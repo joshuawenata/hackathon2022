@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hackathon2022</string>
+    <string name="register">Register</string>
+    <string name="input_username">Input Username</string>
+    <string name="input_password">Input Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="input_fullname">Input FullName</string>
+</resources>
