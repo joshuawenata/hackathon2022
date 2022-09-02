@@ -6,8 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:layout_width="732dp"
+        android:layout_height="876dp"
+        android:src="@drawable/vector"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
+    <TextView
         android:id="@+id/registertitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,6 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/white"
         />
 
     <EditText
@@ -30,19 +40,25 @@
         android:layout_marginTop="100dp"
         android:width="300dp"
         android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
         />
 
     <EditText
-        android:id="@+id/inputusername"
+        android:id="@+id/inputemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/input_username"
+        android:hint="@string/input_email"
         app:layout_constraintTop_toTopOf="@id/inputfullname"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="50dp"
         android:width="300dp"
         android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
         />
 
     <EditText
@@ -50,13 +66,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/input_password"
-        app:layout_constraintTop_toTopOf="@id/inputusername"
+        app:layout_constraintTop_toTopOf="@id/inputemail"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="50dp"
         android:inputType="textPassword"
         android:width="300dp"
         android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
         />
 
     <EditText
@@ -71,6 +90,20 @@
         android:inputType="textPassword"
         android:width="300dp"
         android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have account?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnRegister"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/white"
         />
 
     <Button

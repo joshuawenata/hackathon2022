@@ -6,4 +6,5 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="input_fullname">Input FullName</string>
     <string name="login">Login</string>
+    <string name="input_email">Input Email</string>
 </resources>
