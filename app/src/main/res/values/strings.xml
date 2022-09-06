@@ -1,13 +1,23 @@
 <resources>
     <string name="app_name">Hackathon2022</string>
     <string name="register">Register</string>
-    <string name="input_username">Input Username</string>
-    <string name="input_password">Input Password</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="input_fullname">Input FullName</string>
     <string name="login">Login</string>
-    <string name="input_email">Input Email</string>
-    <string name="welcome">Welcome!</string>
-    <string name="login_into_account">Login into account</string>
-    <string name="register_a_new_account">Register a new account</string>
+
+<!--    WELCOME     -->
+    <string name="welcome_title">Welcome to Kamifriend!</string>
+    <string name="welcome_tagline">Your UKM partner anytime!</string>
+    <string name="welcome_regis_btt_text">Register new account</string>
+    <string name="welcome_login_btt_text">or Login into account</string>
+<!--    welcome asset   -->
+    <string name="welcome_asset_desc">welcome_desc_asset</string>
+
+<!--    REGISTER    -->
+    <string name="register_et_fullname">Enter your full name</string>
+    <string name="register_et_email">Enter your email</string>
+    <string name="register_et_password">Enter your password</string>
+    <string name="register_et_confirm">Confirm password</string>
+    <string name="register_tagline">Start your UKM journey here!</string>
+
+<!--    LOGIN      -->
+    <string name="login_tagline">Continue your UKM journey!</string>
 </resources>
