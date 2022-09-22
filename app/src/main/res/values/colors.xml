@@ -7,12 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="baseBlue">#FF2F3D83</color>
     <color name="backgroundPrimary">#8B9DF2</color>
-
     <color name="primary">#2F3D83</color>
     <color name="primaryVariant">#3A4C9F</color>
-
     <color name="textHint">#BFFFFFFF</color>
-
     <color name="button1_welcome">#2F3D83</color>
+    <color name="backgroundlowongan">#DFE6E9</color>
+    <color name="buttonlowongan">#6FDAC6</color>
+    <color name="buttonsupplier">#FB9292</color>
+    <color name="buttonforum">#62ACD6</color>
 </resources>

@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_addforum.xml" value="0.25" />
+        <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_addlowongan.xml" value="0.2359375" />
+        <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_addsupplier.xml" value="0.25" />
         <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
+        <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_lamar_pekerjaan.xml" value="0.2359375" />
+        <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_login_page.xml" value="0.25" />
+        <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_lowongan_pekerjaan.xml" value="0.25" />
         <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_register_page.xml" value="0.25" />
+        <entry key="..\:/Hackathon2022/app/src/main/res/layout/activity_welcome_page.xml" value="0.25" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/menu_bar.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/round_btt_primary.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/round_btt_white.xml" value="0.3625" />

@@ -1,23 +1,42 @@
 <resources>
     <string name="app_name">Hackathon2022</string>
-    <string name="register">Register</string>
-    <string name="login">Login</string>
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
 
-<!--    WELCOME     -->
-    <string name="welcome_title">Welcome to Kamifriend!</string>
-    <string name="welcome_tagline">Your UKM partner anytime!</string>
-    <string name="welcome_regis_btt_text">Register new account</string>
-    <string name="welcome_login_btt_text">or Login into account</string>
-<!--    welcome asset   -->
+    <!--    WELCOME     -->
+    <string name="welcome_title">Selamat Datang di Kamifriend!</string>
+    <string name="welcome_tagline">Teman usaha yang selalu ada!</string>
+    <string name="welcome_regis_btt_text">Daftarkan akun baru</string>
+    <string name="welcome_login_btt_text">Masuk</string>
+    <!--    welcome asset   -->
     <string name="welcome_asset_desc">welcome_desc_asset</string>
 
-<!--    REGISTER    -->
-    <string name="register_et_fullname">Enter your full name</string>
-    <string name="register_et_email">Enter your email</string>
-    <string name="register_et_password">Enter your password</string>
-    <string name="register_et_confirm">Confirm password</string>
-    <string name="register_tagline">Start your UKM journey here!</string>
+    <!--    REGISTER    -->
+    <string name="register_et_fullname">Nama lengkap anda / perusahaan</string>
+    <string name="register_et_email">Email anda / perusahaan</string>
+    <string name="register_et_password">Masukkan kata kunci</string>
+    <string name="register_et_confirm">Konfirmasi kata kunci</string>
+    <string name="register_tagline">Mulai buka usaha bersama kami!</string>
 
-<!--    LOGIN      -->
-    <string name="login_tagline">Continue your UKM journey!</string>
+    <!--    LOGIN      -->
+    <string name="login_tagline">Lanjutkan perjalanan usaha anda bersama kami!</string>
+    <string name="not_have_an_account">Tidak punya akun?</string>
+    <string name="registrasi">Registrasi</string>
+    <string name="sudah_punya_akun">Sudah punya akun?</string>
+    <string name="masuk">Masuk</string>
+    <string name="lowongan_pekerjaan">Lowongan Pekerjaan</string>
+    <string name="cari_pekerjaan_yang_sesuai_untuk_anda">Cari UMKM yang sesuai untuk anda!</string>
+    <string name="lowongan_pekerjaan_yang_tersedia">Lowongan pekerjaan yang tersedia</string>
+    <string name="lihat_semua">Lihat semua</string>
+    <string name="nama_lowongan">Nama Lowongan</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="tambahkan">Tambahkan</string>
+    <string name="tambah_lowongan">Tambah Lowongan</string>
+    <string name="detail_pertanyaan_anda">Detail pertanyaan anda</string>
+    <string name="judul_forum">judul forum</string>
+    <string name="tambahkan_media">Tambahkan Media</string>
+    <string name="cari_file">Tambahkan dari device</string>
+    <string name="tambahkan_profile">Tambahkan profile</string>
+    <string name="tambah_supplier">Tambah Supplier</string>
 </resources>
