@@ -36,7 +36,8 @@
     <string name="detail_pertanyaan_anda">Detail pertanyaan anda</string>
     <string name="judul_forum">Judul forum</string>
     <string name="tambahkan_media">Tambahkan Media</string>
-    <string name="cari_file">Tambahkan dari device</string>
+    <string name="cari_file">Tambah dari perangkat</string>
     <string name="tambahkan_profile">Tambahkan profile</string>
     <string name="tambah_supplier">Tambah Supplier</string>
+    <string name="forum">Forum</string>
 </resources>
