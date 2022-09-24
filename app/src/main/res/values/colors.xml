@@ -17,4 +17,8 @@
     <color name="buttonlowongan">#6FDAC6</color>
     <color name="buttonsupplier">#FB9292</color>
     <color name="buttonforum">#62ACD6</color>
+    <color name="bgaabu">#DFE6E9</color>
+    <color name="figma_text">#2F3D83</color>
+    <color name="figma_second_text">#6A8794</color>
+    <color name="figma_gray">#4A4D4E</color>
 </resources>

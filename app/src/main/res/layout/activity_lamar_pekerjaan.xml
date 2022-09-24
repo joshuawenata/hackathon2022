@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="Lamar Pekerjaan"
         android:textColor="@color/white"
-        android:fontFamily="@font/montserrat_bold"
+        android:fontFamily="@font/kanit_bold"
         android:textSize="30sp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
@@ -43,6 +43,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:paddingHorizontal="15dp"
         android:paddingTop="10dp"
+        android:fontFamily="@font/kanit_regular"
         />
 
     <EditText
@@ -58,6 +59,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:paddingHorizontal="15dp"
+        android:fontFamily="@font/kanit_regular"
         />
 
     <Button
@@ -65,7 +67,7 @@
         android:layout_height="30dp"
         android:background="@drawable/round_btt_white"
         android:backgroundTint="@color/buttonlowongan"
-        android:fontFamily="@font/montserrat_semibold"
+        android:fontFamily="@font/kanit_semibold"
         android:text="@string/cari_file"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -80,7 +82,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_btt_white"
         android:backgroundTint="@color/buttonlowongan"
-        android:fontFamily="@font/montserrat_semibold"
+        android:fontFamily="@font/kanit_semibold"
         android:text="@string/tambahkan"
         android:textAllCaps="false"
         android:textColor="@color/white"
