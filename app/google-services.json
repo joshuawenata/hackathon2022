@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1068531853773",
+    "firebase_url": "https://hackathon2022-85c99-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hackathon2022-85c99",
+    "storage_bucket": "hackathon2022-85c99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068531853773:android:f518293bbe2cc3690a7c84",
+        "android_client_info": {
+          "package_name": "com.example.hackathon2022"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068531853773-5lubjjr785o0hsuq6vnjff6j3tplp9ml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgxVVBb528WeGZi5jvBaZjWOidG8Wo_fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068531853773-5lubjjr785o0hsuq6vnjff6j3tplp9ml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
