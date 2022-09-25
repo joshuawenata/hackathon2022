@@ -480,14 +480,14 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iconLowongan1"
+                android:src="@drawable/icon_lowongan1"
                 android:layout_marginHorizontal="25dp"
                 />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iconLowongan2"
+                android:src="@drawable/icon_lowongan2"
                 android:layout_marginHorizontal="25dp"
                 />
         </LinearLayout>
@@ -504,14 +504,14 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iconLowongan3"
+                android:src="@drawable/icon_lowongan3"
                 android:layout_marginHorizontal="25dp"
                 />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iconLowongan4"
+                android:src="@drawable/icon_lowongan4"
                 android:layout_marginHorizontal="25dp"
                 />
 
