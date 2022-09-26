@@ -73,7 +73,7 @@
                 />
 
             <EditText
-                android:id="@+id/inputemail"
+                android:id="@+id/inputnomor"
                 android:hint="@string/register_et_email"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -83,10 +83,12 @@
                 android:background="@drawable/round_edittext"
                 android:layout_marginVertical="5dp"
                 android:textSize="15sp"
+                android:inputType="phone"
                 />
 
             <EditText
                 android:id="@+id/inputpassword"
+                android:inputType="textPassword"
                 android:hint="@string/register_et_password"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -99,6 +101,8 @@
                 />
 
             <EditText
+                android:id="@+id/inputconfirmpassword"
+                android:inputType="textPassword"
                 android:hint="@string/register_et_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -113,6 +117,7 @@
 
 
         <Button
+            android:id="@+id/btnDaftar"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@drawable/round_btt_primary"
@@ -136,6 +141,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtMasuk"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

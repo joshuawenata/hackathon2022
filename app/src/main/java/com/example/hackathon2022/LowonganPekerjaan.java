@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.hackathon2022.R;
+
 public class LowonganPekerjaan extends AppCompatActivity {
 
     @Override
