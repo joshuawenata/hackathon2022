@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.hackathon2022.R;
 
-public class Addlowongan extends AppCompatActivity {
+public class addlowongan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

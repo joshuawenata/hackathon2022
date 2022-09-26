@@ -62,6 +62,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             if(flag){
                 //TO DO: auth user sign in
                 UserRepository.auth(nomor, password);
+                startActivity(new Intent(this, HomePage.class));
             }
         }
     }

@@ -796,19 +796,25 @@
             android:orientation="horizontal"
             >
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/homeforumicon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan1"
+                android:src="@drawable/icon_forum_biru"
                 android:layout_marginHorizontal="25dp"
+                android:background="@null"
                 />
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/homesuppliericon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan2"
+                android:src="@drawable/icon_supplier_putih"
                 android:layout_marginHorizontal="25dp"
+                android:background="@null"
+                android:onClick="intoSupplier"
                 />
+
         </LinearLayout>
 
         <LinearLayout
@@ -820,18 +826,23 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
-            <ImageView
+            <ImageButton
+                android:id="@+id/homelowonganicon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan3"
+                android:src="@drawable/icon_lowongan_putih"
                 android:layout_marginHorizontal="25dp"
+                android:background="@null"
+                android:onClick="intoLowongan"
                 />
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/homeakunicon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan4"
+                android:src="@drawable/icon_akun_putih"
                 android:layout_marginHorizontal="25dp"
+                android:background="@null"
                 />
 
         </LinearLayout>
@@ -841,12 +852,12 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/lowongan_pekerjaan_asset3"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:background="@drawable/shadow_round"
         android:elevation="3dp"
-        />
+        android:src="@drawable/lowongan_pekerjaan_asset3"
+        android:onClick="intoAdd"/>
 
 </RelativeLayout>

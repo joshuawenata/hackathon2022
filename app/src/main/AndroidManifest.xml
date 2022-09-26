@@ -38,7 +38,7 @@
             android:name=".addforum"
             android:exported="false" />
         <activity
-            android:name=".Addlowongan"
+            android:name=".addlowongan"
             android:exported="false" />
         <activity
             android:name=".LowonganPekerjaan"

@@ -160,19 +160,9 @@
                 android:layout_marginVertical="2dp"
                 />
 
-
         </LinearLayout>
 
-
     </LinearLayout>
-
-
-
-
-
-
-
-
 
     <ImageView
         android:layout_width="match_parent"
@@ -197,18 +187,22 @@
             android:orientation="horizontal"
             >
 
-            <ImageView
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan1"
+                android:src="@drawable/icon_forum_putih"
                 android:layout_marginHorizontal="25dp"
+                android:background="@null"
+                android:onClick="intoForum"
                 />
 
-            <ImageView
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan2"
+                android:src="@drawable/icon_supplier_putih"
                 android:layout_marginHorizontal="25dp"
+                android:background="@null"
+                android:onClick="intoSupplier"
                 />
         </LinearLayout>
 
@@ -221,25 +215,27 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
-            <ImageView
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan3"
+                android:src="@drawable/icon_lowongan_biru"
                 android:layout_marginHorizontal="25dp"
+                android:background="@null"
                 />
 
-            <ImageView
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan4"
+                android:src="@drawable/icon_akun_putih"
                 android:layout_marginHorizontal="25dp"
+                android:background="@null"
                 />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <ImageView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -247,6 +243,7 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/shadow_round"
         android:elevation="3dp"
-        android:src="@drawable/lowongan_pekerjaan_asset3" />
+        android:src="@drawable/lowongan_pekerjaan_asset3"
+        android:onClick="intoAdd"/>
 
 </RelativeLayout>

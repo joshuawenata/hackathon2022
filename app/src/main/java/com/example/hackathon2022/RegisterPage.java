@@ -17,7 +17,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
     private Button btnDaftar;
     private TextView txtMasuk;
 
-    private void initComponents(){
+    private void initComponents() {
         txtNama = findViewById(R.id.inputfullname);
         txtNomor = findViewById(R.id.inputnomor);
         txtPassword = findViewById(R.id.inputpassword);
@@ -87,6 +87,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
             //buat user baru
             if(flag){
                 UserRepository.insertUser(nama, nomor, password);
+                startActivity(new Intent(this, LoginPage.class));
             }
         }
     }
