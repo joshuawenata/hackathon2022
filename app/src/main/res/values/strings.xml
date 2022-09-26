@@ -40,4 +40,7 @@
     <string name="tambahkan_profile">Tambahkan profile</string>
     <string name="tambah_supplier">Tambah Supplier</string>
     <string name="forum">Forum</string>
+    <string name="tambah_forum">Tambah forum</string>
+    <string name="tambah_dari_perangkat">Tambah dari perangkat</string>
+    <string name="nama_supplier">Nama supplier</string>
 </resources>

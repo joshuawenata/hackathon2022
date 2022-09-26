@@ -35,8 +35,8 @@
             />
 
         <EditText
-            android:id="@+id/inputjudulforum"
-            android:hint="Nama supplier"
+            android:id="@+id/inputnamasupplier"
+            android:hint="@string/nama_supplier"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:backgroundTint="@color/white"
@@ -48,6 +48,7 @@
             />
 
         <EditText
+            android:id="@+id/inputLokasi"
             android:hint="Lokasi"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -61,7 +62,7 @@
 
 
         <EditText
-            android:id="@+id/inputpertanyaan"
+            android:id="@+id/inputDeskripsi"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginVertical="5dp"
@@ -90,7 +91,7 @@
                 android:background="@drawable/round_edittext"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/kanit_regular"
-                android:hint="Tambahkan profile"
+                android:hint="@string/tambahkan_profile"
                 android:textSize="15sp"
                 android:layout_weight="1"
                 />
@@ -101,7 +102,7 @@
                 android:background="@drawable/round_btt_white"
                 android:backgroundTint="@color/buttonsupplier"
                 android:fontFamily="@font/kanit_semibold"
-                android:text="Tambah dari perangkat"
+                android:text="@string/tambah_dari_perangkat"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:layout_weight="1"
@@ -111,6 +112,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/addSupplier"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -119,9 +121,11 @@
         android:background="@drawable/round_btt_white"
         android:backgroundTint="@color/buttonsupplier"
         android:fontFamily="@font/kanit_semibold"
-        android:text="Tambah forum"
+        android:text="@string/tambah_forum"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:onClick="AddSupplier"
+        tools:ignore="OnClick" />
 
 
 </RelativeLayout>
