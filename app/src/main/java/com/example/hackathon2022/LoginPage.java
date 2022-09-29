@@ -18,10 +18,10 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
     private TextView txtRegistrasi;
 
     private void initComponents(){
-        txtNomor = findViewById(R.id.inputnomor);
-        txtPassword = findViewById(R.id.inputpassword);
-        btnMasuk = findViewById(R.id.btnMasuk);
-        txtRegistrasi = findViewById(R.id.txtRegistrasi);
+        txtNomor = findViewById(R.id.activitylogin_inputnomor);
+        txtPassword = findViewById(R.id.activitylogin_inputpassword);
+        btnMasuk = findViewById(R.id.activitylogin_btnMasuk);
+        txtRegistrasi = findViewById(R.id.activitylogin_txtRegistrasi);
     }
 
     @Override

@@ -23,46 +23,42 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/judullamar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Tambah Supplier"
             android:textAlignment="textStart"
             android:textColor="@color/white"
-            android:textSize="35sp"
-            android:layout_marginVertical="10dp"
-            />
+            android:textSize="35sp" />
 
         <EditText
-            android:id="@+id/inputnamasupplier"
+            android:id="@+id/activityaddsupplier_inputnamasupplier"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/round_edittext"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/kanit_regular"
             android:hint="@string/nama_supplier"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:background="@drawable/round_edittext"
-            android:textSize="15sp"
             android:paddingHorizontal="15dp"
-            android:fontFamily="@font/kanit_regular"
-            android:layout_marginVertical="5dp"
-            />
+            android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/inputLokasi"
+            android:id="@+id/activityaddsupplier_inputLokasi"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/round_edittext"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/kanit_regular"
             android:hint="Lokasi"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:background="@drawable/round_edittext"
-            android:textSize="15sp"
             android:paddingHorizontal="15dp"
-            android:fontFamily="@font/kanit_regular"
-            android:layout_marginVertical="5dp"
-            />
+            android:textSize="15sp" />
 
 
         <EditText
-            android:id="@+id/inputDeskripsi"
+            android:id="@+id/activityaddsupplier_inputDeskripsi"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginVertical="5dp"
@@ -76,43 +72,40 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal"
-            android:background="@drawable/round_btt_white"
-            android:paddingHorizontal="15dp"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            android:background="@drawable/round_btt_white"
             android:gravity="center"
-            >
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp">
 
-            <TextView
-                android:id="@+id/inputcv"
+            <ImageView
+                android:id="@+id/activityaddsupplier_imageprofile"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/round_edittext"
-                android:backgroundTint="@color/white"
-                android:fontFamily="@font/kanit_regular"
-                android:hint="@string/tambahkan_profile"
-                android:textSize="15sp"
+                android:layout_height="100dp"
+                android:layout_margin="15dp"
                 android:layout_weight="1"
-                />
+                android:width="10dp"
+                android:src="@drawable/avatar"/>
 
             <Button
+                android:id="@+id/activityaddsupplier_btnTambahDariPerangkat"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
                 android:background="@drawable/round_btt_white"
                 android:backgroundTint="@color/buttonsupplier"
                 android:fontFamily="@font/kanit_semibold"
                 android:text="@string/tambah_dari_perangkat"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:layout_weight="1"
-                />
+                android:textColor="@color/white" />
+
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/addSupplier"
+        android:id="@+id/activityaddsupplier_btnTambahSupplier"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -121,10 +114,10 @@
         android:background="@drawable/round_btt_white"
         android:backgroundTint="@color/buttonsupplier"
         android:fontFamily="@font/kanit_semibold"
-        android:text="@string/tambah_forum"
+        android:onClick="AddSupplier"
+        android:text="@string/tambah_supplier"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:onClick="AddSupplier"
         tools:ignore="OnClick" />
 
 

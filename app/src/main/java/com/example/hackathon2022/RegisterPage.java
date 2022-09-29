@@ -18,12 +18,12 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
     private TextView txtMasuk;
 
     private void initComponents() {
-        txtNama = findViewById(R.id.inputfullname);
-        txtNomor = findViewById(R.id.inputnomor);
-        txtPassword = findViewById(R.id.inputpassword);
-        txtConfirmPassword = findViewById(R.id.inputconfirmpassword);
-        btnDaftar = findViewById(R.id.btnDaftar);
-        txtMasuk = findViewById(R.id.txtMasuk);
+        txtNama = findViewById(R.id.activityregister_inputfullname);
+        txtNomor = findViewById(R.id.activityregister_inputnomor);
+        txtPassword = findViewById(R.id.activityregister_inputpassword);
+        txtConfirmPassword = findViewById(R.id.activityregister_inputconfirmpassword);
+        btnDaftar = findViewById(R.id.activityregister_btnDaftar);
+        txtMasuk = findViewById(R.id.activityregister_txtMasuk);
     }
 
     @Override

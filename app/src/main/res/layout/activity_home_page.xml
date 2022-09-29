@@ -797,7 +797,6 @@
             >
 
             <ImageButton
-                android:id="@+id/homeforumicon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_forum_biru"
@@ -806,7 +805,6 @@
                 />
 
             <ImageButton
-                android:id="@+id/homesuppliericon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_supplier_putih"
@@ -827,7 +825,6 @@
             android:orientation="horizontal"
             >
             <ImageButton
-                android:id="@+id/homelowonganicon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_lowongan_putih"
@@ -837,7 +834,6 @@
                 />
 
             <ImageButton
-                android:id="@+id/homeakunicon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_akun_putih"
@@ -857,7 +853,7 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/shadow_round"
         android:elevation="3dp"
-        android:src="@drawable/lowongan_pekerjaan_asset3"
-        android:onClick="intoAdd"/>
+        android:onClick="intoAdd"
+        android:src="@drawable/lowongan_pekerjaan_asset3" />
 
 </RelativeLayout>

@@ -8,7 +8,6 @@
     tools:context=".WelcomePage">
 
     <ImageView
-        android:id="@+id/welcome_asset1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="-50dp"
@@ -29,7 +28,6 @@
         >
 
         <ImageView
-            android:id="@+id/welcome_asset2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/welcome_asset1"
@@ -50,7 +48,6 @@
                 >
 
                 <TextView
-                    android:id="@+id/welcome_title"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:text="@string/welcome_title"
@@ -60,7 +57,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/welcome_tagline"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:text="@string/welcome_tagline"
@@ -78,6 +74,7 @@
                 >
 
                 <Button
+                    android:id="@+id/activitywelcome_btnDaftar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/welcome_regis_btt_text"
@@ -91,6 +88,7 @@
                     />
 
                 <Button
+                    android:id="@+id/activitywelcome_btnMasuk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/welcome_login_btt_text"

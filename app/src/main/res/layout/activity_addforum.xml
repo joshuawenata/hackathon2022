@@ -35,7 +35,7 @@
             />
 
         <EditText
-            android:id="@+id/inputjudulforum"
+            android:id="@+id/activityaddforum_inputjudulforum"
             android:hint="@string/judul_forum"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -48,14 +48,14 @@
             />
 
         <EditText
-            android:id="@+id/inputpertanyaan"
+            android:id="@+id/activityaddforum_inputpertanyaan"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginVertical="5dp"
             android:background="@drawable/description_column"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/kanit_regular"
-            android:hint="@string/deskripsi"
+            android:hint="@string/detail_pertanyaan_anda"
             android:paddingHorizontal="15dp"
             android:textSize="15sp" />
 
@@ -71,7 +71,7 @@
             >
 
             <TextView
-                android:id="@+id/inputcv"
+                android:id="@+id/activityaddforum_inputmedia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round_edittext"
@@ -83,6 +83,7 @@
                 />
 
             <Button
+                android:id="@+id/activityaddforum_btnTambahMedia"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@drawable/round_btt_white"
@@ -98,6 +99,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/activityaddforum_btnTambahForum"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
