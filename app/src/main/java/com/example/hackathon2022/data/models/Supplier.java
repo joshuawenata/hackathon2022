@@ -8,15 +8,16 @@ public class Supplier {
     private String supplierName;
     private String supplierLokasi;
     private String supplierDeskripsi;
-    private String supplierProfile;
+    private String supplierimagePath;
 
-    public Supplier(String supplierKey, String supplierName, String supplierLokasi, String supplierDeskripsi, String supplierProfile) {
+    public Supplier(String supplierKey, String supplierName, String supplierLokasi, String supplierDeskripsi, String supplierimagePath) {
         this.supplierKey = supplierKey;
         this.supplierName = supplierName;
         this.supplierLokasi = supplierLokasi;
         this.supplierDeskripsi = supplierDeskripsi;
-        this.supplierProfile = supplierProfile;
+        this.supplierimagePath = supplierimagePath;
     }
+
 
     public String getSupplierKey() {
         return supplierKey;
@@ -34,8 +35,8 @@ public class Supplier {
         return supplierDeskripsi;
     }
 
-    public String getSupplierProfile() {
-        return supplierProfile;
+    public String getSupplierimagePath() {
+        return supplierimagePath;
     }
 
     public Map<String, Object> toMap(){
@@ -43,7 +44,7 @@ public class Supplier {
         data.put("nama", supplierName);
         data.put("lokasi", supplierLokasi);
         data.put("deskripsi", supplierDeskripsi);
-        data.put("profile", supplierProfile);
+        data.put("imagePath", supplierimagePath);
         return data;
     }
 }

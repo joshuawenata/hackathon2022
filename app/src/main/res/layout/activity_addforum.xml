@@ -110,6 +110,8 @@
         android:fontFamily="@font/kanit_semibold"
         android:text="Tambah forum"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:onClick="AddForum"
+        tools:ignore="OnClick" />
 
 </RelativeLayout>

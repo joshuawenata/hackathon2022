@@ -10,7 +10,7 @@
     <!--    MAIN CONTAINER  -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:gravity="center"
@@ -27,10 +27,13 @@
             android:paddingHorizontal="10dp"
             android:paddingVertical="5dp">
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/activitynearsupplier_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arrow_back" />
+                app:srcCompat="@drawable/arrow_back"
+                android:onClick="Back"
+                android:background="@null"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -122,379 +125,367 @@
 
         </LinearLayout>
 
-        <!--        CARDS HERE      -->
+<!--        &lt;!&ndash;        CARDS HERE      &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="370dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginVertical="5dp"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            &lt;!&ndash;            CARDS ENTITY     &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:background="@drawable/card"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="10dp"-->
+<!--                android:paddingVertical="5dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/account" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:paddingHorizontal="5dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_semibold"-->
+<!--                        android:text="PT XXXX - Jakarta"-->
+<!--                        android:textColor="@color/figma_text" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="FnB, Packaging"-->
+<!--                        android:textColor="@color/figma_second_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."-->
+<!--                        android:textColor="@color/figma_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/chat" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash;            CARDS ENTITY     &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:background="@drawable/card"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="10dp"-->
+<!--                android:paddingVertical="5dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/account" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:paddingHorizontal="5dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_semibold"-->
+<!--                        android:text="PT XXXX - Jakarta"-->
+<!--                        android:textColor="@color/figma_text" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="FnB, Packaging"-->
+<!--                        android:textColor="@color/figma_second_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."-->
+<!--                        android:textColor="@color/figma_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/chat" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash;            CARDS ENTITY     &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:background="@drawable/card"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="10dp"-->
+<!--                android:paddingVertical="5dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/account" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:paddingHorizontal="5dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_semibold"-->
+<!--                        android:text="PT XXXX - Jakarta"-->
+<!--                        android:textColor="@color/figma_text" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="FnB, Packaging"-->
+<!--                        android:textColor="@color/figma_second_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."-->
+<!--                        android:textColor="@color/figma_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/chat" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash;            CARDS ENTITY     &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:background="@drawable/card"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="10dp"-->
+<!--                android:paddingVertical="5dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/account" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:paddingHorizontal="5dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_semibold"-->
+<!--                        android:text="PT XXXX - Jakarta"-->
+<!--                        android:textColor="@color/figma_text" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="FnB, Packaging"-->
+<!--                        android:textColor="@color/figma_second_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."-->
+<!--                        android:textColor="@color/figma_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/chat" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash;            CARDS ENTITY     &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:background="@drawable/card"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="10dp"-->
+<!--                android:paddingVertical="5dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/account" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:paddingHorizontal="5dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_semibold"-->
+<!--                        android:text="PT XXXX - Jakarta"-->
+<!--                        android:textColor="@color/figma_text" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="FnB, Packaging"-->
+<!--                        android:textColor="@color/figma_second_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."-->
+<!--                        android:textColor="@color/figma_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/chat" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash;            CARDS ENTITY     &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:background="@drawable/card"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="10dp"-->
+<!--                android:paddingVertical="5dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/account" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:paddingHorizontal="5dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_semibold"-->
+<!--                        android:text="PT XXXX - Jakarta"-->
+<!--                        android:textColor="@color/figma_text" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="FnB, Packaging"-->
+<!--                        android:textColor="@color/figma_second_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/kanit_light"-->
+<!--                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."-->
+<!--                        android:textColor="@color/figma_text"-->
+<!--                        android:textSize="11sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/chat" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
         <LinearLayout
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="5dp"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activitynearsupplier_recycleviewsupplier"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/account"
-                    android:layout_weight="1"
-                    />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    android:paddingHorizontal="5dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PT XXXX - Jakarta"
-                        android:fontFamily="@font/kanit_semibold"
-                        android:textColor="@color/figma_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="FnB, Packaging"
-                        android:fontFamily="@font/kanit_light"
-                        android:textSize="11sp"
-                        android:textColor="@color/figma_second_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                        android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_text"
-                        android:textSize="11sp"
-                        />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/chat"
-                    android:layout_weight="1"
-                    />
-
-            </LinearLayout>
-
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/account"
-                    android:layout_weight="1"
-                    />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    android:paddingHorizontal="5dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PT XXXX - Jakarta"
-                        android:fontFamily="@font/kanit_semibold"
-                        android:textColor="@color/figma_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="FnB, Packaging"
-                        android:fontFamily="@font/kanit_light"
-                        android:textSize="11sp"
-                        android:textColor="@color/figma_second_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                        android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_text"
-                        android:textSize="11sp"
-                        />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/chat"
-                    android:layout_weight="1"
-                    />
-
-            </LinearLayout>
-
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/account"
-                    android:layout_weight="1"
-                    />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    android:paddingHorizontal="5dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PT XXXX - Jakarta"
-                        android:fontFamily="@font/kanit_semibold"
-                        android:textColor="@color/figma_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="FnB, Packaging"
-                        android:fontFamily="@font/kanit_light"
-                        android:textSize="11sp"
-                        android:textColor="@color/figma_second_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                        android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_text"
-                        android:textSize="11sp"
-                        />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/chat"
-                    android:layout_weight="1"
-                    />
-
-            </LinearLayout>
-
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/account"
-                    android:layout_weight="1"
-                    />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    android:paddingHorizontal="5dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PT XXXX - Jakarta"
-                        android:fontFamily="@font/kanit_semibold"
-                        android:textColor="@color/figma_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="FnB, Packaging"
-                        android:fontFamily="@font/kanit_light"
-                        android:textSize="11sp"
-                        android:textColor="@color/figma_second_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                        android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_text"
-                        android:textSize="11sp"
-                        />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/chat"
-                    android:layout_weight="1"
-                    />
-
-            </LinearLayout>
-
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/account"
-                    android:layout_weight="1"
-                    />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    android:paddingHorizontal="5dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PT XXXX - Jakarta"
-                        android:fontFamily="@font/kanit_semibold"
-                        android:textColor="@color/figma_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="FnB, Packaging"
-                        android:fontFamily="@font/kanit_light"
-                        android:textSize="11sp"
-                        android:textColor="@color/figma_second_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                        android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_text"
-                        android:textSize="11sp"
-                        />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/chat"
-                    android:layout_weight="1"
-                    />
-
-            </LinearLayout>
-
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/account"
-                    android:layout_weight="1"
-                    />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    android:paddingHorizontal="5dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PT XXXX - Jakarta"
-                        android:fontFamily="@font/kanit_semibold"
-                        android:textColor="@color/figma_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="FnB, Packaging"
-                        android:fontFamily="@font/kanit_light"
-                        android:textSize="11sp"
-                        android:textColor="@color/figma_second_text"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                        android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_text"
-                        android:textSize="11sp"
-                        />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:srcCompat="@drawable/chat"
-                    android:layout_weight="1"
-                    />
-
-            </LinearLayout>
+                android:layout_height="match_parent"
+                />
 
         </LinearLayout>
 

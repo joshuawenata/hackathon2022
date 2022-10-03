@@ -1,37 +1,61 @@
 package com.example.hackathon2022;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.Bundle;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.provider.MediaStore;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.hackathon2022.R;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.hackathon2022.data.SupplierRepository;
-import com.example.hackathon2022.data.UserRepository;
-import com.example.hackathon2022.data.models.Supplier;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.IOException;
+import java.util.UUID;
 
 public class addsupplier extends AppCompatActivity {
 
-    private EditText txtNama, txtLokasi, txtDeskripsi;
-    private Button btnAdd, btnUploadAddSupplier;
-    private ImageView imageprofile;
+    StorageReference storageReference;
 
-    @SuppressLint("WrongViewCast")
+    public Uri getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(Uri filePath) {
+        this.filePath = filePath;
+    }
+
+    private Uri filePath;
+    private final int PICK_IMAGE_REQUEST = 22;
+
+    private EditText txtNama, txtLokasi, txtDeskripsi;
+    private Button btnUploadAddSupplier;
+    private ImageView imageprofile;
+    ProgressDialog pd;
+
     private void initComponents() {
+        pd = new ProgressDialog(this);
+        pd.setMessage("Uploading....");
         txtNama = findViewById(R.id.activityaddsupplier_inputnamasupplier);
         txtLokasi = findViewById(R.id.activityaddsupplier_inputLokasi);
         txtDeskripsi = findViewById(R.id.activityaddsupplier_inputDeskripsi);
-        btnAdd = findViewById(R.id.activityaddsupplier_btnTambahSupplier);
         btnUploadAddSupplier = findViewById(R.id.activityaddsupplier_btnTambahDariPerangkat);
         imageprofile = findViewById(R.id.activityaddsupplier_imageprofile);
+        storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com");
     }
 
     @Override
@@ -44,26 +68,49 @@ public class addsupplier extends AppCompatActivity {
         btnUploadAddSupplier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent iGallery = new Intent(Intent.ACTION_PICK);
-               iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-               startActivityForResult(iGallery,1000);
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent, PICK_IMAGE_REQUEST);
             }
         });
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    protected void onActivityResult(int requestCode,
+                                    int resultCode,
+                                    Intent data)
+    {
 
-        if(resultCode==RESULT_OK){
-            imageprofile.setImageURI(data.getData());
+        super.onActivityResult(requestCode,
+                resultCode,
+                data);
+
+        if (resultCode == RESULT_OK
+                && data != null
+                && data.getData() != null) {
+
+            setFilePath(data.getData());
+            try {
+
+                Bitmap bitmap = MediaStore
+                        .Images
+                        .Media
+                        .getBitmap(
+                                getContentResolver(),
+                                filePath);
+                imageprofile.setImageBitmap(bitmap);
+            }
+
+            catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public void AddSupplier(View view) {
         String nama, lokasi, deskripsi;
 
-        //get data
         nama = txtNama.getText().toString();
         lokasi = txtLokasi.getText().toString();
         deskripsi = txtDeskripsi.getText().toString();
@@ -81,7 +128,24 @@ public class addsupplier extends AppCompatActivity {
         }
 
         if(flag){
-            SupplierRepository.insertSupplier(nama, lokasi, deskripsi, imageprofile.toString());
+            String path = "images/" + UUID.randomUUID().toString();
+            StorageReference childRef = storageReference.child(path);
+            UploadTask uploadTask = childRef.putFile(filePath);
+            uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    pd.dismiss();
+                    Toast.makeText(addsupplier.this, "Upload successful", Toast.LENGTH_SHORT).show();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    pd.dismiss();
+                    Toast.makeText(addsupplier.this, "Upload Failed -> " + e, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            SupplierRepository.insertSupplier(nama, lokasi, deskripsi, path);
             startActivity(new Intent(this, SupplierPage.class));
         }
 

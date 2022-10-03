@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.hackathon2022.Object.ObjectLowongan;
 import com.example.hackathon2022.adapter.LowonganAdapter;
@@ -24,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LowonganPekerjaan extends AppCompatActivity {
-
     ArrayList <ObjectLowongan> newList = new ArrayList<>();
     Context context = this;
 
@@ -76,6 +76,10 @@ public class LowonganPekerjaan extends AppCompatActivity {
 
     public void intoAdd(View view) {
         startActivity(new Intent(this, addlowongan.class));
+    }
+
+    public void LihatSemua(View view) {
+        startActivity(new Intent(this, AllLowongan.class));
     }
 
 

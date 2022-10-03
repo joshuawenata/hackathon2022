@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TopSupplier"
+    tools:context=".TopForum"
     android:background="@color/bgaabu"
     >
+
 
     <!--    MAIN CONTAINER  -->
     <LinearLayout
@@ -22,37 +23,28 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:background="@color/supplier"
+            android:background="@color/forum"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp">
+            android:paddingHorizontal="10dp">
 
             <ImageButton
-                android:id="@+id/activitytopsupplier_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/arrow_back"
                 android:background="@null"
-                android:onClick="Back"/>
+                android:clickable="true"
+                android:onClick="back"
+                tools:ignore="OnClick" />
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Supplier Teratas"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-
+                android:fontFamily="@font/kanit_semibold"
+                android:text="Semua Lowongan Pekerjaan"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <!--        CONTAINER FOR FILTER BTT    -->
@@ -63,13 +55,12 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <!--            SEARCH SORT      -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:background="@drawable/supplier_round"
+                android:background="@drawable/forum_round"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -85,43 +76,22 @@
                     android:layout_weight="1"
                     android:background="@drawable/round_btt_white"
                     android:fontFamily="@font/kanit_regular"
-                    android:hint="Apa yang ingin anda tanyakan?"
+                    android:hint="Masukkan kata kunci!"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="7dp"
                     android:textSize="13sp" />
-            </LinearLayout>
-
-            <!--            CONTAINER SORT      -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:background="@drawable/supplier_round"
-                android:orientation="horizontal"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="7dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/sort" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_regular"
-                    android:text="Sort"
-                    android:textColor="@color/white" />
             </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="25dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activitytopsupplier_recycleviewsupplier"
+                android:id="@+id/activitylowongan_recycleviewlowongan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />

@@ -10,9 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.hackathon2022.Object.ObjectForum;
-import com.example.hackathon2022.adapter.ForumAdapterTop;
-import com.example.hackathon2022.adapter.ForumAdapterNear;
+import com.example.hackathon2022.Object.ObjectLowongan;
+import com.example.hackathon2022.adapter.AllLowonganAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,8 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class HomePage extends AppCompatActivity {
-    ArrayList<ObjectForum> newList = new ArrayList<>();
+public class AllLowongan extends AppCompatActivity {
+    ArrayList<ObjectLowongan> newList = new ArrayList<>();
     Context context = this;
 
     FirebaseDatabase firebaseDatabase;
@@ -31,36 +30,28 @@ public class HomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_all_lowongan);
 
         initComponents();
     }
 
     protected void initComponents() {
-        RecyclerView recyclerView = findViewById(R.id.activityhome_recycleviewtop);
-        RecyclerView recyclerViewterdekat = findViewById(R.id.activityhome_recycleviewnear);
+        RecyclerView recyclerView = findViewById(R.id.activitylowongan_recycleviewlowongan);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("forum");
+        databaseReference = firebaseDatabase.getReference("lowongan");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    newList.add(postSnapshot.getValue(ObjectForum.class));
+                    newList.add(postSnapshot.getValue(ObjectLowongan.class));
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                ForumAdapterTop TopAdapter = new ForumAdapterTop(context, newList);
-                recyclerView.setAdapter(TopAdapter);
-
-                TopAdapter.notifyDataSetChanged();
-
-                recyclerViewterdekat.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                ForumAdapterNear NearAdapter = new ForumAdapterNear(context, newList);
-                recyclerViewterdekat.setAdapter(NearAdapter);
-
-                NearAdapter.notifyDataSetChanged();
+                AllLowonganAdapter myAdapter = new AllLowonganAdapter(context, newList);
+                recyclerView.setAdapter(myAdapter);
+                myAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -71,16 +62,7 @@ public class HomePage extends AppCompatActivity {
 
     }
 
-    public void intoSupplier(View view) {
-        startActivity(new Intent(this, SupplierPage.class));
-    }
-
-    public void intoLowongan(View view) {
+    public void back(View view) {
         startActivity(new Intent(this, LowonganPekerjaan.class));
     }
-
-    public void intoAdd(View view) {
-        startActivity(new Intent(this, addforum.class));
-    }
-
 }

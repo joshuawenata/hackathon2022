@@ -8,13 +8,13 @@ public class SupplierRepository {
     private static FirebaseDatabase db = FirebaseDatabase.getInstance();
     private static DatabaseReference supplierRef = db.getReference("suppliers");
 
-    public static void insertSupplier(String supplierName, String supplierLokasi, String supplierDeskripsi, String supplierProfile){
+    public static void insertSupplier(String supplierName, String supplierLokasi, String supplierDeskripsi, String imagePath){
         String supplierKey = supplierRef.push().getKey();
         Supplier newSupplier = new Supplier(supplierKey,
                 supplierName,
                 supplierLokasi,
                 supplierDeskripsi,
-                supplierProfile);
+                imagePath);
         supplierRef.child(supplierKey).setValue(newSupplier.toMap());
     }
 }

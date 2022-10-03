@@ -85,7 +85,10 @@
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:textAlignment="textEnd"
-                />
+                android:clickable="true"
+                android:onClick="LihatSemua"
+                tools:ignore="OnClick"
+                android:focusable="true" />
 
         </LinearLayout>
 
