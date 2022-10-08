@@ -83,4 +83,11 @@ public class HomePage extends AppCompatActivity {
         startActivity(new Intent(this, addforum.class));
     }
 
+    public void intoPopuler(View view) {
+        startActivity(new Intent(this, PopularForum.class));
+    }
+
+    public void intoTeratas(View view) {
+        startActivity(new Intent(this, TopForum.class));
+    }
 }

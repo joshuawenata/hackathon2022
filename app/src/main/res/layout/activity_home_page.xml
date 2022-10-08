@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgaabu"
-    tools:context=".HomePage">
+    tools:context=".HomePage"
+    android:layout_centerInParent="true">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -19,6 +20,7 @@
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
         >
 
         <LinearLayout
@@ -79,7 +81,8 @@
                 android:hint="Apa yang ingin anda tanyakan?"
                 android:paddingVertical="7dp"
                 android:paddingHorizontal="12dp"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -106,6 +109,8 @@
                 android:textColor="@color/figma_text"
                 android:textSize="17sp" />
 
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,9 +118,9 @@
                 android:text="@string/lihat_semua"
                 android:textAlignment="textEnd"
                 android:textColor="@color/figma_text"
-                android:textSize="12sp" />
-
-
+                android:textSize="12sp"
+                android:onClick="intoPopuler"
+                tools:ignore="OnClick" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -124,11 +129,11 @@
                 android:orientation="horizontal">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/activityhome_recycleviewtop"
+                    android:id="@+id/activityhome_recyclerweeklypopularforum"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/component_cardforum"
                     />
+
 
             </LinearLayout>
 
@@ -156,7 +161,9 @@
                 android:text="Lihat semua"
                 android:textAlignment="textEnd"
                 android:textColor="@color/figma_text"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:onClick="intoTeratas"
+                tools:ignore="OnClick" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -165,10 +172,10 @@
                 android:orientation="horizontal">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/activityhome_recycleviewnear"
+                    android:id="@+id/activityhome_recyclertopforum"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/component_cardforum"/>
+                    />
 
             </LinearLayout>
 
@@ -291,7 +298,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
-        android:src="@drawable/lowongan_pekerjaan_asset2" />
+        android:src="@drawable/lowongan_pekerjaan_asset2"
+        />
 
     <LinearLayout
         android:layout_width="wrap_content"

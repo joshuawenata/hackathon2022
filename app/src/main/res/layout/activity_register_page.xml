@@ -20,7 +20,8 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,7 +63,8 @@
                 android:paddingHorizontal="15dp"
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/activityregister_inputnomor"
@@ -75,7 +77,8 @@
                 android:paddingHorizontal="15dp"
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/activityregister_inputpassword"
@@ -88,7 +91,8 @@
                 android:paddingHorizontal="15dp"
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/activityregister_inputconfirmpassword"
@@ -101,7 +105,8 @@
                 android:paddingHorizontal="15dp"
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <Button
@@ -113,7 +118,8 @@
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/register"
             android:textAllCaps="false"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"/>
 
         <LinearLayout
             android:layout_width="wrap_content"

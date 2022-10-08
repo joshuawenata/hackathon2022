@@ -4,72 +4,96 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardlowongan"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_gravity="center"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        card_view:cardCornerRadius="20dp"
-        android:layout_marginVertical="2dp"
-        android:background="@drawable/round_btt_white">
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal"
+        >
 
-        <TextView
-            android:id="@+id/componentcardlowongan_namaUMKM"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="Nama UMKM"
-            android:fontFamily="@font/kanit_bold"
-            android:textSize="15sp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/card"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="-"
-            android:fontFamily="@font/kanit_bold"
-            android:textSize="15sp"
-            android:layout_marginLeft="130dp"
-            android:layout_marginTop="10dp"
-            />
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:paddingHorizontal="5dp"
+                >
 
-        <TextView
-            android:id="@+id/componentcardlowongan_lokasi"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="Lokasi"
-            android:fontFamily="@font/kanit_bold"
-            android:textSize="15sp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="10dp"
-            />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/componentcardlowongan_deskripsi"
-            android:layout_width="220dp"
-            android:layout_height="25dp"
-            android:text="Deskripsi"
-            android:fontFamily="@font/kanit_regular"
-            android:textSize="15sp"
-            android:layout_marginTop="35dp"
-            android:layout_marginLeft="30dp"
-            />
+                    <TextView
+                        android:id="@+id/componentcardlowongan_namaUMKM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama UMKM"
+                        android:fontFamily="@font/kanit_bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/figma_gray"
+                        />
 
-        <TextView
-            android:id="@+id/lamar"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="Lamar"
-            android:fontFamily="@font/kanit_bold"
-            android:textSize="15sp"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="300dp"
-            android:textColor="@color/baseBlue"
-            android:onClick="intoLamar"
-            />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:fontFamily="@font/kanit_bold"
+                        android:textSize="15sp"
+                        android:layout_marginHorizontal="15dp"
+                        android:textColor="@color/figma_gray"
+                        />
 
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/componentcardlowongan_lokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi"
+                        android:fontFamily="@font/kanit_bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/figma_gray"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/componentcardlowongan_deskripsi"
+                    android:maxWidth="220dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deskripsi"
+                    android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lamar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lamar"
+                android:layout_weight="1"
+                android:fontFamily="@font/kanit_bold"
+                android:textSize="15sp"
+                android:textColor="@color/baseBlue"
+                android:onClick="intoLamar"
+                android:layout_marginRight="30dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

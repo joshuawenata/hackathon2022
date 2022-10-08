@@ -104,7 +104,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="15dp"
+            android:layout_marginHorizontal="20dp"
             >
 
             <androidx.recyclerview.widget.RecyclerView
@@ -112,7 +112,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:itemCount="8"
-                tools:listitem="@layout/recycler_view_item_3" />
+                tools:listitem="@layout/recycler_view_item_3"
+                />
 
         </LinearLayout>
 

@@ -77,7 +77,8 @@
                 android:fontFamily="@font/kanit_regular"
                 android:hint="@string/nama_supplier"
                 android:paddingHorizontal="15dp"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/activityaddsupplier_inputLokasi"
@@ -89,7 +90,8 @@
                 android:fontFamily="@font/kanit_regular"
                 android:hint="Lokasi"
                 android:paddingHorizontal="15dp"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
 
 
             <EditText
@@ -102,7 +104,8 @@
                 android:fontFamily="@font/kanit_regular"
                 android:hint="@string/deskripsi"
                 android:paddingHorizontal="15dp"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
 
 
             <LinearLayout
