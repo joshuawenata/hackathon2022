@@ -333,11 +333,10 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_supplier_putih"
                 android:layout_marginHorizontal="25dp"
                 android:background="@null"
                 android:onClick="intoSupplier"
-                />
+                android:src="@drawable/icon_supplier_putih" />
 
         </LinearLayout>
 
@@ -362,11 +361,10 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_akun_putih"
                 android:layout_marginHorizontal="25dp"
                 android:background="@null"
                 android:onClick="intoProfile"
-                />
+                android:src="@drawable/icon_akun_putih" />
 
         </LinearLayout>
 
