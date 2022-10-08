@@ -52,7 +52,7 @@
             <!--            SEARCH SORT      -->
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/forum_round"
@@ -67,7 +67,7 @@
 
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/round_btt_white"
                     android:fontFamily="@font/kanit_regular"
@@ -103,7 +103,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             >
 
@@ -111,7 +111,8 @@
                 android:id="@+id/activitysupplier_recycleviewsupplier"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                />
+                tools:itemCount="8"
+                tools:listitem="@layout/recycler_view_item_3" />
 
         </LinearLayout>
 

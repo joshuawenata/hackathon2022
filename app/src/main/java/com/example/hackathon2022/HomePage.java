@@ -37,8 +37,8 @@ public class HomePage extends AppCompatActivity {
     }
 
     protected void initComponents() {
-        RecyclerView recyclerView = findViewById(R.id.activityhome_recycleviewtop);
-        RecyclerView recyclerViewterdekat = findViewById(R.id.activityhome_recycleviewnear);
+        RecyclerView recyclerWeeklyPopularForum = findViewById(R.id.activityhome_recyclerweeklypopularforum);
+        RecyclerView recyclerTopForum = findViewById(R.id.activityhome_recyclertopforum);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
@@ -50,15 +50,15 @@ public class HomePage extends AppCompatActivity {
                     newList.add(postSnapshot.getValue(ObjectForum.class));
                 }
 
-                recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
+                recyclerWeeklyPopularForum.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 ForumAdapterTop TopAdapter = new ForumAdapterTop(context, newList);
-                recyclerView.setAdapter(TopAdapter);
+                recyclerWeeklyPopularForum.setAdapter(TopAdapter);
 
                 TopAdapter.notifyDataSetChanged();
 
-                recyclerViewterdekat.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
+                recyclerTopForum.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 ForumAdapterNear NearAdapter = new ForumAdapterNear(context, newList);
-                recyclerViewterdekat.setAdapter(NearAdapter);
+                recyclerTopForum.setAdapter(NearAdapter);
 
                 NearAdapter.notifyDataSetChanged();
             }

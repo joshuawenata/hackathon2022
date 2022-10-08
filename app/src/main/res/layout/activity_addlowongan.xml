@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,90 +7,162 @@
     android:background="@color/backgroundlowongan"
     tools:context=".addlowongan">
 
-
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:scaleType="fitXY"
-        android:src="@drawable/add_lowongan_asset1" />
+        android:src="@drawable/add_lowongan_asset1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginHorizontal="30dp">
+        android:weightSum="12"
+        >
 
-        <TextView
+        <!--    TOP BAR     -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_bold"
-            android:text="Tambah Lowongan"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"
-            android:textSize="35sp"
-            android:layout_marginVertical="10dp"
-            />
+            android:layout_alignParentTop="true"
+            android:background="@color/lowongan"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:layout_weight="1"
+            >
 
-        <EditText
-            android:id="@+id/activityaddlowongan_inputnamalowongan"
-            android:hint="Nama lowongan"
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="back"
+                app:srcCompat="@drawable/arrow_back"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/kanit_semibold"
+                android:text="Tambah Lowongan"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:background="@drawable/round_edittext"
-            android:textSize="15sp"
-            android:paddingHorizontal="15dp"
-            android:fontFamily="@font/kanit_regular"
-            android:layout_marginVertical="5dp"
-            />
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="6"
+            >
 
-        <EditText
-            android:id="@+id/activityaddlowongan_inputlokasilowongan"
-            android:hint="Lokasi"
+            <EditText
+                android:id="@+id/activityaddlowongan_inputnamalowongan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/round_edittext"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/kanit_regular"
+                android:hint="Nama lowongan"
+                android:paddingHorizontal="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:id="@+id/activityaddlowongan_inputlokasilowongan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/round_edittext"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/kanit_regular"
+                android:hint="Lokasi"
+                android:paddingHorizontal="15dp"
+                android:textSize="15sp" />
+
+
+            <EditText
+                android:id="@+id/activityaddlowongan_inputDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/description_column"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/kanit_regular"
+                android:hint="Deskripsi lowongan . . ."
+                android:paddingHorizontal="15dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <!--        BTT LAYOUT      -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/white"
-            android:background="@drawable/round_edittext"
-            android:textSize="15sp"
-            android:paddingHorizontal="15dp"
-            android:fontFamily="@font/kanit_regular"
-            android:layout_marginVertical="5dp"
-            />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:weightSum="4"
+            >
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
 
-        <EditText
-            android:id="@+id/activityaddlowongan_inputDeskripsi"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginVertical="5dp"
-            android:background="@drawable/description_column"
-            android:backgroundTint="@color/white"
-            android:fontFamily="@font/kanit_regular"
-            android:hint="@string/deskripsi"
-            android:paddingHorizontal="15dp"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/activityaddforum_btnTambahForum"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/round_btt_lowongan"
+                android:fontFamily="@font/kanit_semibold"
+                android:text="Tambah forum"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:onClick="AddForum"
+                tools:ignore="OnClick"
+                android:layout_weight="2"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/activityaddlowongan_btnTambahLowongan"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/round_btt_white"
-        android:backgroundTint="@color/buttonlowongan"
-        android:fontFamily="@font/kanit_semibold"
-        android:onClick="AddLowongan"
-        android:text="Tambah lowongan"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
+
+<!--    <Button-->
+<!--        android:id="@+id/activityaddlowongan_btnTambahLowongan"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="25dp"-->
+<!--        android:background="@drawable/round_btt_white"-->
+<!--        android:backgroundTint="@color/buttonlowongan"-->
+<!--        android:fontFamily="@font/kanit_semibold"-->
+<!--        android:onClick="AddLowongan"-->
+<!--        android:text="Tambah lowongan"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/white" />-->
 
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

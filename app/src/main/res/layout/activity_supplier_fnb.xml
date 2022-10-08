@@ -104,7 +104,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="match_parent"
             android:layout_marginHorizontal="15dp"
             >
 
@@ -112,7 +112,8 @@
                 android:id="@+id/activitysupplier_recycleviewsupplier"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                />
+                tools:itemCount="8"
+                tools:listitem="@layout/recycler_view_item_8" />
 
         </LinearLayout>
 

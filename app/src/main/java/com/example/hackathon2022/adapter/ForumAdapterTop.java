@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class ForumAdapterTop extends RecyclerView.Adapter<ForumAdapterTop.ForumViewHolder>{
 
     Context context;
-    ArrayList<ObjectForum> ForumList;
+    ArrayList<ObjectForum> forumList;
 
     public ForumAdapterTop(Context context, ArrayList<ObjectForum> newList) {
         this.context = context;
-        this.ForumList = newList;
+        this.forumList = newList;
     }
 
     @NonNull
@@ -32,16 +32,17 @@ public class ForumAdapterTop extends RecyclerView.Adapter<ForumAdapterTop.ForumV
 
     @Override
     public void onBindViewHolder(@NonNull ForumViewHolder holder, int position) {
-        holder.txtJudul.setText(ForumList.get(position).getJudul());
-        holder.txtPertanyaan.setText(ForumList.get(position).getPertanyaan());
+        holder.txtJudul.setText(forumList.get(position).getJudul());
+        holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
     }
 
+    private final int limit = 2;
     @Override
     public int getItemCount() {
-        if(ForumList.size()>=2){
-            return 2;
+        if(forumList.size() > limit){
+            return limit;
         }else{
-            return ForumList.size();
+            return forumList.size();
         }
     }
 

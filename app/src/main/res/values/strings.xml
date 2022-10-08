@@ -5,7 +5,7 @@
 
     <!--    WELCOME     -->
     <string name="welcome_title">Selamat Datang di Kamifriend!</string>
-    <string name="welcome_tagline">Teman usaha yang selalu ada!</string>
+    <string name="welcome_tagline">Teman UMKM yang selalu ada!</string>
     <string name="welcome_regis_btt_text">Daftarkan akun baru</string>
     <string name="welcome_login_btt_text">Masuk</string>
     <!--    welcome asset   -->
@@ -16,10 +16,10 @@
     <string name="register_et_email">Nomor handphone anda</string>
     <string name="register_et_password">Masukkan kata kunci</string>
     <string name="register_et_confirm">Konfirmasi kata kunci</string>
-    <string name="register_tagline">Mulai buka usaha bersama kami!</string>
+    <string name="register_tagline">Mulai perjalanan UMKM anda bersama kami!</string>
 
     <!--    LOGIN      -->
-    <string name="login_tagline">Lanjutkan perjalanan usaha anda bersama kami!</string>
+    <string name="login_tagline">Lanjutkan perjalanan UMKM anda bersama Kamifriend!</string>
     <string name="not_have_an_account">Tidak punya akun?</string>
     <string name="registrasi">Registrasi</string>
     <string name="sudah_punya_akun">Sudah punya akun?</string>
@@ -41,6 +41,6 @@
     <string name="tambah_supplier">Tambah Supplier</string>
     <string name="forum">Forum</string>
     <string name="tambah_forum">Tambah forum</string>
-    <string name="tambah_dari_perangkat">Tambah dari perangkat</string>
+    <string name="tambah_dari_perangkat">Tambah gambar profil dari perangkat</string>
     <string name="nama_supplier">Nama supplier</string>
 </resources>

@@ -44,11 +44,13 @@
 
         <!--        CONTAINER FOR FILTER BTT    -->
         <LinearLayout
-            android:layout_width="370dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            >
 
             <!--            SEARCH SORT      -->
             <LinearLayout
@@ -105,581 +107,85 @@
 
         <!--        CARDS HERE      -->
         <LinearLayout
-            android:layout_width="370dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="20dp"
             >
 
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!--            CARDS ENTITY     -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:layout_marginVertical="5dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="Bagaimana caranya mendaftar NPWP?"
-                    android:textColor="@color/figma_text"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="420 diskusi"
-                        android:textColor="@color/figma_second_text"
-                        android:textSize="11sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/forum_star"
-                            android:layout_marginHorizontal="3dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="3.6rb"
-                            android:textColor="@color/figma_second_text"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
+                android:layout_height="match_parent"
+                tools:itemCount="8"
+                tools:listitem="@layout/recycler_view_item_6">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--            &lt;!&ndash;            CARDS ENTITY     &ndash;&gt;-->
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@drawable/card"-->
+            <!--                android:gravity="center"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingHorizontal="10dp"-->
+            <!--                android:paddingVertical="5dp"-->
+            <!--                android:layout_marginVertical="5dp"-->
+            <!--                >-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:fontFamily="@font/kanit_semibold"-->
+            <!--                    android:text="Bagaimana caranya mendaftar NPWP?"-->
+            <!--                    android:textColor="@color/figma_text"-->
+            <!--                    android:textSize="14sp" />-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:orientation="horizontal">-->
+
+            <!--                    <TextView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:fontFamily="@font/kanit_light"-->
+            <!--                        android:text="420 diskusi"-->
+            <!--                        android:textColor="@color/figma_second_text"-->
+            <!--                        android:textSize="11sp" />-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_gravity="right"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:gravity="right"-->
+            <!--                        android:orientation="horizontal"-->
+            <!--                        tools:ignore="RtlHardcoded">-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            app:srcCompat="@drawable/forum_star"-->
+            <!--                            android:layout_marginHorizontal="3dp"-->
+            <!--                            />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/kanit_light"-->
+            <!--                            android:text="3.6rb"-->
+            <!--                            android:textColor="@color/figma_second_text"-->
+            <!--                            android:textSize="11sp" />-->
+            <!--                    </LinearLayout>-->
+
+            <!--                </LinearLayout>-->
+
+            <!--            </LinearLayout>-->
 
         </LinearLayout>
 

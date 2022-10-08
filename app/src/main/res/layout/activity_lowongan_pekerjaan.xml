@@ -1,192 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundlowongan"
+    android:background="@color/bgaabu"
     tools:context=".LowonganPekerjaan">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
         android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/lowongan_pekerjaan_asset1" />
 
-    <LinearLayout
-        android:layout_width="370dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="100dp"
         >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingVertical="5dp"
-            >
-
-            <TextView
-                android:id="@+id/lbllowongan1"
-                android:text="@string/lowongan_pekerjaan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit_bold"
-                android:textSize="30sp"
-                android:textColor="@color/white"
-                android:textAlignment="textStart"
-                />
-
-            <TextView
-                android:id="@+id/lbllowongan2"
-                android:text="@string/cari_pekerjaan_yang_sesuai_untuk_anda"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit_regular"
-                android:textSize="15sp"
-                android:textColor="@color/white"
-                android:textAlignment="textStart"
-                />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingVertical="5dp"
-            android:layout_marginTop="20dp"
-            >
-
-            <TextView
-                android:id="@+id/lbllowongan3"
-                android:text="@string/lowongan_pekerjaan_yang_tersedia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit_bold"
-                android:textSize="17sp"
-                android:textColor="@color/baseBlue"
-                />
-
-            <TextView
-                android:id="@+id/activitylowongan_lihatsemua"
-                android:text="@string/lihat_semua"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit_regular"
-                android:textSize="12sp"
-                android:textColor="@color/white"
-                android:textAlignment="textEnd"
-                android:clickable="true"
-                android:onClick="LihatSemua"
-                tools:ignore="OnClick"
-                android:focusable="true" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activitylowongan_recycleviewlowongan"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="370dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:id="@+id/lbllowongan1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kanit_bold"
+                            android:text="@string/lowongan_pekerjaan"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/lbllowongan2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kanit_regular"
+                            android:text="@string/cari_pekerjaan_yang_sesuai_untuk_anda"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:id="@+id/lbllowongan3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kanit_bold"
+                            android:text="@string/lowongan_pekerjaan_yang_tersedia"
+                            android:textColor="@color/baseBlue"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/activitylowongan_lihatsemua"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/kanit_regular"
+                            android:onClick="LihatSemua"
+                            android:text="@string/lihat_semua"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            tools:ignore="OnClick" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/activitylowongan_recycleviewlowongan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--        APP BAR         -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/appbar"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:background="@null"
+                        android:src="@drawable/icon_forum_putih" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:background="@null"
+                        android:onClick="intoSupplier"
+                        android:src="@drawable/icon_supplier_biru" />
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:background="@null"
+                        android:onClick="intoLowongan"
+                        android:src="@drawable/icon_lowongan_putih" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:background="@null"
+                        android:src="@drawable/icon_akun_putih" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shadow_round"
+                    android:elevation="3dp"
+                    android:onClick="intoAdd"
+                    android:src="@drawable/lowongan_pekerjaan_asset3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="25dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/lowongan_pekerjaan_asset2" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="top"
-        android:layout_marginBottom="5dp"
-        >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_forum_putih"
-                android:layout_marginHorizontal="25dp"
-                android:background="@null"
-                android:onClick="intoForum"
-                />
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_supplier_putih"
-                android:layout_marginHorizontal="25dp"
-                android:background="@null"
-                android:onClick="intoSupplier"
-                />
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_lowongan_biru"
-                android:layout_marginHorizontal="25dp"
-                android:background="@null"
-                />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_akun_putih"
-                android:layout_marginHorizontal="25dp"
-                android:background="@null"
-                />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/shadow_round"
-        android:elevation="3dp"
-        android:onClick="intoAdd"
-        android:src="@drawable/lowongan_pekerjaan_asset3" />
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

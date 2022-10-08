@@ -57,9 +57,10 @@
 
         <!--        CONTAINER FOR FILTER BTT    -->
         <LinearLayout
-            android:layout_width="370dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="20dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -118,13 +119,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            >
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activitytopsupplier_recycleviewsupplier"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                />
+                tools:itemCount="8"
+                tools:listitem="@layout/recycler_view_item_9" />
 
         </LinearLayout>
 
