@@ -78,6 +78,10 @@ public class LowonganPekerjaan extends AppCompatActivity {
         startActivity(new Intent(this, addlowongan.class));
     }
 
+    public void intoLamar(View view) {
+        startActivity(new Intent(this, LamarPekerjaan.class));
+    }
+
     public void LihatSemua(View view) {
         startActivity(new Intent(this, AllLowongan.class));
     }

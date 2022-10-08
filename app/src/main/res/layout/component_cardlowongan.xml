@@ -67,6 +67,7 @@
             android:layout_marginTop="25dp"
             android:layout_marginLeft="300dp"
             android:textColor="@color/baseBlue"
+            android:onClick="intoLamar"
             />
 
     </androidx.cardview.widget.CardView>

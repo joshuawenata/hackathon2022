@@ -101,6 +101,7 @@
                 android:id="@+id/activitylowongan_recycleviewlowongan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                tools:listitem="@layout/component_cardlowongan"
                 />
 
         </LinearLayout>
