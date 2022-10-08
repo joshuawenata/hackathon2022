@@ -11,9 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectSupplier;
-import com.example.hackathon2022.R;
-import com.example.hackathon2022.adapter.SupplierAdapter;
-import com.example.hackathon2022.adapter.TopSupplierAdapter;
+import com.example.hackathon2022.adapter.AllSupplierAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -51,7 +49,7 @@ public class TopSupplier extends AppCompatActivity {
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                TopSupplierAdapter myAdapter = new TopSupplierAdapter(context, newList);
+                AllSupplierAdapter myAdapter = new AllSupplierAdapter(context, newList);
                 recyclerView.setAdapter(myAdapter);
                 myAdapter.notifyDataSetChanged();
             }

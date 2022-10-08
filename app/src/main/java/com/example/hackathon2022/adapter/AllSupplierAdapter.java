@@ -3,7 +3,6 @@ package com.example.hackathon2022.adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,14 +23,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class TopSupplierAdapter extends RecyclerView.Adapter<TopSupplierAdapter.SupplierViewHolder>{
+public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.SupplierViewHolder>{
 
     StorageReference storageReference;
 
     Context context;
     ArrayList<ObjectSupplier> SupplierList;
 
-    public TopSupplierAdapter(Context context, ArrayList<ObjectSupplier> newList) {
+    public AllSupplierAdapter(Context context, ArrayList<ObjectSupplier> newList) {
         this.context = context;
         this.SupplierList = newList;
     }
@@ -40,7 +39,7 @@ public class TopSupplierAdapter extends RecyclerView.Adapter<TopSupplierAdapter.
     @Override
     public SupplierViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.component_cardsupplier,parent,false);
-        return new TopSupplierAdapter.SupplierViewHolder(v);
+        return new AllSupplierAdapter.SupplierViewHolder(v);
     }
 
     @Override
