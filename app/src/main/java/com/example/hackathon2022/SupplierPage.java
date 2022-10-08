@@ -84,4 +84,8 @@ public class SupplierPage extends AppCompatActivity {
     public void TopSupplier(View view) { startActivity(new Intent(this, TopSupplier.class)); }
 
     public void NearSupplier(View view) { startActivity(new Intent(this, NearSupplier.class)); }
+
+    public void intoProfile(View view) {
+        startActivity(new Intent(this, Profile.class));
+    }
 }

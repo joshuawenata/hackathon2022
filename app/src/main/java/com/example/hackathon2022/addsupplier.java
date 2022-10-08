@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -43,7 +44,7 @@ public class addsupplier extends AppCompatActivity {
     private final int PICK_IMAGE_REQUEST = 22;
 
     private EditText txtNama, txtLokasi, txtDeskripsi;
-    private Button btnUploadAddSupplier;
+    private ImageButton btnUploadAddSupplier;
     private ImageView imageprofile;
     ProgressDialog pd;
 

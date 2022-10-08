@@ -78,6 +78,7 @@
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"
+                android:textColorHint="@color/figma_gray"
                 />
 
             <EditText
@@ -91,7 +92,8 @@
                 android:hint="Lokasi"
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/figma_gray"/>
 
 
             <EditText
@@ -105,7 +107,8 @@
                 android:hint="Deskripsi lowongan . . ."
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/figma_gray"/>
 
         </LinearLayout>
 
@@ -124,19 +127,16 @@
                 android:layout_weight="1"
                 />
 
-            <Button
+            <ImageButton
                 android:id="@+id/activityaddlowongan_btnTambahLowongan"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
-                android:background="@drawable/round_btt_lowongan"
-                android:fontFamily="@font/kanit_semibold"
-                android:text="Tambah forum"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
                 android:onClick="AddForum"
                 tools:ignore="OnClick"
                 android:layout_weight="2"
+                android:src="@drawable/activityaddlowongan_btnadd"
+                android:background="@null"
                 />
 
             <LinearLayout

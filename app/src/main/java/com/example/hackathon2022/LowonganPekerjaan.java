@@ -86,5 +86,7 @@ public class LowonganPekerjaan extends AppCompatActivity {
         startActivity(new Intent(this, AllLowongan.class));
     }
 
-
+    public void intoProfile(View view) {
+        startActivity(new Intent(this, Profile.class));
+    }
 }

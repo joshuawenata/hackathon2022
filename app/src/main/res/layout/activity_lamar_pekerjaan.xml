@@ -77,7 +77,7 @@
 
                 <TextView
                     android:id="@+id/activitylamar_lblCV"
-                    android:layout_width="match_parent"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/round_edittext"
                     android:backgroundTint="@color/white"
@@ -85,19 +85,17 @@
                     android:hint="Tambahkan CV"
                     android:textSize="15sp"
                     android:layout_weight="1"
+                    android:textColorHint="@color/figma_gray"
+                    android:textColor="@color/black"
                     />
 
-                <Button
+                <ImageButton
                     android:id="@+id/activitylamar_TambahDariPerangkat"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/round_btt_white"
-                    android:backgroundTint="@color/buttonlowongan"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="@string/cari_file"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
                     android:layout_weight="1"
+                    android:src="@drawable/activiitylamar_btnfile"
                     />
             </LinearLayout>
 
@@ -112,6 +110,8 @@
                 android:hint="Perkenalkan diri anda . . ."
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
+                android:textColorHint="@color/figma_gray"
+                android:textColor="@color/black"
                 />
 
         </LinearLayout>
@@ -131,16 +131,13 @@
                 android:layout_weight="1"
                 />
 
-            <Button
+            <ImageButton
                 android:id="@+id/activitylamar_Lamar"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
-                android:background="@drawable/round_btt_lowongan"
-                android:fontFamily="@font/kanit_semibold"
-                android:text="Lamar"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:src="@drawable/activitylamar_btnlamar"
+                android:background="@null"
                 android:layout_weight="2"
                 />
 

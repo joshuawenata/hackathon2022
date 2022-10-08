@@ -32,13 +32,13 @@ public class PopularForum extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_lowongan);
+        setContentView(R.layout.activity_popular_forum);
 
         initComponents();
     }
 
     protected void initComponents() {
-        RecyclerView recyclerView = findViewById(R.id.activitylowongan_recycleviewlowongan);
+        RecyclerView recyclerView = findViewById(R.id.activitypopularforum_recycleviewpopularforum);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");

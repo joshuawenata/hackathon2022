@@ -79,6 +79,8 @@
                     android:hint="Apa yang ingin anda tanyakan?"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="7dp"
+                    android:textColorHint="@color/figma_gray"
+                    android:textColor="@color/black"
                     android:textSize="13sp" />
             </LinearLayout>
 
@@ -114,7 +116,7 @@
             >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activitynearsupplier_recycleviewsupplier"
+                android:id="@+id/activitytopforum_recycleviewtopforum"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:itemCount="8"

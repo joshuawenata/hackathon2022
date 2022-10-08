@@ -32,13 +32,13 @@ public class TopForum extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_lowongan);
+        setContentView(R.layout.activity_top_forum);
 
         initComponents();
     }
 
     protected void initComponents() {
-        RecyclerView recyclerView = findViewById(R.id.activitylowongan_recycleviewlowongan);
+        RecyclerView recyclerView = findViewById(R.id.activitytopforum_recycleviewtopforum);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");

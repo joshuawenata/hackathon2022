@@ -64,6 +64,7 @@
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
                 android:textSize="15sp"
+                android:textColorHint="@color/figma_gray"
                 android:textColor="@color/black"/>
 
             <EditText
@@ -78,6 +79,7 @@
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
                 android:textSize="15sp"
+                android:textColorHint="@color/figma_gray"
                 android:textColor="@color/black"/>
 
             <EditText
@@ -92,6 +94,7 @@
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
                 android:textSize="15sp"
+                android:textColorHint="@color/figma_gray"
                 android:textColor="@color/black"/>
 
             <EditText
@@ -106,20 +109,17 @@
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
                 android:textSize="15sp"
+                android:textColorHint="@color/figma_gray"
                 android:textColor="@color/black"/>
         </LinearLayout>
 
-        <Button
+        <ImageButton
             android:id="@+id/activityregister_btnDaftar"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="25dp"
-            android:background="@drawable/round_btt_primary"
-            android:fontFamily="@font/montserrat_semibold"
-            android:text="@string/register"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/primary"/>
+            android:src="@drawable/activityregister_button"
+            android:background="@null"/>
 
         <LinearLayout
             android:layout_width="wrap_content"

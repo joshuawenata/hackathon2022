@@ -96,7 +96,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp">
+            android:layout_height="140dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activitysupplier_recycleviewsupplier"
@@ -155,7 +155,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/activitysupplier_recycleviewsupplierterdekat"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="140dp"
                     tools:listitem="@layout/component_cardsupplier"
                     />
 
@@ -169,7 +169,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingVertical="5dp"
+            android:layout_marginVertical="20dp"
             >
 
             <TextView
@@ -178,7 +178,8 @@
                 android:fontFamily="@font/kanit_semibold"
                 android:text="Topik"
                 android:textColor="@color/figma_text"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -192,7 +193,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingHorizontal="19dp">
+                    android:paddingHorizontal="10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -213,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingHorizontal="19dp">
+                    android:paddingHorizontal="10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -234,7 +235,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingHorizontal="19dp">
+                    android:paddingHorizontal="10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -255,7 +256,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingHorizontal="19dp">
+                    android:paddingHorizontal="10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -305,7 +306,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_forum_putih"
-                android:layout_marginHorizontal="25dp"
+                android:layout_marginLeft="25dp"
                 android:background="@null"
                 android:onClick="intoForum"
                 tools:ignore="OnClick" />
@@ -332,7 +333,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_lowongan_putih"
-                android:layout_marginHorizontal="25dp"
+                android:layout_marginLeft="20dp"
                 android:background="@null"
                 android:onClick="intoLowongan"
                 />
@@ -343,6 +344,7 @@
                 android:src="@drawable/icon_akun_putih"
                 android:layout_marginHorizontal="25dp"
                 android:background="@null"
+                android:onClick="intoProfile"
                 />
 
         </LinearLayout>

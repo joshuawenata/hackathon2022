@@ -90,4 +90,7 @@ public class HomePage extends AppCompatActivity {
     public void intoTeratas(View view) {
         startActivity(new Intent(this, TopForum.class));
     }
+    public void intoProfile(View view) {
+        startActivity(new Intent(this, Profile.class));
+    }
 }

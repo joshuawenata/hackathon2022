@@ -82,6 +82,7 @@
                 android:paddingVertical="7dp"
                 android:paddingHorizontal="12dp"
                 android:textSize="13sp"
+                android:textColorHint="@color/figma_gray"
                 android:textColor="@color/black"/>
 
             <ImageView
@@ -124,7 +125,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:layout_marginVertical="2dp"
                 android:orientation="horizontal">
 
@@ -132,6 +133,7 @@
                     android:id="@+id/activityhome_recyclerweeklypopularforum"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    tools:listitem="@layout/component_cardforum"
                     />
 
 
@@ -167,7 +169,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:layout_marginVertical="2dp"
                 android:orientation="horizontal">
 
@@ -175,6 +177,7 @@
                     android:id="@+id/activityhome_recyclertopforum"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    tools:listitem="@layout/component_cardforum"
                     />
 
             </LinearLayout>
@@ -185,8 +188,9 @@
         <!--        TOPIK       -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_marginVertical="20dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -194,7 +198,8 @@
                 android:fontFamily="@font/kanit_semibold"
                 android:text="Topik"
                 android:textColor="@color/figma_text"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -208,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingHorizontal="19dp">
+                    android:paddingHorizontal="10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -229,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingHorizontal="19dp">
+                    android:paddingHorizontal="10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -250,7 +255,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingHorizontal="19dp">
+                    android:paddingHorizontal="10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -271,7 +276,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingHorizontal="19dp">
+                    android:paddingHorizontal="10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -321,7 +326,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_forum_biru"
-                android:layout_marginHorizontal="25dp"
+                android:layout_marginLeft="25dp"
                 android:background="@null"
                 />
 
@@ -349,7 +354,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_lowongan_putih"
-                android:layout_marginHorizontal="25dp"
+                android:layout_marginLeft="20dp"
                 android:background="@null"
                 android:onClick="intoLowongan"
                 />
@@ -360,6 +365,7 @@
                 android:src="@drawable/icon_akun_putih"
                 android:layout_marginHorizontal="25dp"
                 android:background="@null"
+                android:onClick="intoProfile"
                 />
 
         </LinearLayout>

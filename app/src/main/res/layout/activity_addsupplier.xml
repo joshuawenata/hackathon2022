@@ -78,7 +78,8 @@
                 android:hint="@string/nama_supplier"
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/figma_gray"/>
 
             <EditText
                 android:id="@+id/activityaddsupplier_inputLokasi"
@@ -91,7 +92,8 @@
                 android:hint="Lokasi"
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/figma_gray"/>
 
 
             <EditText
@@ -105,7 +107,8 @@
                 android:hint="@string/deskripsi"
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/figma_gray"/>
 
 
             <LinearLayout
@@ -119,24 +122,20 @@
 
                 <ImageView
                     android:id="@+id/activityaddsupplier_imageprofile"
-                    android:layout_width="match_parent"
+                    android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_margin="15dp"
-                    android:layout_weight="4"
+                    android:layout_weight="1"
                     android:width="10dp"
                     android:src="@drawable/avatar"/>
 
-                <Button
+                <ImageButton
                     android:id="@+id/activityaddsupplier_btnTambahDariPerangkat"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/round_btt_white"
-                    android:backgroundTint="@color/buttonsupplier"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:text="@string/tambah_dari_perangkat"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white" />
+                    android:layout_marginVertical="10dp"
+                    android:background="@null"
+                    android:src="@drawable/activitysupplier_btnfile"/>
 
             </LinearLayout>
 
@@ -157,20 +156,17 @@
                 android:layout_weight="1"
                 />
 
-            <Button
+            <ImageButton
                 android:id="@+id/activityaddsupplier_btnTambahSupplier"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
-                android:background="@drawable/round_btt_white"
-                android:backgroundTint="@color/buttonsupplier"
-                android:fontFamily="@font/kanit_semibold"
+                android:background="@null"
                 android:onClick="AddSupplier"
-                android:text="@string/tambah_supplier"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
                 tools:ignore="OnClick"
                 android:layout_weight="2"
+                android:src="@drawable/activityaddsupplier_btnadd"
                 />
 
             <LinearLayout
