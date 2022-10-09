@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.hackathon2022.data.UserRepository;
@@ -14,7 +15,7 @@ import com.example.hackathon2022.data.UserRepository;
 public class RegisterPage extends AppCompatActivity implements View.OnClickListener{
 
     private EditText txtNama, txtNomor, txtPassword, txtConfirmPassword;
-    private Button btnDaftar;
+    private ImageButton btnDaftar;
     private TextView txtMasuk;
 
     private void initComponents() {

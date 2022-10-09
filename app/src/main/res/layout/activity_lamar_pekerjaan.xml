@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:clickable="true"
-                android:onClick="back"
+                android:onClick="backtoLowongan"
                 app:srcCompat="@drawable/arrow_back"
                 tools:ignore="OnClick" />
 

@@ -19,7 +19,7 @@ public class WelcomePage extends AppCompatActivity {
         startActivity(new Intent(this, RegisterPage.class));
     }
     public void intoLoginPage(View view){
-        startActivity(new Intent(this, HomePage.class));
+        startActivity(new Intent(this, LoginPage.class));
     }
 
 }

@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:fontFamily="@font/kanit_semibold"
-                android:text="FnB"
+                android:text="Modal Usaha"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </LinearLayout>

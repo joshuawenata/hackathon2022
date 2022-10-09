@@ -64,4 +64,7 @@ public class addlowongan extends AppCompatActivity {
 
     }
 
+    public void backtoLowongan(View view) {
+        startActivity(new Intent(this, LowonganPekerjaan.class));
+    }
 }

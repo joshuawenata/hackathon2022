@@ -25,4 +25,8 @@ public class Profile extends AppCompatActivity {
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
     }
+
+    public void Logout(View view) {
+        startActivity(new Intent(this, WelcomePage.class));
+    }
 }

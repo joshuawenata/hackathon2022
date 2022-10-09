@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ import com.example.hackathon2022.interfaces.FinisihListener;
 public class LoginPage extends AppCompatActivity implements View.OnClickListener, FinisihListener<User> {
 
     private EditText txtNomor, txtPassword;
-    private Button btnMasuk;
+    private ImageButton btnMasuk;
     private TextView txtRegistrasi;
 
     private void initComponents(){

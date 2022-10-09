@@ -58,7 +58,7 @@ public class UserRepository {
         if(!snapshot.exists()) return null;
 
         String nomor, nama, password;
-        snapshot.getChildren().iterator().next();
+        snapshot = snapshot.getChildren().iterator().next();
 
         nomor = snapshot.child("nomor").getValue(String.class);
         nama = snapshot.child("nama").getValue(String.class);
