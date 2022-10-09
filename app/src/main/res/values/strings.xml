@@ -43,4 +43,15 @@
     <string name="tambah_forum">Tambah forum</string>
     <string name="tambah_dari_perangkat">Tambah gambar profil dari perangkat</string>
     <string name="nama_supplier">Nama supplier</string>
+
+    <string name="topik">Pilih Berdasarkan Topik</string>
+    <string name="lihat_semua">Lihat semua</string>
+    <string name="forum_tagline">Berbagi cerita dan ide bersama teman UMKM lain</string>
+    <string name="forum_apa_yang_ingin_ditanyakan">Apa yang ingin anda tanyakan?</string>
+    <string name="forum_populer_minggu_ini">Forum populer minggu ini</string>
+    <string name="forum_teratas">Forum teratas</string>
+    <string name="modal_usaha">Modal usaha</string>
+    <string name="perizinan">Perizinan</string>
+    <string name="pemasaran">Pemasaran</string>
+    <string name="lainnya">Lainnya</string>
 </resources>

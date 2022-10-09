@@ -19,26 +19,18 @@
         <entry key="..\:/Hackathon2022/changes/app/src/main/res/layout/activity_top_forum.xml" value="0.25" />
         <entry key="..\:/Hackathon2022/changes/app/src/main/res/layout/activity_top_supplier.xml" value="0.25" />
         <entry key="..\:/Hackathon2022/changes/app/src/main/res/layout/activity_welcome_page.xml" value="0.10989583333333333" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_addforum.xml" value="0.15172101449275363" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_addlowongan.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_addsupplier.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_all_lowongan.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_lamar_pekerjaan.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_lowongan_pekerjaan.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_supplier_fnb.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_supplier_page.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_top_forum.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/activity_welcome_page.xml" value="0.25" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/component_cardforum.xml" value="0.264" />
-        <entry key="..\:/New folder/hackathon2022/app/src/main/res/layout/component_cardlowongan.xml" value="0.25" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/appbar.xml" value="0.3075" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/card.xml" value="0.3625" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/chat.xml" value="0.3515" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/description_column.xml" value="0.3605" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/forum_round.xml" value="0.3625" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.3515" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.3635" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" value="0.3635" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.3635" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/menu_bar.xml" value="0.3625" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/round_btt_forum.xml" value="0.3235" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/round_btt_lowongan.xml" value="0.3235" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/round_btt_primary.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/round_btt_white.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/drawable/round_edittext.xml" value="0.3625" />
@@ -51,11 +43,12 @@
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_addforum.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_addlowongan.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_addsupplier.xml" value="0.3625" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_all_lowongan.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_home_modalusaha.xml" value="0.3625" />
-        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_home_page.xml" value="0.33" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_home_page.xml" value="0.29891304347826086" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_lamar_pekerjaan.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_login_page.xml" value="0.3625" />
-        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_lowongan_pekerjaan.xml" value="0.3625" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_lowongan_pekerjaan.xml" value="0.33" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_near_supplier.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_popular_forum.xml" value="0.3625" />
@@ -63,13 +56,12 @@
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_register_page.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_supplier_fnb.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_supplier_page.xml" value="0.3625" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_testing.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_top_forum.xml" value="0.3484375" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_top_supplier.xml" value="0.3625" />
         <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/activity_welcome_page.xml" value="0.33" />
-        <entry key="..\:/hackathon2022/app/src/main/res/layout/activity_all_lowongan.xml" value="0.25" />
-        <entry key="..\:/hackathon2022/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
-        <entry key="..\:/hackathon2022/app/src/main/res/layout/recycler_view_item_1.xml" value="0.25" />
-        <entry key="..\:/hackathon2022/app/src/main/res/layout/recycler_view_item_2.xml" value="0.25" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/component_cardforum.xml" value="0.3625" />
+        <entry key="..\:/binus/LATIHAN/LOMBA ANDROID STUDIO/hackathon2022/app/src/main/res/layout/recycler_view_item_1.xml" value="0.3625" />
       </map>
     </option>
   </component>
@@ -78,5 +70,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
   </component>
 </project>
