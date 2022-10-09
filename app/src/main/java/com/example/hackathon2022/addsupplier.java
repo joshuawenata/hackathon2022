@@ -129,7 +129,7 @@ public class addsupplier extends AppCompatActivity {
         }
 
         if(flag){
-            String path = "images/" + UUID.randomUUID().toString();
+            String path = "supplierimages/" + UUID.randomUUID().toString();
             StorageReference childRef = storageReference.child(path);
             UploadTask uploadTask = childRef.putFile(filePath);
             uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

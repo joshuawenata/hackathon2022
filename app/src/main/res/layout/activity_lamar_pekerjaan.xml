@@ -100,14 +100,14 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/activitylamar_inputDeskripsi"
+                android:id="@+id/activitylamar_inputPertanyaan"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="5dp"
                 android:background="@drawable/description_column"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/kanit_regular"
-                android:hint="Perkenalkan diri anda . . ."
+                android:hint="Tambahkan Pertanyaan"
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
                 android:textColorHint="@color/figma_gray"
@@ -139,7 +139,8 @@
                 android:src="@drawable/activitylamar_btnlamar"
                 android:background="@null"
                 android:layout_weight="2"
-                />
+                android:onClick="AddLamar"
+                tools:ignore="OnClick" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

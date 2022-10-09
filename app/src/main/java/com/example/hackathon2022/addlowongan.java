@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.example.hackathon2022.R;
 import com.example.hackathon2022.data.LowonganRepository;
@@ -16,7 +17,7 @@ import com.example.hackathon2022.data.SupplierRepository;
 public class addlowongan extends AppCompatActivity {
 
     private EditText txtNama, txtLokasi, txtDeskripsi;
-    private Button btnAdd;
+    private ImageButton btnAdd;
 
     @SuppressLint("WrongViewCast")
     private void initComponents() {

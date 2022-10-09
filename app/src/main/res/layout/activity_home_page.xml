@@ -215,10 +215,12 @@
                     android:orientation="vertical"
                     android:paddingHorizontal="10dp">
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/forum_modal_usaha_icon" />
+                        app:srcCompat="@drawable/forum_modal_usaha_icon"
+                        android:onClick="intoModal"
+                        tools:ignore="OnClick" />
 
                     <TextView
                         android:layout_width="wrap_content"

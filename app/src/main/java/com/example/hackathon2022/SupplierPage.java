@@ -88,4 +88,8 @@ public class SupplierPage extends AppCompatActivity {
     public void intoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
     }
+
+    public void intoFnB(View view) {
+        startActivity(new Intent(this, SupplierFnb.class));
+    }
 }

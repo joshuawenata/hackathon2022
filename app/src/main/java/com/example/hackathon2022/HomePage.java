@@ -93,4 +93,8 @@ public class HomePage extends AppCompatActivity {
     public void intoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
     }
+
+    public void intoModal(View view) {
+        startActivity(new Intent(this, HomeModalusaha.class));
+    }
 }
