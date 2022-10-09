@@ -37,7 +37,7 @@ public class HomeModalusaha extends AppCompatActivity {
     }
 
     protected void initComponents() {
-        RecyclerView recyclerView = findViewById(R.id.activitytopforum_recycleviewtopforum);
+        RecyclerView recyclerView = findViewById(R.id.activityhomemodalusaha_recycleview);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
@@ -62,7 +62,7 @@ public class HomeModalusaha extends AppCompatActivity {
 
     }
 
-    public void back(View view) {
+    public void backtoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
     }
 }

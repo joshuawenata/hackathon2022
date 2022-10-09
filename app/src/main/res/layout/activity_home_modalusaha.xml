@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/arrow_back"
-                android:onClick="back"
+                android:onClick="backtoHome"
                 tools:ignore="OnClick"
                 android:background="@null"/>
 
@@ -111,7 +111,7 @@
             >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activitysupplier_recycleviewsupplier"
+                android:id="@+id/activityhomemodalusaha_recycleview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:itemCount="8"

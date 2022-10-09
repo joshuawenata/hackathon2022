@@ -21,7 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class SupplierFnb extends AppCompatActivity {
-
     ArrayList<ObjectSupplier> newList = new ArrayList<>();
     Context context = this;
 
@@ -37,7 +36,7 @@ public class SupplierFnb extends AppCompatActivity {
     }
 
     protected void initComponents() {
-        RecyclerView recyclerView = findViewById(R.id.activitytopsupplier_recycleviewsupplier);
+        RecyclerView recyclerView = findViewById(R.id.activitysupplierfnb_recycleview);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("suppliers");
@@ -63,6 +62,6 @@ public class SupplierFnb extends AppCompatActivity {
 
     }
 
-    public void back(View view) { startActivity(new Intent(this, SupplierPage.class)); }
+    public void backtoSupplier(View view) { startActivity(new Intent(this, SupplierPage.class)); }
 
 }

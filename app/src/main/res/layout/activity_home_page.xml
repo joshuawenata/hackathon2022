@@ -220,7 +220,8 @@
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/forum_modal_usaha_icon"
                         android:onClick="intoModal"
-                        tools:ignore="OnClick" />
+                        tools:ignore="OnClick"
+                        android:background="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"

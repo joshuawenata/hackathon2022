@@ -200,7 +200,8 @@
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/supplier_fnb"
                         android:onClick="intoFnB"
-                        tools:ignore="OnClick" />
+                        tools:ignore="OnClick"
+                        android:background="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"

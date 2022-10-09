@@ -40,6 +40,9 @@
             android:name=".SupplierPage"
             android:exported="false" />
         <activity
+            android:name=".SupplierFnb"
+            android:exported="false" />
+        <activity
             android:name=".LamarPekerjaan"
             android:exported="false" />
         <activity

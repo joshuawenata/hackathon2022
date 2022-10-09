@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/arrow_back"
                 android:background="@null"
-                android:onClick="back"
+                android:onClick="backtoSupplier"
                 tools:ignore="OnClick" />
 
             <TextView
@@ -112,7 +112,7 @@
             >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activitysupplier_recycleviewsupplier"
+                android:id="@+id/activitysupplierfnb_recycleview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:itemCount="8"
