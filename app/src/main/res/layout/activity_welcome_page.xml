@@ -105,22 +105,24 @@
 
                 <ImageButton
                     android:id="@+id/activitywelcome_btnDaftar"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="intoRegisterPage"
                     tools:ignore="OnClick"
                     android:background="@null"
-                    android:src="@drawable/activitywelcome_btn_welcome_daftar"
+                    android:src="@drawable/activitywelcome_btn_welcome_daftartemp"
                     android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
                     />
 
                 <ImageButton
                     android:id="@+id/activitywelcome_btnMasuk"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:src="@drawable/activitywelcome_btn_welcome_masuk"
+                    android:src="@drawable/activitywelcome_btn_welcome_masuktemp"
                     android:onClick="intoLoginPage"
+                    android:layout_gravity="center"
                     tools:ignore="OnClick" />
 
             </LinearLayout>

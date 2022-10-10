@@ -6,10 +6,12 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -39,6 +41,7 @@ public class addsupplier extends AppCompatActivity {
 
     private Uri filePath;
     private final int PICK_IMAGE_REQUEST = 22;
+    public static int temp = 0;
 
     private EditText txtNama, txtLokasi, txtKategori, txtDeskripsi;
     private ImageButton btnUploadAddSupplier;
@@ -131,22 +134,34 @@ public class addsupplier extends AppCompatActivity {
         }
 
         if(flag){
-            String path = "supplierimages/" + UUID.randomUUID().toString();
-            StorageReference childRef = storageReference.child(path);
-            UploadTask uploadTask = childRef.putFile(filePath);
-            uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    pd.dismiss();
-                    Toast.makeText(addsupplier.this, "Upload successful", Toast.LENGTH_SHORT).show();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    pd.dismiss();
-                    Toast.makeText(addsupplier.this, "Upload Failed -> " + e, Toast.LENGTH_SHORT).show();
-                }
-            });
+            if(filePath!=null){
+                temp = 0;
+            }else{
+                temp = 1;
+            }
+
+            String path;
+            if(temp==0){
+                path = "supplierimages/" + UUID.randomUUID().toString();
+                StorageReference childRef = storageReference.child(path);
+                UploadTask uploadTask = childRef.putFile(filePath);
+                uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        pd.dismiss();
+                        Toast.makeText(addsupplier.this, "Upload successful", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        pd.dismiss();
+                        Toast.makeText(addsupplier.this, "Upload Failed -> " + e, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }else{
+                temp = 0;
+                path = "avatar.png";
+            }
 
             SupplierRepository.insertSupplier(nama, lokasi, kategori, deskripsi, path);
             startActivity(new Intent(this, SupplierPage.class));

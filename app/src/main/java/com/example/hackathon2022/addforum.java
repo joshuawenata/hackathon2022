@@ -43,6 +43,7 @@ public class addforum extends AppCompatActivity {
 
     private Uri filePath;
     private final int PICK_IMAGE_REQUEST = 22;
+    public static int temp = 0;
 
     private EditText txtJudul, txtPertanyaan, txtKategori;
     private ImageButton btnUploadFile;
@@ -117,22 +118,32 @@ public class addforum extends AppCompatActivity {
         }
 
         if(flag){
-            String path = "forumfile/" + UUID.randomUUID().toString();
-            StorageReference childRef = storageReference.child(path);
-            UploadTask uploadTask = childRef.putFile(filePath);
-            uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    pd.dismiss();
-                    Toast.makeText(addforum.this, "Upload successful", Toast.LENGTH_SHORT).show();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    pd.dismiss();
-                    Toast.makeText(addforum.this, "Upload Failed -> " + e, Toast.LENGTH_SHORT).show();
-                }
-            });
+            if(filePath!=null){
+                temp = 0;
+            }else{
+                temp = 1;
+            }
+            String path;
+            if(temp==0){
+                path = "forumfile/" + UUID.randomUUID().toString();
+                StorageReference childRef = storageReference.child(path);
+                UploadTask uploadTask = childRef.putFile(filePath);
+                uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        pd.dismiss();
+                        Toast.makeText(addforum.this, "Upload successful", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        pd.dismiss();
+                        Toast.makeText(addforum.this, "Upload Failed -> " + e, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }else{
+                path = "";
+            }
 
             ForumRepository.insertForum(judul, kategori, pertanyaan, path);
             startActivity(new Intent(this, HomePage.class));

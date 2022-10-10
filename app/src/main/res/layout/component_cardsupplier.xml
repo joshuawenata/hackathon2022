@@ -51,7 +51,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kanit_semibold"
                         android:textColor="@color/figma_text"
-                        android:minWidth="100dp"
                         android:maxWidth="150dp"
                         android:maxHeight="20dp"
                         />
@@ -70,7 +69,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kanit_semibold"
                         android:textColor="@color/figma_text"
-                        android:minWidth="100dp"
                         android:maxWidth="150dp"
                         android:maxHeight="20dp"
                         />
