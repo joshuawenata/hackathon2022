@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hackathon2022</string>
+    <string name="app_name">Kamifriend</string>
     <string name="register">Daftar</string>
     <string name="login">Masuk</string>
 
@@ -55,4 +55,6 @@
     <string name="lainnya">Lainnya</string>
     <string name="supplier_pilihan_terbaik">Supplier pilihan terbaik</string>
     <string name="fnb">FnB</string>
+    <string name="daftar_akun_baru">Daftar akun baru</string>
+    <string name="strip">-</string>
 </resources>
