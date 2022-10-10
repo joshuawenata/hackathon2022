@@ -123,7 +123,7 @@ public class addsupplier extends AppCompatActivity {
             txtLokasi.setError("Silahkan masukan lokasi supplier");
             flag = false;
         }else if(kategori.isEmpty()){
-            txtKategori.setError("Silahkan masukan lokasi supplier");
+            txtKategori.setError("Silahkan masukan kategori supplier");
             flag = false;
         }else if(deskripsi.isEmpty()){
             txtDeskripsi.setError("Silahkan masukan deskripsi supplier");
