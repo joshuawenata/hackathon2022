@@ -27,7 +27,6 @@
     <string name="lowongan_pekerjaan">Lowongan Pekerjaan</string>
     <string name="cari_pekerjaan_yang_sesuai_untuk_anda">Cari UMKM yang sesuai untuk anda!</string>
     <string name="lowongan_pekerjaan_yang_tersedia">Lowongan pekerjaan yang tersedia</string>
-    <string name="lihat_semua">Lihat semua</string>
     <string name="nama_lowongan">Nama Lowongan</string>
     <string name="lokasi">Lokasi</string>
     <string name="deskripsi">Deskripsi</string>
@@ -54,4 +53,6 @@
     <string name="perizinan">Perizinan</string>
     <string name="pemasaran">Pemasaran</string>
     <string name="lainnya">Lainnya</string>
+    <string name="supplier_pilihan_terbaik">Supplier pilihan terbaik</string>
+    <string name="fnb">FnB</string>
 </resources>
