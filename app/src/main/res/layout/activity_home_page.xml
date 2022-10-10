@@ -346,6 +346,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             >
+
             <!--HOLDER NYA ITEM DI APP BAR-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -356,6 +357,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:background="@drawable/appbar"
+                android:weightSum="5"
                 >
 
                 <!--ICON FORUM-->
@@ -366,7 +368,7 @@
                     android:src="@drawable/icon_forum_biru"
                     android:onClick="intoHome"
                     android:layout_weight="1"
-                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginHorizontal="5dp"
                     tools:ignore="OnClick" />
                     <!-- ON CLICK NYA BELOM BENER!!!!  -->
 
@@ -378,14 +380,13 @@
                     android:onClick="intoSupplier"
                     android:src="@drawable/icon_supplier_putih"
                     android:layout_weight="1"
-                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginHorizontal="5dp"
                     tools:ignore="OnClick" />
 
                 <!--NGASIH GAP-->
                 <LinearLayout
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     />
 
                 <!--ICON LOWONGAN-->
@@ -394,9 +395,9 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:onClick="intoLowongan"
-                    android:src="@drawable/icon_lowongan_putih"
+                    android:src="@drawable/icon_jasa_putih"
                     tools:ignore="OnClick"
-                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginHorizontal="5dp"
                     android:layout_weight="1"
                     />
 
@@ -408,7 +409,7 @@
                     android:src="@drawable/icon_akun_putih"
                     android:onClick="intoProfile"
                     android:layout_weight="1"
-                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginHorizontal="5dp"
                     />
             </LinearLayout>
 
@@ -427,5 +428,4 @@
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
