@@ -6,9 +6,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -21,7 +19,6 @@ import com.example.hackathon2022.data.SupplierRepository;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -43,7 +40,7 @@ public class addsupplier extends AppCompatActivity {
     private Uri filePath;
     private final int PICK_IMAGE_REQUEST = 22;
 
-    private EditText txtNama, txtLokasi, txtDeskripsi;
+    private EditText txtNama, txtLokasi, txtKategori, txtDeskripsi;
     private ImageButton btnUploadAddSupplier;
     private ImageView imageprofile;
     ProgressDialog pd;
@@ -53,6 +50,7 @@ public class addsupplier extends AppCompatActivity {
         pd.setMessage("Uploading....");
         txtNama = findViewById(R.id.activityaddsupplier_inputnamasupplier);
         txtLokasi = findViewById(R.id.activityaddsupplier_inputLokasi);
+        txtKategori = findViewById(R.id.activityaddsupplier_inputKategori);
         txtDeskripsi = findViewById(R.id.activityaddsupplier_inputDeskripsi);
         btnUploadAddSupplier = findViewById(R.id.activityaddsupplier_btnTambahDariPerangkat);
         imageprofile = findViewById(R.id.activityaddsupplier_imageprofile);
@@ -110,10 +108,11 @@ public class addsupplier extends AppCompatActivity {
     }
 
     public void AddSupplier(View view) {
-        String nama, lokasi, deskripsi;
+        String nama, lokasi, kategori, deskripsi;
 
         nama = txtNama.getText().toString();
         lokasi = txtLokasi.getText().toString();
+        kategori = txtKategori.getText().toString();
         deskripsi = txtDeskripsi.getText().toString();
 
         boolean flag = true;
@@ -122,6 +121,9 @@ public class addsupplier extends AppCompatActivity {
             flag = false;
         }else if(lokasi.isEmpty()){
             txtLokasi.setError("Silahkan masukan lokasi supplier");
+            flag = false;
+        }else if(kategori.isEmpty()){
+            txtKategori.setError("Silahkan masukan lokasi supplier");
             flag = false;
         }else if(deskripsi.isEmpty()){
             txtDeskripsi.setError("Silahkan masukan deskripsi supplier");
@@ -146,7 +148,7 @@ public class addsupplier extends AppCompatActivity {
                 }
             });
 
-            SupplierRepository.insertSupplier(nama, lokasi, deskripsi, path);
+            SupplierRepository.insertSupplier(nama, lokasi, kategori, deskripsi, path);
             startActivity(new Intent(this, SupplierPage.class));
         }
 

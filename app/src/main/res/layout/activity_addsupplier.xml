@@ -95,6 +95,19 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/figma_gray"/>
 
+            <EditText
+                android:id="@+id/activityaddsupplier_inputKategori"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/round_edittext"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/kanit_regular"
+                android:hint="Kategori"
+                android:paddingHorizontal="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/figma_gray"/>
 
             <EditText
                 android:id="@+id/activityaddsupplier_inputDeskripsi"
@@ -109,7 +122,6 @@
                 android:textSize="15sp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/figma_gray"/>
-
 
             <LinearLayout
                 android:layout_width="match_parent"

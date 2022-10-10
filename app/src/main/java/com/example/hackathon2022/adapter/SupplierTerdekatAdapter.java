@@ -47,6 +47,7 @@ public class SupplierTerdekatAdapter extends RecyclerView.Adapter<SupplierTerdek
     public void onBindViewHolder(@NonNull SupplierViewHolder holder, int position) {
         holder.txtName.setText(SupplierList.get(position).getNama());
         holder.txtLokasi.setText(SupplierList.get(position).getLokasi());
+        holder.txtKategori.setText(SupplierList.get(position).getKategori());
         holder.txtDeskripsi.setText(SupplierList.get(position).getDeskripsi());
 
         storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(SupplierList.get(position).getImagePath());
@@ -74,12 +75,13 @@ public class SupplierTerdekatAdapter extends RecyclerView.Adapter<SupplierTerdek
     }
 
     public class SupplierViewHolder extends RecyclerView.ViewHolder {
-        TextView txtName, txtLokasi, txtDeskripsi;
+        TextView txtName, txtLokasi, txtKategori, txtDeskripsi;
         ImageView lblimage;
         SupplierViewHolder(@NonNull View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.componentcardsupplier_nama);
             txtLokasi = itemView.findViewById(R.id.componentcardsupplier_lokasi);
+            txtKategori = itemView.findViewById(R.id.componentcardsupplier_kategori);
             txtDeskripsi = itemView.findViewById(R.id.componentcardsupplier_deskripsi);
             lblimage = itemView.findViewById(R.id.componentcardsupplier_image);
         }
