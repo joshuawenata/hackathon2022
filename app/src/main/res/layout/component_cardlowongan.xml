@@ -43,7 +43,7 @@
                         android:fontFamily="@font/kanit_bold"
                         android:textSize="15sp"
                         android:textColor="@color/figma_gray"
-                        android:minWidth="90dp"
+                        android:maxWidth="120dp"
                         android:maxHeight="20dp"
                         />
 
@@ -63,7 +63,7 @@
                         android:layout_height="wrap_content"
                         android:text="Lokasi"
                         android:fontFamily="@font/kanit_bold"
-                        android:minWidth="90dp"
+                        android:maxWidth="120dp"
                         android:maxHeight="20dp"
                         android:textSize="15sp"
                         android:textColor="@color/figma_gray"
@@ -76,7 +76,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Deskripsi"
-                    android:minWidth="210dp"
                     android:maxHeight="20dp"
                     android:fontFamily="@font/kanit_regular"
                     android:textColor="@color/figma_gray"

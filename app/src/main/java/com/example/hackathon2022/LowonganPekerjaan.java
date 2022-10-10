@@ -66,7 +66,7 @@ public class LowonganPekerjaan extends AppCompatActivity {
 
     }
 
-    public void intoForum(View view) {
+    public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
     }
 
@@ -89,4 +89,5 @@ public class LowonganPekerjaan extends AppCompatActivity {
     public void intoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
     }
+
 }

@@ -132,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
-                android:onClick="AddForum"
+                android:onClick="AddLowongan"
                 tools:ignore="OnClick"
                 android:layout_weight="2"
                 android:src="@drawable/activityaddlowongan_btnadd"

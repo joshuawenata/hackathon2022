@@ -204,19 +204,6 @@
                 android:src="@drawable/icon_akun_biru" />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shadow_round"
-            android:elevation="3dp"
-            android:onClick="intoAdd"
-            android:src="@drawable/lowongan_pekerjaan_asset3"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="25dp"
-            tools:ignore="OnClick" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

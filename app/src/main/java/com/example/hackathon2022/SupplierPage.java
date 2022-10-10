@@ -73,7 +73,7 @@ public class SupplierPage extends AppCompatActivity {
 
     }
 
-    public void intoForum(View view) {
+    public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
     }
 
