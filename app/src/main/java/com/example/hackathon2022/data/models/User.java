@@ -24,6 +24,22 @@ public class User {
         return userName;
     }
 
+    public void setUserKey(String userKey) {
+        this.userKey = userKey;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setUserNomor(String userNomor) {
+        this.userNomor = userNomor;
+    }
+
+    public void setUserPass(String userPass) {
+        this.userPass = userPass;
+    }
+
     public String getUserNomor() {
         return userNomor;
     }

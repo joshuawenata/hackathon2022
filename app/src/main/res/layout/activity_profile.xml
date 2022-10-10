@@ -51,7 +51,8 @@
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/ic_baseline_person_24" />
 
-            <TextView
+            <EditText
+                android:id="@+id/activityprofile_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -59,21 +60,19 @@
                 android:text="Joshua Wenata Sunarto"
                 android:textAlignment="center"
                 android:textColor="@color/baseBlue"
-                android:textSize="21sp" />
+                android:backgroundTint="@color/baseBlue"
+                android:textSize="21sp"/>
 
-            <TextView
+            <EditText
+                android:id="@+id/activityprofile_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_light"
                 android:text="081252346294"
                 android:textAlignment="center"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                android:backgroundTint="@color/baseBlue"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="5dp"
-                android:background="@color/baseBlue" />
         </LinearLayout>
 
         <!--    UBAH INFORMASI AKUN-->
@@ -101,10 +100,12 @@
                     android:textColor="@color/baseBlue"
                     android:textSize="12dp" />
 
-                <ImageView
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_baseline_edit_24" />
+                    app:srcCompat="@drawable/ic_baseline_edit_24"
+                    android:background="@null"
+                    android:onClick="editProfile"/>
             </LinearLayout>
         </LinearLayout>
 
