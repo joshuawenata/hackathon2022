@@ -103,30 +103,22 @@
                 android:layout_marginHorizontal="20dp"
                 >
 
-                <Button
+                <ImageButton
                     android:id="@+id/activitywelcome_btnDaftar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="intoRegisterPage"
                     tools:ignore="OnClick"
-                    android:background="@drawable/round_btt_primary"
+                    android:background="@drawable/activitywelcome_btn_welcome_daftar"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/daftar_akun_baru"
-                    android:textAllCaps="false"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:textColor="@color/white"
                     />
 
                 <Button
                     android:id="@+id/activitywelcome_btnMasuk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_btt_white"
-                    android:fontFamily="@font/kanit_semibold"
+                    android:background="@drawable/activitywelcome_btn_welcome_masuk"
                     android:onClick="intoLoginPage"
-                    android:text="@string/masuk"
-                    android:textAllCaps="false"
-                    android:textColor="@color/primary"
                     tools:ignore="OnClick,TextContrastCheck" />
             </LinearLayout>
         </LinearLayout>
