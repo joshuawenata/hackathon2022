@@ -39,6 +39,8 @@
                         android:id="@+id/componentcardforum_judul"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxWidth="250dp"
+                        android:maxHeight="20dp"
                         android:fontFamily="@font/kanit_semibold"
                         android:textColor="@color/figma_text"/>
 
@@ -50,6 +52,8 @@
                     android:layout_height="wrap_content"
                     android:text="FnB, Packaging"
                     android:fontFamily="@font/kanit_light"
+                    android:maxWidth="250dp"
+                    android:maxHeight="20dp"
                     android:textSize="11sp"
                     android:textColor="@color/figma_second_text"/>
 
@@ -61,6 +65,8 @@
                     android:fontFamily="@font/kanit_light"
                     android:textColor="@color/figma_text"
                     android:textSize="11sp"
+                    android:maxWidth="250dp"
+                    android:maxHeight="20dp"
                     />
 
             </LinearLayout>

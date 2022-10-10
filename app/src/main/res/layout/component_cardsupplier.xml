@@ -82,7 +82,9 @@
                     android:text="FnB, Packaging"
                     android:fontFamily="@font/kanit_light"
                     android:textSize="11sp"
-                    android:textColor="@color/figma_second_text"/>
+                    android:textColor="@color/figma_second_text"
+                    android:minWidth="250dp"
+                    android:maxHeight="20dp"/>
 
                 <TextView
                     android:id="@+id/componentcardsupplier_deskripsi"
@@ -92,6 +94,8 @@
                     android:fontFamily="@font/kanit_light"
                     android:textColor="@color/figma_text"
                     android:textSize="11sp"
+                    android:minWidth="250dp"
+                    android:maxHeight="20dp"
                     />
 
             </LinearLayout>
