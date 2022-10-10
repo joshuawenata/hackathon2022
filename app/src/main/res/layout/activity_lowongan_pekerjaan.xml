@@ -52,7 +52,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:text="@string/lowongan_pekerjaan"
+                        android:text="Sewa Jasa"
                         android:id="@+id/lbllowongan1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kanit_regular"
-                        android:text="@string/cari_pekerjaan_yang_sesuai_untuk_anda"
+                        android:text="Cari Tenaga Kerja Yang Sesuai Untuk UMKM Anda!"
                         android:textColor="@color/white"
                         android:textSize="15sp"
                         android:textAlignment="textStart"
@@ -84,10 +84,10 @@
                 android:layout_weight="1"
                 >
 
-                <!--TEXT "LOWONGAN PEKERJAAN YANG TERSEDIA"-->
+                <!--TEXT "PEKERJAAN YANG DIBUTUHKAN TERSEDIA"-->
                 <TextView
                     android:id="@+id/lbllowongan3"
-                    android:text="@string/lowongan_pekerjaan_yang_tersedia"
+                    android:text="UMKM yang memerlukan jasa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_bold"

@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:fontFamily="@font/kanit_semibold"
-                android:text="Tambah Lowongan"
+                android:text="Tambah Pekerjaan"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -74,7 +74,7 @@
                 android:background="@drawable/round_edittext"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/kanit_regular"
-                android:hint="Nama lowongan"
+                android:hint="Nama jasa yang diperlukan"
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"
@@ -104,7 +104,7 @@
                 android:background="@drawable/description_column"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/kanit_regular"
-                android:hint="Deskripsi lowongan . . ."
+                android:hint="Deskripsi pekerjaan . . ."
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"
