@@ -109,17 +109,20 @@
                     android:layout_height="wrap_content"
                     android:onClick="intoRegisterPage"
                     tools:ignore="OnClick"
-                    android:background="@drawable/activitywelcome_btn_welcome_daftar"
+                    android:background="@null"
+                    android:src="@drawable/activitywelcome_btn_welcome_daftar"
                     android:layout_marginBottom="10dp"
                     />
 
-                <Button
+                <ImageButton
                     android:id="@+id/activitywelcome_btnMasuk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/activitywelcome_btn_welcome_masuk"
+                    android:background="@null"
+                    android:src="@drawable/activitywelcome_btn_welcome_masuk"
                     android:onClick="intoLoginPage"
-                    tools:ignore="OnClick,TextContrastCheck" />
+                    tools:ignore="OnClick" />
+
             </LinearLayout>
         </LinearLayout>
 
