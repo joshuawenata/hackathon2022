@@ -3,8 +3,17 @@ package com.example.hackathon2022.Object;
 public class ObjectForum {
 
     private String judul;
+    private String kategori;
     private String pertanyaan;
     private String file;
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
 
     public String getJudul() {
         return judul;

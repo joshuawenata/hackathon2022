@@ -33,6 +33,7 @@ public class ForumAdapterTop extends RecyclerView.Adapter<ForumAdapterTop.ForumV
     @Override
     public void onBindViewHolder(@NonNull ForumViewHolder holder, int position) {
         holder.txtJudul.setText(forumList.get(position).getJudul());
+        holder.txtKategori.setText(forumList.get(position).getKategori());
         holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
     }
 
@@ -47,10 +48,11 @@ public class ForumAdapterTop extends RecyclerView.Adapter<ForumAdapterTop.ForumV
     }
 
     public class ForumViewHolder extends RecyclerView.ViewHolder {
-        TextView txtJudul, txtPertanyaan;
+        TextView txtJudul, txtKategori, txtPertanyaan;
         ForumViewHolder(@NonNull View itemView) {
             super(itemView);
             txtJudul = itemView.findViewById(R.id.componentcardforum_judul);
+            txtKategori = itemView.findViewById(R.id.componentcardforum_kategori);
             txtPertanyaan = itemView.findViewById(R.id.componentcardforum_Pertanyaan);
         }
     }

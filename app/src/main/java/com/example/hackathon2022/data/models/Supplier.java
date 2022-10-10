@@ -8,10 +8,21 @@ public class Supplier {
     private String supplierName;
     private String supplierLokasi;
     private String supplierDeskripsi;
+    private String supplierKategori;
+
+    public String getSupplierKategori() {
+        return supplierKategori;
+    }
+
+    public void setSupplierKategori(String supplierKategori) {
+        this.supplierKategori = supplierKategori;
+    }
+
     private String supplierimagePath;
 
-    public Supplier(String supplierKey, String supplierName, String supplierLokasi, String supplierDeskripsi, String supplierimagePath) {
+    public Supplier(String supplierKey, String supplierName, String supplierLokasi, String supplierKategori, String supplierDeskripsi, String supplierimagePath) {
         this.supplierKey = supplierKey;
+        this.supplierKategori = supplierKategori;
         this.supplierName = supplierName;
         this.supplierLokasi = supplierLokasi;
         this.supplierDeskripsi = supplierDeskripsi;
@@ -43,6 +54,7 @@ public class Supplier {
         Map<String, Object> data = new HashMap<>();
         data.put("nama", supplierName);
         data.put("lokasi", supplierLokasi);
+        data.put("kategori", supplierKategori);
         data.put("deskripsi", supplierDeskripsi);
         data.put("imagePath", supplierimagePath);
         return data;

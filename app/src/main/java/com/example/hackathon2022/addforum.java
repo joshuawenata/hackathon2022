@@ -44,7 +44,7 @@ public class addforum extends AppCompatActivity {
     private Uri filePath;
     private final int PICK_IMAGE_REQUEST = 22;
 
-    private EditText txtJudul, txtPertanyaan;
+    private EditText txtJudul, txtPertanyaan, txtKategori;
     private ImageButton btnUploadFile;
     private TextView FileForum;
     ProgressDialog pd;
@@ -53,6 +53,7 @@ public class addforum extends AppCompatActivity {
         pd = new ProgressDialog(this);
         pd.setMessage("Uploading....");
         txtJudul = findViewById(R.id.activityaddforum_inputjudulforum);
+        txtKategori = findViewById(R.id.activityaddforum_inputkategori);
         txtPertanyaan = findViewById(R.id.activityaddforum_inputpertanyaan);
         btnUploadFile = findViewById(R.id.activityaddforum_btnTambahMedia);
         FileForum = findViewById(R.id.activityaddforum_inputmedia);
@@ -97,14 +98,18 @@ public class addforum extends AppCompatActivity {
     }
 
     public void AddForum(View view) {
-        String judul, pertanyaan;
+        String judul, kategori, pertanyaan;
 
         judul = txtJudul.getText().toString();
+        kategori = txtKategori.getText().toString();
         pertanyaan = txtPertanyaan.getText().toString();
 
         boolean flag = true;
         if(judul.isEmpty()){
             txtJudul.setError("Silahkan masukan judul Forum");
+            flag = false;
+        }else if(pertanyaan.isEmpty()){
+            txtKategori.setError("Silahkan masukan kategori Forum");
             flag = false;
         }else if(pertanyaan.isEmpty()){
             txtPertanyaan.setError("Silahkan masukan pertanyaan Forum");
@@ -129,7 +134,7 @@ public class addforum extends AppCompatActivity {
                 }
             });
 
-            ForumRepository.insertForum(judul, pertanyaan, path);
+            ForumRepository.insertForum(judul, kategori, pertanyaan, path);
             startActivity(new Intent(this, HomePage.class));
         }
 

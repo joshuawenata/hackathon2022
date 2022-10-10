@@ -6,12 +6,22 @@ import java.util.Map;
 public class Forum {
     private String ForumKey;
     private String ForumJudul;
+    private String ForumKategori;
     private String ForumPertanyaan;
     private String ForumFilePath;
 
-    public Forum(String ForumKey, String ForumJudul, String ForumPertanyaan, String ForumFilePath) {
+    public String getForumKategori() {
+        return ForumKategori;
+    }
+
+    public void setForumKategori(String forumKategori) {
+        ForumKategori = forumKategori;
+    }
+
+    public Forum(String ForumKey, String ForumJudul, String ForumKategori, String ForumPertanyaan, String ForumFilePath) {
         this.ForumKey = ForumKey;
         this.ForumJudul = ForumJudul;
+        this.ForumKategori = ForumKategori;
         this.ForumPertanyaan = ForumPertanyaan;
         this.ForumFilePath = ForumFilePath;
     }
@@ -36,6 +46,7 @@ public class Forum {
     public Map<String, Object> toMap(){
         Map<String, Object> data = new HashMap<>();
         data.put("judul", ForumJudul);
+        data.put("kategori", ForumKategori);
         data.put("pertanyaan", ForumPertanyaan);
         data.put("filepath", ForumFilePath);
         return data;

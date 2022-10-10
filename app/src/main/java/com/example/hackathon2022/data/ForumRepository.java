@@ -9,10 +9,11 @@ public class ForumRepository {
     private static FirebaseDatabase db = FirebaseDatabase.getInstance();
     private static DatabaseReference forumRef = db.getReference("forum");
 
-    public static void insertForum(String forumJudul, String forumPertanyaan, String filePath){
+    public static void insertForum(String forumJudul, String forumKategori, String forumPertanyaan, String filePath){
         String forumKey = forumRef.push().getKey();
         Forum newForum = new Forum(forumKey,
                 forumJudul,
+                forumKategori,
                 forumPertanyaan,
                 filePath);
         forumRef.child(forumKey).setValue(newForum.toMap());

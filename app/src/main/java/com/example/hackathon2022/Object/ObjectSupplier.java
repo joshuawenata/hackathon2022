@@ -3,6 +3,8 @@ package com.example.hackathon2022.Object;
 public class ObjectSupplier {
     private String nama;
     private String lokasi;
+    private String kategori;
+
     private String deskripsi;
     private String imagePath;
 
@@ -37,4 +39,13 @@ public class ObjectSupplier {
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
+
 }

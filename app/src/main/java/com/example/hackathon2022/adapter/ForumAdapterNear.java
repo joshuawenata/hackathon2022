@@ -36,6 +36,7 @@ public class ForumAdapterNear extends RecyclerView.Adapter<ForumAdapterNear.Foru
     @Override
     public void onBindViewHolder(@NonNull ForumViewHolder holder, int position) {
         holder.txtJudul.setText(forumList.get(position).getJudul());
+        holder.txtKategori.setText(forumList.get(position).getKategori());
         holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
     }
 
@@ -50,10 +51,11 @@ public class ForumAdapterNear extends RecyclerView.Adapter<ForumAdapterNear.Foru
     }
 
     public class ForumViewHolder extends RecyclerView.ViewHolder {
-        TextView txtJudul, txtPertanyaan;
+        TextView txtJudul, txtKategori, txtPertanyaan;
         ForumViewHolder(@NonNull View itemView) {
             super(itemView);
             txtJudul = itemView.findViewById(R.id.componentcardforum_judul);
+            txtKategori = itemView.findViewById(R.id.componentcardforum_kategori);
             txtPertanyaan = itemView.findViewById(R.id.componentcardforum_Pertanyaan);
         }
     }
