@@ -58,4 +58,7 @@
     <string name="daftar_akun_baru">Daftar akun baru</string>
     <string name="strip">-</string>
     <string name="lamar">Lamar</string>
+
+    <string name="loremipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu scelerisque sapien. Morbi gravida pulvinar enim, blandit molestie ipsum finibus eget. Duis cursus justo sit amet nisl posuere convallis. Mauris tempor justo elit, eget interdum ligula lacinia eget. Praesent tempor eu eros non accumsan. Cras vitae mauris non tortor volutpat volutpat eu in eros. Mauris est ante, mattis a sapien nec, efficitur dictum lorem. Maecenas consectetur, justo eget viverra tristique, turpis orci semper tellus, a volutpat lorem neque sit amet elit. Nullam id ullamcorper orci. Suspendisse sit amet posuere ipsum. Fusce elementum tristique libero. Mauris turpis ipsum, lacinia eu eros a, vehicula vulputate neque. Proin quis leo non orci venenatis feugiat. Vivamus sed convallis ex.</string>
+    <string name="supplier">Supplier</string>
 </resources>

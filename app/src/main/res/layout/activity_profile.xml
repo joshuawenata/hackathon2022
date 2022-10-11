@@ -166,70 +166,72 @@
             app:layout_constraintRight_toRightOf="parent"
             android:background="@drawable/appbar"
             >
-        <!--HOLDER NYA ITEM DI APP BAR-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:background="@drawable/appbar"
-            android:weightSum="5"
-            >
 
-            <!--ICON FORUM-->
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:src="@drawable/icon_forum_putih"
-                android:onClick="intoHome"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="5dp"
-                tools:ignore="OnClick" />
-            <!-- ON CLICK NYA BELOM BENER!!!!  -->
-
-            <!--ICON SUPPLIER-->
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:onClick="intoSupplier"
-                android:src="@drawable/icon_supplier_putih"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="5dp"
-                tools:ignore="OnClick" />
-
-            <!--NGASIH GAP-->
+            <!--HOLDER NYA ITEM DI APP BAR-->
             <LinearLayout
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/appbar"
+                android:weightSum="5"
+                >
 
-            <!--ICON LOWONGAN-->
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:onClick="intoLowongan"
-                android:src="@drawable/icon_jasa_putih"
-                tools:ignore="OnClick"
-                android:layout_marginHorizontal="5dp"
-                android:layout_weight="1"
-                />
+                <!--ICON FORUM-->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/icon_forum_putih"
+                    android:onClick="intoHome"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
+                    tools:ignore="OnClick" />
+                <!-- ON CLICK NYA BELOM BENER!!!!  -->
 
-            <!--ICON AKUN-->
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:src="@drawable/icon_akun_biru"
-                android:onClick="intoProfile"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="5dp"
-                />
+                <!--ICON SUPPLIER-->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:onClick="intoSupplier"
+                    android:src="@drawable/icon_supplier_putih"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
+                    tools:ignore="OnClick" />
+
+                <!--NGASIH GAP-->
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <!--ICON LOWONGAN-->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:onClick="intoLowongan"
+                    android:src="@drawable/icon_jasa_putih"
+                    tools:ignore="OnClick"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_weight="1"
+                    />
+
+                <!--ICON AKUN-->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/icon_akun_biru"
+                    android:onClick="intoProfile"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
+                    tools:ignore="OnClick" />
+            </LinearLayout>
         </LinearLayout>
 
         <!--ICON ADD-->
@@ -244,7 +246,7 @@
             android:layout_marginBottom="30dp"
             android:onClick="intoAdd"
             android:padding="5dp"
-            />
+            tools:ignore="OnClick" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
