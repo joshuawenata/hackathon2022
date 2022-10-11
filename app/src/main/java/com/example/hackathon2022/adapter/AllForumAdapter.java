@@ -17,6 +17,15 @@ import java.util.ArrayList;
 public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumViewHolder> {
     Context context;
     ArrayList<ObjectForum> forumList;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClick();
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public AllForumAdapter(Context context, ArrayList<ObjectForum> newList) {
         this.context = context;
@@ -26,7 +35,7 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
     @NonNull
     @Override
     public ForumViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.component_cardforum,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_component_card_forum,parent,false);
         return new AllForumAdapter.ForumViewHolder(v);
     }
 
@@ -49,6 +58,15 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
             txtJudul = itemView.findViewById(R.id.componentcardforum_judul);
             txtKategori = itemView.findViewById(R.id.componentcardforum_kategori);
             txtPertanyaan = itemView.findViewById(R.id.componentcardforum_Pertanyaan);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener!=null){
+                        mListener.onItemClick();
+                    }
+                }
+            });
         }
     }
 }

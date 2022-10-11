@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectSupplier;
+import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.AllSupplierAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -50,6 +51,12 @@ public class SupplierFnb extends AppCompatActivity {
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 AllSupplierAdapter myAdapter = new AllSupplierAdapter(context, newList);
+                myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick() {
+                        startActivity(new Intent(SupplierFnb.this, SupplierCardPage.class));
+                    }
+                });
                 recyclerView.setAdapter(myAdapter);
                 myAdapter.notifyDataSetChanged();
             }

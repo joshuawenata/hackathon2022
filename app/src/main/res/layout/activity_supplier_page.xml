@@ -136,7 +136,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             tools:itemCount="2"
-                            tools:listitem="@layout/component_cardsupplier" />
+                            tools:listitem="@layout/activity_component_card_supplier" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -193,7 +193,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             tools:itemCount="2"
-                            tools:listitem="@layout/component_cardsupplier" />
+                            tools:listitem="@layout/activity_component_card_supplier" />
                     </LinearLayout>
                 </LinearLayout>
 

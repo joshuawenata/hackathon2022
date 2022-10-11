@@ -18,6 +18,15 @@ public class LowonganAdapter extends RecyclerView.Adapter<LowonganAdapter.Lowong
 
     Context context;
     ArrayList <ObjectLowongan> LowonganList;
+    private AllForumAdapter.OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClick();
+    }
+
+    public void setOnItemClickListener(AllForumAdapter.OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public LowonganAdapter(Context context, ArrayList<ObjectLowongan> newList){
         this.context = context;
@@ -27,7 +36,7 @@ public class LowonganAdapter extends RecyclerView.Adapter<LowonganAdapter.Lowong
     @NonNull
     @Override
     public LowonganViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.component_cardlowongan,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_component_card_jasa,parent,false);
         return new LowonganViewHolder(v);
     }
 
@@ -54,6 +63,15 @@ public class LowonganAdapter extends RecyclerView.Adapter<LowonganAdapter.Lowong
             txtName = itemView.findViewById(R.id.componentcardlowongan_namaUMKM);
             txtLokasi = itemView.findViewById(R.id.componentcardlowongan_lokasi);
             txtDeskripsi = itemView.findViewById(R.id.componentcardlowongan_deskripsi);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener!=null){
+                        mListener.onItemClick();
+                    }
+                }
+            });
         }
     }
 

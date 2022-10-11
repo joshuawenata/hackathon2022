@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectLowongan;
+import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.AllLowonganAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -50,6 +51,12 @@ public class AllLowongan extends AppCompatActivity {
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 AllLowonganAdapter myAdapter = new AllLowonganAdapter(context, newList);
+                myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick() {
+                        startActivity(new Intent(AllLowongan.this, JasaCardPage.class));
+                    }
+                });
                 recyclerView.setAdapter(myAdapter);
                 myAdapter.notifyDataSetChanged();
             }

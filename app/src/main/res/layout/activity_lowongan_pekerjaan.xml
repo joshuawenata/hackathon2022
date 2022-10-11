@@ -121,7 +121,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:itemCount="7"
-                        tools:listitem="@layout/component_cardlowongan" />
+                        tools:listitem="@layout/activity_component_card_jasa" />
 
                 </LinearLayout>
             </LinearLayout>

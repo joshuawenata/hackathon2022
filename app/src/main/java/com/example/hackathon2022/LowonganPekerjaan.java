@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.hackathon2022.Object.ObjectLowongan;
+import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.LowonganAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -54,6 +55,12 @@ public class LowonganPekerjaan extends AppCompatActivity {
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 LowonganAdapter myAdapter = new LowonganAdapter(context, newList);
+                myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick() {
+                        startActivity(new Intent(LowonganPekerjaan.this, JasaCardPage.class));
+                    }
+                });
                 recyclerView.setAdapter(myAdapter);
                 myAdapter.notifyDataSetChanged();
             }

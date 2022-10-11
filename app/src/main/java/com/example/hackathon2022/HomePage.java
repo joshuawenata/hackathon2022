@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectForum;
+import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.ForumAdapterTop;
 import com.example.hackathon2022.adapter.ForumAdapterNear;
 import com.google.firebase.database.DataSnapshot;
@@ -52,12 +53,24 @@ public class HomePage extends AppCompatActivity {
 
                 recyclerWeeklyPopularForum.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 ForumAdapterTop TopAdapter = new ForumAdapterTop(context, newList);
+                TopAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick() {
+                        startActivity(new Intent(HomePage.this, ForumCardPage.class));
+                    }
+                });
                 recyclerWeeklyPopularForum.setAdapter(TopAdapter);
 
                 TopAdapter.notifyDataSetChanged();
 
                 recyclerTopForum.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 ForumAdapterNear NearAdapter = new ForumAdapterNear(context, newList);
+                NearAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick() {
+                        startActivity(new Intent(HomePage.this, ForumCardPage.class));
+                    }
+                });
                 recyclerTopForum.setAdapter(NearAdapter);
 
                 NearAdapter.notifyDataSetChanged();

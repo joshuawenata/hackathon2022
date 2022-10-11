@@ -52,6 +52,12 @@ public class PopularForum extends AppCompatActivity {
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 AllForumAdapter myAdapter = new AllForumAdapter(context, newList);
+                myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick() {
+                        startActivity(new Intent(PopularForum.this, ForumCardPage.class));
+                    }
+                });
                 recyclerView.setAdapter(myAdapter);
                 myAdapter.notifyDataSetChanged();
             }

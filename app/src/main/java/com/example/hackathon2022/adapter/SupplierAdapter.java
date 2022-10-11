@@ -30,6 +30,15 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
 
     Context context;
     ArrayList<ObjectSupplier> SupplierList;
+    private AllForumAdapter.OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClick();
+    }
+
+    public void setOnItemClickListener(AllForumAdapter.OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public SupplierAdapter(Context context, ArrayList<ObjectSupplier> newList) {
         this.context = context;
@@ -39,7 +48,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
     @NonNull
     @Override
     public SupplierViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.component_cardsupplier,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_component_card_supplier,parent,false);
         return new SupplierAdapter.SupplierViewHolder(v);
     }
 
@@ -84,6 +93,15 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
             txtKategori = itemView.findViewById(R.id.componentcardsupplier_kategori);
             txtDeskripsi = itemView.findViewById(R.id.componentcardsupplier_deskripsi);
             lblimage = itemView.findViewById(R.id.componentcardsupplier_image);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener!=null){
+                        mListener.onItemClick();
+                    }
+                }
+            });
         }
     }
 }

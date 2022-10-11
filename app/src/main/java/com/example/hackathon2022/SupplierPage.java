@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectSupplier;
+import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.SupplierAdapter;
 import com.example.hackathon2022.adapter.SupplierTerdekatAdapter;
 import com.google.firebase.database.DataSnapshot;
@@ -54,12 +55,24 @@ public class SupplierPage extends AppCompatActivity {
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 SupplierAdapter myAdapter = new SupplierAdapter(context, newList);
+                myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick() {
+                        startActivity(new Intent(SupplierPage.this, SupplierCardPage.class));
+                    }
+                });
                 recyclerView.setAdapter(myAdapter);
 
                 myAdapter.notifyDataSetChanged();
 
                 recyclerViewterdekat.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 SupplierTerdekatAdapter terdekatAdapter = new SupplierTerdekatAdapter(context, newList);
+                terdekatAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick() {
+                        startActivity(new Intent(SupplierPage.this, SupplierCardPage.class));
+                    }
+                });
                 recyclerViewterdekat.setAdapter(terdekatAdapter);
 
                 terdekatAdapter.notifyDataSetChanged();
