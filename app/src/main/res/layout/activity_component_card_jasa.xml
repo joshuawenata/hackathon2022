@@ -26,7 +26,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="10"
+                android:layout_weight="1"
                 android:layout_marginHorizontal="20dp"
                 android:paddingHorizontal="5dp"
                 >
@@ -84,23 +84,10 @@
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/componentcardlowongan_lamar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/lamar"
-                android:fontFamily="@font/kanit_bold"
-                android:textSize="15sp"
-                android:textColor="@color/baseBlue"
-                android:onClick="intoLamar"
-                />
-
             <ImageButton
                 android:id="@+id/componentcardlowongan_chat"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@null"
                 android:src="@drawable/chat"/>
 
