@@ -9,16 +9,6 @@
     tools:context=".HomePage"
     >
 
-    <!--BACKGROUND-->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/forum_bg"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:scaleType="fitXY"
-        />
-
     <!--CONTENT-->
     <ScrollView
         android:layout_width="match_parent"
@@ -26,328 +16,328 @@
         android:layout_marginBottom="50dp"
         >
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="1"
-            android:layout_marginBottom="100dp"
-            >
+            android:layout_height="wrap_content">
 
-            <!--MAIN HOLDER BUAT ITEM-ITEM LAIN SELAIN APP BAR-->
+            <!--BACKGROUND-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/forum_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scaleType="fitXY"
+                />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
                 android:orientation="vertical"
-                android:layout_marginHorizontal="20dp"
-                android:layout_weight="1"
-                android:weightSum="4"
-                android:layout_marginTop="20dp"
+                android:weightSum="1"
+                android:layout_marginBottom="100dp"
+
                 >
 
-                <!--MAIN HOLDER NYA JUDUL SAMA GAMBAR-->
+
+
+                <!--MAIN HOLDER BUAT ITEM-ITEM LAIN SELAIN APP BAR-->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:layout_weight="3"
-                    tools:ignore="NestedWeights">
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:weightSum="4"
+                    android:layout_marginTop="20dp"
+                    >
 
+                    <!--MAIN HOLDER NYA JUDUL SAMA GAMBAR-->
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="45dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_weight="3"
+                        tools:ignore="NestedWeights"
+                        android:paddingHorizontal="20dp"
+                        >
 
-                        <TextView
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_bold"
-                            android:text="@string/forum"
-                            android:textColor="@color/white"
-                            android:textSize="40sp" />
+                            android:layout_weight="50"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="@string/forum_tagline"
-                            android:textColor="@color/white" />
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/kanit_bold"
+                                android:text="@string/forum"
+                                android:textColor="@color/white"
+                                android:textSize="40sp" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/kanit_light"
+                                android:text="@string/forum_tagline"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="match_parent"
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            app:srcCompat="@drawable/forum_art" />
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/forum_art" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
 
-                <!--MAIN HOLDER NYA SEARCH BAR-->
-    <!--            <LinearLayout-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_marginVertical="5dp"-->
-    <!--                android:gravity="center"-->
-    <!--                android:orientation="horizontal"-->
-    <!--                android:layout_weight="1"-->
-    <!--                >-->
 
-    <!--                &lt;!&ndash;EDIT TEXT SEARCH&ndash;&gt;-->
-    <!--                <EditText-->
-    <!--                    android:layout_width="wrap_content"-->
-    <!--                    android:layout_height="wrap_content"-->
-    <!--                    android:layout_weight="1"-->
-    <!--                    android:background="@drawable/round_btt_white"-->
-    <!--                    android:fontFamily="@font/kanit_regular"-->
-    <!--                    android:hint="@string/forum_apa_yang_ingin_ditanyakan"-->
-    <!--                    android:paddingVertical="7dp"-->
-    <!--                    android:paddingHorizontal="12dp"-->
-    <!--                    android:textSize="13sp"-->
-    <!--                    android:textColorHint="@color/figma_gray"-->
-    <!--                    android:textColor="@color/figma_gray"/>-->
-
-    <!--                &lt;!&ndash;ICON NYA SEARCH&ndash;&gt;-->
-    <!--                <ImageView-->
-    <!--                    android:layout_width="wrap_content"-->
-    <!--                    android:layout_height="wrap_content"-->
-    <!--                    android:layout_marginStart="5dp"-->
-    <!--                    android:layout_weight="0.05"-->
-    <!--                    android:background="@drawable/roundcorner"-->
-    <!--                    android:padding="7dp"-->
-    <!--                    app:srcCompat="@drawable/search"-->
-    <!--                    app:tint="@color/figma_gray"-->
-    <!--                    />-->
-    <!--            </LinearLayout>-->
-
-                <!--MAIN HOLDER NYA FORUM POPULER-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingVertical="2dp"
-                    android:layout_weight="1"
-                    >
-
-                    <!--TEXT "FORUM POPULER MINGGU INI"-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kanit_semibold"
-                        android:text="Pertanyaan seputar UMKM"
-                        android:textColor="@color/figma_text"
-                        android:textSize="17sp" />
-
-                    <!--TEXT "LIHAT SEMUA"-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kanit_regular"
-                        android:text="@string/lihat_semua"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/figma_text"
-                        android:textSize="12sp"
-                        android:onClick="intoPopuler"
-                        tools:ignore="OnClick" />
-
-                    <!--HOLDER NYA RECYCLER VIEW-->
+                    <!--MAIN HOLDER NYA FORUM POPULER-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="2dp"
-                        android:orientation="horizontal">
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/forum_round_top"
+                        android:paddingHorizontal="10dp"
+                        android:paddingTop="10dp"
+                        >
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/activityhome_recyclerweeklypopularforum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            tools:itemCount="4"
-                            tools:listitem="@layout/activity_component_card_forum" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <!--MAIN HOLDER FORUM TERATAS-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginVertical="15dp"
-                    android:layout_weight="1"
-                    >
-
-                    <!--TEXT "FORUM TERATAS"-->
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:fontFamily="@font/kanit_semibold"-->
-<!--                        android:text="@string/forum_teratas"-->
-<!--                        android:textColor="@color/figma_text"-->
-<!--                        android:textSize="17sp" />-->
-
-                    <!--TEXT "LIHAT SEMUA"-->
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:fontFamily="@font/kanit_regular"-->
-<!--                        android:text="@string/lihat_semua"-->
-<!--                        android:textAlignment="textEnd"-->
-<!--                        android:textColor="@color/figma_text"-->
-<!--                        android:textSize="12sp"-->
-<!--                        android:onClick="intoTeratas"-->
-<!--                        tools:ignore="OnClick" />-->
-
-                    <!--HOLDER NYA RECYCLER VIEW-->
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="horizontal">-->
-
-<!--                        <androidx.recyclerview.widget.RecyclerView-->
-<!--                            android:id="@+id/activityhome_recyclertopforum"-->
+<!--                        &lt;!&ndash;MAIN HOLDER NYA SEARCH BAR&ndash;&gt;-->
+<!--                        <LinearLayout-->
 <!--                            android:layout_width="match_parent"-->
 <!--                            android:layout_height="wrap_content"-->
-<!--                            tools:itemCount="2"-->
-<!--                            tools:listitem="@layout/activity_component_card_forum" />-->
-<!--                    </LinearLayout>-->
-                </LinearLayout>
+<!--                            android:layout_marginVertical="5dp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_weight="1"-->
+<!--                            >-->
 
-                <!--MAIN HOLDER NYA TOPIK-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
+<!--                            &lt;!&ndash;EDIT TEXT SEARCH&ndash;&gt;-->
+<!--                            <EditText-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:background="@drawable/round_btt_white"-->
+<!--                                android:fontFamily="@font/kanit_regular"-->
+<!--                                android:hint="@string/forum_apa_yang_ingin_ditanyakan"-->
+<!--                                android:paddingVertical="7dp"-->
+<!--                                android:paddingHorizontal="12dp"-->
+<!--                                android:textSize="13sp"-->
+<!--                                android:textColorHint="@color/figma_gray"-->
+<!--                                android:textColor="@color/figma_gray"/>-->
 
-                    <!--TEXT "PILIH BERDASARKAN TOPIK"-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kanit_semibold"
-                        android:text="@string/topik"
-                        android:textColor="@color/figma_text"
-                        android:textSize="17sp"
-                        />
+<!--                            &lt;!&ndash;ICON NYA SEARCH&ndash;&gt;-->
+<!--                            <ImageView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginStart="5dp"-->
+<!--                                android:layout_weight="0.05"-->
+<!--                                android:background="@drawable/roundcorner"-->
+<!--                                android:padding="7dp"-->
+<!--                                app:srcCompat="@drawable/search"-->
+<!--                                app:tint="@color/figma_gray"-->
+<!--                                />-->
+<!--                        </LinearLayout>-->
 
-                    <!--HOLDER NYA ANAK-ANAK TOPIK-->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginVertical="2dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <!--MODAL USAHA-->
+                        <!--MAIN HOLDER NYA TOPIK-->
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:orientation="vertical"
-                            android:layout_marginHorizontal="10dp"
                             android:layout_weight="1"
+                            android:layout_marginBottom="20dp"
                             >
 
-                            <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/forum_modal_usaha_icon"
-                                android:onClick="intoModal"
-                                tools:ignore="OnClick"
-                                android:background="@null"/>
-
+                            <!--TEXT "PILIH BERDASARKAN TOPIK"-->
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kanit_semibold"
-                                android:text="@string/modal_usaha"
-                                android:textColor="@color/figma_gray"
-                                android:textSize="11sp" />
+                                android:text="@string/topik"
+                                android:textColor="@color/figma_text"
+                                android:textSize="20sp"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                            <!--HOLDER NYA ANAK-ANAK TOPIK-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+
+                                >
+
+                                <!--MODAL USAHA-->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:layout_weight="1"
+                                    >
+
+                                    <ImageButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/ic_forum_modal_usaha_icon"
+                                        android:onClick="intoModal"
+                                        tools:ignore="OnClick"
+                                        android:background="@drawable/almost_square_white_imagebtt"
+                                        android:padding="10dp"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kanit_semibold"
+                                        android:text="@string/modal_usaha"
+                                        android:textColor="@color/figma_gray"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+
+                                <!--PERIZINAN-->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:layout_weight="1"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/ic_forum_perizinan_icon"
+                                        android:background="@drawable/almost_square_white_imagebtt"
+                                        android:padding="10dp"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kanit_semibold"
+                                        android:text="@string/perizinan"
+                                        android:textColor="@color/figma_gray"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+
+                                <!--PEMASARAN-->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:layout_weight="1"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/forum_pemasaran_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kanit_semibold"
+                                        android:text="@string/pemasaran"
+                                        android:textColor="@color/figma_gray"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+
+                                <!--LAINNYA-->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:layout_weight="1"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/forum_lainnya_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kanit_semibold"
+                                        android:text="@string/lainnya"
+                                        android:textColor="@color/figma_gray"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
-                        <!--PERIZINAN-->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
+
+                        <!--TEXT "FORUM POPULER MINGGU INI"-->
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:layout_marginHorizontal="10dp"
-                            android:layout_weight="1"
-                            >
+                            android:fontFamily="@font/kanit_semibold"
+                            android:text="Pertanyaan seputar UMKM"
+                            android:textColor="@color/figma_text"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="15dp"
+                            />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/forum_perizinan_icon" />
+<!--                        &lt;!&ndash;TEXT "LIHAT SEMUA"&ndash;&gt;-->
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="@font/kanit_regular"-->
+<!--                            android:text="@string/lihat_semua"-->
+<!--                            android:textAlignment="textEnd"-->
+<!--                            android:textColor="@color/figma_text"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:onClick="intoPopuler"-->
+<!--                            tools:ignore="OnClick" />-->
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kanit_semibold"
-                                android:text="@string/perizinan"
-                                android:textColor="@color/figma_gray"
-                                android:textSize="11sp" />
-                        </LinearLayout>
-
-                        <!--PEMASARAN-->
+                        <!--HOLDER NYA RECYCLER VIEW-->
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:layout_marginHorizontal="10dp"
-                            android:layout_weight="1"
-                            >
+                            android:layout_marginVertical="2dp"
+                            android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activityhome_recyclerweeklypopularforum"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/forum_pemasaran_icon" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kanit_semibold"
-                                android:text="@string/pemasaran"
-                                android:textColor="@color/figma_gray"
-                                android:textSize="11sp" />
-                        </LinearLayout>
-
-                        <!--LAINNYA-->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:layout_marginHorizontal="10dp"
-                            android:layout_weight="1"
-                            >
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/forum_lainnya_icon" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kanit_semibold"
-                                android:text="@string/lainnya"
-                                android:textColor="@color/figma_gray"
-                                android:textSize="11sp" />
+                                tools:itemCount="6"
+                                tools:listitem="@layout/activity_component_card_forum" />
                         </LinearLayout>
                     </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
     </ScrollView>
+
     <!--MAIN CONSTRAINT BUAT APP BAR-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
