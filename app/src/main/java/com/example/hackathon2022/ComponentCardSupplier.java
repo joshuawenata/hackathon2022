@@ -17,6 +17,7 @@ public class ComponentCardSupplier extends AppCompatActivity {
 
     public void intoDetailsSupplier(View view) {
         startActivity(new Intent(ComponentCardSupplier.this, SupplierCardPage.class));
+        finish();
     }
 
 }

@@ -215,6 +215,7 @@
 
                 <!--TITLE-->
                 <TextView
+                    android:id="@+id/componentcardforum_judul"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
@@ -230,12 +231,31 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/reply"
+                        android:id="@+id/componentcardforum_username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Anonymous"
                         android:fontFamily="@font/kanit_regular"
                         android:textColor="@color/figma_gray"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  •  "
+                        android:textSize="13sp"
+                        android:textColor="@color/figma_gray"
+                        android:gravity="bottom"
+                        />
+
+                    <TextView
+                        android:id="@+id/componentcardforum_kategori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textSize="13sp"
+                        android:textColor="@color/figma_gray"
+                        android:gravity="bottom"
                         />
 
                     <TextView
@@ -257,6 +277,9 @@
                         android:gravity="bottom"
                         android:fontFamily="@font/kanit_light"
                         />
+
+
+
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -280,7 +303,7 @@
 
     <!--DESC-->
     <TextView
-        android:id="@+id/reply_content"
+        android:id="@+id/componentcardforum_Pertanyaan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/loremipsum"

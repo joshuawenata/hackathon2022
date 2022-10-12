@@ -44,6 +44,7 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
         holder.txtJudul.setText(forumList.get(position).getJudul());
         holder.txtKategori.setText(forumList.get(position).getKategori());
         holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
+        holder.txtUsername.setText(forumList.get(position).getUsername());
     }
 
     @Override
@@ -52,12 +53,13 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
     }
 
     public class ForumViewHolder extends RecyclerView.ViewHolder {
-        TextView txtJudul, txtKategori, txtPertanyaan;
+        TextView txtJudul, txtKategori, txtPertanyaan, txtUsername;
         ForumViewHolder(@NonNull View itemView) {
             super(itemView);
             txtJudul = itemView.findViewById(R.id.componentcardforum_judul);
             txtKategori = itemView.findViewById(R.id.componentcardforum_kategori);
             txtPertanyaan = itemView.findViewById(R.id.componentcardforum_Pertanyaan);
+            txtUsername = itemView.findViewById(R.id.componentcardforum_username);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

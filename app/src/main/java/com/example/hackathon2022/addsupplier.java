@@ -165,6 +165,7 @@ public class addsupplier extends AppCompatActivity {
 
             SupplierRepository.insertSupplier(nama, lokasi, kategori, deskripsi, path);
             startActivity(new Intent(this, SupplierPage.class));
+            finish();
         }
 
     }

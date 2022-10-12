@@ -5,6 +5,16 @@ public class ObjectForum {
     private String judul;
     private String kategori;
     private String pertanyaan;
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String userName) {
+        this.username = userName;
+    }
+
     private String file;
 
     public String getKategori() {

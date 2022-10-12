@@ -56,6 +56,7 @@ public class NearSupplier extends AppCompatActivity {
                     @Override
                     public void onItemClick() {
                         startActivity(new Intent(NearSupplier.this, SupplierCardPage.class));
+                        finish();
                     }
                 });
                 recyclerView.setAdapter(myAdapter);
@@ -68,5 +69,5 @@ public class NearSupplier extends AppCompatActivity {
         });
     }
 
-    public void Back(View view) { startActivity(new Intent(this, SupplierPage.class)); }
+    public void Back(View view) { startActivity(new Intent(this, SupplierPage.class)); finish();}
 }

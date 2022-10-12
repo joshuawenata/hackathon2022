@@ -17,6 +17,7 @@ public class ComponentCardForum extends AppCompatActivity {
 
     public void intoDetailsForum(View view){
         startActivity(new Intent(ComponentCardForum.this, ForumCardPage.class));
+        finish();
     }
 
 }

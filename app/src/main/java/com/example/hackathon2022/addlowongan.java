@@ -60,11 +60,13 @@ public class addlowongan extends AppCompatActivity {
                     lokasi,
                     deskripsi);
             startActivity(new Intent(this, LowonganPekerjaan.class));
+            finish();
         }
 
     }
 
     public void backtoLowongan(View view) {
         startActivity(new Intent(this, LowonganPekerjaan.class));
+        finish();
     }
 }

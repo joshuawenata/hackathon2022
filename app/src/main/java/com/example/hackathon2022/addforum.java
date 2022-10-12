@@ -1,5 +1,7 @@
 package com.example.hackathon2022;
 
+import static com.example.hackathon2022.data.UserRepository.LOGGED_IN_USER;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -75,6 +77,7 @@ public class addforum extends AppCompatActivity {
                 intent.setType("*/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(intent, PICK_IMAGE_REQUEST);
+                finish();
             }
         });
     }
@@ -145,8 +148,9 @@ public class addforum extends AppCompatActivity {
                 path = "";
             }
 
-            ForumRepository.insertForum(judul, kategori, pertanyaan, path);
+            ForumRepository.insertForum(judul, kategori, pertanyaan, path, LOGGED_IN_USER.getUserName());
             startActivity(new Intent(this, HomePage.class));
+            finish();
         }
 
     }

@@ -87,21 +87,36 @@ public class SupplierPage extends AppCompatActivity {
 
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
+        finish();
     }
 
-    public void intoLowongan(View view) { startActivity(new Intent(this, LowonganPekerjaan.class)); }
+    public void intoLowongan(View view) {
+        startActivity(new Intent(this, LowonganPekerjaan.class));
+        finish();
+    }
 
-    public void intoAdd(View view) { startActivity(new Intent(this, addsupplier.class)); }
+    public void intoAdd(View view) {
+        startActivity(new Intent(this, addsupplier.class));
+        finish();
+    }
 
-    public void TopSupplier(View view) { startActivity(new Intent(this, TopSupplier.class)); }
+    public void TopSupplier(View view) {
+        startActivity(new Intent(this, TopSupplier.class));
+        finish();
+    }
 
-    public void NearSupplier(View view) { startActivity(new Intent(this, NearSupplier.class)); }
+    public void NearSupplier(View view) {
+        startActivity(new Intent(this, NearSupplier.class));
+        finish();
+    }
 
     public void intoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
+        finish();
     }
 
     public void intoFnB(View view) {
         startActivity(new Intent(this, SupplierFnb.class));
+        finish();
     }
 }

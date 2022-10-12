@@ -59,6 +59,7 @@ public class LowonganPekerjaan extends AppCompatActivity {
                     @Override
                     public void onItemClick() {
                         startActivity(new Intent(LowonganPekerjaan.this, JasaCardPage.class));
+                        finish();
                     }
                 });
                 recyclerView.setAdapter(myAdapter);

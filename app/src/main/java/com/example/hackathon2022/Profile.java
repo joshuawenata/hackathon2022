@@ -34,18 +34,22 @@ public class Profile extends AppCompatActivity {
 
     public void intoSupplier(View view) {
         startActivity(new Intent(this, SupplierPage.class));
+        finish();
     }
 
     public void intoLowongan(View view) {
         startActivity(new Intent(this, LowonganPekerjaan.class));
+        finish();
     }
 
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
+        finish();
     }
 
     public void Logout(View view) {
         startActivity(new Intent(this, WelcomePage.class));
+        finish();
     }
 
     public void editProfile(View view) {

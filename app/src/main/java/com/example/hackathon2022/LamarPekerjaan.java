@@ -121,6 +121,7 @@ public class LamarPekerjaan extends AppCompatActivity {
 
             LamarRepository.insertLamar(pertanyaan, path);
             startActivity(new Intent(this, HomePage.class));
+            finish();
         }
 
     }

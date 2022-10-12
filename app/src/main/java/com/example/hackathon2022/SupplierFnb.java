@@ -69,6 +69,6 @@ public class SupplierFnb extends AppCompatActivity {
 
     }
 
-    public void backtoSupplier(View view) { startActivity(new Intent(this, SupplierPage.class)); }
+    public void backtoSupplier(View view) { startActivity(new Intent(this, SupplierPage.class)); finish();}
 
 }

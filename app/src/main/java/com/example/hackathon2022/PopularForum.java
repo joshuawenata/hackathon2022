@@ -56,6 +56,7 @@ public class PopularForum extends AppCompatActivity {
                     @Override
                     public void onItemClick() {
                         startActivity(new Intent(PopularForum.this, ForumCardPage.class));
+                        finish();
                     }
                 });
                 recyclerView.setAdapter(myAdapter);
@@ -71,5 +72,6 @@ public class PopularForum extends AppCompatActivity {
 
     public void back(View view) {
         startActivity(new Intent(this, HomePage.class));
+        finish();
     }
 }

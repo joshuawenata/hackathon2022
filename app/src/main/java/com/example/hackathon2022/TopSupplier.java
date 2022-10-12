@@ -69,5 +69,8 @@ public class TopSupplier extends AppCompatActivity {
 
     }
 
-    public void Back(View view) { startActivity(new Intent(this, SupplierPage.class)); }
+    public void Back(View view) {
+        startActivity(new Intent(this, SupplierPage.class));
+        finish();
+    }
 }

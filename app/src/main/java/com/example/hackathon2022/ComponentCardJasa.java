@@ -17,6 +17,7 @@ public class ComponentCardJasa extends AppCompatActivity {
 
     public void intoDetailsJasa(View view) {
         startActivity(new Intent(ComponentCardJasa.this, JasaCardPage.class));
+        finish();
     }
 
 }

@@ -11,9 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectForum;
-import com.example.hackathon2022.adapter.AllForumAdapter;
-import com.example.hackathon2022.adapter.ForumAdapterTop;
-import com.example.hackathon2022.adapter.ForumAdapterNear;
+import com.example.hackathon2022.adapter.FrontForumAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -51,11 +49,12 @@ public class HomePage extends AppCompatActivity {
                 }
 
                 recyclerWeeklyPopularForum.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                ForumAdapterTop TopAdapter = new ForumAdapterTop(context, newList);
-                TopAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                FrontForumAdapter TopAdapter = new FrontForumAdapter(context, newList);
+                TopAdapter.setOnItemClickListener(new FrontForumAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick() {
                         startActivity(new Intent(HomePage.this, ForumCardPage.class));
+                        finish();
                     }
                 });
                 recyclerWeeklyPopularForum.setAdapter(TopAdapter);
@@ -73,29 +72,27 @@ public class HomePage extends AppCompatActivity {
 
     public void intoSupplier(View view) {
         startActivity(new Intent(this, SupplierPage.class));
+        finish();
     }
 
     public void intoLowongan(View view) {
         startActivity(new Intent(this, LowonganPekerjaan.class));
+        finish();
     }
 
     public void intoAdd(View view) {
         startActivity(new Intent(this, addforum.class));
+        finish();
     }
 
-    public void intoPopuler(View view) {
-        startActivity(new Intent(this, PopularForum.class));
-    }
-
-    public void intoTeratas(View view) {
-        startActivity(new Intent(this, TopForum.class));
-    }
     public void intoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
+        finish();
     }
 
     public void intoModal(View view) {
         startActivity(new Intent(this, HomeModalusaha.class));
+        finish();
     }
 
 }

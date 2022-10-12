@@ -10,6 +10,16 @@ public class Forum {
     private String ForumPertanyaan;
     private String ForumFilePath;
 
+    public String getForumUserName() {
+        return ForumUserName;
+    }
+
+    public void setForumUserName(String forumUserName) {
+        ForumUserName = forumUserName;
+    }
+
+    private String ForumUserName;
+
     public String getForumKategori() {
         return ForumKategori;
     }
@@ -18,7 +28,7 @@ public class Forum {
         ForumKategori = forumKategori;
     }
 
-    public Forum(String ForumKey, String ForumJudul, String ForumKategori, String ForumPertanyaan, String ForumFilePath) {
+    public Forum(String ForumKey, String ForumJudul, String ForumKategori, String ForumPertanyaan, String ForumFilePath, String username) {
         this.ForumKey = ForumKey;
         this.ForumJudul = ForumJudul;
         this.ForumKategori = ForumKategori;
@@ -49,6 +59,7 @@ public class Forum {
         data.put("kategori", ForumKategori);
         data.put("pertanyaan", ForumPertanyaan);
         data.put("filepath", ForumFilePath);
+        data.put("username",ForumUserName);
         return data;
     }
 }
