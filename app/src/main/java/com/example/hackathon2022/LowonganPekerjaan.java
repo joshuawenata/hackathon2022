@@ -55,7 +55,7 @@ public class LowonganPekerjaan extends AppCompatActivity {
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 LowonganAdapter myAdapter = new LowonganAdapter(context, newList);
-                myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                myAdapter.setOnItemClickListener(new LowonganAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick() {
                         startActivity(new Intent(LowonganPekerjaan.this, JasaCardPage.class));

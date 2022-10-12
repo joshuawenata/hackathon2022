@@ -83,12 +83,23 @@
                 >
 
                 <TextView
+                    android:id="@+id/activityforumcardpage_judul"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="A short or very long title to put in here"
                     android:fontFamily="@font/kanit_semibold"
                     android:textColor="@color/primary"
                     android:textSize="22sp"
+                    />
+
+                <TextView
+                    android:id="@+id/activityforumcardpage_pertanyaan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="A short or very long title to put in here"
+                    android:fontFamily="@font/kanit_semibold"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="15sp"
                     />
 
                 <LinearLayout
@@ -101,12 +112,38 @@
                         android:id="@+id/author"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="by Anonymous"
+                        android:text="by "
                         android:fontFamily="@font/kanit_light"
                         android:textColor="@color/figma_gray"/>
 
                     <TextView
-                        android:id="@+id/dot"
+                        android:id="@+id/activityforumcardpage_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kanit_light"
+                        android:textColor="@color/figma_gray"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  •  "
+                        android:textSize="13sp"
+                        android:textColor="@color/figma_gray"
+                        android:gravity="bottom"
+                        />
+
+                    <TextView
+                        android:id="@+id/activityforumcardpage_kategori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/figma_gray"
+                        android:gravity="bottom"
+                        />
+
+                    <TextView
+                        android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="  •  "
@@ -218,7 +255,7 @@
                             />
 
                         <TextView
-                            android:id="@+id/reply"
+                            android:id="@+id/activityforumcardpage_jdlusername"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Anonymous"
@@ -274,17 +311,16 @@
 
                 <!--DESC-->
                 <TextView
-                    android:id="@+id/reply_content"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/loremipsum"
                     android:fontFamily="@font/kanit_regular"
                     android:layout_marginVertical="5dp"
+                    android:text="@string/loremipsum"
                     />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:layout_marginTop="5dp"
@@ -293,7 +329,7 @@
                     <LinearLayout
                         android:id="@+id/star_holder"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:background="@drawable/round_gray"
                         android:paddingHorizontal="5dp"
@@ -328,16 +364,15 @@
                     <LinearLayout
                         android:id="@+id/comment_holder"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:paddingHorizontal="5dp"
-                        android:paddingVertical="2dp"
                         android:gravity="center_vertical"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="10dp"
                         >
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/ic_comment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -346,7 +381,9 @@
                             android:maxWidth="20dp"
                             android:maxHeight="20dp"
                             android:scaleType="fitCenter"
-                            />
+                            android:background="@null"
+                            android:onClick="pushtoDB"
+                            tools:ignore="OnClick" />
 
                         <TextView
                             android:id="@+id/comment_count"
@@ -356,6 +393,17 @@
                             android:fontFamily="@font/kanit_light"
                             android:textColor="@android:color/darker_gray"
                             android:layout_marginHorizontal="3dp"/>
+
+                        <EditText
+                            android:id="@+id/activityforumcardpage_replycontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:fontFamily="@font/kanit_regular"
+                            android:textSize="12dp"
+                            android:hint="jawab pertanyaan"
+                            android:paddingHorizontal="10dp"
+                            />
+
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

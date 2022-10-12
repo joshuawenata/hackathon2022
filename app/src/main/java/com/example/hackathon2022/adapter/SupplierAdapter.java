@@ -30,13 +30,13 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
 
     Context context;
     ArrayList<ObjectSupplier> SupplierList;
-    private AllForumAdapter.OnItemClickListener mListener;
+    private SupplierAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
         void onItemClick();
     }
 
-    public void setOnItemClickListener(AllForumAdapter.OnItemClickListener listener){
+    public void setOnItemClickListener(SupplierAdapter.OnItemClickListener listener){
         mListener = listener;
     }
 

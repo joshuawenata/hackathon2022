@@ -51,7 +51,7 @@ public class AllLowongan extends AppCompatActivity {
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 AllLowonganAdapter myAdapter = new AllLowonganAdapter(context, newList);
-                myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                myAdapter.setOnItemClickListener(new AllLowonganAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick() {
                         startActivity(new Intent(AllLowongan.this, JasaCardPage.class));

@@ -1,5 +1,7 @@
 package com.example.hackathon2022;
 
+import static com.example.hackathon2022.data.UserRepository.LOGGED_IN_USER;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -51,9 +53,16 @@ public class HomePage extends AppCompatActivity {
                 recyclerWeeklyPopularForum.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 FrontForumAdapter TopAdapter = new FrontForumAdapter(context, newList);
                 TopAdapter.setOnItemClickListener(new FrontForumAdapter.OnItemClickListener() {
+
                     @Override
-                    public void onItemClick() {
-                        startActivity(new Intent(HomePage.this, ForumCardPage.class));
+                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan) {
+                        Intent i = new Intent(HomePage.this, ForumCardPage.class);
+                        i.putExtra("key",key);
+                        i.putExtra("username",username);
+                        i.putExtra("judul",judul);
+                        i.putExtra("kategori",kategori);
+                        i.putExtra("pertanyaan",pertanyaan);
+                        startActivity(i);
                         finish();
                     }
                 });

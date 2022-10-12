@@ -53,9 +53,13 @@ public class Forum {
         return ForumFilePath;
     }
 
+    public void setForumKey(String forumKey) {
+        ForumKey = forumKey;
+    }
 
     public Map<String, Object> toMap(){
         Map<String, Object> data = new HashMap<>();
+        data.put("key", ForumKey);
         data.put("judul", ForumJudul);
         data.put("kategori", ForumKategori);
         data.put("pertanyaan", ForumPertanyaan);

@@ -51,7 +51,7 @@ public class TopSupplier extends AppCompatActivity {
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
                 AllSupplierAdapter myAdapter = new AllSupplierAdapter(context, newList);
-                myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+                myAdapter.setOnItemClickListener(new AllSupplierAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick() {
                         startActivity(new Intent(TopSupplier.this, SupplierCardPage.class));

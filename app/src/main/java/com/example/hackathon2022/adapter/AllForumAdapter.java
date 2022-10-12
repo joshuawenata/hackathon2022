@@ -20,11 +20,19 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick();
+        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener){
         mListener = listener;
+    }
+
+    public ArrayList<ObjectForum> getForumList() {
+        return forumList;
+    }
+
+    public void setForumList(ArrayList<ObjectForum> forumList) {
+        this.forumList = forumList;
     }
 
     public AllForumAdapter(Context context, ArrayList<ObjectForum> newList) {
@@ -64,8 +72,16 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    ArrayList<ObjectForum> Forumlist = getForumList();
+                    String key, username, judul, kategori, pertanyaan;
+                    key = Forumlist.get(position).getKey();
+                    username = Forumlist.get(position).getUsername();
+                    judul = Forumlist.get(position).getJudul();
+                    kategori = Forumlist.get(position).getKategori();
+                    pertanyaan = Forumlist.get(position).getPertanyaan();
                     if(mListener!=null){
-                        mListener.onItemClick();
+                        mListener.onItemClick(key, username,judul,kategori,pertanyaan);
                     }
                 }
             });

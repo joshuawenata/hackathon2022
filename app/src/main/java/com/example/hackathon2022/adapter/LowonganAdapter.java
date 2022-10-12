@@ -18,13 +18,13 @@ public class LowonganAdapter extends RecyclerView.Adapter<LowonganAdapter.Lowong
 
     Context context;
     ArrayList <ObjectLowongan> LowonganList;
-    private AllForumAdapter.OnItemClickListener mListener;
+    private LowonganAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
         void onItemClick();
     }
 
-    public void setOnItemClickListener(AllForumAdapter.OnItemClickListener listener){
+    public void setOnItemClickListener(LowonganAdapter.OnItemClickListener listener){
         mListener = listener;
     }
 

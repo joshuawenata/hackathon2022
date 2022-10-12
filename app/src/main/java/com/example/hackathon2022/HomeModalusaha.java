@@ -54,8 +54,15 @@ public class HomeModalusaha extends AppCompatActivity {
                 AllForumAdapter myAdapter = new AllForumAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick() {
-                        startActivity(new Intent(HomeModalusaha.this, ForumCardPage.class));
+                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan) {
+                        Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
+                        i.putExtra("key",key);
+                        i.putExtra("username",username);
+                        i.putExtra("judul",judul);
+                        i.putExtra("kategori",kategori);
+                        i.putExtra("pertanyaan",pertanyaan);
+                        startActivity(i);
+                        finish();
                     }
                 });
                 recyclerView.setAdapter(myAdapter);

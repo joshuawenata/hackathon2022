@@ -2,6 +2,16 @@ package com.example.hackathon2022.Object;
 
 public class ObjectForum {
 
+    private String key;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
     private String judul;
     private String kategori;
     private String pertanyaan;

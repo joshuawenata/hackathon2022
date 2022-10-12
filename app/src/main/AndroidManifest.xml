@@ -61,12 +61,6 @@
             android:name=".TopSupplier"
             android:exported="false" />
         <activity
-            android:name=".TopForum"
-            android:exported="false" />
-        <activity
-            android:name=".PopularForum"
-            android:exported="false" />
-        <activity
             android:name=".SupplierPage"
             android:exported="false" />
         <activity
