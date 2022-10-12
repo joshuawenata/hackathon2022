@@ -76,26 +76,32 @@ public class LowonganPekerjaan extends AppCompatActivity {
 
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
+        finish();
     }
 
     public void intoSupplier(View view) {
         startActivity(new Intent(this, SupplierPage.class));
+        finish();
     }
 
     public void intoAdd(View view) {
         startActivity(new Intent(this, addlowongan.class));
+        finish();
     }
 
     public void intoLamar(View view) {
         startActivity(new Intent(this, LamarPekerjaan.class));
+        finish();
     }
 
     public void LihatSemua(View view) {
         startActivity(new Intent(this, AllLowongan.class));
+        finish();
     }
 
     public void intoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
+        finish();
     }
 
 }

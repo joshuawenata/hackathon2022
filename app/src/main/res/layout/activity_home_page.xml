@@ -359,10 +359,8 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:src="@drawable/ic_forum_biru"
-                android:onClick="intoHome"
                 android:layout_weight="1"
-                android:layout_marginHorizontal="5dp"
-                tools:ignore="OnClick" />
+                android:layout_marginHorizontal="5dp" />
 
             <!--ICON SUPPLIER-->
             <ImageButton
