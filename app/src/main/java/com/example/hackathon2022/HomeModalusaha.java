@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectForum;
@@ -54,7 +53,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 AllForumAdapter myAdapter = new AllForumAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan) {
+                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date) {
                         Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);

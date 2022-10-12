@@ -268,7 +268,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/answer_date"
+                        android:id="@+id/componentcardforum_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="22h"

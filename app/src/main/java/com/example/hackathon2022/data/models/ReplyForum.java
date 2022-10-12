@@ -1,7 +1,5 @@
 package com.example.hackathon2022.data.models;
 
-import com.example.hackathon2022.R;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,7 +50,7 @@ public class ReplyForum {
     private String answer;
     private String ForumKey;
 
-    public ReplyForum(String ReplyKey, String username, String answer, String ForumKey){
+    public ReplyForum(String ReplyKey, String username, String answer, String ForumKey, String date){
         this.ReplyKey = ReplyKey;
         this.username = username;
         this.answer = answer;

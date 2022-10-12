@@ -20,7 +20,7 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan);
+        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener){
@@ -53,6 +53,7 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
         holder.txtKategori.setText(forumList.get(position).getKategori());
         holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
         holder.txtUsername.setText(forumList.get(position).getUsername());
+        holder.txtDate.setText(forumList.get(position).getDate());
     }
 
     @Override
@@ -61,27 +62,29 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
     }
 
     public class ForumViewHolder extends RecyclerView.ViewHolder {
-        TextView txtJudul, txtKategori, txtPertanyaan, txtUsername;
+        TextView txtJudul, txtKategori, txtPertanyaan, txtUsername, txtDate;
         ForumViewHolder(@NonNull View itemView) {
             super(itemView);
             txtJudul = itemView.findViewById(R.id.componentcardforum_judul);
             txtKategori = itemView.findViewById(R.id.componentcardforum_kategori);
             txtPertanyaan = itemView.findViewById(R.id.componentcardforum_Pertanyaan);
             txtUsername = itemView.findViewById(R.id.componentcardforum_username);
+            txtDate = itemView.findViewById(R.id.componentcardforum_date);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     ArrayList<ObjectForum> Forumlist = getForumList();
-                    String key, username, judul, kategori, pertanyaan;
+                    String key, username, judul, kategori, pertanyaan, date;
                     key = Forumlist.get(position).getKey();
                     username = Forumlist.get(position).getUsername();
                     judul = Forumlist.get(position).getJudul();
                     kategori = Forumlist.get(position).getKategori();
                     pertanyaan = Forumlist.get(position).getPertanyaan();
+                    date = Forumlist.get(position).getDate();
                     if(mListener!=null){
-                        mListener.onItemClick(key, username,judul,kategori,pertanyaan);
+                        mListener.onItemClick(key, username,judul,kategori,pertanyaan,date);
                     }
                 }
             });

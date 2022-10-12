@@ -9,6 +9,7 @@ public class Forum {
     private String ForumKategori;
     private String ForumPertanyaan;
     private String ForumFilePath;
+    private String date;
 
     public String getForumUserName() {
         return ForumUserName;
@@ -28,13 +29,14 @@ public class Forum {
         ForumKategori = forumKategori;
     }
 
-    public Forum(String ForumKey, String ForumJudul, String ForumKategori, String ForumPertanyaan, String ForumFilePath, String username) {
+    public Forum(String ForumKey, String ForumJudul, String ForumKategori, String ForumPertanyaan, String ForumFilePath, String username, String date) {
         this.ForumKey = ForumKey;
         this.ForumJudul = ForumJudul;
         this.ForumKategori = ForumKategori;
         this.ForumPertanyaan = ForumPertanyaan;
         this.ForumFilePath = ForumFilePath;
         this.ForumUserName = username;
+        this.date = date;
     }
 
     public String getForumKey() {
@@ -57,6 +59,14 @@ public class Forum {
         ForumKey = forumKey;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public Map<String, Object> toMap(){
         Map<String, Object> data = new HashMap<>();
         data.put("key", ForumKey);
@@ -65,6 +75,7 @@ public class Forum {
         data.put("pertanyaan", ForumPertanyaan);
         data.put("filepath", ForumFilePath);
         data.put("username",ForumUserName);
+        data.put("date",date);
         return data;
     }
 }

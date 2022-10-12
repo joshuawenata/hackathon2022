@@ -29,6 +29,9 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.UUID;
 
 public class addforum extends AppCompatActivity {
@@ -148,7 +151,10 @@ public class addforum extends AppCompatActivity {
                 path = "";
             }
 
-            ForumRepository.insertForum(judul, kategori, pertanyaan, path, LOGGED_IN_USER.getUserName());
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            Date date = new Date();
+
+            ForumRepository.insertForum(judul, kategori, pertanyaan, path, LOGGED_IN_USER.getUserName(),dateFormat.format(date));
             startActivity(new Intent(this, HomePage.class));
             finish();
         }

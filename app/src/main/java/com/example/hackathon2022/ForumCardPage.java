@@ -28,9 +28,9 @@ import java.util.ArrayList;
 
 public class ForumCardPage extends AppCompatActivity {
 
-    TextView txtjudul, txtusernamekecil, txtusername, txtkategori, txtpertanyaan, replyusername;
+    TextView txtjudul, txtusernamekecil, txtdate, txtkategori, txtpertanyaan;
     EditText replyanswer;
-    String forumkey, judul, username, kategori, pertanyaan;
+    String forumkey, judul, username, kategori, pertanyaan, date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ public class ForumCardPage extends AppCompatActivity {
         txtusernamekecil = findViewById(R.id.activityforumcardpage_username);
         txtkategori = findViewById(R.id.activityforumcardpage_kategori);
         txtpertanyaan = findViewById(R.id.activityforumcardpage_pertanyaan);
+        txtdate = findViewById(R.id.date);
 
         Intent intent = getIntent();
         forumkey = intent.getStringExtra("key");
@@ -54,14 +55,16 @@ public class ForumCardPage extends AppCompatActivity {
         username = intent.getStringExtra("username");
         kategori = intent.getStringExtra("kategori");
         pertanyaan = intent.getStringExtra("pertanyaan");
+        date = intent.getStringExtra("date");
 
         txtjudul.setText(judul);
+        txtdate.setText(date);
         txtusernamekecil.setText(username);
         txtkategori.setText(kategori);
         txtpertanyaan.setText(pertanyaan);
     }
 
     public void pushtoDB(View view) {
-        ReplyForumRepository.insertReplyForum(forumkey,LOGGED_IN_USER.getUserName(),replyanswer.getText().toString());
+        ReplyForumRepository.insertReplyForum(forumkey,LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),date);
     }
 }

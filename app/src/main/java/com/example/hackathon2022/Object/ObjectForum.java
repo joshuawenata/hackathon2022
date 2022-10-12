@@ -2,8 +2,6 @@ package com.example.hackathon2022.Object;
 
 public class ObjectForum {
 
-    private String key;
-
     public String getKey() {
         return key;
     }
@@ -12,10 +10,21 @@ public class ObjectForum {
         this.key = key;
     }
 
+    private String key;
     private String judul;
     private String kategori;
     private String pertanyaan;
     private String username;
+    private String date;
+    private String file;
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public String getUsername() {
         return username;
@@ -24,8 +33,6 @@ public class ObjectForum {
     public void setUsername(String userName) {
         this.username = userName;
     }
-
-    private String file;
 
     public String getKategori() {
         return kategori;
