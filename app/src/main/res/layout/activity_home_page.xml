@@ -84,41 +84,41 @@
             </LinearLayout>
 
             <!--MAIN HOLDER NYA SEARCH BAR-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                >
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_weight="1"-->
+<!--                >-->
 
-                <!--EDIT TEXT SEARCH-->
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/round_btt_white"
-                    android:fontFamily="@font/kanit_regular"
-                    android:hint="@string/forum_apa_yang_ingin_ditanyakan"
-                    android:paddingVertical="7dp"
-                    android:paddingHorizontal="12dp"
-                    android:textSize="13sp"
-                    android:textColorHint="@color/figma_gray"
-                    android:textColor="@color/figma_gray"/>
+<!--                &lt;!&ndash;EDIT TEXT SEARCH&ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/round_btt_white"-->
+<!--                    android:fontFamily="@font/kanit_regular"-->
+<!--                    android:hint="@string/forum_apa_yang_ingin_ditanyakan"-->
+<!--                    android:paddingVertical="7dp"-->
+<!--                    android:paddingHorizontal="12dp"-->
+<!--                    android:textSize="13sp"-->
+<!--                    android:textColorHint="@color/figma_gray"-->
+<!--                    android:textColor="@color/figma_gray"/>-->
 
-                <!--ICON NYA SEARCH-->
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_weight="0.05"
-                    android:background="@drawable/roundcorner"
-                    android:padding="7dp"
-                    app:srcCompat="@drawable/search"
-                    app:tint="@color/figma_gray"
-                    />
-            </LinearLayout>
+<!--                &lt;!&ndash;ICON NYA SEARCH&ndash;&gt;-->
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="5dp"-->
+<!--                    android:layout_weight="0.05"-->
+<!--                    android:background="@drawable/roundcorner"-->
+<!--                    android:padding="7dp"-->
+<!--                    app:srcCompat="@drawable/search"-->
+<!--                    app:tint="@color/figma_gray"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
 
             <!--MAIN HOLDER NYA FORUM POPULER-->
             <LinearLayout
