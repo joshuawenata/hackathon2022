@@ -34,6 +34,7 @@ public class Forum {
         this.ForumKategori = ForumKategori;
         this.ForumPertanyaan = ForumPertanyaan;
         this.ForumFilePath = ForumFilePath;
+        this.ForumUserName = username;
     }
 
     public String getForumKey() {
