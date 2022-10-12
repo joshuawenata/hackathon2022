@@ -41,7 +41,6 @@ public class SupplierPage extends AppCompatActivity {
 
     protected void initComponents() {
         RecyclerView recyclerView = findViewById(R.id.activitysupplier_recycleviewsupplier);
-        RecyclerView recyclerViewterdekat = findViewById(R.id.activitysupplier_recycleviewsupplierterdekat);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("suppliers");
@@ -65,17 +64,17 @@ public class SupplierPage extends AppCompatActivity {
 
                 myAdapter.notifyDataSetChanged();
 
-                recyclerViewterdekat.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                SupplierTerdekatAdapter terdekatAdapter = new SupplierTerdekatAdapter(context, newList);
-                terdekatAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick() {
-                        startActivity(new Intent(SupplierPage.this, SupplierCardPage.class));
-                    }
-                });
-                recyclerViewterdekat.setAdapter(terdekatAdapter);
-
-                terdekatAdapter.notifyDataSetChanged();
+//                recyclerViewterdekat.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
+//                SupplierTerdekatAdapter terdekatAdapter = new SupplierTerdekatAdapter(context, newList);
+//                terdekatAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
+//                    @Override
+//                    public void onItemClick() {
+//                        startActivity(new Intent(SupplierPage.this, SupplierCardPage.class));
+//                    }
+//                });
+//                recyclerViewterdekat.setAdapter(terdekatAdapter);
+//
+//                terdekatAdapter.notifyDataSetChanged();
             }
 
             @Override

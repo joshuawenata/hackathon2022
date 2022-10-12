@@ -46,7 +46,7 @@ public class ForumAdapterTop extends RecyclerView.Adapter<ForumAdapterTop.ForumV
         holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
     }
 
-    private final int limit = 2;
+    private final int limit = 4;
     @Override
     public int getItemCount() {
         if(forumList.size() > limit){

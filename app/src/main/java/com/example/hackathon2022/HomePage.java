@@ -39,7 +39,6 @@ public class HomePage extends AppCompatActivity {
 
     protected void initComponents() {
         RecyclerView recyclerWeeklyPopularForum = findViewById(R.id.activityhome_recyclerweeklypopularforum);
-        RecyclerView recyclerTopForum = findViewById(R.id.activityhome_recyclertopforum);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
@@ -62,18 +61,6 @@ public class HomePage extends AppCompatActivity {
                 recyclerWeeklyPopularForum.setAdapter(TopAdapter);
 
                 TopAdapter.notifyDataSetChanged();
-
-                recyclerTopForum.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                ForumAdapterNear NearAdapter = new ForumAdapterNear(context, newList);
-                NearAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick() {
-                        startActivity(new Intent(HomePage.this, ForumCardPage.class));
-                    }
-                });
-                recyclerTopForum.setAdapter(NearAdapter);
-
-                NearAdapter.notifyDataSetChanged();
             }
 
             @Override

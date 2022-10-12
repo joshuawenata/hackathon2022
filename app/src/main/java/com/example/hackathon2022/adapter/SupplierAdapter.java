@@ -76,8 +76,8 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
 
     @Override
     public int getItemCount() {
-        if(SupplierList.size()>=2){
-            return 2;
+        if(SupplierList.size()>=4){
+            return 4;
         }else{
             return SupplierList.size();
         }
