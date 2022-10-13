@@ -42,28 +42,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:weightSum="1"
-                >
+                android:weightSum="1">
 
                 <!--MAIN HOLDER BUAT ITEM-ITEM LAIN SELAIN APP BAR-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="20dp"
-                    >
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <!--MAIN HOLDER NYA JUDUL SAMA GAMBAR-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:layout_weight="1"
                         android:weightSum="4"
                         tools:ignore="NestedWeights">
 
@@ -93,8 +91,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            >
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -107,10 +104,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingVertical="2dp"
                         android:layout_weight="1"
-                        >
+                        android:orientation="vertical"
+                        android:paddingVertical="2dp">
 
                         <!--TEXT "SUPPLIER PILIHAN TERBAIK"-->
                         <TextView
@@ -125,15 +121,15 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
                             android:fontFamily="@font/kanit_regular"
+                            android:onClick="TopSupplier"
                             android:text="@string/lihat_semua"
                             android:textAlignment="textEnd"
                             android:textColor="@color/white"
                             android:textSize="12sp"
-                            android:clickable="true"
-                            android:onClick="TopSupplier"
-                            tools:ignore="OnClick"
-                            android:focusable="true"/>
+                            tools:ignore="OnClick" />
 
                         <!--HOLDER NYA RECYCLER VIEW-->
                         <LinearLayout
@@ -155,66 +151,64 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_weight="1"
-                        >
+                        android:orientation="vertical">
 
                         <!--TEXT "SUPPLIER TERDEKAT"-->
-    <!--                    <TextView-->
-    <!--                        android:layout_width="match_parent"-->
-    <!--                        android:layout_height="wrap_content"-->
-    <!--                        android:fontFamily="@font/kanit_semibold"-->
-    <!--                        android:text="Supplier terdekat"-->
-    <!--                        android:textColor="@color/figma_text"-->
-    <!--                        android:textSize="17sp" />-->
+                        <!--                    <TextView-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:fontFamily="@font/kanit_semibold"-->
+                        <!--                        android:text="Supplier terdekat"-->
+                        <!--                        android:textColor="@color/figma_text"-->
+                        <!--                        android:textSize="17sp" />-->
 
-    <!--                    &lt;!&ndash;TEXT "LOKASI ANDA..."&ndash;&gt;-->
-    <!--                    <TextView-->
-    <!--                        android:layout_width="match_parent"-->
-    <!--                        android:layout_height="wrap_content"-->
-    <!--                        android:text="Lokasi anda : Jl. Pasir Kaliki, Kota Bandung"-->
-    <!--                        android:fontFamily="@font/kanit_regular"-->
-    <!--                        android:textColor="@color/figma_text"-->
-    <!--                        android:textSize="11sp"/>-->
+                        <!--                    &lt;!&ndash;TEXT "LOKASI ANDA..."&ndash;&gt;-->
+                        <!--                    <TextView-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="Lokasi anda : Jl. Pasir Kaliki, Kota Bandung"-->
+                        <!--                        android:fontFamily="@font/kanit_regular"-->
+                        <!--                        android:textColor="@color/figma_text"-->
+                        <!--                        android:textSize="11sp"/>-->
 
                         <!--TEXT "LIHAT SEMYUA"-->
-    <!--                    <TextView-->
-    <!--                        android:layout_width="match_parent"-->
-    <!--                        android:layout_height="wrap_content"-->
-    <!--                        android:fontFamily="@font/kanit_regular"-->
-    <!--                        android:text="Lihat semua"-->
-    <!--                        android:textAlignment="textEnd"-->
-    <!--                        android:textColor="@color/white"-->
-    <!--                        android:textSize="12sp"-->
-    <!--                        android:clickable="true"-->
-    <!--                        android:onClick="NearSupplier"-->
-    <!--                        tools:ignore="OnClick"-->
-    <!--                        android:focusable="true"/>-->
+                        <!--                    <TextView-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:fontFamily="@font/kanit_regular"-->
+                        <!--                        android:text="Lihat semua"-->
+                        <!--                        android:textAlignment="textEnd"-->
+                        <!--                        android:textColor="@color/white"-->
+                        <!--                        android:textSize="12sp"-->
+                        <!--                        android:clickable="true"-->
+                        <!--                        android:onClick="NearSupplier"-->
+                        <!--                        tools:ignore="OnClick"-->
+                        <!--                        android:focusable="true"/>-->
 
                         <!--HOLDER NYA RECYCLER VIEW-->
-    <!--                    <LinearLayout-->
-    <!--                        android:layout_width="match_parent"-->
-    <!--                        android:layout_height="wrap_content"-->
-    <!--                        android:orientation="horizontal"-->
-    <!--                        >-->
+                        <!--                    <LinearLayout-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:orientation="horizontal"-->
+                        <!--                        >-->
 
-    <!--                        <androidx.recyclerview.widget.RecyclerView-->
-    <!--                            android:id="@+id/activitysupplier_recycleviewsupplierterdekat"-->
-    <!--                            android:layout_width="match_parent"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            tools:itemCount="2"-->
-    <!--                            tools:listitem="@layout/activity_component_card_supplier" />-->
-    <!--                    </LinearLayout>-->
+                        <!--                        <androidx.recyclerview.widget.RecyclerView-->
+                        <!--                            android:id="@+id/activitysupplier_recycleviewsupplierterdekat"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            tools:itemCount="2"-->
+                        <!--                            tools:listitem="@layout/activity_component_card_supplier" />-->
+                        <!--                    </LinearLayout>-->
                     </LinearLayout>
 
                     <!--MAIN HOLDER NYA TOPIK-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
-                        >
+                        android:orientation="vertical">
 
                         <!--TEXT "PILIH BERDASARKAN TOPIK"-->
                         <TextView
@@ -223,8 +217,7 @@
                             android:fontFamily="@font/kanit_semibold"
                             android:text="Topik"
                             android:textColor="@color/figma_text"
-                            android:textSize="17sp"
-                            />
+                            android:textSize="17sp" />
 
                         <!--HOLDER NYA ANAK-ANAK TOPIK-->
                         <LinearLayout
@@ -238,19 +231,18 @@
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical"
                                 android:layout_marginHorizontal="10dp"
                                 android:layout_weight="1"
-                                >
+                                android:gravity="center"
+                                android:orientation="vertical">
 
                                 <ImageButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/supplier_fnb"
+                                    android:background="@null"
                                     android:onClick="intoFnB"
-                                    tools:ignore="OnClick"
-                                    android:background="@null"/>
+                                    app:srcCompat="@drawable/supplier_fnb"
+                                    tools:ignore="OnClick" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -265,11 +257,10 @@
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical"
                                 android:layout_marginHorizontal="10dp"
                                 android:layout_weight="1"
-                                >
+                                android:gravity="center"
+                                android:orientation="vertical">
 
                                 <ImageView
                                     android:layout_width="wrap_content"
@@ -289,11 +280,10 @@
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical"
                                 android:layout_marginHorizontal="10dp"
                                 android:layout_weight="1"
-                                >
+                                android:gravity="center"
+                                android:orientation="vertical">
 
                                 <ImageView
                                     android:layout_width="wrap_content"
@@ -313,11 +303,10 @@
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical"
                                 android:layout_marginHorizontal="10dp"
                                 android:layout_weight="1"
-                                >
+                                android:gravity="center"
+                                android:orientation="vertical">
 
                                 <ImageView
                                     android:layout_width="wrap_content"
@@ -338,7 +327,6 @@
 
             </LinearLayout>
         </RelativeLayout>
-
     </ScrollView>
 
     <!--MAIN CONSTRAINT BUAT APP BAR-->
