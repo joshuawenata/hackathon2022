@@ -56,4 +56,5 @@ public class Profile extends AppCompatActivity {
         LOGGED_IN_USER.setUserName(name.getText().toString());
         LOGGED_IN_USER.setUserNomor(phone.getText().toString());
     }
+
 }

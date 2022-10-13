@@ -299,8 +299,6 @@
             />
     </LinearLayout>
 
-
-
     <!--DESC-->
     <TextView
         android:id="@+id/componentcardforum_Pertanyaan"
@@ -376,8 +374,7 @@
                 android:maxHeight="20dp"
                 android:scaleType="fitCenter"
                 android:background="@null"
-                android:onClick="pushtoDB"
-                tools:ignore="OnClick" />
+                android:onClick="pushtoDB" />
 
             <TextView
                 android:id="@+id/comment_count"

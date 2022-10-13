@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hackathon2022.Object.ObjectForum;
+import com.example.hackathon2022.Object.ObjectReply;
 import com.example.hackathon2022.R;
 import java.util.ArrayList;
 
