@@ -29,7 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ForumCardPage extends AppCompatActivity {
+public class ForumCardPage extends AppCompatActivity{
 
     TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, txtanswer, txtusernamejawaban, txtdatejawaban;
     EditText replyanswer;
@@ -74,7 +74,7 @@ public class ForumCardPage extends AppCompatActivity {
 
         RecyclerView recyclerJawaban = findViewById(R.id.activityforumcardpage_recyclerviewjawaban);
 
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("replyforum");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -98,10 +98,6 @@ public class ForumCardPage extends AppCompatActivity {
             }
         });
 
-    }
-
-    public void pushtoDB(View view) {
-        ReplyForumRepository.insertReplyForum(forumkey,LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),date);
     }
 
     public void backtoHome(View view) {

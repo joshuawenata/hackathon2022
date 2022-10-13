@@ -81,7 +81,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/dot"
+                        android:text="  •  "
                         android:textSize="13sp"
                         android:textColor="@color/figma_gray"
                         android:gravity="bottom"
@@ -143,6 +143,7 @@
         android:id="@+id/componentcardforum_Pertanyaan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:maxHeight="20dp"
         android:text="@string/loremipsum"
         android:fontFamily="@font/kanit_regular"
         android:layout_marginVertical="5dp"
@@ -213,7 +214,7 @@
                 android:maxHeight="20dp"
                 android:scaleType="fitCenter"
                 android:background="@null"
-                android:onClick="pushtoDB" />
+                android:onClick="pushtodatabase" />
 
             <TextView
                 android:id="@+id/comment_count"
@@ -234,7 +235,9 @@
                 android:importantForAutofill="no"
                 android:paddingHorizontal="10dp"
                 android:textSize="12sp"
-                tools:ignore="NestedWeights,TextFields" />
+                tools:ignore="NestedWeights,TextFields"
+                android:textColorHint="@color/figma_gray"
+                android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
