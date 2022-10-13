@@ -318,7 +318,6 @@
                     android:text="@string/loremipsum"
                     />
 
-                <!--STAR,COMMENT,ETC-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -395,17 +394,16 @@
                             android:textColor="@android:color/darker_gray"
                             android:layout_marginHorizontal="3dp"/>
 
-
                         <EditText
                             android:id="@+id/activityforumcardpage_replycontent"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:fontFamily="@font/kanit_regular"
                             android:textSize="12dp"
-                            android:hint="Tambahkan komentar"
+                            android:hint="jawab pertanyaan"
                             android:paddingHorizontal="10dp"
-                            android:layout_weight="1"
                             />
+
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Spinner;
 
 import com.example.hackathon2022.data.UserRepository;
 
@@ -18,6 +20,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
     private ImageButton btnDaftar;
     private TextView txtMasuk;
 
+
     private void initComponents() {
         txtNama = findViewById(R.id.activityregister_inputfullname);
         txtNomor = findViewById(R.id.activityregister_inputnomor);
@@ -25,6 +28,8 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
         txtConfirmPassword = findViewById(R.id.activityregister_inputconfirmpassword);
         btnDaftar = findViewById(R.id.activityregister_btnDaftar);
         txtMasuk = findViewById(R.id.activityregister_txtMasuk);
+
+
     }
 
     @Override

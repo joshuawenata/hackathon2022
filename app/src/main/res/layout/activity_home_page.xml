@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:scaleType="fitXY"
-                />
+                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,354 +43,337 @@
                 >
 
                 <!--MAIN HOLDER BUAT ITEM-ITEM LAIN SELAIN APP BAR-->
+
+                <!--MAIN HOLDER NYA JUDUL SAMA GAMBAR-->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="45dp"
+                    android:layout_weight="3"
                     android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp"
+                    tools:ignore="NestedWeights"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kanit_bold"
+                            android:text="@string/forum"
+                            android:textColor="@color/white"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kanit_light"
+                            android:text="@string/forum_tagline"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/forum_artwork_01"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="200dp"
+                            android:scaleType="fitCenter"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--MAIN HOLDER NYA FORUM POPULER-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:weightSum="4"
-                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/forum_round_top"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="10dp"
                     >
 
-                    <!--MAIN HOLDER NYA JUDUL SAMA GAMBAR-->
+                    <!--MAIN HOLDER NYA SEARCH BAR-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="45dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginVertical="5dp"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:layout_weight="3"
-                        tools:ignore="NestedWeights"
-                        android:paddingHorizontal="20dp"
-                        >
+                        android:layout_weight="1"
+                        tools:ignore="NestedWeights">
 
-                        <LinearLayout
+                        <!--EDIT TEXT SEARCH-->
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="50"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kanit_bold"
-                                android:text="@string/forum"
-                                android:textColor="@color/white"
-                                android:textSize="40sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kanit_light"
-                                android:text="@string/forum_tagline"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="15dp"
-                            >
+                            android:background="@drawable/round_btt_white"
+                            android:fontFamily="@font/kanit_regular"
+                            android:hint="@string/forum_apa_yang_ingin_ditanyakan"
+                            android:paddingVertical="7dp"
+                            android:paddingHorizontal="12dp"
+                            android:textSize="13sp"
+                            android:textColorHint="@color/figma_gray"
+                            android:textColor="@color/figma_gray"
+                            tools:ignore="NestedWeights"
+                            android:autofillHints=""
+                            android:inputType="text" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                app:srcCompat="@drawable/forum_art" />
-                        </LinearLayout>
+                        <!--ICON NYA SEARCH-->
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="0.05"
+                            android:background="@drawable/roundcorner"
+                            android:padding="7dp"
+                            app:srcCompat="@drawable/search"
+                            app:tint="@color/figma_gray"
+                            tools:ignore="ContentDescription" />
                     </LinearLayout>
 
-
-                    <!--MAIN HOLDER NYA FORUM POPULER-->
-                    <LinearLayout
+                    <!--TEXT "PILIH BERDASARKAN TOPIK"-->
+                    <TextView
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kanit_semibold"
+                        android:text="@string/topik"
+                        android:textColor="@color/elegant_black"
+                        android:textSize="20sp"
+                        />
+
+                    <!--MAIN HOLDER NYA TOPIK-->
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_weight="1"
-                        android:background="@drawable/forum_round_top"
-                        android:paddingHorizontal="15dp"
-                        android:paddingTop="10dp"
+                        android:scrollbars="none"
                         >
 
-                        <!--MAIN HOLDER NYA SEARCH BAR-->
+                        <!--HOLDER NYA ANAK-ANAK TOPIK-->
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginVertical="5dp"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:layout_weight="1"
-                            >
-
-                            <!--EDIT TEXT SEARCH-->
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:background="@drawable/round_btt_white"
-                                android:fontFamily="@font/kanit_regular"
-                                android:hint="@string/forum_apa_yang_ingin_ditanyakan"
-                                android:paddingVertical="7dp"
-                                android:paddingHorizontal="12dp"
-                                android:textSize="13sp"
-                                android:textColorHint="@color/figma_gray"
-                                android:textColor="@color/figma_gray"/>
-
-                            <!--ICON NYA SEARCH-->
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
-                                android:layout_weight="0.05"
-                                android:background="@drawable/roundcorner"
-                                android:padding="7dp"
-                                app:srcCompat="@drawable/search"
-                                app:tint="@color/figma_gray"
-                                />
-                        </LinearLayout>
-
-                        <!--TEXT "PILIH BERDASARKAN TOPIK"-->
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_semibold"
-                            android:text="Topik"
-                            android:textColor="@color/elegant_black"
-                            android:textSize="20sp"
-                            />
-
-                        <!--MAIN HOLDER NYA TOPIK-->
-                        <HorizontalScrollView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_weight="1"
-                            android:layout_marginTop="15dp"
-                            android:scrollbars="none"
-                            >
+                            android:layout_marginVertical="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:baselineAligned="false">
 
-                            <!--HOLDER NYA ANAK-ANAK TOPIK-->
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="10dp"
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
                                 android:gravity="center"
-                                android:orientation="horizontal"
+                                android:orientation="vertical"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/almost_square_white_imagebtt"
                                 >
 
-                                <androidx.constraintlayout.widget.ConstraintLayout
-                                    android:layout_width="150dp"
-                                    android:layout_height="150dp"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_marginHorizontal="5dp"
-                                    android:layout_weight="1"
-                                    android:background="@drawable/almost_square_white_imagebtt"
-                                    >
+                                <ImageButton
+                                    android:layout_width="250dp"
+                                    android:layout_height="250dp"
+                                    app:srcCompat="@drawable/ic_forum_modal_usaha_icon"
+                                    android:onClick="intoModal"
+                                    tools:ignore="ContentDescription,OnClick"
+                                    android:padding="40dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:background="@null"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginStart="100dp"
+                                    android:alpha="0.5"
+                                    />
 
-                                    <ImageButton
-                                        android:layout_width="250dp"
-                                        android:layout_height="250dp"
-                                        app:srcCompat="@drawable/ic_forum_modal_usaha_icon"
-                                        android:onClick="intoModal"
-                                        tools:ignore="OnClick"
-                                        android:padding="40dp"
-                                        android:adjustViewBounds="true"
-                                        android:scaleType="fitCenter"
-                                        android:background="@null"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        android:layout_marginStart="100dp"
-                                        android:alpha="0.5"
-                                        />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/kanit_semibold"
-                                        android:text="@string/modal_usaha"
-                                        android:textColor="@color/figma_gray"
-                                        android:textSize="20sp"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        android:layout_marginBottom="7dp"
-                                        android:layout_marginStart="15dp"
-                                        />
-                                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                                <androidx.constraintlayout.widget.ConstraintLayout
-                                    android:layout_width="150dp"
-                                    android:layout_height="150dp"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_marginHorizontal="5dp"
-                                    android:layout_weight="1"
-                                    android:background="@drawable/almost_square_white_imagebtt"
-
-                                    >
-
-                                    <ImageButton
-                                        android:layout_width="257dp"
-                                        android:layout_height="257dp"
-                                        app:srcCompat="@drawable/ic_forum_perizinan_icon"
-                                        android:onClick="intoModal"
-                                        tools:ignore="OnClick"
-                                        android:padding="40dp"
-                                        android:adjustViewBounds="true"
-                                        android:scaleType="fitCenter"
-                                        android:background="@null"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        android:layout_marginStart="100dp"
-                                        />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/kanit_semibold"
-                                        android:text="@string/perizinan"
-                                        android:textColor="@color/figma_gray"
-                                        android:textSize="20sp"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        android:layout_marginBottom="7dp"
-                                        android:layout_marginStart="15dp"
-                                        />
-                                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                                <androidx.constraintlayout.widget.ConstraintLayout
-                                    android:layout_width="150dp"
-                                    android:layout_height="150dp"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_marginHorizontal="5dp"
-                                    android:layout_weight="1"
-                                    android:background="@drawable/almost_square_white_imagebtt"
-                                    >
-
-                                    <ImageButton
-                                        android:layout_width="250dp"
-                                        android:layout_height="250dp"
-                                        app:srcCompat="@drawable/ic_forum_pemasaran_icon"
-                                        android:onClick="intoModal"
-                                        tools:ignore="OnClick"
-                                        android:padding="40dp"
-                                        android:adjustViewBounds="true"
-                                        android:scaleType="fitCenter"
-                                        android:background="@null"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        android:layout_marginLeft="100dp"
-                                        />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/kanit_semibold"
-                                        android:text="@string/modal_usaha"
-                                        android:textColor="@color/figma_gray"
-                                        android:textSize="20sp"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        android:layout_marginBottom="7dp"
-                                        android:layout_marginStart="15dp"
-                                        />
-                                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                                <!--PEMASARAN-->
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_marginHorizontal="5dp"
-                                    android:layout_weight="1"
-                                    >
+                                    android:fontFamily="@font/kanit_semibold"
+                                    android:text="@string/modal_usaha"
+                                    android:textColor="@color/figma_gray"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginBottom="7dp"
+                                    android:layout_marginStart="15dp"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        app:srcCompat="@drawable/ic_forum_pemasaran_icon"
-                                        android:background="@drawable/almost_square_white_imagebtt"
-                                        android:padding="10dp"
-                                        />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/almost_square_white_imagebtt"
+                                >
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/kanit_semibold"
-                                        android:text="@string/pemasaran"
-                                        android:textColor="@color/figma_gray"
-                                        android:textSize="11sp" />
-                                </LinearLayout>
+                                <ImageButton
+                                    android:layout_width="257dp"
+                                    android:layout_height="257dp"
+                                    app:srcCompat="@drawable/ic_forum_perizinan_icon"
+                                    android:onClick="intoModal"
+                                    tools:ignore="OnClick"
+                                    android:padding="40dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:background="@null"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginStart="100dp"
+                                    android:alpha="0.5"
+                                    android:contentDescription="@string/resouceperizinan" />
 
-                                <!--LAINNYA-->
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_marginHorizontal="5dp"
-                                    android:layout_weight="1"
-                                    >
+                                    android:fontFamily="@font/kanit_semibold"
+                                    android:text="@string/perizinan"
+                                    android:textColor="@color/figma_gray"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginBottom="7dp"
+                                    android:layout_marginStart="15dp"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                    <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        app:srcCompat="@drawable/ic_misc_other"
-                                        android:background="@drawable/almost_square_white_imagebtt"
-                                        android:padding="10dp"
-                                        />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/almost_square_white_imagebtt"
+                                >
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/kanit_semibold"
-                                        android:text="@string/lainnya"
-                                        android:textColor="@color/figma_gray"
-                                        android:textSize="11sp" />
-                                </LinearLayout>
-                            </LinearLayout>
-                        </HorizontalScrollView>
+                                <ImageButton
+                                    android:layout_width="250dp"
+                                    android:layout_height="250dp"
+                                    app:srcCompat="@drawable/ic_forum_pemasaran_icon"
+                                    android:onClick="intoModal"
+                                    tools:ignore="ContentDescription,OnClick"
+                                    android:padding="40dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:background="@null"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginStart="100dp"
+                                    android:alpha="0.5"
+                                    />
 
-                        <!--TEXT "FORUM POPULER MINGGU INI"-->
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kanit_semibold"
-                            android:text="Rekomendasi Forum"
-                            android:textColor="@color/elegant_black"
-                            android:textSize="20sp"
-                            android:layout_marginBottom="10dp"
-                            />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/kanit_semibold"
+                                    android:text="@string/pemasaran"
+                                    android:textColor="@color/figma_gray"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginBottom="7dp"
+                                    android:layout_marginStart="15dp"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </LinearLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/almost_square_white_imagebtt"
+                                >
 
-                    <LinearLayout
+                                <ImageButton
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    app:srcCompat="@drawable/ic_misc_other"
+                                    android:onClick="intoModal"
+                                    tools:ignore="ContentDescription,OnClick"
+                                    android:padding="40dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:background="@null"
+                                    android:layout_marginStart="50dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:alpha="0.5"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/kanit_semibold"
+                                    android:text="@string/lainnya"
+                                    android:textColor="@color/figma_gray"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginBottom="7dp"
+                                    android:layout_marginStart="15dp"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!--TEXT "FORUM POPULER MINGGU INI"-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/almost_blue"
-                        >
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/activityhome_recyclerweeklypopularforum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            tools:itemCount="6"
-                            tools:listitem="@layout/activity_component_card_forum"
-                            android:paddingHorizontal="10dp"
-                            android:layout_marginBottom="80dp"
-                            />
-                    </LinearLayout>
+                        android:fontFamily="@font/kanit_semibold"
+                        android:text="Rekomendasi forum untuk anda"
+                        android:textColor="@color/elegant_black"
+                        android:textSize="20sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/almost_blue"
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/activityhome_recyclerweeklypopularforum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/activity_component_card_forum"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginBottom="80dp"
+                        />
                 </LinearLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -426,7 +409,8 @@
                 android:background="@null"
                 android:src="@drawable/ic_forum_biru"
                 android:layout_weight="1"
-                android:layout_marginHorizontal="5dp" />
+                android:layout_marginHorizontal="5dp"
+                tools:ignore="ContentDescription" />
 
             <!--ICON SUPPLIER-->
             <ImageButton
@@ -437,7 +421,7 @@
                 android:src="@drawable/ic_supplier_white"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="5dp"
-                tools:ignore="OnClick" />
+                tools:ignore="ContentDescription,OnClick" />
 
             <!--ICON LOWONGAN-->
             <ImageButton
@@ -446,7 +430,7 @@
                 android:background="@null"
                 android:onClick="intoLowongan"
                 android:src="@drawable/ic_jasa_white"
-                tools:ignore="OnClick"
+                tools:ignore="ContentDescription,OnClick"
                 android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
                 />
@@ -460,7 +444,7 @@
                 android:onClick="intoProfile"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="5dp"
-                />
+                tools:ignore="ContentDescription" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -476,5 +460,5 @@
         android:layout_marginEnd="30dp"
         android:onClick="intoAdd"
         android:padding="5dp"
-        />
+        tools:ignore="ContentDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>
