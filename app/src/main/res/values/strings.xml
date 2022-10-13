@@ -63,6 +63,13 @@
     <string name="supplier">Supplier</string>
     <string name="resouceperizinan">resoucePerizinan</string>
     <string name="rekomendasi_forum">Rekomendasi Forum</string>
+    <string name="rekomendasi_forum_untuk_anda">Rekomendasi forum untuk anda</string>
+    <string name="tambahkan_jawaban">Tambahkan jawaban</string>
+    <string name="_234">234</string>
+    <string name="_3_1_ribu">3,1 ribu</string>
+    <string name="anonymous">Anonymous</string>
+    <string name="dot">•</string>
+    <string name="title_soal_di_sini">Title soal di sini</string>
     <string-array name="umkm_user_category">
         <item>Fabrikasi</item>
         <item>Food and Beverage</item>
