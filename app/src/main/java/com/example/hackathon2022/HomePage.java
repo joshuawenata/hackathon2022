@@ -101,7 +101,6 @@ public class HomePage extends AppCompatActivity {
 
     public void intoModal(View view) {
         startActivity(new Intent(this, HomeModalusaha.class));
-        finish();
     }
 
 }
