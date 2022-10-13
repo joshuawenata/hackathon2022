@@ -5,16 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 
 import com.example.hackathon2022.Object.ObjectLowongan;
-import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.LowonganAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class LowonganPekerjaan extends AppCompatActivity {
     ArrayList <ObjectLowongan> newList = new ArrayList<>();
@@ -35,7 +30,7 @@ public class LowonganPekerjaan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lowongan_pekerjaan);
+        setContentView(R.layout.activity_jasa_page);
 
         initComponents();
     }

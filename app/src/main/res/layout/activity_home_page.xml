@@ -323,11 +323,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
     </ScrollView>
 
     <!--MAIN CONSTRAINT BUAT APP BAR-->
@@ -368,16 +364,10 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:onClick="intoSupplier"
-                android:src="@drawable/ic_supplier_biru"
+                android:src="@drawable/ic_supplier_white"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="5dp"
                 tools:ignore="OnClick" />
-
-            <!--NGASIH GAP-->
-            <LinearLayout
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                />
 
             <!--ICON LOWONGAN-->
             <ImageButton
@@ -385,7 +375,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:onClick="intoLowongan"
-                android:src="@drawable/ic_jasa_biru"
+                android:src="@drawable/ic_jasa_white"
                 tools:ignore="OnClick"
                 android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
@@ -396,25 +386,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
-                android:src="@drawable/ic_akun_biru"
+                android:src="@drawable/ic_akun_white"
                 android:onClick="intoProfile"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="5dp"
                 />
         </LinearLayout>
-
-        <!--ICON ADD-->
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_baseline_add_24"
-            android:background="@drawable/round_btt_primary"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="30dp"
-            android:onClick="intoAdd"
-            android:padding="5dp"
-            />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--ICON ADD-->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:background="@drawable/round_btt_primary"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="intoAdd"
+        android:padding="5dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
