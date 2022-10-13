@@ -61,7 +61,6 @@ public class HomeModalusaha extends AppCompatActivity {
                         i.putExtra("kategori",kategori);
                         i.putExtra("pertanyaan",pertanyaan);
                         startActivity(i);
-                        finish();
                     }
                 });
                 recyclerView.setAdapter(myAdapter);

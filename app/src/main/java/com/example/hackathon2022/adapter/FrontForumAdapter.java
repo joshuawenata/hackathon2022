@@ -57,14 +57,9 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
         holder.txtDate.setText(forumList.get(position).getDate());
     }
 
-    private final int limit = 4;
     @Override
     public int getItemCount() {
-        if(forumList.size() > limit){
-            return limit;
-        }else{
-            return forumList.size();
-        }
+        return forumList.size();
     }
 
     public class ForumViewHolder extends RecyclerView.ViewHolder {

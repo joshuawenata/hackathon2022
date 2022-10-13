@@ -106,5 +106,6 @@ public class ForumCardPage extends AppCompatActivity {
 
     public void backtoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
+        finish();
     }
 }

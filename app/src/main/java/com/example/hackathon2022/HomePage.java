@@ -64,7 +64,6 @@ public class HomePage extends AppCompatActivity {
                         i.putExtra("pertanyaan",pertanyaan);
                         i.putExtra("date",date);
                         startActivity(i);
-                        finish();
                     }
                 });
                 recyclerWeeklyPopularForum.setAdapter(TopAdapter);
