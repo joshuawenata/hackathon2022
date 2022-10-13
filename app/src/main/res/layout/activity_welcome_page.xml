@@ -110,7 +110,7 @@
                     android:onClick="intoRegisterPage"
                     tools:ignore="OnClick"
                     android:background="@null"
-                    android:src="@drawable/activitywelcome_btn_welcome_daftartemp"
+                    android:src="@drawable/welcomedaftarbtt"
                     android:layout_marginBottom="10dp"
                     android:layout_gravity="center"
                     />
@@ -120,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:src="@drawable/activitywelcome_btn_welcome_masuktemp"
+                    android:src="@drawable/welcomemasukbtt"
                     android:onClick="intoLoginPage"
                     android:layout_gravity="center"
                     tools:ignore="OnClick" />
