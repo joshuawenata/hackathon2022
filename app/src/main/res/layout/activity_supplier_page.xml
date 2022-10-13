@@ -96,7 +96,11 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                app:srcCompat="@drawable/forum_art" />
+                                app:srcCompat="@drawable/forum_artwork_01"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="200dp"
+                                android:scaleType="fitCenter"
+                                />
                         </LinearLayout>
                     </LinearLayout>
 
