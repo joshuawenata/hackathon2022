@@ -11,8 +11,8 @@ public class ObjectReply {
         return forumkey;
     }
 
-    public void setForumKey(String forumKey) {
-        this.forumkey = forumKey;
+    public void setForumKey(String forumkey) {
+        this.forumkey = forumkey;
     }
 
     public String getDate() {

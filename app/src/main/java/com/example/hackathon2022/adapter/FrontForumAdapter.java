@@ -23,7 +23,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
     private FrontForumAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star);
+        void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star);
     }
 
     public void setOnItemClickListener(FrontForumAdapter.OnItemClickListener listener){
@@ -91,7 +91,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
                     date = Forumlist.get(position).getDate();
                     star = Forumlist.get(position).getStar().toString();
                     if(mListener!=null){
-                        mListener.onItemClick(key,username,judul,kategori,pertanyaan,date,star);
+                        mListener.onItemClick(v,key,username,judul,kategori,pertanyaan,date,star);
                     }
                 }
             });

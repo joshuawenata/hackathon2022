@@ -181,7 +181,7 @@
             >
 
             <ImageButton
-                android:id="@+id/ic_star"
+                android:id="@+id/componentcardforum_starbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
