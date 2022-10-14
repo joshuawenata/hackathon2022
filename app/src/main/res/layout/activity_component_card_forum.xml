@@ -7,11 +7,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:paddingHorizontal="10dp"
-    android:paddingTop="20dp"
     android:background="@drawable/description_column"
     android:layout_marginVertical="4dp"
     android:layout_marginHorizontal="3dp"
     android:elevation="2dp"
+    android:paddingVertical="4dp"
     >
 
     <!--PROFILE HEADER-->
@@ -61,7 +61,7 @@
                     android:fontFamily="@font/kanit_semibold"
                     android:text="@string/title_soal_di_sini"
                     android:textColor="@color/elegant_black"
-                    android:textSize="17sp"
+                    android:textSize="14sp"
                     />
 
                 <LinearLayout
@@ -76,6 +76,7 @@
                         android:text="@string/anonymous"
                         android:fontFamily="@font/kanit_regular"
                         android:textColor="@color/figma_gray"
+                        android:textSize="12sp"
                         />
 
                     <TextView
@@ -92,7 +93,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Category"
-                        android:textSize="13sp"
+                        android:textSize="12sp"
                         android:textColor="@color/figma_gray"
                         android:gravity="bottom"
                         />
@@ -111,7 +112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="22h"
-                        android:textSize="13sp"
+                        android:textSize="12sp"
                         android:textColor="@color/figma_gray"
                         android:gravity="bottom"
                         android:fontFamily="@font/kanit_light"
@@ -147,6 +148,8 @@
         android:text="@string/loremipsum"
         android:fontFamily="@font/kanit_regular"
         android:layout_marginVertical="5dp"
+        android:maxLines="3"
+        android:ellipsize="end"
         />
 
     <!--STAR,COMMENT,ETC-->
@@ -155,16 +158,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginVertical="5dp"
+        android:layout_marginVertical="2dp"
         >
 
         <LinearLayout
             android:id="@+id/star_holder"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/round_gray"
-            android:paddingHorizontal="5dp"
+            android:paddingHorizontal="2dp"
             android:paddingVertical="2dp"
             android:gravity="center_vertical"
             >
@@ -190,8 +193,56 @@
                 android:text="@string/_3_1_ribu"
                 android:fontFamily="@font/kanit_light"
                 android:textColor="@android:color/darker_gray"
-                android:layout_marginHorizontal="3dp"/>
+                android:layout_marginHorizontal="3dp"
+                android:textSize="12sp"
+                />
         </LinearLayout>
-        
+
+        <LinearLayout
+            android:id="@+id/comment_holder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            >
+
+            <ImageButton
+                android:id="@+id/ic_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:maxWidth="20dp"
+                android:maxHeight="20dp"
+                android:onClick="pushToDatabase"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_baseline_comment_24" />
+
+            <TextView
+                android:id="@+id/comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_234"
+                android:fontFamily="@font/kanit_light"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginHorizontal="2dp"/>
+
+            <EditText
+                android:id="@+id/componentcardforum_replycontent"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/kanit_regular"
+                android:hint="@string/tambahkan_jawaban"
+                android:importantForAutofill="no"
+                android:paddingHorizontal="10dp"
+                android:textSize="12sp"
+                tools:ignore="NestedWeights,TextFields"
+                android:textColorHint="@color/figma_gray"
+                android:textColor="@color/black"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
