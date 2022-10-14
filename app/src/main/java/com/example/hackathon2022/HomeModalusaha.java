@@ -56,7 +56,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 AllForumAdapter myAdapter = new AllForumAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date) {
+                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star) {
                         Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
@@ -64,6 +64,7 @@ public class HomeModalusaha extends AppCompatActivity {
                         i.putExtra("kategori",kategori);
                         i.putExtra("pertanyaan",pertanyaan);
                         i.putExtra("date",date);
+                        i.putExtra("star",star);
                         startActivity(i);
                     }
                 });

@@ -53,7 +53,6 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         RecyclerView recyclerView = findViewById(R.id.activityhome_recyclerview);
 
         starsBtn = findViewById(R.id.componentcardforum_starbtn);
-//        starsBtn.setOnClickListener(this);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
