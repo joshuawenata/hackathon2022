@@ -59,7 +59,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="50"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        >
 
                         <TextView
                             android:layout_width="match_parent"
@@ -67,7 +68,7 @@
                             android:fontFamily="@font/kanit_bold"
                             android:text="@string/forum"
                             android:textColor="@color/white"
-                            android:textSize="40sp" />
+                            android:textSize="30sp" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -102,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_weight="1"
-                    android:background="@drawable/forum_round_top"
+                    android:background="@drawable/round_top"
                     android:paddingHorizontal="20dp"
                     android:paddingTop="10dp"
                     >

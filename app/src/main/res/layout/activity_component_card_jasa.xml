@@ -12,88 +12,64 @@
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_weight="1"
-            android:background="@drawable/card"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="15dp"
             >
 
             <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="20dp"
-                android:paddingHorizontal="5dp"
-                >
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/componentcardlowongan_namaUMKM"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Nama Pekerjaan"
-                        android:fontFamily="@font/kanit_bold"
-                        android:textSize="15sp"
-                        android:textColor="@color/figma_gray"
-                        android:maxWidth="120dp"
-                        android:maxHeight="20dp"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-"
-                        android:fontFamily="@font/kanit_bold"
-                        android:textSize="15sp"
-                        android:layout_marginHorizontal="15dp"
-                        android:textColor="@color/figma_gray"
-                        />
-
-                    <TextView
-                        android:id="@+id/componentcardlowongan_lokasi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lokasi"
-                        android:fontFamily="@font/kanit_bold"
-                        android:maxWidth="120dp"
-                        android:maxHeight="20dp"
-                        android:textSize="15sp"
-                        android:textColor="@color/figma_gray"
-                        />
-                </LinearLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/componentcardlowongan_deskripsi"
-                    android:maxWidth="220dp"
+                    android:id="@+id/componentcardlowongan_namaUMKM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Deskripsi"
-                    android:maxHeight="20dp"
-                    android:fontFamily="@font/kanit_regular"
-                    android:textColor="@color/figma_gray"
+                    android:text="Nama jasa"
+                    android:fontFamily="@font/kanit_bold"
                     android:textSize="15sp"
+                    android:textColor="@color/figma_gray"
+                    android:maxWidth="120dp"
+                    android:maxHeight="20dp"
                     />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:fontFamily="@font/kanit_bold"
+                    android:textSize="15sp"
+                    android:layout_marginHorizontal="15dp"
+                    android:textColor="@color/figma_gray"
+                    />
+
+                <TextView
+                    android:id="@+id/componentcardlowongan_lokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi"
+                    android:fontFamily="@font/kanit_bold"
+                    android:maxWidth="120dp"
+                    android:maxHeight="20dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/figma_gray"
+                    />
             </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/componentcardlowongan_chat"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@null"
-                android:src="@drawable/chat"/>
-
+            <TextView
+                android:id="@+id/componentcardlowongan_deskripsi"
+                android:maxWidth="220dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi"
+                android:maxHeight="20dp"
+                android:fontFamily="@font/kanit_regular"
+                android:textColor="@color/figma_gray"
+                android:textSize="15sp"
+                />
 
         </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>

@@ -11,7 +11,8 @@
     android:elevation="2dp"
     android:orientation="vertical"
     android:paddingHorizontal="10dp"
-    android:paddingVertical="6dp">
+    android:paddingVertical="6dp"
+    >
 
     <!--PROFILE HEADER-->
     <LinearLayout
@@ -168,13 +169,11 @@
             android:layout_weight="1"
             />
 
-
         <LinearLayout
             android:id="@+id/star_holder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/round_gray"
             android:paddingHorizontal="8dp"
             android:paddingVertical="2dp"
             android:gravity="center_vertical"
@@ -186,14 +185,6 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 app:srcCompat="@drawable/ic_baseline_star_rate_24"
-                />
-
-            <View
-                android:id="@+id/gap1"
-                android:layout_width="0.7dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
-                android:layout_marginHorizontal="5dp"
                 />
 
             <TextView
