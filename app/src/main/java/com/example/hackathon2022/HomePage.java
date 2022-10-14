@@ -48,8 +48,6 @@ public class HomePage extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
 
-        replyanswer = findViewById(R.id.componentcardforum_replycontent);
-
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -70,8 +68,6 @@ public class HomePage extends AppCompatActivity {
                         i.putExtra("kategori",kategori);
                         i.putExtra("pertanyaan",pertanyaan);
                         i.putExtra("date",date);
-                        dates = date;
-                        forumkeys = key;
                         startActivity(i);
                     }
                 });
@@ -113,7 +109,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void pushToDatabase(View view) {
-        ReplyForumRepository.insertReplyForum(forumkeys,LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),dates);
+
     }
 
 }

@@ -162,6 +162,7 @@ android:background="@color/bgaabu"
             </LinearLayout>
 
             <!--JASA CONTENT-->
+
             <LinearLayout
                 android:id="@+id/jasa_answer_entity"
                 android:layout_width="match_parent"

@@ -192,52 +192,6 @@
                 android:textColor="@android:color/darker_gray"
                 android:layout_marginHorizontal="3dp"/>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/comment_holder"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingHorizontal="5dp"
-            android:gravity="center_vertical"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
-            >
-
-            <ImageButton
-                android:id="@+id/ic_comment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:background="@null"
-                android:maxWidth="20dp"
-                android:maxHeight="20dp"
-                android:onClick="pushToDatabase"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/ic_baseline_comment_24" />
-
-            <TextView
-                android:id="@+id/comment_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_234"
-                android:fontFamily="@font/kanit_light"
-                android:textColor="@android:color/darker_gray"
-                android:layout_marginHorizontal="3dp"/>
-
-            <EditText
-                android:id="@+id/componentcardforum_replycontent"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/kanit_regular"
-                android:hint="@string/tambahkan_jawaban"
-                android:importantForAutofill="no"
-                android:paddingHorizontal="10dp"
-                android:textSize="12sp"
-                tools:ignore="NestedWeights,TextFields"
-                android:textColorHint="@color/figma_gray"
-                android:textColor="@color/black"/>
-        </LinearLayout>
+        
     </LinearLayout>
 </LinearLayout>

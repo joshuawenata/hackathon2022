@@ -4,20 +4,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReplyForum {
-    public String getReplyKey() {
-        return ReplyKey;
+
+    private String username;
+    private String answer;
+    private String Date;
+    private String ForumKey;
+
+    public ReplyForum(String username, String answer, String date, String forumkey){
+        this.ForumKey = forumkey;
+        this.username = username;
+        this.answer = answer;
+        this.Date = date;
     }
 
-    public void setReplyKey(String replyKey) {
-        ReplyKey = replyKey;
-    }
-
-    public String getJudul() {
-        return Judul;
-    }
-
-    public void setJudul(String judul) {
-        Judul = judul;
+    public Map<String, Object> toMap(){
+        Map<String, Object> data = new HashMap<>();
+        data.put("key", ForumKey);
+        data.put("username",username);
+        data.put("answer", answer);
+        data.put("date", Date);
+        return data;
     }
 
     public String getUsername() {
@@ -36,33 +42,19 @@ public class ReplyForum {
         this.answer = answer;
     }
 
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
+    }
+
     public String getForumKey() {
         return ForumKey;
     }
 
     public void setForumKey(String forumKey) {
         ForumKey = forumKey;
-    }
-
-    private String ReplyKey;
-    private String Judul;
-    private String username;
-    private String answer;
-    private String ForumKey;
-
-    public ReplyForum(String ReplyKey, String username, String answer, String ForumKey, String date){
-        this.ReplyKey = ReplyKey;
-        this.username = username;
-        this.answer = answer;
-        this.ForumKey = ForumKey;
-    }
-
-    public Map<String, Object> toMap(){
-        Map<String, Object> data = new HashMap<>();
-        data.put("key", ReplyKey);
-        data.put("username",username);
-        data.put("answer", answer);
-        data.put("foreignkey", ForumKey);
-        return data;
     }
 }

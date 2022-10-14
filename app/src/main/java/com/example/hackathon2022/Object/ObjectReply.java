@@ -5,6 +5,15 @@ public class ObjectReply {
     private String username;
     private String answer;
     private String date;
+    private String forumKey;
+
+    public String getForumKey() {
+        return forumKey;
+    }
+
+    public void setForumKey(String forumKey) {
+        this.forumKey = forumKey;
+    }
 
     public String getDate() {
         return date;

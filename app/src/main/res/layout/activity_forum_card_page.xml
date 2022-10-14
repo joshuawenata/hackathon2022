@@ -189,6 +189,49 @@
                         android:textColor="@color/figma_gray"
                         android:layout_marginHorizontal="3dp"/>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/comment_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
+
+                    <ImageButton
+                        android:id="@+id/ic_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:maxWidth="20dp"
+                        android:maxHeight="20dp"
+                        android:onClick="pushToDatabase"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_baseline_comment_24" />
+
+                    <TextView
+                        android:id="@+id/comment_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="3dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="234"
+                        android:textColor="@android:color/darker_gray" />
+
+
+                    <EditText
+                        android:id="@+id/activityforumcardpage_addanswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kanit_regular"
+                        android:hint="Tambahkan jawaban"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
 <!--                <View-->
 <!--                    android:layout_width="match_parent"-->
 <!--                    android:layout_height="1dp"-->
@@ -199,7 +242,7 @@
 
             <!--JAWABAN FORUM TEXT-->
             <TextView
-                android:id="@+id/jawaban_forum_text"
+                android:id="@+id/activityforumcardpage_lbljawaban"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jawaban Forum"
@@ -210,11 +253,12 @@
                 android:paddingHorizontal="20dp"
                 android:background="@color/white"
                 android:paddingTop="7dp"
+                android:visibility="invisible"
                 />
 
             <!--ONE FORUM REPLY ENTITY-->
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activityforumcardpage_recyclerviewjawaban"
+                android:id="@+id/activityforumcardpage_recyclerview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 

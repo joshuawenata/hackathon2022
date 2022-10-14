@@ -9,13 +9,12 @@ public class ReplyForumRepository {
     private static FirebaseDatabase db = FirebaseDatabase.getInstance();
     private static DatabaseReference replyRef = db.getReference("replyforum");
 
-    public static void insertReplyForum(String key, String username, String answer, String date){
+    public static void insertReplyForum(String username, String answer, String date, String forumkey){
         String replyKey = replyRef.push().getKey();
-        ReplyForum newReply = new ReplyForum(replyKey,
-                username,
+        ReplyForum newReply = new ReplyForum(username,
                 answer,
-                key,
-                date);
+                date,
+                forumkey);
         replyRef.child(replyKey).setValue(newReply.toMap());
     }
 }

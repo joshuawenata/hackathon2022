@@ -31,7 +31,7 @@ import java.util.ArrayList;
 
 public class ForumCardPage extends AppCompatActivity{
 
-    TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, txtanswer, txtusernamejawaban, txtdatejawaban;
+    TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban;
     EditText replyanswer;
     String forumkey, judul, username, kategori, pertanyaan, date;
 
@@ -51,7 +51,7 @@ public class ForumCardPage extends AppCompatActivity{
 
     private void initComponents() {
 
-        replyanswer = findViewById(R.id.componentcardforum_replycontent);
+        labelJawaban = findViewById(R.id.activityforumcardpage_lbljawaban);
         txtjudul = findViewById(R.id.activityforumcardpage_judul);
         txtusernamepenanya = findViewById(R.id.activityforumcardpage_username);
         txtkategori = findViewById(R.id.activityforumcardpage_kategori);
@@ -72,7 +72,7 @@ public class ForumCardPage extends AppCompatActivity{
         txtkategori.setText(kategori);
         txtpertanyaan.setText(pertanyaan);
 
-        RecyclerView recyclerJawaban = findViewById(R.id.activityforumcardpage_recyclerviewjawaban);
+        RecyclerView recyclerJawaban = findViewById(R.id.activityforumcardpage_recyclerview);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("replyforum");
@@ -82,8 +82,15 @@ public class ForumCardPage extends AppCompatActivity{
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     if(forumkey.equals(postSnapshot.getValue(ObjectReply.class).getKey())){
+                        Log.i("cek", "onDataChange: ");
                         newList.add(postSnapshot.getValue(ObjectReply.class));
                     }
+                }
+
+                if(newList.size()>0){
+                    labelJawaban.setVisibility(View.VISIBLE);
+                }else{
+                    labelJawaban.setVisibility(View.INVISIBLE);
                 }
 
                 recyclerJawaban.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
@@ -106,6 +113,7 @@ public class ForumCardPage extends AppCompatActivity{
     }
 
     public void pushToDatabase(View view) {
-        ReplyForumRepository.insertReplyForum(forumkey,LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),date);
+        replyanswer = findViewById(R.id.activityforumcardpage_addanswer);
+        ReplyForumRepository.insertReplyForum(LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),date,forumkey);
     }
 }
