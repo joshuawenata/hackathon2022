@@ -72,6 +72,7 @@
     <string name="title_soal_di_sini">Title soal di sini</string>
     <string name="lokasi_supplier">Lokasi supplier</string>
     <string name="jasa_yang_mungkin_anda_perlukan">Jasa yang mungkin anda perlukan</string>
+    <string name="jawaban_forum">Jawaban Forum</string>
     <string-array name="umkm_user_category">
         <item>Fabrikasi</item>
         <item>Food and Beverage</item>
