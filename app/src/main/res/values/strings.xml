@@ -4,8 +4,8 @@
     <string name="login">Masuk</string>
 
     <!--    WELCOME     -->
-    <string name="welcome_title">Selamat Datang di Kamifriend!</string>
-    <string name="welcome_tagline">Teman UMKM yang selalu ada!</string>
+    <string name="welcome_title">Selamat Datang di Kamifriend</string>
+    <string name="welcome_tagline">Teman UMKM yang selalu ada</string>
     <string name="welcome_regis_btt_text">Daftarkan akun baru</string>
     <string name="welcome_login_btt_text">Masuk</string>
     <!--    welcome asset   -->
@@ -16,10 +16,10 @@
     <string name="register_et_email">Nomor handphone anda</string>
     <string name="register_et_password">Masukkan kata kunci</string>
     <string name="register_et_confirm">Konfirmasi kata kunci</string>
-    <string name="register_tagline">Mulai perjalanan UMKM anda bersama kami!</string>
+    <string name="register_tagline">Mulai perjalanan UMKM anda bersama Kami</string>
 
     <!--    LOGIN      -->
-    <string name="login_tagline">Lanjutkan perjalanan UMKM anda bersama Kamifriend!</string>
+    <string name="login_tagline">Lanjutkan perjalanan UMKM anda bersama Kami</string>
     <string name="not_have_an_account">Tidak punya akun?</string>
     <string name="registrasi">Registrasi</string>
     <string name="sudah_punya_akun">Sudah punya akun?</string>
