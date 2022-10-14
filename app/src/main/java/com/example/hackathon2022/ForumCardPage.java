@@ -7,12 +7,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.hackathon2022.Object.ObjectForum;
@@ -37,15 +39,17 @@ public class ForumCardPage extends AppCompatActivity{
 
     TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban, txtStarCount;
     EditText replyanswer;
-    String forumkey, judul, username, kategori, pertanyaan, date, dateanswer, star;
+    String forumkey, judul, username, kategori, pertanyaan, date, dateanswer;
+    Integer star;
+    ImageButton starBtn;
     DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     Date dates = new Date();
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference, ref;
 
     ArrayList<ObjectReply> newList = new ArrayList<>();
     Context context = this;
 
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +68,7 @@ public class ForumCardPage extends AppCompatActivity{
         txtpertanyaan = findViewById(R.id.activityforumcardpage_pertanyaan);
         txtdate = findViewById(R.id.date);
         txtStarCount = findViewById(R.id.activityforumcardpage_starCount);
+        starBtn = findViewById(R.id.activityforumcardpage_starButton);
 
         Intent intent = getIntent();
         forumkey = intent.getStringExtra("key");
@@ -73,19 +78,20 @@ public class ForumCardPage extends AppCompatActivity{
         pertanyaan = intent.getStringExtra("pertanyaan");
         date = intent.getStringExtra("date");
         dateanswer = intent.getStringExtra("dateanswer");
-        star = intent.getStringExtra("star");
+        star = Integer.valueOf(intent.getStringExtra("star"));
 
         txtjudul.setText(judul);
         txtdate.setText(date);
         txtusernamepenanya.setText(username);
         txtkategori.setText(kategori);
         txtpertanyaan.setText(pertanyaan);
-        txtStarCount.setText(star);
+        txtStarCount.setText(star.toString());
 
         RecyclerView recyclerJawaban = findViewById(R.id.activityforumcardpage_recyclerview);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("replyforum");
+        ref = firebaseDatabase.getReference("forum");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -124,5 +130,13 @@ public class ForumCardPage extends AppCompatActivity{
     public void pushToDatabase(View view) {
         replyanswer = findViewById(R.id.activityforumcardpage_addanswer);
         ReplyForumRepository.insertReplyForum(LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),dateFormat.format(dates),forumkey);
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void AddStar(View view) {
+        ref.child(forumkey+"/star").setValue(star+1);
+        Integer tempo = star + 1;
+        txtStarCount.setText(tempo.toString());
+        starBtn.setImageResource(R.drawable.ic_baseline_star_24);
     }
 }

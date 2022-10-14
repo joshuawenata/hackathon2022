@@ -38,8 +38,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     Context context = this;
 
     FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference, databaseReferences;
-    Integer stars;
+    DatabaseReference databaseReference;
     ImageView starsBtn;
 
     @Override
@@ -58,7 +57,6 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
-        databaseReferences = firebaseDatabase.getReference("replyforum");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @SuppressLint("NotifyDataSetChanged")

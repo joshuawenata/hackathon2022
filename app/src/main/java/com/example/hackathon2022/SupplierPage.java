@@ -63,18 +63,6 @@ public class SupplierPage extends AppCompatActivity {
                 recyclerView.setAdapter(myAdapter);
 
                 myAdapter.notifyDataSetChanged();
-
-//                recyclerViewterdekat.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-//                SupplierTerdekatAdapter terdekatAdapter = new SupplierTerdekatAdapter(context, newList);
-//                terdekatAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
-//                    @Override
-//                    public void onItemClick() {
-//                        startActivity(new Intent(SupplierPage.this, SupplierCardPage.class));
-//                    }
-//                });
-//                recyclerViewterdekat.setAdapter(terdekatAdapter);
-//
-//                terdekatAdapter.notifyDataSetChanged();
             }
 
             @Override
