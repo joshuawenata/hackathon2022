@@ -29,7 +29,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/forum"
+                android:background="@color/backgroundPrimary"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp">
@@ -261,7 +261,9 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activityforumcardpage_recyclerview"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/activity_component_card_forum_jawaban"
+                >
 
             </androidx.recyclerview.widget.RecyclerView>
 
