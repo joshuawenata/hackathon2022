@@ -65,13 +65,13 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="45dp"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:orientation="horizontal"
-                            android:weightSum="4"
                             android:paddingHorizontal="15dp"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginBottom="45dp"
+                            android:weightSum="4"
                             tools:ignore="DisableBaselineAlignment,NestedWeights">
 
                             <LinearLayout
@@ -117,21 +117,20 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:layout_weight="1"
                             android:background="@drawable/forum_round_top"
+                            android:orientation="vertical"
                             android:paddingHorizontal="20dp"
-                            android:paddingTop="10dp"
-                            >
+                            android:paddingTop="10dp">
 
                             <!--MAIN HOLDER NYA SEARCH BAR-->
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_marginVertical="5dp"
+                                android:layout_weight="1"
                                 android:gravity="center"
                                 android:orientation="horizontal"
-                                android:layout_weight="1"
                                 tools:ignore="NestedWeights">
 
                                 <!--EDIT TEXT SEARCH-->
@@ -139,17 +138,17 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:autofillHints=""
                                     android:background="@drawable/round_btt_white"
                                     android:fontFamily="@font/kanit_regular"
                                     android:hint="Supplier apa yang ingin anda cari?"
-                                    android:paddingVertical="7dp"
+                                    android:inputType="text"
                                     android:paddingHorizontal="12dp"
-                                    android:textSize="13sp"
-                                    android:textColorHint="@color/figma_gray"
+                                    android:paddingVertical="7dp"
                                     android:textColor="@color/figma_gray"
-                                    tools:ignore="NestedWeights"
-                                    android:autofillHints=""
-                                    android:inputType="text" />
+                                    android:textColorHint="@color/figma_gray"
+                                    android:textSize="13sp"
+                                    tools:ignore="NestedWeights" />
 
                                 <!--ICON NYA SEARCH-->
                                 <ImageView
@@ -168,10 +167,9 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:background="@drawable/forum_round_top"
                                 android:layout_marginTop="10dp"
-                                >
+                                android:background="@drawable/forum_round_top"
+                                android:orientation="vertical">
 
                                 <!--TEXT "PILIH BERDASARKAN TOPIK"-->
                                 <TextView
@@ -186,191 +184,180 @@
                                 <HorizontalScrollView
                                     android:layout_width="wrap_content"
                                     android:layout_height="0dp"
-                                    android:orientation="vertical"
                                     android:layout_weight="1"
-                                    android:scrollbars="none"
-                                    >
+                                    android:orientation="vertical"
+                                    android:scrollbars="none">
 
                                     <LinearLayout
                                         android:layout_width="wrap_content"
                                         android:layout_height="85dp"
-                                        android:orientation="horizontal"
                                         android:layout_marginVertical="5dp"
-                                        >
+                                        android:orientation="horizontal">
 
                                         <!--FNB-->
                                         <androidx.constraintlayout.widget.ConstraintLayout
                                             android:layout_width="90dp"
                                             android:layout_height="80dp"
-                                            android:gravity="center"
-                                            android:orientation="vertical"
                                             android:layout_marginHorizontal="5dp"
                                             android:background="@drawable/almost_square_white_imagebtt"
                                             android:elevation="2dp"
-                                            >
+                                            android:gravity="center"
+                                            android:orientation="vertical">
 
                                             <ImageButton
                                                 android:layout_width="90dp"
                                                 android:layout_height="90dp"
-                                                android:onClick="intoFnB"
-                                                app:srcCompat="@drawable/ic_misc_food"
-                                                tools:ignore="ContentDescription,OnClick"
-                                                android:padding="5dp"
-                                                android:adjustViewBounds="true"
-                                                android:scaleType="fitCenter"
-                                                android:background="@null"
-                                                app:layout_constraintTop_toTopOf="parent"
-                                                app:layout_constraintEnd_toEndOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                app:layout_constraintBottom_toBottomOf="parent"
                                                 android:layout_marginStart="45dp"
                                                 android:layout_marginTop="30dp"
+                                                android:adjustViewBounds="true"
                                                 android:alpha="0.5"
-                                                />
+                                                android:background="@null"
+                                                android:onClick="intoFnB"
+                                                android:padding="5dp"
+                                                android:scaleType="fitCenter"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_misc_food"
+                                                tools:ignore="ContentDescription,OnClick" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
+                                                android:layout_marginStart="10dp"
+                                                android:layout_marginBottom="7dp"
+                                                android:ellipsize="end"
                                                 android:fontFamily="@font/kanit_semibold"
+                                                android:maxLines="1"
                                                 android:text="@string/fnb"
                                                 android:textColor="@color/figma_gray"
                                                 android:textSize="13sp"
                                                 app:layout_constraintBottom_toBottomOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                android:layout_marginBottom="7dp"
-                                                android:layout_marginStart="10dp"
-                                                android:maxLines="1"
-                                                android:ellipsize="end"
-                                                />
+                                                app:layout_constraintStart_toStartOf="parent" />
                                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                                         <!--FABRIKASI-->
                                         <androidx.constraintlayout.widget.ConstraintLayout
                                             android:layout_width="90dp"
                                             android:layout_height="80dp"
-                                            android:gravity="center"
-                                            android:orientation="vertical"
                                             android:layout_marginHorizontal="5dp"
                                             android:background="@drawable/almost_square_white_imagebtt"
                                             android:elevation="2dp"
-                                            >
+                                            android:gravity="center"
+                                            android:orientation="vertical">
 
                                             <ImageButton
                                                 android:layout_width="100dp"
                                                 android:layout_height="100dp"
-                                                app:srcCompat="@drawable/ic_misc_clothes"
-                                                tools:ignore="OnClick"
-                                                android:padding="5dp"
-                                                android:adjustViewBounds="true"
-                                                android:scaleType="fitCenter"
-                                                android:background="@null"
-                                                app:layout_constraintTop_toTopOf="parent"
-                                                app:layout_constraintEnd_toEndOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                app:layout_constraintBottom_toBottomOf="parent"
                                                 android:layout_marginStart="50dp"
                                                 android:layout_marginTop="30dp"
+                                                android:adjustViewBounds="true"
                                                 android:alpha="0.5"
-                                                android:contentDescription="@string/resouceperizinan" />
+                                                android:background="@null"
+                                                android:contentDescription="@string/resouceperizinan"
+                                                android:padding="5dp"
+                                                android:scaleType="fitCenter"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_misc_clothes"
+                                                tools:ignore="OnClick" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
+                                                android:layout_marginStart="15dp"
+                                                android:layout_marginBottom="7dp"
                                                 android:fontFamily="@font/kanit_semibold"
                                                 android:text="Fabrikasi"
                                                 android:textColor="@color/figma_gray"
                                                 android:textSize="13sp"
                                                 app:layout_constraintBottom_toBottomOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                android:layout_marginBottom="7dp"
-                                                android:layout_marginStart="15dp"
-                                                />
+                                                app:layout_constraintStart_toStartOf="parent" />
                                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                                         <!--ELEKTRONIK-->
                                         <androidx.constraintlayout.widget.ConstraintLayout
                                             android:layout_width="90dp"
                                             android:layout_height="80dp"
-                                            android:gravity="center"
-                                            android:orientation="vertical"
                                             android:layout_marginHorizontal="5dp"
                                             android:background="@drawable/almost_square_white_imagebtt"
                                             android:elevation="2dp"
-                                            >
+                                            android:gravity="center"
+                                            android:orientation="vertical">
 
                                             <ImageButton
                                                 android:layout_width="100dp"
                                                 android:layout_height="100dp"
-                                                app:srcCompat="@drawable/ic_misc_chip"
-                                                tools:ignore="OnClick"
-                                                android:padding="5dp"
-                                                android:adjustViewBounds="true"
-                                                android:scaleType="fitCenter"
-                                                android:background="@null"
-                                                app:layout_constraintTop_toTopOf="parent"
-                                                app:layout_constraintEnd_toEndOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                app:layout_constraintBottom_toBottomOf="parent"
                                                 android:layout_marginStart="50dp"
                                                 android:layout_marginTop="30dp"
+                                                android:adjustViewBounds="true"
                                                 android:alpha="0.5"
-                                                android:contentDescription="@string/resouceperizinan" />
+                                                android:background="@null"
+                                                android:contentDescription="@string/resouceperizinan"
+                                                android:padding="5dp"
+                                                android:scaleType="fitCenter"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_misc_chip"
+                                                tools:ignore="OnClick" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
+                                                android:layout_marginStart="10dp"
+                                                android:layout_marginBottom="7dp"
                                                 android:fontFamily="@font/kanit_semibold"
                                                 android:text="Elektronik"
                                                 android:textColor="@color/figma_gray"
                                                 android:textSize="13sp"
                                                 app:layout_constraintBottom_toBottomOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                android:layout_marginBottom="7dp"
-                                                android:layout_marginStart="10dp"
-                                                />
+                                                app:layout_constraintStart_toStartOf="parent" />
                                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                                         <!--LAINNYA-->
                                         <androidx.constraintlayout.widget.ConstraintLayout
                                             android:layout_width="90dp"
                                             android:layout_height="80dp"
-                                            android:gravity="center"
-                                            android:orientation="vertical"
                                             android:layout_marginHorizontal="5dp"
                                             android:background="@drawable/almost_square_white_imagebtt"
                                             android:elevation="2dp"
-                                            >
+                                            android:gravity="center"
+                                            android:orientation="vertical">
 
                                             <ImageButton
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:layout_marginStart="40dp"
                                                 android:layout_marginTop="25dp"
-                                                app:srcCompat="@drawable/ic_misc_other"
-                                                tools:ignore="OnClick"
-                                                android:padding="5dp"
                                                 android:adjustViewBounds="true"
-                                                android:scaleType="fitCenter"
+                                                android:alpha="0.5"
                                                 android:background="@null"
-                                                app:layout_constraintTop_toTopOf="parent"
+                                                android:contentDescription="@string/resouceperizinan"
+                                                android:padding="5dp"
+                                                android:scaleType="fitCenter"
+                                                app:layout_constraintBottom_toBottomOf="parent"
                                                 app:layout_constraintEnd_toEndOf="parent"
                                                 app:layout_constraintStart_toStartOf="parent"
-                                                app:layout_constraintBottom_toBottomOf="parent"
-                                                android:alpha="0.5"
-                                                android:contentDescription="@string/resouceperizinan" />
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_misc_other"
+                                                tools:ignore="OnClick" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
+                                                android:layout_marginStart="15dp"
+                                                android:layout_marginBottom="7dp"
                                                 android:fontFamily="@font/kanit_semibold"
                                                 android:text="@string/lainnya"
                                                 android:textColor="@color/figma_gray"
                                                 android:textSize="13sp"
                                                 app:layout_constraintBottom_toBottomOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                android:layout_marginBottom="7dp"
-                                                android:layout_marginStart="15dp"
-                                                />
+                                                app:layout_constraintStart_toStartOf="parent" />
                                         </androidx.constraintlayout.widget.ConstraintLayout>
                                     </LinearLayout>
                                 </HorizontalScrollView>
@@ -381,12 +368,11 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
                                 android:fontFamily="@font/kanit_semibold"
                                 android:text="Supplier rekomendasi untuk anda"
                                 android:textColor="@color/elegant_black"
-                                android:textSize="16sp"
-                                android:layout_marginTop="10dp"
-                                />
+                                android:textSize="16sp" />
                         </LinearLayout>
 
                         <!--MAIN HOLDER NYA SUPPLIER TERBAIK-->
@@ -394,17 +380,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:background="@color/almost_blue"
+                            android:orientation="vertical"
+                            android:paddingTop="4dp"
                             >
 
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/activitysupplier_recycleviewsupplier"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                tools:itemCount="6"
                                 android:layout_marginBottom="80dp"
                                 android:paddingHorizontal="10dp"
+                                tools:itemCount="6"
                                 tools:listitem="@layout/activity_component_card_supplier" />
                         </LinearLayout>
                     </LinearLayout>
