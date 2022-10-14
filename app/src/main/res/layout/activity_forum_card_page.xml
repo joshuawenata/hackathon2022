@@ -92,15 +92,57 @@
                     android:textSize="22sp"
                     />
 
+
                 <TextView
                     android:id="@+id/activityforumcardpage_pertanyaan"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="A short or very long title to put in here"
                     android:fontFamily="@font/kanit_semibold"
                     android:textColor="@color/figma_gray"
                     android:textSize="15sp"
                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="2dp"
+                        android:background="@drawable/round_btt_white"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_baseline_star_border_24"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="20dp"
+                            android:maxHeight="20dp"
+                            android:scaleType="fitCenter"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Beri bintang"
+                            android:fontFamily="@font/kanit_light"
+                            android:textColor="@color/figma_gray"
+                            android:layout_marginHorizontal="3dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -171,24 +213,7 @@
                         android:gravity="bottom"
                         />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_baseline_star_rate_24"
-                        android:adjustViewBounds="true"
-                        android:maxWidth="20dp"
-                        android:maxHeight="20dp"
-                        android:scaleType="fitCenter"
-                        />
 
-                    <TextView
-                        android:id="@+id/activityforumcardpage_starCount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2,8 ribu"
-                        android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_gray"
-                        android:layout_marginHorizontal="3dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -227,6 +252,8 @@
                         android:layout_weight="0.1"
                         />
                 </LinearLayout>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -263,11 +290,11 @@
                 android:text="@string/jawaban_forum"
                 android:fontFamily="@font/kanit_medium"
                 android:textColor="@color/elegant_black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:layout_marginTop="15dp"
                 android:paddingHorizontal="20dp"
                 android:background="@color/white"
-                android:paddingTop="7dp"
+                android:paddingVertical="10dp"
                 android:visibility="invisible"
                 />
 
@@ -278,6 +305,7 @@
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/activity_component_card_forum_jawaban"
                 android:paddingHorizontal="10dp"
+                android:background="@color/white"
                 />
 
         </LinearLayout>
