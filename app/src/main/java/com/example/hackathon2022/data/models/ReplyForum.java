@@ -11,9 +11,9 @@ public class ReplyForum {
     private String Date;
     private String ForumKey;
 
-    public ReplyForum(String replyKey, String username, String answer, String date, String forumkey){
+    public ReplyForum(String replyKey, String username, String answer, String date, String forumKey){
         this.ReplyKey = replyKey;
-        this.ForumKey = forumkey;
+        this.ForumKey = forumKey;
         this.username = username;
         this.answer = answer;
         this.Date = date;
