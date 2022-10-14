@@ -172,11 +172,13 @@
             android:gravity="center_vertical"
             >
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/ic_star"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_baseline_star_rate_24" />
+                android:background="@null"
+                app:srcCompat="@drawable/ic_baseline_star_rate_24"
+                android:onClick="addStar"/>
 
             <View
                 android:id="@+id/gap1"
@@ -187,7 +189,7 @@
                 />
 
             <TextView
-                android:id="@+id/star_count"
+                android:id="@+id/componentcardforum_starcount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_3_1_ribu"

@@ -1,5 +1,7 @@
 package com.example.hackathon2022.Object;
 
+import android.content.Intent;
+
 public class ObjectForum {
 
     public String getKey() {
@@ -17,6 +19,15 @@ public class ObjectForum {
     private String username;
     private String date;
     private String file;
+    private Integer star;
+
+    public Integer getStar() {
+        return star;
+    }
+
+    public void setStar(Integer star) {
+        this.star = star;
+    }
 
     public String getDate() {
         return date;

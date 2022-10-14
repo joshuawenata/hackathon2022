@@ -22,7 +22,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
     private FrontForumAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date);
+        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star);
     }
 
     public void setOnItemClickListener(FrontForumAdapter.OnItemClickListener listener){
@@ -56,6 +56,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
         holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
         holder.txtUserName.setText(forumList.get(position).getUsername());
         holder.txtDate.setText(forumList.get(position).getDate());
+        holder.txtStar.setText(forumList.get(position).getStar().toString());
     }
 
     @Override
@@ -64,7 +65,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
     }
 
     public class ForumViewHolder extends RecyclerView.ViewHolder {
-        TextView txtJudul, txtKategori, txtPertanyaan, txtUserName, txtDate;
+        TextView txtJudul, txtKategori, txtPertanyaan, txtUserName, txtDate, txtStar;
         ForumViewHolder(@NonNull View itemView) {
             super(itemView);
             txtJudul = itemView.findViewById(R.id.componentcardforum_judul);
@@ -72,21 +73,23 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
             txtPertanyaan = itemView.findViewById(R.id.componentcardforum_Pertanyaan);
             txtUserName = itemView.findViewById(R.id.componentcardforum_username);
             txtDate = itemView.findViewById(R.id.componentcardforum_date);
+            txtStar = itemView.findViewById(R.id.componentcardforum_starcount);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     ArrayList<ObjectForum> Forumlist = getForumList();
-                    String key, username, judul, kategori, pertanyaan, date;
+                    String key, username, judul, kategori, pertanyaan, date, star;
                     key = Forumlist.get(position).getKey();
                     username = Forumlist.get(position).getUsername();
                     judul = Forumlist.get(position).getJudul();
                     kategori = Forumlist.get(position).getKategori();
                     pertanyaan = Forumlist.get(position).getPertanyaan();
                     date = Forumlist.get(position).getDate();
+                    star = Forumlist.get(position).getStar().toString();
                     if(mListener!=null){
-                        mListener.onItemClick(key, username,judul,kategori,pertanyaan,date);
+                        mListener.onItemClick(key,username,judul,kategori,pertanyaan,date,star);
                     }
                 }
             });

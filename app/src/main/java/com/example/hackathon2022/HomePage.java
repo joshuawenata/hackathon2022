@@ -61,7 +61,7 @@ public class HomePage extends AppCompatActivity {
                 TopAdapter.setOnItemClickListener(new FrontForumAdapter.OnItemClickListener() {
 
                     @Override
-                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date) {
+                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star) {
                         Intent i = new Intent(HomePage.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
@@ -69,6 +69,7 @@ public class HomePage extends AppCompatActivity {
                         i.putExtra("kategori",kategori);
                         i.putExtra("pertanyaan",pertanyaan);
                         i.putExtra("date",date);
+                        i.putExtra("star",star);
                         startActivity(i);
                     }
                 });

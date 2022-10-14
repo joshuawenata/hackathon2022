@@ -34,9 +34,9 @@ import java.util.Date;
 
 public class ForumCardPage extends AppCompatActivity{
 
-    TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban;
+    TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban, txtStarCount;
     EditText replyanswer;
-    String forumkey, judul, username, kategori, pertanyaan, date, dateanswer;
+    String forumkey, judul, username, kategori, pertanyaan, date, dateanswer, star;
     DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     Date dates = new Date();
 
@@ -62,6 +62,7 @@ public class ForumCardPage extends AppCompatActivity{
         txtkategori = findViewById(R.id.activityforumcardpage_kategori);
         txtpertanyaan = findViewById(R.id.activityforumcardpage_pertanyaan);
         txtdate = findViewById(R.id.date);
+        txtStarCount = findViewById(R.id.activityforumcardpage_starCount);
 
         Intent intent = getIntent();
         forumkey = intent.getStringExtra("key");
@@ -71,12 +72,14 @@ public class ForumCardPage extends AppCompatActivity{
         pertanyaan = intent.getStringExtra("pertanyaan");
         date = intent.getStringExtra("date");
         dateanswer = intent.getStringExtra("dateanswer");
+        star = intent.getStringExtra("star");
 
         txtjudul.setText(judul);
         txtdate.setText(date);
         txtusernamepenanya.setText(username);
         txtkategori.setText(kategori);
         txtpertanyaan.setText(pertanyaan);
+        txtStarCount.setText(star);
 
         RecyclerView recyclerJawaban = findViewById(R.id.activityforumcardpage_recyclerview);
 
