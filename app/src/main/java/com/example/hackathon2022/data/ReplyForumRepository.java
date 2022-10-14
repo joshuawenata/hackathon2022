@@ -11,7 +11,8 @@ public class ReplyForumRepository {
 
     public static void insertReplyForum(String username, String answer, String date, String forumkey){
         String replyKey = replyRef.push().getKey();
-        ReplyForum newReply = new ReplyForum(username,
+        ReplyForum newReply = new ReplyForum(replyKey,
+                username,
                 answer,
                 date,
                 forumkey);

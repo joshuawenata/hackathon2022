@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -44,12 +45,13 @@ public class HomePage extends AppCompatActivity {
     }
 
     protected void initComponents() {
-        RecyclerView recyclerWeeklyPopularForum = findViewById(R.id.activityhome_recyclerweeklypopularforum);
+        RecyclerView recyclerWeeklyPopularForum = findViewById(R.id.activityhome_recyclerview);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
@@ -61,7 +63,7 @@ public class HomePage extends AppCompatActivity {
                 TopAdapter.setOnItemClickListener(new FrontForumAdapter.OnItemClickListener() {
 
                     @Override
-                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star) {
+                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String forumKey) {
                         Intent i = new Intent(HomePage.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
@@ -70,11 +72,11 @@ public class HomePage extends AppCompatActivity {
                         i.putExtra("pertanyaan",pertanyaan);
                         i.putExtra("date",date);
                         i.putExtra("star",star);
+                        i.putExtra("forumKey",forumKey);
                         startActivity(i);
                     }
                 });
                 recyclerWeeklyPopularForum.setAdapter(TopAdapter);
-
                 TopAdapter.notifyDataSetChanged();
             }
 

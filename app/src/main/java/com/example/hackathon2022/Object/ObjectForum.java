@@ -19,6 +19,16 @@ public class ObjectForum {
     private String username;
     private String date;
     private String file;
+    private String forumkey;
+
+    public String getForumkey() {
+        return forumkey;
+    }
+
+    public void setForumkey(String forumkey) {
+        this.forumkey = forumkey;
+    }
+
     private Integer star;
 
     public Integer getStar() {

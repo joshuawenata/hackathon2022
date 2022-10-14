@@ -178,7 +178,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 app:srcCompat="@drawable/ic_baseline_star_rate_24"
-                android:onClick="addStar"/>
+                />
 
             <View
                 android:id="@+id/gap1"

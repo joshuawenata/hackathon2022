@@ -31,6 +31,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 public class ForumCardPage extends AppCompatActivity{
 
@@ -90,7 +91,7 @@ public class ForumCardPage extends AppCompatActivity{
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    if(forumkey.equals(postSnapshot.getValue(ObjectReply.class).getKey())){
+                    if(forumkey.equals(Objects.requireNonNull(postSnapshot.getValue(ObjectReply.class)).getForumKey())){
                         newList.add(postSnapshot.getValue(ObjectReply.class));
                     }
                 }

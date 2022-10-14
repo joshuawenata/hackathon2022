@@ -1,5 +1,6 @@
 package com.example.hackathon2022.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,7 +23,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
     private FrontForumAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star);
+        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String forumKey);
     }
 
     public void setOnItemClickListener(FrontForumAdapter.OnItemClickListener listener){
@@ -49,6 +50,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
         this.forumList = forumList;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ForumViewHolder holder, int position) {
         holder.txtJudul.setText(forumList.get(position).getJudul());
@@ -80,7 +82,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     ArrayList<ObjectForum> Forumlist = getForumList();
-                    String key, username, judul, kategori, pertanyaan, date, star;
+                    String key, username, judul, kategori, pertanyaan, date, star, forumkey;
                     key = Forumlist.get(position).getKey();
                     username = Forumlist.get(position).getUsername();
                     judul = Forumlist.get(position).getJudul();
@@ -88,8 +90,9 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
                     pertanyaan = Forumlist.get(position).getPertanyaan();
                     date = Forumlist.get(position).getDate();
                     star = Forumlist.get(position).getStar().toString();
+                    forumkey = Forumlist.get(position).getForumkey();
                     if(mListener!=null){
-                        mListener.onItemClick(key,username,judul,kategori,pertanyaan,date,star);
+                        mListener.onItemClick(key,username,judul,kategori,pertanyaan,date,star, forumkey);
                     }
                 }
             });
