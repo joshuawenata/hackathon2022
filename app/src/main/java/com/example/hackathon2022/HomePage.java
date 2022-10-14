@@ -74,23 +74,15 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
                     @Override
                     public void onItemClick(View v,String key, String username, String judul, String kategori, String pertanyaan, String date, String star) {
-                        if(v.equals(starsBtn)){
-                            stars = Integer.parseInt(star) + 1;
-                            Log.i("TAG", "onDataChange: lalala"+stars);
-                            for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                                databaseReference.child(Objects.requireNonNull(postSnapshot.getValue(ObjectForum.class)).getKey() + "/star").setValue(stars.toString());
-                            }
-                        }else{
-                            Intent i = new Intent(HomePage.this, ForumCardPage.class);
-                            i.putExtra("key",key);
-                            i.putExtra("username",username);
-                            i.putExtra("judul",judul);
-                            i.putExtra("kategori",kategori);
-                            i.putExtra("pertanyaan",pertanyaan);
-                            i.putExtra("date",date);
-                            i.putExtra("star",star);
-                            startActivity(i);
-                        }
+                        Intent i = new Intent(HomePage.this, ForumCardPage.class);
+                        i.putExtra("key",key);
+                        i.putExtra("username",username);
+                        i.putExtra("judul",judul);
+                        i.putExtra("kategori",kategori);
+                        i.putExtra("pertanyaan",pertanyaan);
+                        i.putExtra("date",date);
+                        i.putExtra("star",star);
+                        startActivity(i);
                     }
                 });
                 recyclerView.setAdapter(TopAdapter);

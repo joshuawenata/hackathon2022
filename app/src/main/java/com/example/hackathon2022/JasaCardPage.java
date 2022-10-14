@@ -14,4 +14,9 @@ public class JasaCardPage extends AppCompatActivity {
         setContentView(R.layout.activity_jasa_card_page);
     }
 
+    public void backtoHome(View view) {
+        startActivity(new Intent(this, LowonganPekerjaan.class));
+        finish();
+    }
+
 }

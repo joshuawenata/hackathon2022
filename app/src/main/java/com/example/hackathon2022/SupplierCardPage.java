@@ -13,4 +13,9 @@ public class SupplierCardPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_supplier_card_page);
     }
+
+    public void backtoHome(View view) {
+        startActivity(new Intent(this, SupplierPage.class));
+        finish();
+    }
 }
