@@ -33,14 +33,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
-public class HomePage extends AppCompatActivity {
+public class HomePage extends AppCompatActivity implements View.OnClickListener{
     ArrayList<ObjectForum> newList = new ArrayList<>();
     Context context = this;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference, databaseReferences;
     Integer stars;
-    ImageButton starsBtn;
+    ImageView starsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class HomePage extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.activityhome_recyclerview);
 
         starsBtn = findViewById(R.id.componentcardforum_starbtn);
-        starsBtn.setOnClickListener((View.OnClickListener) this);
+//        starsBtn.setOnClickListener(this);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
@@ -129,4 +129,8 @@ public class HomePage extends AppCompatActivity {
         startActivity(new Intent(this, HomeModalusaha.class));
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }
