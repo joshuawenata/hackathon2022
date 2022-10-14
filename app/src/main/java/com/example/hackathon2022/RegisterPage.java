@@ -29,7 +29,6 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
         btnDaftar = findViewById(R.id.activityregister_btnDaftar);
         txtMasuk = findViewById(R.id.activityregister_txtMasuk);
 
-
     }
 
     @Override
