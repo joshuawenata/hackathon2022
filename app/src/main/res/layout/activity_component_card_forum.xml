@@ -208,13 +208,13 @@
                 android:id="@+id/ic_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_baseline_comment_24"
                 android:adjustViewBounds="true"
+                android:background="@null"
                 android:maxWidth="20dp"
                 android:maxHeight="20dp"
+                android:onClick="pushToDatabase"
                 android:scaleType="fitCenter"
-                android:background="@null"
-                android:onClick="pushtodatabase" />
+                app:srcCompat="@drawable/ic_baseline_comment_24" />
 
             <TextView
                 android:id="@+id/comment_count"
@@ -226,7 +226,7 @@
                 android:layout_marginHorizontal="3dp"/>
 
             <EditText
-                android:id="@+id/activityforumcardpage_replycontent"
+                android:id="@+id/componentcardforum_replycontent"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"

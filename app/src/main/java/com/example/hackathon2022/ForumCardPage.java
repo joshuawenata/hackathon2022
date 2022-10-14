@@ -51,7 +51,7 @@ public class ForumCardPage extends AppCompatActivity{
 
     private void initComponents() {
 
-        replyanswer = findViewById(R.id.activityforumcardpage_replycontent);
+        replyanswer = findViewById(R.id.componentcardforum_replycontent);
         txtjudul = findViewById(R.id.activityforumcardpage_judul);
         txtusernamepenanya = findViewById(R.id.activityforumcardpage_username);
         txtkategori = findViewById(R.id.activityforumcardpage_kategori);
@@ -103,5 +103,9 @@ public class ForumCardPage extends AppCompatActivity{
     public void backtoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
         finish();
+    }
+
+    public void pushToDatabase(View view) {
+        ReplyForumRepository.insertReplyForum(forumkey,LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),date);
     }
 }

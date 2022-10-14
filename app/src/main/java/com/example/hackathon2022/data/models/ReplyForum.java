@@ -59,9 +59,10 @@ public class ReplyForum {
 
     public Map<String, Object> toMap(){
         Map<String, Object> data = new HashMap<>();
-        data.put("key", ForumKey);
+        data.put("key", ReplyKey);
         data.put("username",username);
         data.put("answer", answer);
+        data.put("foreignkey", ForumKey);
         return data;
     }
 }

@@ -65,11 +65,6 @@ public class Profile extends AppCompatActivity {
         finish();
     }
 
-    public void Logout(View view) {
-        startActivity(new Intent(this, WelcomePage.class));
-        finish();
-    }
-
     public void editProfile(View view) {
         LOGGED_IN_USER.setUserName(name.getText().toString());
         LOGGED_IN_USER.setUserNomor(phone.getText().toString());

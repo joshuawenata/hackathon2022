@@ -10,10 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 import com.example.hackathon2022.Object.ObjectForum;
 import com.example.hackathon2022.adapter.FrontForumAdapter;
+import com.example.hackathon2022.data.ReplyForumRepository;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +31,8 @@ public class HomePage extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    EditText replyanswer;
+    String dates, forumkeys;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,8 @@ public class HomePage extends AppCompatActivity {
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
+
+        replyanswer = findViewById(R.id.componentcardforum_replycontent);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -63,6 +70,8 @@ public class HomePage extends AppCompatActivity {
                         i.putExtra("kategori",kategori);
                         i.putExtra("pertanyaan",pertanyaan);
                         i.putExtra("date",date);
+                        dates = date;
+                        forumkeys = key;
                         startActivity(i);
                     }
                 });
@@ -101,6 +110,10 @@ public class HomePage extends AppCompatActivity {
 
     public void intoModal(View view) {
         startActivity(new Intent(this, HomeModalusaha.class));
+    }
+
+    public void pushToDatabase(View view) {
+        ReplyForumRepository.insertReplyForum(forumkeys,LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),dates);
     }
 
 }
