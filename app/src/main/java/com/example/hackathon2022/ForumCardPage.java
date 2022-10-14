@@ -27,13 +27,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ForumCardPage extends AppCompatActivity{
 
     TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban;
     EditText replyanswer;
-    String forumkey, judul, username, kategori, pertanyaan, date;
+    String forumkey, judul, username, kategori, pertanyaan, date, dateanswer;
+    DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    Date dates = new Date();
 
     ArrayList<ObjectReply> newList = new ArrayList<>();
     Context context = this;
@@ -65,6 +70,7 @@ public class ForumCardPage extends AppCompatActivity{
         kategori = intent.getStringExtra("kategori");
         pertanyaan = intent.getStringExtra("pertanyaan");
         date = intent.getStringExtra("date");
+        dateanswer = intent.getStringExtra("dateanswer");
 
         txtjudul.setText(judul);
         txtdate.setText(date);
@@ -82,7 +88,6 @@ public class ForumCardPage extends AppCompatActivity{
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     if(forumkey.equals(postSnapshot.getValue(ObjectReply.class).getKey())){
-                        Log.i("cek", "onDataChange: ");
                         newList.add(postSnapshot.getValue(ObjectReply.class));
                     }
                 }
@@ -114,6 +119,6 @@ public class ForumCardPage extends AppCompatActivity{
 
     public void pushToDatabase(View view) {
         replyanswer = findViewById(R.id.activityforumcardpage_addanswer);
-        ReplyForumRepository.insertReplyForum(LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),date,forumkey);
+        ReplyForumRepository.insertReplyForum(LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),dateFormat.format(dates),forumkey);
     }
 }

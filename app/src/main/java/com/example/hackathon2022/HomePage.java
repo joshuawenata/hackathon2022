@@ -23,7 +23,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class HomePage extends AppCompatActivity {
     ArrayList<ObjectForum> newList = new ArrayList<>();
@@ -31,8 +34,6 @@ public class HomePage extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    EditText replyanswer;
-    String dates, forumkeys;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,10 +107,6 @@ public class HomePage extends AppCompatActivity {
 
     public void intoModal(View view) {
         startActivity(new Intent(this, HomeModalusaha.class));
-    }
-
-    public void pushToDatabase(View view) {
-
     }
 
 }

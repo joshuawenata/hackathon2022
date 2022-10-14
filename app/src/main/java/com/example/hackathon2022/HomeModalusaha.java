@@ -18,7 +18,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class HomeModalusaha extends AppCompatActivity {
 
@@ -60,6 +63,7 @@ public class HomeModalusaha extends AppCompatActivity {
                         i.putExtra("judul",judul);
                         i.putExtra("kategori",kategori);
                         i.putExtra("pertanyaan",pertanyaan);
+                        i.putExtra("date",date);
                         startActivity(i);
                     }
                 });
