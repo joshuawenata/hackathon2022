@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,20 +19,24 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hackathon2022.Object.ObjectForum;
 import com.example.hackathon2022.Object.ObjectReply;
-import com.example.hackathon2022.adapter.FrontForumAdapter;
 import com.example.hackathon2022.adapter.ReplyForumAdapter;
 import com.example.hackathon2022.data.ReplyForumRepository;
-import com.example.hackathon2022.data.models.ReplyForum;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -41,13 +47,15 @@ public class ForumCardPage extends AppCompatActivity{
 
     TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban, txtStarCount, answercount;
     EditText replyanswer;
-    String forumkey, judul, username, kategori, pertanyaan, date, dateanswer;
+    String forumkey, judul, username, kategori, pertanyaan, date, dateanswer, path;
     Integer star;
     ImageButton starBtn;
     DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     Date dates = new Date();
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference, ref;
+    ImageView imageprofile;
+    StorageReference storageReference;
 
     ArrayList<ObjectReply> newList = new ArrayList<>();
     Context context = this;
@@ -74,6 +82,7 @@ public class ForumCardPage extends AppCompatActivity{
         txtdate = findViewById(R.id.date);
         txtStarCount = findViewById(R.id.activityforumcardpage_starCount);
         starBtn = findViewById(R.id.activityforumcardpage_starButton);
+        imageprofile = findViewById(R.id.activityforumcardpage_imageview);
 
         Intent intent = getIntent();
         forumkey = intent.getStringExtra("key");
@@ -84,12 +93,33 @@ public class ForumCardPage extends AppCompatActivity{
         date = intent.getStringExtra("date");
         dateanswer = intent.getStringExtra("dateanswer");
         star = Integer.valueOf(intent.getStringExtra("star"));
+        path = intent.getStringExtra("path");
+
+        if(path.equals("")){
+            imageprofile.setImageResource(R.drawable.asset_forum);
+        }else{
+            Log.i("cek", path);
+            storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(path);
+            try {
+                File localfile = File.createTempFile("temp","*");
+                storageReference.getFile(localfile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                        Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+                        imageprofile.setImageBitmap(bitmap);
+                    }
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         txtjudul.setText(judul);
         txtdate.setText(date);
         txtusernamepenanya.setText(username);
         txtkategori.setText(kategori);
         txtpertanyaan.setText(pertanyaan);
+
         if(star>999){
             float temp = (float)star/1000;
             txtStarCount.setText(String.valueOf(String.format("%.1f",temp))+" ribu");

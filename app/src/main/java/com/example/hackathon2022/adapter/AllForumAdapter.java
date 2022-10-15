@@ -2,6 +2,8 @@ package com.example.hackathon2022.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +24,7 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star);
+        void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener){
@@ -86,7 +88,8 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     ArrayList<ObjectForum> Forumlist = getForumList();
-                    String key, username, judul, kategori, pertanyaan, date, star;
+                    String key, username, judul, kategori, pertanyaan, date, star, path;
+
                     key = Forumlist.get(position).getKey();
                     username = Forumlist.get(position).getUsername();
                     judul = Forumlist.get(position).getJudul();
@@ -94,8 +97,10 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
                     pertanyaan = Forumlist.get(position).getPertanyaan();
                     date = Forumlist.get(position).getDate();
                     star = String.valueOf(Forumlist.get(position).getStar());
+                    path = Forumlist.get(position).getFilepath();
+
                     if(mListener!=null){
-                        mListener.onItemClick(key, username,judul,kategori,pertanyaan,date,star);
+                        mListener.onItemClick(v,key,username,judul,kategori,pertanyaan,date,star,path);
                     }
                 }
             });

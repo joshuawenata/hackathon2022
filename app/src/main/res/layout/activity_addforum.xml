@@ -111,25 +111,21 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
-                android:background="@drawable/round_btt_white"
+                android:background="@drawable/description_column"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp">
 
-                <TextView
-                    android:id="@+id/activityaddforum_inputmedia"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/activityaddforum_imageprofile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:background="@drawable/round_edittext"
-                    android:backgroundTint="@color/white"
-                    android:fontFamily="@font/kanit_regular"
-                    android:hint="Tambahkan media"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/figma_gray"/>
+                    android:width="10dp"
+                    android:src="@drawable/asset_add_pic"
+                    android:layout_margin="20dp"/>
 
                 <ImageButton
                     android:id="@+id/activityaddforum_btnTambahMedia"
@@ -138,6 +134,7 @@
                     android:layout_weight="1"
                     android:background="@null"
                     android:src="@drawable/activityforum_btnfile" />
+
             </LinearLayout>
 
         </LinearLayout>

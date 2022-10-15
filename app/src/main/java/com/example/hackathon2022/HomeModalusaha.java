@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 
@@ -18,10 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class HomeModalusaha extends AppCompatActivity {
 
@@ -56,7 +55,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 AllForumAdapter myAdapter = new AllForumAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String key, String username, String judul, String kategori, String pertanyaan, String date, String star) {
+                    public void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path) {
                         Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
@@ -65,6 +64,7 @@ public class HomeModalusaha extends AppCompatActivity {
                         i.putExtra("pertanyaan",pertanyaan);
                         i.putExtra("date",date);
                         i.putExtra("star",star);
+                        i.putExtra("path",path);
                         startActivity(i);
                     }
                 });

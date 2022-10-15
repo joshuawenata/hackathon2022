@@ -1,6 +1,7 @@
 package com.example.hackathon2022.Object;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 
 public class ObjectForum {
 
@@ -18,7 +19,7 @@ public class ObjectForum {
     private String pertanyaan;
     private String username;
     private String date;
-    private String file;
+    private String filepath;
     private String forumkey;
 
     public String getForumkey() {
@@ -79,11 +80,11 @@ public class ObjectForum {
         this.pertanyaan = pertanyaan;
     }
 
-    public String getFile() {
-        return file;
+    public String getFilepath() {
+        return filepath;
     }
 
-    public void setFile(String file) {
-        this.file = file;
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
     }
 }

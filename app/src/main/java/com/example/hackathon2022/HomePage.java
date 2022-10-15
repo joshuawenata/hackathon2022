@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +28,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.ByteArrayOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -70,7 +72,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
                 TopAdapter.setOnItemClickListener(new FrontForumAdapter.OnItemClickListener() {
 
                     @Override
-                    public void onItemClick(View v,String key, String username, String judul, String kategori, String pertanyaan, String date, String star) {
+                    public void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path) {
                         Intent i = new Intent(HomePage.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
@@ -79,6 +81,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
                         i.putExtra("pertanyaan",pertanyaan);
                         i.putExtra("date",date);
                         i.putExtra("star",star);
+                        i.putExtra("path",path);
                         startActivity(i);
                     }
                 });

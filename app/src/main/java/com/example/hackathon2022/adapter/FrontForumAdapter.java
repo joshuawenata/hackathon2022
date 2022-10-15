@@ -3,6 +3,8 @@ package com.example.hackathon2022.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,16 +17,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.hackathon2022.Object.ObjectForum;
 import com.example.hackathon2022.Object.ObjectReply;
 import com.example.hackathon2022.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.ForumViewHolder>{
 
+    StorageReference storageReference;
     Context context;
     ArrayList<ObjectForum> forumList;
     private FrontForumAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star);
+        void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path);
     }
 
     public void setOnItemClickListener(FrontForumAdapter.OnItemClickListener listener){
@@ -65,7 +75,6 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
         }else{
             holder.txtStar.setText(forumList.get(position).getStar().toString());
         }
-
     }
 
     @Override
@@ -89,7 +98,8 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     ArrayList<ObjectForum> Forumlist = getForumList();
-                    String key, username, judul, kategori, pertanyaan, date, star, forumkey;
+                    String key, username, judul, kategori, pertanyaan, date, star, path;
+
                     key = Forumlist.get(position).getKey();
                     username = Forumlist.get(position).getUsername();
                     judul = Forumlist.get(position).getJudul();
@@ -97,8 +107,10 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
                     pertanyaan = Forumlist.get(position).getPertanyaan();
                     date = Forumlist.get(position).getDate();
                     star = Forumlist.get(position).getStar().toString();
+                    path = Forumlist.get(position).getFilepath();
+
                     if(mListener!=null){
-                        mListener.onItemClick(v,key,username,judul,kategori,pertanyaan,date,star);
+                        mListener.onItemClick(v,key,username,judul,kategori,pertanyaan,date,star,path);
                     }
                 }
             });

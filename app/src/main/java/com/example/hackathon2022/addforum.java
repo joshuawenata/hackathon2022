@@ -52,7 +52,7 @@ public class addforum extends AppCompatActivity {
 
     private EditText txtJudul, txtPertanyaan, txtKategori;
     private ImageButton btnUploadFile;
-    private TextView FileForum;
+    private ImageView imageprofile;
     ProgressDialog pd;
 
     private void initComponents() {
@@ -62,7 +62,7 @@ public class addforum extends AppCompatActivity {
         txtKategori = findViewById(R.id.activityaddforum_inputkategori);
         txtPertanyaan = findViewById(R.id.activityaddforum_inputpertanyaan);
         btnUploadFile = findViewById(R.id.activityaddforum_btnTambahMedia);
-        FileForum = findViewById(R.id.activityaddforum_inputmedia);
+        imageprofile = findViewById(R.id.activityaddforum_imageprofile);
         storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com");
     }
 
@@ -77,10 +77,9 @@ public class addforum extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setType("*/*");
+                intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(intent, PICK_IMAGE_REQUEST);
-                finish();
             }
         });
     }
@@ -100,7 +99,20 @@ public class addforum extends AppCompatActivity {
                 && data.getData() != null) {
 
             setFilePath(data.getData());
-            FileForum.setText(data.getData().toString());
+            try {
+
+                Bitmap bitmap = MediaStore
+                        .Images
+                        .Media
+                        .getBitmap(
+                                getContentResolver(),
+                                filePath);
+                imageprofile.setImageBitmap(bitmap);
+            }
+
+            catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -131,7 +143,7 @@ public class addforum extends AppCompatActivity {
             }
             String path;
             if(temp==0){
-                path = "forumfile/" + UUID.randomUUID().toString();
+                path = "forumimages/" + UUID.randomUUID().toString();
                 StorageReference childRef = storageReference.child(path);
                 UploadTask uploadTask = childRef.putFile(filePath);
                 uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -148,6 +160,7 @@ public class addforum extends AppCompatActivity {
                     }
                 });
             }else{
+                temp = 0;
                 path = "";
             }
 
