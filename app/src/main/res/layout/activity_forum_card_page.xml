@@ -123,7 +123,8 @@
                         android:background="@drawable/round_btt_white"
                         >
 
-                        <ImageView
+                        <ImageButton
+                            android:id="@+id/activityforumcardpage_starButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/ic_baseline_star_border_24"
@@ -131,9 +132,12 @@
                             android:maxWidth="20dp"
                             android:maxHeight="20dp"
                             android:scaleType="fitCenter"
+                            android:background="@null"
+                            android:onClick="AddStar"
                             />
 
                         <TextView
+                            android:id="@+id/activityforumcardpage_starCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Beri bintang"
@@ -157,7 +161,8 @@
                         android:layout_height="wrap_content"
                         android:text="by "
                         android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_gray"/>
+                        android:textColor="@color/figma_gray"
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:id="@+id/activityforumcardpage_username"
@@ -236,6 +241,9 @@
                         android:paddingHorizontal="10dp"
                         android:textSize="12sp"
                         tools:ignore="NestedWeights"
+                        android:textColorHint="@color/figma_gray"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/black"
                         />
 
                     <ImageButton
