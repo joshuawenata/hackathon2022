@@ -2,6 +2,7 @@ package com.example.hackathon2022.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +51,7 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
         this.forumList = forumList;
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "DefaultLocale"})
     @Override
     public void onBindViewHolder(@NonNull ForumViewHolder holder, int position) {
         holder.txtJudul.setText(forumList.get(position).getJudul());
@@ -58,7 +59,13 @@ public class FrontForumAdapter extends RecyclerView.Adapter<FrontForumAdapter.Fo
         holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
         holder.txtUserName.setText(forumList.get(position).getUsername());
         holder.txtDate.setText(forumList.get(position).getDate());
-        holder.txtStar.setText(forumList.get(position).getStar().toString());
+        if(forumList.get(position).getStar()>999){
+            float temp = (float)forumList.get(position).getStar()/1000;
+            holder.txtStar.setText(String.valueOf(String.format("%.1f",temp))+" ribu");
+        }else{
+            holder.txtStar.setText(forumList.get(position).getStar().toString());
+        }
+
     }
 
     @Override

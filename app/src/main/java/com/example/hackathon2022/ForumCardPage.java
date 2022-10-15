@@ -11,6 +11,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -37,7 +39,7 @@ import java.util.Objects;
 
 public class ForumCardPage extends AppCompatActivity{
 
-    TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban, txtStarCount;
+    TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban, txtStarCount, answercount;
     EditText replyanswer;
     String forumkey, judul, username, kategori, pertanyaan, date, dateanswer;
     Integer star;
@@ -59,8 +61,11 @@ public class ForumCardPage extends AppCompatActivity{
         initComponents();
     }
 
+    @SuppressLint({"DefaultLocale", "SetTextI18n"})
     private void initComponents() {
 
+        answercount = findViewById(R.id.activityforumcardpage_answercount);
+        replyanswer = findViewById(R.id.activityforumcardpage_addanswer);
         labelJawaban = findViewById(R.id.activityforumcardpage_lbljawaban);
         txtjudul = findViewById(R.id.activityforumcardpage_judul);
         txtusernamepenanya = findViewById(R.id.activityforumcardpage_username);
@@ -85,7 +90,31 @@ public class ForumCardPage extends AppCompatActivity{
         txtusernamepenanya.setText(username);
         txtkategori.setText(kategori);
         txtpertanyaan.setText(pertanyaan);
-        txtStarCount.setText(star.toString());
+        if(star>999){
+            float temp = (float)star/1000;
+            txtStarCount.setText(String.valueOf(String.format("%.1f",temp))+" ribu");
+        }else{
+            txtStarCount.setText(star.toString());
+        }
+
+        replyanswer.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                String temp = String.valueOf(replyanswer.length());
+                if(replyanswer.length()>999){
+                    temp = String.valueOf(replyanswer.length()/1000)+" ribu";
+                }
+                answercount.setText(temp);
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+        });
 
         RecyclerView recyclerJawaban = findViewById(R.id.activityforumcardpage_recyclerview);
 
@@ -132,11 +161,17 @@ public class ForumCardPage extends AppCompatActivity{
         ReplyForumRepository.insertReplyForum(LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),dateFormat.format(dates),forumkey);
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "DefaultLocale"})
     public void AddStar(View view) {
         ref.child(forumkey+"/star").setValue(star+1);
-        Integer tempo = star + 1;
-        txtStarCount.setText(tempo.toString());
+        int tempint = star + 1;
+        float tempo;
+        String tempstr = "";
+        if(tempint>999){
+            tempo=(float)tempint/1000;
+            tempstr=String.valueOf(String.format("%.1f",tempo))+" ribu";
+        }
+        txtStarCount.setText(tempstr);
         starBtn.setImageResource(R.drawable.ic_baseline_star_24);
     }
 }
