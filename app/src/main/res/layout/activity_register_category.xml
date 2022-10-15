@@ -8,15 +8,33 @@
     android:background="@color/backgroundPrimary"
     >
 
+    <!--LOGO-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logotext_01"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="650dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingHorizontal="20dp"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/welcome_bg"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
         >
 
         <TextView
@@ -25,29 +43,314 @@
             android:text="@string/apa_kategori_umkm_anda"
             android:fontFamily="@font/kanit_semibold"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="24sp"
+            android:layout_marginVertical="20dp"
             />
 
-        <androidx.core.widget.NestedScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true"
-            >
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_misc_food"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
 
-                </LinearLayout>
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FnB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_misc_clothes"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pakaian / Fabrikasi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_misc_chip"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
 
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Elektronik"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
 
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/misc_wheat"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pangan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/misc_courrier"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transportasi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/misc_fish"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Boga Bahari"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/misc_laundy"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transportasi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_misc_other"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lainnya"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_btt_primary"
+            android:text="Lanjut"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/kanit_regular"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginVertical="10dp"/>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
