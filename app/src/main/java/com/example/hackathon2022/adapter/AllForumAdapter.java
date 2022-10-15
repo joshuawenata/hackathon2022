@@ -1,5 +1,6 @@
 package com.example.hackathon2022.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -48,6 +49,7 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
         return new AllForumAdapter.ForumViewHolder(v);
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public void onBindViewHolder(@NonNull AllForumAdapter.ForumViewHolder holder, int position) {
         holder.txtJudul.setText(forumList.get(position).getJudul());
@@ -55,7 +57,12 @@ public class AllForumAdapter extends RecyclerView.Adapter<AllForumAdapter.ForumV
         holder.txtPertanyaan.setText(forumList.get(position).getPertanyaan());
         holder.txtUsername.setText(forumList.get(position).getUsername());
         holder.txtDate.setText(forumList.get(position).getDate());
-        holder.txtStar.setText(forumList.get(position).getStar().toString());
+        if(forumList.get(position).getStar()>999){
+            float temp = (float)forumList.get(position).getStar()/1000;
+            holder.txtStar.setText(String.valueOf(String.format("%.1f",temp))+" ribu");
+        }else{
+            holder.txtStar.setText(forumList.get(position).getStar().toString());
+        }
     }
 
     @Override
