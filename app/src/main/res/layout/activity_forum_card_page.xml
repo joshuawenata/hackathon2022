@@ -139,7 +139,8 @@
                             android:text="Beri bintang"
                             android:fontFamily="@font/kanit_light"
                             android:textColor="@color/figma_gray"
-                            android:layout_marginHorizontal="3dp"/>
+                            android:layout_marginHorizontal="3dp"
+                            />
                     </LinearLayout>
 
                 </LinearLayout>
