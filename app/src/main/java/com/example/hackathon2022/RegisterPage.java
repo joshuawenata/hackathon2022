@@ -91,8 +91,11 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
 
             //buat user baru
             if(flag){
-                UserRepository.insertUser(nama, nomor, password);
-                startActivity(new Intent(this, LoginPage.class));
+                Intent i = new Intent(this, RegisterCategoryActivity.class);
+                i.putExtra("nama", nama);
+                i.putExtra("nomor", nomor);
+                i.putExtra("password", password);
+                startActivity(i);
             }
         }
     }

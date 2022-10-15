@@ -12,8 +12,8 @@
     <string name="welcome_asset_desc">welcome_desc_asset</string>
 
     <!--    REGISTER    -->
-    <string name="register_et_fullname">Nama lengkap anda / perusahaan</string>
-    <string name="register_et_email">Nomor handphone anda</string>
+    <string name="register_et_fullname">Nama lengkap umkm / bisnis anda</string>
+    <string name="register_et_email">Nomor handphone anda (whatsapp)</string>
     <string name="register_et_password">Masukkan kata kunci</string>
     <string name="register_et_confirm">Konfirmasi kata kunci</string>
     <string name="register_tagline">Mulai perjalanan UMKM anda bersama Kami</string>
