@@ -1,34 +1,45 @@
 package com.example.hackathon2022;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.hackathon2022.data.UserRepository;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.IOException;
+import java.util.UUID;
 
 public class RegisterPage extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText txtNama, txtNomor, txtPassword, txtConfirmPassword, txtDescription;
+    private EditText txtNomor, txtPassword, txtConfirmPassword;
     private ImageButton btnDaftar;
     private TextView txtMasuk;
 
-
     private void initComponents() {
-        txtNama = findViewById(R.id.activityregister_inputfullname);
         txtNomor = findViewById(R.id.activityregister_inputnomor);
         txtPassword = findViewById(R.id.activityregister_inputpassword);
         txtConfirmPassword = findViewById(R.id.activityregister_inputconfirmpassword);
         btnDaftar = findViewById(R.id.activityregister_btnDaftar);
         txtMasuk = findViewById(R.id.activityregister_txtMasuk);
-        txtDescription = findViewById(R.id.activityregister_inputdescription);
     }
 
     @Override
@@ -55,22 +66,16 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
         }
         else if(view.equals(btnDaftar)){
-            String nama, nomor, password, confirmPassword, description;
+            String nomor, password, confirmPassword;
 
             //get data
-            nama = txtNama.getText().toString();
             nomor = txtNomor.getText().toString();
             password = txtPassword.getText().toString();
             confirmPassword = txtConfirmPassword.getText().toString();
-            description = txtDescription.getText().toString();
 
             //validate data
             boolean flag = true;
-            if(nama.isEmpty()){
-                txtNama.setError("Silahkan masukan nama");
-                flag = false;
-            }
-            else if(nomor.isEmpty()){
+            if(nomor.isEmpty()){
                 txtNomor.setError("Silahkan masukan nomor handphone");
                 flag = false;
             }
@@ -80,10 +85,6 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
             }
             else if(confirmPassword.isEmpty()){
                 txtConfirmPassword.setError("Silahkan masukan konfirmasi kata sandi");
-                flag = false;
-            }
-            else if(description.isEmpty()){
-                txtConfirmPassword.setError("Silahkan masukan deskripsi");
                 flag = false;
             }
             else if(checkConfirmPassword(password, confirmPassword)){
@@ -96,11 +97,10 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
 
             //buat user baru
             if(flag){
+
                 Intent i = new Intent(this, RegisterCategoryActivity.class);
-                i.putExtra("nama", nama);
                 i.putExtra("nomor", nomor);
                 i.putExtra("password", password);
-                i.putExtra("deskripsi", description);
                 startActivity(i);
             }
         }

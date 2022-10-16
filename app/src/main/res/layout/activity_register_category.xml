@@ -62,6 +62,7 @@
                 >
                 <!--SATU ITEM-->
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityregistercategory_fnb"
                     android:layout_width="130dp"
                     android:layout_height="100dp"
                     android:background="@drawable/description_column"
@@ -81,7 +82,7 @@
                         />
 
                     <ImageButton
-                        android:id="@+id/activityregistercategory_fnb"
+                        android:id="@+id/activityregistercategory_fnbic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_misc_food"
@@ -107,6 +108,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <!--SATU ITEM-->
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityregistercategory_pakaian"
                     android:layout_width="130dp"
                     android:layout_height="100dp"
                     android:background="@drawable/description_column"
@@ -124,7 +126,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
-                        android:id="@+id/activityregistercategory_pakaian"
+                        android:id="@+id/activityregistercategory_pakaianic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_misc_clothes"
@@ -157,6 +159,7 @@
                 >
                 <!--SATU ITEM-->
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityregistercategory_elektronik"
                     android:layout_width="130dp"
                     android:layout_height="100dp"
                     android:background="@drawable/description_column"
@@ -174,7 +177,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
-                        android:id="@+id/activityregistercategory_elektronik"
+                        android:id="@+id/activityregistercategory_elektronikic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_misc_chip"
@@ -200,6 +203,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <!--SATU ITEM-->
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityregistercategory_pangan"
                     android:layout_width="130dp"
                     android:layout_height="100dp"
                     android:background="@drawable/description_column"
@@ -217,7 +221,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
-                        android:id="@+id/activityregistercategory_pangan"
+                        android:id="@+id/activityregistercategory_panganic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/misc_wheat"
@@ -249,6 +253,7 @@
                 >
                 <!--SATU ITEM-->
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityregistercategory_transportasi"
                     android:layout_width="130dp"
                     android:layout_height="100dp"
                     android:background="@drawable/description_column"
@@ -266,7 +271,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
-                        android:id="@+id/activityregistercategory_transportasi"
+                        android:id="@+id/activityregistercategory_transportasiic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/misc_courrier"
@@ -291,6 +296,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <!--SATU ITEM-->
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityregistercategory_pengolahan"
                     android:layout_width="130dp"
                     android:layout_height="100dp"
                     android:background="@drawable/description_column"
@@ -308,7 +314,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
-                        android:id="@+id/activityregistercategory_pengolahan"
+                        android:id="@+id/activityregistercategory_pengolahanic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/misc_laundy"

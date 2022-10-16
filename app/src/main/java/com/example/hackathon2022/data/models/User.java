@@ -10,14 +10,18 @@ public class User {
     private String userPass;
     private String deskripsi;
     private String kategori;
+    private String lokasi;
+    private String imagepath;
 
-    public User(String userKey, String userName, String userNomor, String userPass, String deskripsi, String kategori) {
+    public User(String userKey, String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath) {
         this.userKey = userKey;
         this.userName = userName;
         this.userNomor = userNomor;
         this.userPass = userPass;
         this.deskripsi = deskripsi;
         this.kategori = kategori;
+        this.lokasi = lokasi;
+        this.imagepath = imagepath;
     }
 
     public String getDeskripsi() {
@@ -75,6 +79,8 @@ public class User {
         data.put("password", userPass);
         data.put("deskripsi", deskripsi);
         data.put("kategori", kategori);
+        data.put("lokasi", lokasi);
+        data.put("imagepath", imagepath);
         return data;
     }
 }

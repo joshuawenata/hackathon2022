@@ -16,8 +16,9 @@ import com.example.hackathon2022.data.UserRepository;
 public class RegisterCategoryActivity extends AppCompatActivity implements View.OnClickListener{
 
     static int checklist = 0 ;
-    String nama, nomor, password, deskripsi, kategori;
-    ImageButton fnb, pakaian, elektronik, pangan, transportasi, pengolahan;
+    String nomor, password, kategori;
+    ConstraintLayout fnb, pakaian, elektronik, pangan, transportasi, pengolahan;
+    ImageButton fnbic, pakaianic, elektronikic, panganic, transportasiic, pengolahanic;
     ImageView fnbcheck, pakaiancheck, elektronikcheck, pangancheck, transportasicheck, pengolahancheck;
     Button lanjut;
 
@@ -31,10 +32,8 @@ public class RegisterCategoryActivity extends AppCompatActivity implements View.
 
     private void initComponents() {
         Intent intent = getIntent();
-        nama = intent.getStringExtra("nama");
         nomor = intent.getStringExtra("nomor");
         password = intent.getStringExtra("password");
-        deskripsi = intent.getStringExtra("deskripsi");
 
         fnbcheck = findViewById(R.id.fnb_check);
         pakaiancheck = findViewById(R.id.fabrikasi_check);
@@ -51,6 +50,13 @@ public class RegisterCategoryActivity extends AppCompatActivity implements View.
         transportasi = findViewById(R.id.activityregistercategory_transportasi);
         pengolahan = findViewById(R.id.activityregistercategory_pengolahan);
 
+        fnbic = findViewById(R.id.activityregistercategory_fnbic);
+        pakaianic = findViewById(R.id.activityregistercategory_pakaianic);
+        elektronikic = findViewById(R.id.activityregistercategory_elektronikic);
+        panganic = findViewById(R.id.activityregistercategory_panganic);
+        transportasiic = findViewById(R.id.activityregistercategory_transportasiic);
+        pengolahanic = findViewById(R.id.activityregistercategory_pengolahanic);
+
         lanjut.setOnClickListener(this);
         fnb.setOnClickListener(this);
         pakaian.setOnClickListener(this);
@@ -58,12 +64,32 @@ public class RegisterCategoryActivity extends AppCompatActivity implements View.
         pangan.setOnClickListener(this);
         transportasi.setOnClickListener(this);
         pengolahan.setOnClickListener(this);
+        fnbic.setOnClickListener(this);
+        pakaianic.setOnClickListener(this);
+        elektronikic.setOnClickListener(this);
+        panganic.setOnClickListener(this);
+        transportasiic.setOnClickListener(this);
+        pengolahanic.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
         if(v.equals(fnb)) {
+            kategori = "FnB";
+            if(checklist==0){
+                fnbcheck.setVisibility(View.VISIBLE);
+                checklist = 1;
+            }else{
+                fnbcheck.setVisibility(View.VISIBLE);
+                pakaiancheck.setVisibility(View.INVISIBLE);
+                elektronikcheck.setVisibility(View.INVISIBLE);
+                pangancheck.setVisibility(View.INVISIBLE);
+                transportasicheck.setVisibility(View.INVISIBLE);
+                pengolahancheck.setVisibility(View.INVISIBLE);
+            }
+        }
+        else if(v.equals(fnbic)) {
             kategori = "FnB";
             if(checklist==0){
                 fnbcheck.setVisibility(View.VISIBLE);
@@ -91,7 +117,35 @@ public class RegisterCategoryActivity extends AppCompatActivity implements View.
                 pengolahancheck.setVisibility(View.INVISIBLE);
             }
         }
+        else if(v.equals(pakaianic)) {
+            kategori = "Pakaian / Fabrikasi";
+            if(checklist==0){
+                pakaiancheck.setVisibility(View.VISIBLE);
+                checklist = 1;
+            }else{
+                fnbcheck.setVisibility(View.INVISIBLE);
+                pakaiancheck.setVisibility(View.VISIBLE);
+                elektronikcheck.setVisibility(View.INVISIBLE);
+                pangancheck.setVisibility(View.INVISIBLE);
+                transportasicheck.setVisibility(View.INVISIBLE);
+                pengolahancheck.setVisibility(View.INVISIBLE);
+            }
+        }
         else if(v.equals(elektronik)) {
+            kategori = "Elektronik";
+            if(checklist==0){
+                elektronikcheck.setVisibility(View.VISIBLE);
+                checklist = 1;
+            }else{
+                fnbcheck.setVisibility(View.INVISIBLE);
+                pakaiancheck.setVisibility(View.INVISIBLE);
+                elektronikcheck.setVisibility(View.VISIBLE);
+                pangancheck.setVisibility(View.INVISIBLE);
+                transportasicheck.setVisibility(View.INVISIBLE);
+                pengolahancheck.setVisibility(View.INVISIBLE);
+            }
+        }
+        else if(v.equals(elektronikic)) {
             kategori = "Elektronik";
             if(checklist==0){
                 elektronikcheck.setVisibility(View.VISIBLE);
@@ -119,7 +173,35 @@ public class RegisterCategoryActivity extends AppCompatActivity implements View.
                 pengolahancheck.setVisibility(View.INVISIBLE);
             }
         }
+        else if(v.equals(panganic)) {
+            kategori = "Pangan";
+            if(checklist==0){
+                pangancheck.setVisibility(View.VISIBLE);
+                checklist = 1;
+            }else{
+                fnbcheck.setVisibility(View.INVISIBLE);
+                pakaiancheck.setVisibility(View.INVISIBLE);
+                elektronikcheck.setVisibility(View.INVISIBLE);
+                pangancheck.setVisibility(View.VISIBLE);
+                transportasicheck.setVisibility(View.INVISIBLE);
+                pengolahancheck.setVisibility(View.INVISIBLE);
+            }
+        }
         else if(v.equals(transportasi)) {
+            kategori = "Transportasi";
+            if(checklist==0){
+                transportasicheck.setVisibility(View.VISIBLE);
+                checklist = 1;
+            }else{
+                fnbcheck.setVisibility(View.INVISIBLE);
+                pakaiancheck.setVisibility(View.INVISIBLE);
+                elektronikcheck.setVisibility(View.INVISIBLE);
+                pangancheck.setVisibility(View.INVISIBLE);
+                transportasicheck.setVisibility(View.VISIBLE);
+                pengolahancheck.setVisibility(View.INVISIBLE);
+            }
+        }
+        else if(v.equals(transportasiic)) {
             kategori = "Transportasi";
             if(checklist==0){
                 transportasicheck.setVisibility(View.VISIBLE);
@@ -147,13 +229,30 @@ public class RegisterCategoryActivity extends AppCompatActivity implements View.
                 pengolahancheck.setVisibility(View.VISIBLE);
             }
         }
+        else if(v.equals(pengolahanic)) {
+            kategori = "Pengolahan";
+            if(checklist==0){
+                pengolahancheck.setVisibility(View.VISIBLE);
+                checklist = 1;
+            }else{
+                fnbcheck.setVisibility(View.INVISIBLE);
+                pakaiancheck.setVisibility(View.INVISIBLE);
+                elektronikcheck.setVisibility(View.INVISIBLE);
+                pangancheck.setVisibility(View.INVISIBLE);
+                transportasicheck.setVisibility(View.INVISIBLE);
+                pengolahancheck.setVisibility(View.VISIBLE);
+            }
+        }
         else if(v.equals(lanjut)){
             if(checklist==0){
                 Toast.makeText(this, "Please pick a category!", Toast.LENGTH_SHORT).show();
             }else{
-                UserRepository.insertUser(nama, nomor, password, deskripsi, kategori);
-                startActivity(new Intent(this, LoginPage.class));
                 checklist=0;
+                Intent i = new Intent(this, RegisterUMKM.class);
+                i.putExtra("nomor", nomor);
+                i.putExtra("password", password);
+                i.putExtra("kategori", kategori);
+                startActivity(i);
             }
         }
 

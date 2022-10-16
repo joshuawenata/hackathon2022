@@ -18,9 +18,9 @@ public class UserRepository {
 
     public static User LOGGED_IN_USER = null;
 
-    public static void insertUser(String userName, String userNomor, String userPass, String deskripsi, String kategori){
+    public static void insertUser(String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath){
         String userKey = userRef.push().getKey();
-        User newUser = new User(userKey, userName, userNomor, Crypt.generateHash(userPass), deskripsi, kategori);
+        User newUser = new User(userKey, userName, userNomor, Crypt.generateHash(userPass), deskripsi, kategori, lokasi, imagepath);
         userRef.child(userKey).setValue(newUser.toMap());
     }
 
@@ -57,7 +57,7 @@ public class UserRepository {
     public static User transformSnapshot(DataSnapshot snapshot) {
         if(!snapshot.exists()) return null;
 
-        String nomor, nama, password, deskripsi, kategori;
+        String nomor, nama, password, deskripsi, kategori, lokasi, imagepath;
         snapshot = snapshot.getChildren().iterator().next();
 
         nomor = snapshot.child("nomor").getValue(String.class);
@@ -65,8 +65,10 @@ public class UserRepository {
         password = snapshot.child("password").getValue(String.class);
         deskripsi = snapshot.child("deskripsi").getValue(String.class);
         kategori = snapshot.child("kategori").getValue(String.class);
+        lokasi = snapshot.child("lokasi").getValue(String.class);
+        imagepath = snapshot.child("imagepath").getValue(String.class);
 
-        return new User(snapshot.getKey(), nama, nomor, password, deskripsi, kategori);
+        return new User(snapshot.getKey(), nama, nomor, password, deskripsi, kategori, lokasi, imagepath);
     }
 
     public static void find(String userKey, FinisihListener<User> listener){

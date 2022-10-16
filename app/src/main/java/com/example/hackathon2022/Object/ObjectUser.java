@@ -3,4 +3,56 @@ package com.example.hackathon2022.Object;
 public class ObjectUser {
     private String nama;
     private String nomor;
+    private String deskripsi;
+    private String kategori;
+    private String lokasi;
+    private String imagepath;
+
+    public String getImagePath() {
+        return imagepath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagepath = imagePath;
+    }
+
+    public String getLokasi() {
+        return lokasi;
+    }
+
+    public void setLokasi(String lokasi) {
+        this.lokasi = lokasi;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getNomor() {
+        return nomor;
+    }
+
+    public void setNomor(String nomor) {
+        this.nomor = nomor;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
+    }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
 }

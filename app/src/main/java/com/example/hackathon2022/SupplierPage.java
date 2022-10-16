@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectSupplier;
+import com.example.hackathon2022.Object.ObjectUser;
 import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.SupplierAdapter;
 import com.example.hackathon2022.adapter.SupplierTerdekatAdapter;
@@ -25,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class SupplierPage extends AppCompatActivity {
-    ArrayList<ObjectSupplier> newList = new ArrayList<>();
+    ArrayList<ObjectUser> newList = new ArrayList<>();
     Context context = this;
 
     FirebaseDatabase firebaseDatabase;
@@ -43,13 +44,13 @@ public class SupplierPage extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.activitysupplier_recycleviewsupplier);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("suppliers");
+        databaseReference = firebaseDatabase.getReference("users");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    newList.add(postSnapshot.getValue(ObjectSupplier.class));
+                    newList.add(postSnapshot.getValue(ObjectUser.class));
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
