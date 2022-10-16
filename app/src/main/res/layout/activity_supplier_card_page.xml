@@ -83,6 +83,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/activitysuppliercardpage_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="Supplier name to put in here"
@@ -98,7 +99,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/supplier_type"
+                        android:id="@+id/activitysuppliercardpage_category"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kanit_light"
@@ -123,7 +124,7 @@
                         android:textSize="13sp" />
 
                     <TextView
-                        android:id="@+id/date"
+                        android:id="@+id/activitysuppliercardpage_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="bottom"
@@ -208,7 +209,7 @@
 
                 <!---->
                 <TextView
-                    android:id="@+id/reply_content"
+                    android:id="@+id/activitysuppliercardpage_description"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/loremipsum"

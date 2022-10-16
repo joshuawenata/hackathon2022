@@ -33,7 +33,7 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
     private AllSupplierAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick();
+        void onItemClick(String judul, String category, String description, String nomor);
     }
 
     public void setOnItemClickListener(AllSupplierAdapter.OnItemClickListener listener){
@@ -93,8 +93,16 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    String judul, category, description, nomor;
+
+                    judul = SupplierList.get(position).getNama();
+                    category = SupplierList.get(position).getKategori();
+                    description = SupplierList.get(position).getDeskripsi();
+                    nomor = SupplierList.get(position).getNomor();
+
                     if(mListener!=null){
-                        mListener.onItemClick();
+                        mListener.onItemClick(judul, category, description, nomor);
                     }
                 }
             });
