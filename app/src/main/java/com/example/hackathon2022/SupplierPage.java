@@ -57,8 +57,13 @@ public class SupplierPage extends AppCompatActivity {
                 SupplierAdapter myAdapter = new SupplierAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new SupplierAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick() {
-                        startActivity(new Intent(SupplierPage.this, SupplierCardPage.class));
+                    public void onItemClick(String judul, String category, String description, String nomor) {
+                        Intent i = new Intent(SupplierPage.this, SupplierCardPage.class);
+                        i.putExtra("judul",judul);
+                        i.putExtra("category",category);
+                        i.putExtra("description",description);
+                        i.putExtra("nomor", nomor);
+                        startActivity(i);
                     }
                 });
                 recyclerView.setAdapter(myAdapter);
@@ -91,11 +96,6 @@ public class SupplierPage extends AppCompatActivity {
 
     public void TopSupplier(View view) {
         startActivity(new Intent(this, TopSupplier.class));
-        finish();
-    }
-
-    public void NearSupplier(View view) {
-        startActivity(new Intent(this, NearSupplier.class));
         finish();
     }
 

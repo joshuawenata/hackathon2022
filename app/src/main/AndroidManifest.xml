@@ -72,9 +72,6 @@
             android:name=".AllLowongan"
             android:exported="false" />
         <activity
-            android:name=".NearSupplier"
-            android:exported="false" />
-        <activity
             android:name=".TopSupplier"
             android:exported="false" />
         <activity

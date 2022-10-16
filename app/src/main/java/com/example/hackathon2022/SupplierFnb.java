@@ -54,8 +54,13 @@ public class SupplierFnb extends AppCompatActivity {
                 AllSupplierAdapter myAdapter = new AllSupplierAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new AllSupplierAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick() {
-                        startActivity(new Intent(SupplierFnb.this, SupplierCardPage.class));
+                    public void onItemClick(String judul, String category, String description, String nomor) {
+                        Intent i = new Intent(SupplierFnb.this, SupplierCardPage.class);
+                        i.putExtra("judul",judul);
+                        i.putExtra("category",category);
+                        i.putExtra("description",description);
+                        i.putExtra("nomor", nomor);
+                        startActivity(i);
                     }
                 });
                 recyclerView.setAdapter(myAdapter);
