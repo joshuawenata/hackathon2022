@@ -8,12 +8,32 @@ public class User {
     private String userName;
     private String userNomor;
     private String userPass;
+    private String deskripsi;
+    private String kategori;
 
-    public User(String userKey, String userName, String userNomor, String userPass) {
+    public User(String userKey, String userName, String userNomor, String userPass, String deskripsi, String kategori) {
         this.userKey = userKey;
         this.userName = userName;
         this.userNomor = userNomor;
         this.userPass = userPass;
+        this.deskripsi = deskripsi;
+        this.kategori = kategori;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
+    }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
     }
 
     public String getUserKey() {
@@ -53,6 +73,8 @@ public class User {
         data.put("nama", userName);
         data.put("nomor", userNomor);
         data.put("password", userPass);
+        data.put("deskripsi", deskripsi);
+        data.put("kategori", kategori);
         return data;
     }
 }

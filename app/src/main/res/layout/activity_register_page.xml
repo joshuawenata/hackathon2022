@@ -135,6 +135,19 @@
                 android:textSize="15sp"
                 android:textColorHint="@color/figma_gray"
                 android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/activityregister_inputdescription"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/round_btt_white"
+                android:hint="@string/deskripsi_umkm_bisnis_anda"
+                android:paddingHorizontal="15dp"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/kanit_light"
+                android:textSize="15sp"
+                android:textColorHint="@color/figma_gray"
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <ImageButton

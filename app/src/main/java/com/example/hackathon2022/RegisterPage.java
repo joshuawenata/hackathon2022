@@ -16,7 +16,7 @@ import com.example.hackathon2022.data.UserRepository;
 
 public class RegisterPage extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText txtNama, txtNomor, txtPassword, txtConfirmPassword;
+    private EditText txtNama, txtNomor, txtPassword, txtConfirmPassword, txtDescription;
     private ImageButton btnDaftar;
     private TextView txtMasuk;
 
@@ -28,7 +28,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
         txtConfirmPassword = findViewById(R.id.activityregister_inputconfirmpassword);
         btnDaftar = findViewById(R.id.activityregister_btnDaftar);
         txtMasuk = findViewById(R.id.activityregister_txtMasuk);
-
+        txtDescription = findViewById(R.id.activityregister_inputdescription);
     }
 
     @Override
@@ -55,13 +55,14 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
         }
         else if(view.equals(btnDaftar)){
-            String nama, nomor, password, confirmPassword;
+            String nama, nomor, password, confirmPassword, description;
 
             //get data
             nama = txtNama.getText().toString();
             nomor = txtNomor.getText().toString();
             password = txtPassword.getText().toString();
             confirmPassword = txtConfirmPassword.getText().toString();
+            description = txtDescription.getText().toString();
 
             //validate data
             boolean flag = true;
@@ -81,6 +82,10 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
                 txtConfirmPassword.setError("Silahkan masukan konfirmasi kata sandi");
                 flag = false;
             }
+            else if(description.isEmpty()){
+                txtConfirmPassword.setError("Silahkan masukan deskripsi");
+                flag = false;
+            }
             else if(checkConfirmPassword(password, confirmPassword)){
                 txtConfirmPassword.setError("Konfirmasi kata sandi harus sesuai dengan kata sandi");
                 flag = false;
@@ -95,6 +100,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
                 i.putExtra("nama", nama);
                 i.putExtra("nomor", nomor);
                 i.putExtra("password", password);
+                i.putExtra("deskripsi", description);
                 startActivity(i);
             }
         }

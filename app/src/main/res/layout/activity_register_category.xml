@@ -81,6 +81,7 @@
                         />
 
                     <ImageButton
+                        android:id="@+id/activityregistercategory_fnb"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_misc_food"
@@ -123,6 +124,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
+                        android:id="@+id/activityregistercategory_pakaian"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_misc_clothes"
@@ -172,6 +174,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
+                        android:id="@+id/activityregistercategory_elektronik"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_misc_chip"
@@ -214,6 +217,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
+                        android:id="@+id/activityregistercategory_pangan"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/misc_wheat"
@@ -262,6 +266,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
+                        android:id="@+id/activityregistercategory_transportasi"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/misc_courrier"
@@ -303,6 +308,7 @@
                         android:visibility="invisible"
                         />
                     <ImageButton
+                        android:id="@+id/activityregistercategory_pengolahan"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/misc_laundy"
@@ -368,6 +374,7 @@
             </LinearLayout>
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/activityregistercategory_lanjutbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_btt_primary"

@@ -74,6 +74,7 @@
     <string name="jasa_yang_mungkin_anda_perlukan">Jasa yang mungkin anda perlukan</string>
     <string name="jawaban_forum">Jawaban Forum</string>
     <string name="apa_kategori_umkm_anda">Apa kategori UMKM anda?</string>
+    <string name="deskripsi_umkm_bisnis_anda">Deskripsi umkm / bisnis anda</string>
     <string-array name="umkm_user_category">
         <item>Fabrikasi</item>
         <item>Food and Beverage</item>

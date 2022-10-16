@@ -18,9 +18,9 @@ public class UserRepository {
 
     public static User LOGGED_IN_USER = null;
 
-    public static void insertUser(String userName, String userNomor, String userPass){
+    public static void insertUser(String userName, String userNomor, String userPass, String deskripsi, String kategori){
         String userKey = userRef.push().getKey();
-        User newUser = new User(userKey, userName, userNomor, Crypt.generateHash(userPass));
+        User newUser = new User(userKey, userName, userNomor, Crypt.generateHash(userPass), deskripsi, kategori);
         userRef.child(userKey).setValue(newUser.toMap());
     }
 
@@ -57,14 +57,16 @@ public class UserRepository {
     public static User transformSnapshot(DataSnapshot snapshot) {
         if(!snapshot.exists()) return null;
 
-        String nomor, nama, password;
+        String nomor, nama, password, deskripsi, kategori;
         snapshot = snapshot.getChildren().iterator().next();
 
         nomor = snapshot.child("nomor").getValue(String.class);
         nama = snapshot.child("nama").getValue(String.class);
         password = snapshot.child("password").getValue(String.class);
+        deskripsi = snapshot.child("deskripsi").getValue(String.class);
+        kategori = snapshot.child("kategori").getValue(String.class);
 
-        return new User(snapshot.getKey(), nama, nomor, password);
+        return new User(snapshot.getKey(), nama, nomor, password, deskripsi, kategori);
     }
 
     public static void find(String userKey, FinisihListener<User> listener){
