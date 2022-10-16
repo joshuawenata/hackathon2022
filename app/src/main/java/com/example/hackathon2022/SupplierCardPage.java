@@ -26,7 +26,7 @@ public class SupplierCardPage extends AppCompatActivity {
 
         String judul, category, description, nomor;
         Intent intent = getIntent();
-        judul = intent.getStringExtra("key");
+        judul = intent.getStringExtra("judul");
         category = intent.getStringExtra("category");
         description = intent.getStringExtra("description");
         nomor = intent.getStringExtra("nomor");
