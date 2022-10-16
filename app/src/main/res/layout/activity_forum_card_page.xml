@@ -21,10 +21,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            >
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <!--    TOP BAR     -->
             <LinearLayout
@@ -38,10 +38,10 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/arrow_back"
+                    android:background="@null"
                     android:onClick="backtoHome"
-                    tools:ignore="ContentDescription,OnClick"
-                    android:background="@null"/>
+                    app:srcCompat="@drawable/arrow_back"
+                    tools:ignore="ContentDescription,OnClick" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,171 +57,155 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:background="@drawable/gray_round_rectangle"
-                android:padding="30dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
-                >
+                android:background="@drawable/gray_round_rectangle"
+                android:padding="30dp">
 
                 <ImageView
                     android:id="@+id/activityforumcardpage_imageview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_logo_gray"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_logo_gray"
+                    tools:ignore="ContentDescription" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!--FORUM TITLE-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="10dp"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/activityforumcardpage_judul"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="A short or very long title to put in here"
                     android:fontFamily="@font/kanit_semibold"
+                    android:paddingHorizontal="15dp"
                     android:textColor="@color/primary"
                     android:textSize="22sp"
-                    />
+                    tools:text="A short or very long title to put in here" />
 
 
                 <TextView
                     android:id="@+id/activityforumcardpage_pertanyaan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="A short or very long title to put in here"
                     android:fontFamily="@font/kanit_semibold"
+                    android:paddingHorizontal="15dp"
                     android:textColor="@color/figma_gray"
                     android:textSize="15sp"
+                    tools:text="A short or very long title to put in here"
+                    android:layout_marginBottom="8dp"
                     />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    >
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingHorizontal="4dp"
-                        android:paddingVertical="2dp"
-                        android:background="@drawable/round_btt_white"
-                        >
-
-                        <ImageButton
-                            android:id="@+id/activityforumcardpage_starButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_baseline_star_border_24"
-                            android:adjustViewBounds="true"
-                            android:maxWidth="20dp"
-                            android:maxHeight="20dp"
-                            android:scaleType="fitCenter"
-                            android:background="@null"
-                            android:onClick="AddStar"
-                            />
-
-                        <TextView
-                            android:id="@+id/activityforumcardpage_starCount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Beri bintang"
-                            android:fontFamily="@font/kanit_light"
-                            android:textColor="@color/figma_gray"
-                            android:layout_marginHorizontal="3dp"
-                            />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:paddingHorizontal="15dp">
 
                     <TextView
                         android:id="@+id/author"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="by "
                         android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_gray"
-                        android:layout_marginLeft="15dp"/>
+                        android:text="Ditanyakan "
+                        android:textColor="@color/figma_gray" />
 
                     <TextView
                         android:id="@+id/activityforumcardpage_username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_gray"/>
-
+                        android:text="Author"
+                        android:textColor="@color/figma_gray" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="  •  "
-                        android:textSize="13sp"
-                        android:textColor="@color/figma_gray"
                         android:gravity="bottom"
-                        />
+                        android:text="  •  "
+                        android:textColor="@color/figma_gray"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/activityforumcardpage_kategori"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
-                        android:textColor="@color/figma_gray"
                         android:gravity="bottom"
-                        />
+                        android:text="Kategori Forum"
+                        android:textColor="@color/figma_gray"
+                        android:fontFamily="@font/kanit_light"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="  •  "
-                        android:textSize="13sp"
-                        android:textColor="@color/figma_gray"
                         android:gravity="bottom"
-                        />
+                        android:text="  •  "
+                        android:textColor="@color/figma_gray"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nov 25"
-                        android:textSize="13sp"
-                        android:textColor="@color/figma_gray"
                         android:gravity="bottom"
-                        />
+                        android:text="Nov 25"
+                        android:fontFamily="@font/kanit_light"
+                        android:textColor="@color/figma_gray"
+                        android:textSize="13sp" />
 
-                    <TextView
+                    <!--                    <TextView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text="  •  "-->
+                    <!--                        android:textSize="13sp"-->
+                    <!--                        android:textColor="@color/figma_gray"-->
+                    <!--                        android:gravity="bottom"-->
+                    <!--                        />-->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="  •  "
-                        android:textSize="13sp"
-                        android:textColor="@color/figma_gray"
-                        android:gravity="bottom"
-                        />
+                        android:background="@drawable/round_btt_white"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="2dp">
 
+                        <ImageButton
+                            android:id="@+id/activityforumcardpage_starButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@null"
+                            android:maxWidth="20dp"
+                            android:maxHeight="20dp"
+                            android:onClick="AddStar"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_baseline_star_border_24" />
 
+                        <TextView
+                            android:id="@+id/activityforumcardpage_starCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="3dp"
+                            android:fontFamily="@font/kanit_light"
+                            android:text="0"
+                            android:textColor="@color/figma_gray" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -231,93 +215,103 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="5dp">
+                    android:paddingHorizontal="10dp">
 
                     <EditText
                         android:id="@+id/activityforumcardpage_addanswer"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:backgroundTint="@color/black"
                         android:fontFamily="@font/kanit_regular"
                         android:hint="Tambahkan jawaban"
-                        android:paddingHorizontal="10dp"
-                        android:textSize="12sp"
-                        tools:ignore="NestedWeights"
-                        android:textColorHint="@color/figma_gray"
                         android:textColor="@color/black"
-                        android:backgroundTint="@color/black"
-                        />
+                        android:textColorHint="@color/figma_gray"
+                        android:textSize="12sp"
+                        tools:ignore="NestedWeights" />
 
                     <ImageButton
                         android:id="@+id/ic_comment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
                         android:adjustViewBounds="true"
                         android:background="@drawable/round_btt_primary"
                         android:maxWidth="20dp"
                         android:maxHeight="20dp"
                         android:onClick="pushToDatabase"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/ic_baseline_send_24"
                         android:padding="4dp"
-                        android:layout_weight="0.1"
-                        />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_baseline_send_24" />
                 </LinearLayout>
 
 
             </LinearLayout>
 
+            <!--JAWABAN-->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingHorizontal="20dp"
-                android:layout_marginTop="10dp"
-                >
-
-                <TextView
-                    android:id="@+id/activityforumcardpage_answercount"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="3dp"
-                    android:fontFamily="@font/kanit_light"
-                    android:textColor="@android:color/darker_gray"
-                    android:layout_weight="1"
-                    android:text="0"
-                    android:textAlignment="textEnd"
-                    />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_baseline_comment_24" />
-            </LinearLayout>
-
-            <!--JAWABAN FORUM TEXT-->
-            <TextView
                 android:id="@+id/activityforumcardpage_lbljawaban"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/jawaban_forum"
-                android:fontFamily="@font/kanit_medium"
-                android:textColor="@color/elegant_black"
-                android:textSize="16sp"
-                android:layout_marginTop="15dp"
-                android:paddingHorizontal="20dp"
-                android:background="@color/white"
-                android:paddingVertical="10dp"
+                android:orientation="vertical"
                 android:visibility="invisible"
-                />
+                >
 
-            <!--ONE FORUM REPLY ENTITY-->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activityforumcardpage_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:paddingHorizontal="10dp"
-                tools:listitem="@layout/activity_component_card_forum_jawaban"
-                />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:background="@color/white"
+                    >
+                    <!--JAWABAN FORUM TEXT-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kanit_medium"
+                        android:text="@string/jawaban_forum"
+                        android:textColor="@color/elegant_black"
+                        android:textSize="16sp"
+                        />
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_comment_24"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:maxWidth="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/activityforumcardpage_answercount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/darker_gray"
+                        />
+                </LinearLayout>
+
+                <!--ONE FORUM REPLY ENTITY-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activityforumcardpage_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingHorizontal="10dp"
+                    tools:listitem="@layout/activity_component_card_forum_jawaban" />
+            </LinearLayout>
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

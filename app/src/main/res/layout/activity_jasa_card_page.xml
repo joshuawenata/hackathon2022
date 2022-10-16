@@ -65,7 +65,7 @@ android:background="@color/bgaabu"
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_supplier_gray"
+                    app:srcCompat="@drawable/jasa_art"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -95,69 +95,79 @@ android:background="@color/bgaabu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center_vertical"
                     >
 
                     <TextView
-                        android:id="@+id/supplier_type"
+                        android:id="@+id/jasa_type"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="FnB, Packaging"
                         android:fontFamily="@font/kanit_light"
-                        android:textColor="@color/figma_gray"/>
+                        android:text="FnB, Packaging"
+                        android:textColor="@color/figma_gray" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="  •  "
+                        android:textColor="@color/figma_gray"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="  •  "
-                        android:textSize="13sp"
-                        android:textColor="@color/figma_gray"
                         android:gravity="bottom"
+                        android:text="Sejak "
+                        android:fontFamily="@font/kanit_light"
+                        android:textColor="@color/figma_gray"
                         />
 
                     <TextView
                         android:id="@+id/date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sejak 2015"
-                        android:textSize="13sp"
-                        android:textColor="@color/figma_gray"
                         android:gravity="bottom"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="  •  "
-                        android:textSize="13sp"
-                        android:textColor="@color/figma_gray"
-                        android:gravity="bottom"
-                        />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_baseline_star_rate_24"
-                        android:adjustViewBounds="true"
-                        android:maxWidth="20dp"
-                        android:maxHeight="20dp"
-                        android:scaleType="fitCenter"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="332"
+                        android:text="Nov 25"
                         android:fontFamily="@font/kanit_light"
                         android:textColor="@color/figma_gray"
-                        android:layout_marginHorizontal="3dp"/>
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_btt_white"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="2dp">
+
+                        <ImageButton
+                            android:id="@+id/activityforumcardpage_starButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@null"
+                            android:maxWidth="20dp"
+                            android:maxHeight="20dp"
+                            android:onClick="AddStar"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_baseline_star_border_24" />
+
+                        <TextView
+                            android:id="@+id/activityforumcardpage_starCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="3dp"
+                            android:fontFamily="@font/kanit_light"
+                            android:text="0"
+                            android:textColor="@color/figma_gray" />
+                    </LinearLayout>
                 </LinearLayout>
-                <!--                <View-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="1dp"-->
-                <!--                    android:background="@android:color/darker_gray"-->
-                <!--                    android:layout_marginVertical="10dp"-->
-                <!--                    />-->
             </LinearLayout>
 
             <!--JASA CONTENT-->
@@ -219,7 +229,7 @@ android:background="@color/bgaabu"
                     android:layout_marginTop="20dp"
                     android:background="@color/white"
                     android:fontFamily="@font/kanit_regular"
-                    android:text="Tertarik dengan jasa ini? Kontak sekarang"
+                    android:text="Tertarik dengan jasa ini? Hubungi sekarang juga"
                     android:textAlignment="center"
                     android:textColor="@color/figma_gray"
                     android:textSize="13sp" />

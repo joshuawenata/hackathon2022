@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        android:src="@drawable/blobsforum"
+        android:src="@drawable/add_forum_bg"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        />
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,12 +27,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:background="@color/forum"
+            android:background="@color/backgroundPrimary"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingHorizontal="10dp"
             android:layout_weight="1"
+            android:elevation="4dp"
             >
 
             <ImageButton
@@ -40,9 +40,10 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:clickable="true"
+                android:focusable="true"
                 android:onClick="back"
                 app:srcCompat="@drawable/arrow_back"
-                tools:ignore="OnClick" />
+                tools:ignore="ContentDescription,OnClick" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -51,15 +52,14 @@
                 android:fontFamily="@font/kanit_semibold"
                 android:text="Tambah Forum"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
             android:layout_marginHorizontal="20dp"
             android:gravity="center"
             android:orientation="vertical"
@@ -78,7 +78,8 @@
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/figma_gray"/>
+                android:textColorHint="@color/figma_gray"
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/activityaddforum_inputkategori"
@@ -92,7 +93,9 @@
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/figma_gray"/>
+                android:textColorHint="@color/figma_gray"
+                android:inputType="text"
+                tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/activityaddforum_inputpertanyaan"
@@ -106,7 +109,8 @@
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/figma_gray"/>
+                android:textColorHint="@color/figma_gray"
+                android:inputType="text" />
 
 
             <LinearLayout
@@ -125,7 +129,8 @@
                     android:layout_weight="1"
                     android:width="10dp"
                     android:src="@drawable/asset_add_pic"
-                    android:layout_margin="20dp"/>
+                    android:layout_margin="20dp"
+                    tools:ignore="ContentDescription" />
 
                 <ImageButton
                     android:id="@+id/activityaddforum_btnTambahMedia"
@@ -133,7 +138,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
-                    android:src="@drawable/activityforum_btnfile" />
+                    android:src="@drawable/add_forum_pic_btt"
+                    tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -146,30 +152,19 @@
             android:orientation="horizontal"
             android:layout_weight="5"
             android:weightSum="4"
+            android:gravity="center_horizontal"
             >
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                />
 
             <ImageButton
                 android:id="@+id/activityaddforum_btnTambahForum"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
                 android:onClick="AddForum"
-                tools:ignore="OnClick"
+                tools:ignore="ContentDescription,NestedWeights,OnClick"
                 android:layout_weight="2"
-                android:src="@drawable/activityaddforum_btnadd"
+                android:src="@drawable/add_forum_btt"
                 android:background="@null"
-                />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 />
 
         </LinearLayout>

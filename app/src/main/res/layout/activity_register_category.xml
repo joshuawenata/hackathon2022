@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:text="@string/apa_kategori_umkm_anda"
             android:fontFamily="@font/kanit_semibold"
-            android:textColor="@color/white"
+            android:textColor="@color/primary"
             android:textSize="24sp"
             android:layout_marginVertical="20dp"
             />
@@ -50,7 +50,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,6 +69,17 @@
                     android:layout_margin="3dp"
                     android:padding="10dp"
                     >
+
+                    <ImageView
+                        android:id="@+id/fnb_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
+
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -100,6 +113,15 @@
                     android:layout_margin="3dp"
                     android:padding="10dp"
                     >
+                    <ImageView
+                        android:id="@+id/fabrikasi_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -140,6 +162,15 @@
                     android:layout_margin="3dp"
                     android:padding="10dp"
                     >
+                    <ImageView
+                        android:id="@+id/elektronik_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -173,6 +204,15 @@
                     android:layout_margin="3dp"
                     android:padding="10dp"
                     >
+                    <ImageView
+                        android:id="@+id/pangan_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -212,6 +252,15 @@
                     android:layout_margin="3dp"
                     android:padding="10dp"
                     >
+                    <ImageView
+                        android:id="@+id/transportasi_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -234,7 +283,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:fontFamily="@font/kanit_regular"
                         android:textColor="@color/figma_second_text"/>
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <!--SATU ITEM-->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -245,45 +293,15 @@
                     android:layout_margin="3dp"
                     android:padding="10dp"
                     >
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/misc_fish"
-                        android:background="@null"
-                        android:adjustViewBounds="true"
-                        android:maxWidth="10dp"
-                        android:maxHeight="10dp"
-                        android:scaleType="fitCenter"
-                        android:layout_marginBottom="16dp"
-                        android:alpha="0.7"
-                        />
-
-                    <TextView
-                        android:layout_marginTop="4dp"
+                    <ImageView
+                        android:id="@+id/pengolahan_check"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Boga Bahari"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        android:fontFamily="@font/kanit_regular"
-                        android:textColor="@color/figma_second_text"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
-                <!--SATU ITEM-->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/description_column"
-                    android:elevation="2dp"
-                    android:layout_margin="3dp"
-                    android:padding="10dp"
-                    >
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -301,45 +319,52 @@
                         android:layout_marginTop="4dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Transportasi"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:fontFamily="@font/kanit_regular"
-                        android:textColor="@color/figma_second_text"/>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-                <!--SATU ITEM-->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/description_column"
-                    android:elevation="2dp"
-                    android:layout_margin="3dp"
-                    android:padding="10dp"
-                    >
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_misc_other"
-                        android:background="@null"
-                        android:adjustViewBounds="true"
-                        android:maxWidth="10dp"
-                        android:maxHeight="10dp"
-                        android:scaleType="fitCenter"
-                        android:layout_marginBottom="16dp"
-                        android:alpha="0.7"
-                        />
-
-                    <TextView
-                        android:layout_marginTop="4dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lainnya"
+                        android:text="Pengolahan"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:fontFamily="@font/kanit_regular"
                         android:textColor="@color/figma_second_text"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+<!--                &lt;!&ndash;SATU ITEM&ndash;&gt;-->
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="130dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:background="@drawable/description_column"-->
+<!--                    android:elevation="2dp"-->
+<!--                    android:layout_margin="3dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    >-->
+<!--                    <ImageButton-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:src="@drawable/ic_misc_other"-->
+<!--                        android:background="@null"-->
+<!--                        android:adjustViewBounds="true"-->
+<!--                        android:maxWidth="10dp"-->
+<!--                        android:maxHeight="10dp"-->
+<!--                        android:scaleType="fitCenter"-->
+<!--                        android:layout_marginBottom="16dp"-->
+<!--                        android:alpha="0.7"-->
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_marginTop="4dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Lainnya"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        android:fontFamily="@font/kanit_regular"-->
+<!--                        android:textColor="@color/figma_second_text"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
             </LinearLayout>
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatButton

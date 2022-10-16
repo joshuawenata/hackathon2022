@@ -93,7 +93,8 @@
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/kanit_light"
                                     android:text="Temukan supplier yang cocok dengan anda"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/white"
+                                    tools:ignore="HardcodedText" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -109,7 +110,8 @@
                                     android:maxWidth="150dp"
                                     android:minWidth="100dp"
                                     android:scaleType="fitCenter"
-                                    app:srcCompat="@drawable/jasa_artwork_01" />
+                                    app:srcCompat="@drawable/jasa_artwork_01"
+                                    tools:ignore="ContentDescription" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -148,7 +150,7 @@
                                     android:textColor="@color/figma_gray"
                                     android:textColorHint="@color/figma_gray"
                                     android:textSize="13sp"
-                                    tools:ignore="NestedWeights" />
+                                    tools:ignore="HardcodedText,NestedWeights" />
 
                                 <!--ICON NYA SEARCH-->
                                 <ImageView
@@ -178,7 +180,8 @@
                                     android:fontFamily="@font/kanit_semibold"
                                     android:text="Cari supplier berdasarkan kategori"
                                     android:textColor="@color/elegant_black"
-                                    android:textSize="16sp" />
+                                    android:textSize="16sp"
+                                    tools:ignore="HardcodedText" />
 
                                 <!--MAIN HOLDER NYA TOPIK-->
                                 <HorizontalScrollView
@@ -275,7 +278,8 @@
                                                 android:textColor="@color/figma_gray"
                                                 android:textSize="13sp"
                                                 app:layout_constraintBottom_toBottomOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent" />
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                tools:ignore="HardcodedText" />
                                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                                         <!--ELEKTRONIK-->
@@ -316,7 +320,8 @@
                                                 android:textColor="@color/figma_gray"
                                                 android:textSize="13sp"
                                                 app:layout_constraintBottom_toBottomOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent" />
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                tools:ignore="HardcodedText" />
                                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                                         <!--LAINNYA-->
@@ -372,7 +377,8 @@
                                 android:fontFamily="@font/kanit_semibold"
                                 android:text="Supplier rekomendasi untuk anda"
                                 android:textColor="@color/elegant_black"
-                                android:textSize="16sp" />
+                                android:textSize="16sp"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                         <!--MAIN HOLDER NYA SUPPLIER TERBAIK-->
@@ -432,7 +438,7 @@
                 android:layout_weight="1"
                 android:layout_marginHorizontal="5dp"
                 android:onClick="intoHome"
-                tools:ignore="OnClick" />
+                tools:ignore="ContentDescription,OnClick" />
 
             <!--ICON SUPPLIER-->
             <ImageButton
@@ -443,7 +449,7 @@
                 android:src="@drawable/ic_supplier_biru"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="5dp"
-                tools:ignore="OnClick" />
+                tools:ignore="ContentDescription,OnClick" />
 
             <!--ICON LOWONGAN-->
             <ImageButton
@@ -452,7 +458,7 @@
                 android:background="@null"
                 android:onClick="intoLowongan"
                 android:src="@drawable/ic_jasa_white"
-                tools:ignore="OnClick"
+                tools:ignore="ContentDescription,OnClick"
                 android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
                 />
@@ -466,7 +472,7 @@
                 android:onClick="intoProfile"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="5dp"
-                />
+                tools:ignore="ContentDescription" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

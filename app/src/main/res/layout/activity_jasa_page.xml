@@ -113,7 +113,7 @@
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
                         android:background="@drawable/round_top"
-                        android:paddingHorizontal="20dp"
+                        android:paddingHorizontal="15dp"
                         android:paddingTop="10dp"
                         tools:ignore="NestedWeights"
                         >
@@ -135,7 +135,7 @@
                                 android:layout_weight="1"
                                 android:background="@drawable/round_btt_white"
                                 android:fontFamily="@font/kanit_regular"
-                                android:hint="@string/forum_apa_yang_ingin_ditanyakan"
+                                android:hint="Jasa apa yang ingin anda cari?"
                                 android:paddingVertical="7dp"
                                 android:paddingHorizontal="12dp"
                                 android:textSize="13sp"
@@ -167,6 +167,9 @@
                             android:fontFamily="@font/kanit_semibold"
                             android:textSize="16sp"
                             android:textColor="@color/elegant_black"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:paddingHorizontal="5dp"
                             />
 
                         <!--HOLDER NYA RECYCLER VIEW-->
