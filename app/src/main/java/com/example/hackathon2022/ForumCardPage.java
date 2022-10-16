@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.hackathon2022.Object.ObjectReply;
@@ -45,7 +46,8 @@ import java.util.Objects;
 
 public class ForumCardPage extends AppCompatActivity{
 
-    TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, labelJawaban, txtStarCount, answercount;
+    TextView txtjudul, txtusernamepenanya, txtdate, txtkategori, txtpertanyaan, txtStarCount, answercount;
+    LinearLayout labelJawaban;
     EditText replyanswer;
     String forumkey, judul, username, kategori, pertanyaan, date, dateanswer, path;
     Integer star;

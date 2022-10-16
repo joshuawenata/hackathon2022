@@ -29,7 +29,7 @@
                 android:padding="6dp"
                 >
                 <ImageView
-                    android:id="@+id/componentcardsupplier_image"
+                    android:id="@+id/componentcardjasa_image"
                     android:layout_width="80dp"
                     android:layout_height="60dp"
                     android:src="@drawable/jasa_art"

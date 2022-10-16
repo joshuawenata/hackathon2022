@@ -20,7 +20,7 @@ public class RegisterCategoryActivity extends AppCompatActivity implements View.
     ConstraintLayout fnb, pakaian, elektronik, pangan, transportasi, pengolahan;
     ImageButton fnbic, pakaianic, elektronikic, panganic, transportasiic, pengolahanic;
     ImageView fnbcheck, pakaiancheck, elektronikcheck, pangancheck, transportasicheck, pengolahancheck;
-    Button lanjut;
+    ImageButton lanjut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

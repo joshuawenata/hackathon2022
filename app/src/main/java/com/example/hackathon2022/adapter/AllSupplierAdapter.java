@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hackathon2022.Object.ObjectSupplier;
+import com.example.hackathon2022.Object.ObjectUser;
 import com.example.hackathon2022.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
@@ -28,7 +29,7 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
     StorageReference storageReference;
 
     Context context;
-    ArrayList<ObjectSupplier> SupplierList;
+    ArrayList<ObjectUser> SupplierList;
     private AllSupplierAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
@@ -39,7 +40,7 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
         mListener = listener;
     }
 
-    public AllSupplierAdapter(Context context, ArrayList<ObjectSupplier> newList) {
+    public AllSupplierAdapter(Context context, ArrayList<ObjectUser> newList) {
         this.context = context;
         this.SupplierList = newList;
     }
