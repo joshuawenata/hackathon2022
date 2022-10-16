@@ -22,10 +22,12 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:background="@color/supplier"
+            android:background="@color/backgroundPrimary"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingHorizontal="10dp">
+            android:paddingHorizontal="10dp"
+            android:elevation="4dp"
+            >
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -47,19 +49,20 @@
 
         <!--        CONTAINER FOR FILTER BTT    -->
         <LinearLayout
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginVertical="5dp"
+            android:paddingHorizontal="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <!--            SEARCH SORT      -->
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:background="@drawable/supplier_round"
+                android:background="@drawable/round_btt_primary"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -71,7 +74,7 @@
 
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/round_btt_white"
                     android:fontFamily="@font/kanit_regular"
@@ -86,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
-                android:background="@drawable/supplier_round"
+                android:background="@drawable/round_btt_primary"
                 android:orientation="horizontal"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="7dp">
