@@ -12,8 +12,8 @@
     <string name="welcome_asset_desc">welcome_desc_asset</string>
 
     <!--    REGISTER    -->
-    <string name="register_et_fullname">Nama lengkap umkm / bisnis anda</string>
-    <string name="register_et_email">Nomor handphone anda (whatsapp)</string>
+    <string name="register_et_fullname">Nama lengkap UMKM atau bisnis anda</string>
+    <string name="register_et_email">Nomor handphone anda (WhatsApp)</string>
     <string name="register_et_password">Masukkan kata kunci</string>
     <string name="register_et_confirm">Konfirmasi kata kunci</string>
     <string name="register_tagline">Mulai perjalanan UMKM anda bersama Kami</string>
@@ -74,8 +74,8 @@
     <string name="jasa_yang_mungkin_anda_perlukan">Jasa yang mungkin anda perlukan</string>
     <string name="jawaban_forum">Jawaban Forum</string>
     <string name="apa_kategori_umkm_anda">Apa kategori UMKM anda?</string>
-    <string name="deskripsi_umkm_bisnis_anda">Deskripsi umkm / bisnis anda</string>
-    <string name="lokasi_umkm_bisnis_anda">Lokasi umkm / bisnis anda</string>
+    <string name="deskripsi_umkm_bisnis_anda">Deskripsi UMKM atau bisnis anda</string>
+    <string name="lokasi_umkm_bisnis_anda">Lokasi UMKM atau bisnis anda</string>
     <string-array name="umkm_user_category">
         <item>Fabrikasi</item>
         <item>Food and Beverage</item>

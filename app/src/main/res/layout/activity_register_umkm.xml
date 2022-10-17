@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Lengkapi data umkm"
+                android:text="Lengkapi data UMKM"
                 android:textColor="@color/primary"
                 android:textSize="30sp" />
 
@@ -110,14 +110,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="5dp"
-                android:background="@drawable/round_btt_white"
+                android:background="@drawable/description_column"
                 android:hint="@string/deskripsi_umkm_bisnis_anda"
                 android:paddingHorizontal="15dp"
                 android:textAlignment="textStart"
                 android:fontFamily="@font/kanit_light"
                 android:textSize="15sp"
                 android:textColorHint="@color/figma_gray"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                />
 
         </LinearLayout>
 
@@ -128,28 +129,5 @@
             android:layout_marginVertical="25dp"
             android:src="@drawable/activityregister_button"
             android:background="@null"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sudah_punya_akun"
-                android:textColor="@color/white"
-                android:fontFamily="@font/kanit_light"
-                />
-
-            <TextView
-                android:id="@+id/activityregister_txtMasuk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:fontFamily="@font/kanit_regular"
-                android:text="@string/masuk"
-                android:textColor="@color/primary" />
-        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
