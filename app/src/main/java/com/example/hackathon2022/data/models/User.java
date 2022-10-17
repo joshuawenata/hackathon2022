@@ -12,9 +12,10 @@ public class User {
     private String kategori;
     private String lokasi;
     private String imagepath;
+    private String star;
 
-    public User(String userKey, String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath) {
-        this.userKey = userKey;
+    public User(String key, String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath, String star) {
+        this.userKey = key;
         this.userName = userName;
         this.userNomor = userNomor;
         this.userPass = userPass;
@@ -22,6 +23,7 @@ public class User {
         this.kategori = kategori;
         this.lokasi = lokasi;
         this.imagepath = imagepath;
+        this.star = star;
     }
 
     public String getDeskripsi() {
@@ -72,8 +74,33 @@ public class User {
         return userPass;
     }
 
+    public String getLokasi() {
+        return lokasi;
+    }
+
+    public void setLokasi(String lokasi) {
+        this.lokasi = lokasi;
+    }
+
+    public String getImagepath() {
+        return imagepath;
+    }
+
+    public void setImagepath(String imagepath) {
+        this.imagepath = imagepath;
+    }
+
+    public String getStar() {
+        return star;
+    }
+
+    public void setStar(String star) {
+        this.star = star;
+    }
+
     public Map<String, Object> toMap(){
         Map<String, Object> data = new HashMap<>();
+        data.put("key", userKey);
         data.put("nama", userName);
         data.put("nomor", userNomor);
         data.put("password", userPass);
@@ -81,6 +108,7 @@ public class User {
         data.put("kategori", kategori);
         data.put("lokasi", lokasi);
         data.put("imagepath", imagepath);
+        data.put("star", star);
         return data;
     }
 }

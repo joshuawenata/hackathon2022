@@ -1,5 +1,6 @@
 package com.example.hackathon2022.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -34,7 +35,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
     private SupplierAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String judul, String category, String description, String nomor);
+        void onItemClick(String key, String judul, String category, String description, String nomor, String star);
     }
 
     public void setOnItemClickListener(SupplierAdapter.OnItemClickListener listener){
@@ -53,12 +54,14 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
         return new SupplierAdapter.SupplierViewHolder(v);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull SupplierViewHolder holder, int position) {
         holder.txtName.setText(SupplierList.get(position).getNama());
         holder.txtLokasi.setText(SupplierList.get(position).getLokasi());
         holder.txtKategori.setText(SupplierList.get(position).getKategori());
         holder.txtDeskripsi.setText(SupplierList.get(position).getDeskripsi());
+        holder.star.setText(SupplierList.get(position).getStar().toString());
 
         storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(SupplierList.get(position).getImagePath());
         try {
@@ -85,7 +88,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
     }
 
     public class SupplierViewHolder extends RecyclerView.ViewHolder {
-        TextView txtName, txtLokasi, txtKategori, txtDeskripsi;
+        TextView txtName, txtLokasi, txtKategori, txtDeskripsi, star;
         ImageView lblimage;
         SupplierViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -94,20 +97,23 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
             txtKategori = itemView.findViewById(R.id.componentcardsupplier_kategori);
             txtDeskripsi = itemView.findViewById(R.id.componentcardsupplier_deskripsi);
             lblimage = itemView.findViewById(R.id.componentcardsupplier_image);
+            star = itemView.findViewById(R.id.componentcardsupplier_starcount);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-                    String judul, category, description, nomor;
+                    String judul, category, description, nomor, key, star;
 
                     judul = SupplierList.get(position).getNama();
                     category = SupplierList.get(position).getKategori();
                     description = SupplierList.get(position).getDeskripsi();
                     nomor = SupplierList.get(position).getNomor();
+                    star = SupplierList.get(position).getStar().toString();
+                    key = SupplierList.get(position).getKey();
 
                     if(mListener!=null){
-                        mListener.onItemClick(judul, category, description, nomor);
+                        mListener.onItemClick(key, judul, category, description, nomor, star);
                     }
                 }
             });

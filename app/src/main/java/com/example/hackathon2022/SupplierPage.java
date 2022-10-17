@@ -57,12 +57,15 @@ public class SupplierPage extends AppCompatActivity {
                 SupplierAdapter myAdapter = new SupplierAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new SupplierAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String judul, String category, String description, String nomor) {
+                    public void onItemClick(String key, String judul, String category, String description, String nomor, String star) {
                         Intent i = new Intent(SupplierPage.this, SupplierCardPage.class);
+                        i.putExtra("key", key);
                         i.putExtra("judul",judul);
                         i.putExtra("category",category);
                         i.putExtra("description",description);
                         i.putExtra("nomor", nomor);
+                        i.putExtra("star", star);
+                        i.putExtra("key", key);
                         startActivity(i);
                     }
                 });

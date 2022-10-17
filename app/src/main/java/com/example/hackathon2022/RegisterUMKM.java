@@ -34,7 +34,7 @@ public class RegisterUMKM extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        String nama, deskripsi, lokasi, nomor, password, kategori;
+        String nama, deskripsi, lokasi, nomor, password, kategori, key;
         nama = txtNama.getText().toString();
         deskripsi = txtDescription.getText().toString();
         lokasi = txtLokasi.getText().toString();
@@ -44,7 +44,7 @@ public class RegisterUMKM extends AppCompatActivity implements View.OnClickListe
         password = intent.getStringExtra("password");
         kategori = intent.getStringExtra("kategori");
 
-        UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png");
+        UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0");
         startActivity(new Intent(this, LoginPage.class));
         finish();
     }
