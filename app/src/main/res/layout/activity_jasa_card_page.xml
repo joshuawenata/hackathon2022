@@ -164,7 +164,7 @@ android:background="@color/bgaabu"
                         android:paddingVertical="2dp">
 
                         <ImageButton
-                            android:id="@+id/activityforumcardpage_starButton"
+                            android:id="@+id/activityjasacardpage_starButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"

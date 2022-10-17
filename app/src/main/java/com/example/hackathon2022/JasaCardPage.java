@@ -57,6 +57,7 @@ public class JasaCardPage extends AppCompatActivity {
 
     @SuppressLint({"SetTextI18n", "DefaultLocale"})
     public void AddStar(View view) {
+        starBtn = findViewById(R.id.activityjasacardpage_starButton);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("lowongan");
         databaseReference.child(jasakey+"/star").setValue(String.valueOf(Integer.parseInt(star)+1));
