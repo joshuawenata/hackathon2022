@@ -33,7 +33,7 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
     private AllSupplierAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String judul, String category, String description, String nomor);
+        void onItemClick(String key, String judul, String category, String description, String nomor, String star, String backgroundimagepath);
     }
 
     public void setOnItemClickListener(AllSupplierAdapter.OnItemClickListener listener){
@@ -94,15 +94,18 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-                    String judul, category, description, nomor;
+                    String judul, category, description, nomor, star, key, backgroundimagepath;
 
                     judul = SupplierList.get(position).getNama();
                     category = SupplierList.get(position).getKategori();
                     description = SupplierList.get(position).getDeskripsi();
                     nomor = SupplierList.get(position).getNomor();
+                    star = SupplierList.get(position).getStar();
+                    key = SupplierList.get(position).getKey();
+                    backgroundimagepath = SupplierList.get(position).getBackgroundimagepath();
 
                     if(mListener!=null){
-                        mListener.onItemClick(judul, category, description, nomor);
+                        mListener.onItemClick(key, judul, category, description, nomor, star, backgroundimagepath);
                     }
                 }
             });

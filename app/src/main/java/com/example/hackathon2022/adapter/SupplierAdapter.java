@@ -35,7 +35,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
     private SupplierAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String key, String judul, String category, String description, String nomor, String star);
+        void onItemClick(String key, String judul, String category, String description, String nomor, String star, String date, String backgroundimagepath);
     }
 
     public void setOnItemClickListener(SupplierAdapter.OnItemClickListener listener){
@@ -61,7 +61,12 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
         holder.txtLokasi.setText(SupplierList.get(position).getLokasi());
         holder.txtKategori.setText(SupplierList.get(position).getKategori());
         holder.txtDeskripsi.setText(SupplierList.get(position).getDeskripsi());
-        holder.star.setText(SupplierList.get(position).getStar().toString());
+        if(Integer.valueOf(SupplierList.get(position).getStar())>999){
+            float temp = (float)Float.valueOf(SupplierList.get(position).getStar())/1000;
+            holder.star.setText(String.valueOf(String.format("%.1f",temp))+" ribu");
+        }else{
+            holder.star.setText(SupplierList.get(position).getStar().toString());
+        }
 
         storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(SupplierList.get(position).getImagePath());
         try {
@@ -103,7 +108,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-                    String judul, category, description, nomor, key, star;
+                    String judul, category, description, nomor, key, star, date, backgroundimagepath;
 
                     judul = SupplierList.get(position).getNama();
                     category = SupplierList.get(position).getKategori();
@@ -111,9 +116,11 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
                     nomor = SupplierList.get(position).getNomor();
                     star = SupplierList.get(position).getStar().toString();
                     key = SupplierList.get(position).getKey();
+                    date = SupplierList.get(position).getDate();
+                    backgroundimagepath = SupplierList.get(position).getBackgroundimagepath();
 
                     if(mListener!=null){
-                        mListener.onItemClick(key, judul, category, description, nomor, star);
+                        mListener.onItemClick(key, judul, category, description, nomor, star, date, backgroundimagepath);
                     }
                 }
             });

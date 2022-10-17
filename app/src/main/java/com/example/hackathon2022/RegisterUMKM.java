@@ -10,6 +10,10 @@ import android.widget.ImageButton;
 
 import com.example.hackathon2022.data.UserRepository;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class RegisterUMKM extends AppCompatActivity implements View.OnClickListener{
 
     EditText txtNama, txtDescription, txtLokasi;
@@ -44,7 +48,10 @@ public class RegisterUMKM extends AppCompatActivity implements View.OnClickListe
         password = intent.getStringExtra("password");
         kategori = intent.getStringExtra("kategori");
 
-        UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+
+        UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png");
         startActivity(new Intent(this, LoginPage.class));
         finish();
     }

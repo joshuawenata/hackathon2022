@@ -14,21 +14,30 @@ import com.example.hackathon2022.R;
 
 import java.util.ArrayList;
 
-public class LowonganAdapter extends RecyclerView.Adapter<LowonganAdapter.LowonganViewHolder>{
+public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHolder>{
 
     Context context;
     ArrayList <ObjectLowongan> LowonganList;
-    private LowonganAdapter.OnItemClickListener mListener;
 
-    public interface OnItemClickListener{
-        void onItemClick();
+    public ArrayList<ObjectLowongan> getLowonganList() {
+        return LowonganList;
     }
 
-    public void setOnItemClickListener(LowonganAdapter.OnItemClickListener listener){
+    public void setLowonganList(ArrayList<ObjectLowongan> lowonganList) {
+        LowonganList = lowonganList;
+    }
+
+    private JasaAdapter.OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star);
+    }
+
+    public void setOnItemClickListener(JasaAdapter.OnItemClickListener listener){
         mListener = listener;
     }
 
-    public LowonganAdapter(Context context, ArrayList<ObjectLowongan> newList){
+    public JasaAdapter(Context context, ArrayList<ObjectLowongan> newList){
         this.context = context;
         this.LowonganList = newList;
     }
@@ -45,6 +54,7 @@ public class LowonganAdapter extends RecyclerView.Adapter<LowonganAdapter.Lowong
         holder.txtName.setText(LowonganList.get(position).getNama());
         holder.txtLokasi.setText(LowonganList.get(position).getLokasi());
         holder.txtDeskripsi.setText(LowonganList.get(position).getDeskripsi());
+        holder.txtStar.setText(LowonganList.get(position).getStar());
     }
 
     @Override
@@ -57,18 +67,30 @@ public class LowonganAdapter extends RecyclerView.Adapter<LowonganAdapter.Lowong
     }
 
     public class LowonganViewHolder extends RecyclerView.ViewHolder{
-        TextView txtName, txtLokasi, txtDeskripsi;
+        TextView txtName, txtLokasi, txtDeskripsi, txtDate, txtStar;
         public LowonganViewHolder(@NonNull View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.componentcardlowongan_namaUMKM);
             txtLokasi = itemView.findViewById(R.id.componentcardlowongan_lokasi);
             txtDeskripsi = itemView.findViewById(R.id.componentcardlowongan_deskripsi);
+            txtStar = itemView.findViewById(R.id.componentcardlowongan_starcount);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    String nama, lokasi, deskripsi, date, star, key;
+                    ArrayList<ObjectLowongan> Llist = getLowonganList();
+                    int position = getAdapterPosition();
+
+                    nama = Llist.get(position).getNama();
+                    lokasi = Llist.get(position).getLokasi();
+                    deskripsi = Llist.get(position).getDeskripsi();
+                    date = Llist.get(position).getDate();
+                    star = Llist.get(position).getStar();
+                    key = Llist.get(position).getKey();
+
                     if(mListener!=null){
-                        mListener.onItemClick();
+                        mListener.onItemClick(key, nama, lokasi, deskripsi, date, star);
                     }
                 }
             });

@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectLowongan;
-import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.AllLowonganAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -71,7 +70,7 @@ public class AllLowongan extends AppCompatActivity {
     }
 
     public void back(View view) {
-        startActivity(new Intent(this, LowonganPekerjaan.class));
+        startActivity(new Intent(this, JasaPage.class));
         finish();
     }
 }

@@ -72,9 +72,6 @@
             android:name=".AllLowongan"
             android:exported="false" />
         <activity
-            android:name=".TopSupplier"
-            android:exported="false" />
-        <activity
             android:name=".SupplierPage"
             android:exported="false" />
         <activity
@@ -93,7 +90,7 @@
             android:name=".addlowongan"
             android:exported="false" />
         <activity
-            android:name=".LowonganPekerjaan"
+            android:name=".JasaPage"
             android:exported="false" />
         <activity
             android:name=".WelcomePage"

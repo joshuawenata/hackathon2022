@@ -12,8 +12,6 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class Profile extends AppCompatActivity {
 
@@ -56,7 +54,7 @@ public class Profile extends AppCompatActivity {
     }
 
     public void intoLowongan(View view) {
-        startActivity(new Intent(this, LowonganPekerjaan.class));
+        startActivity(new Intent(this, JasaPage.class));
         finish();
     }
 

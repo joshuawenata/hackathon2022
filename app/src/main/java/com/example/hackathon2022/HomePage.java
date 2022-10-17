@@ -1,7 +1,5 @@
 package com.example.hackathon2022;
 
-import static com.example.hackathon2022.data.UserRepository.LOGGED_IN_USER;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,30 +8,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.hackathon2022.Object.ObjectForum;
-import com.example.hackathon2022.Object.ObjectReply;
 import com.example.hackathon2022.adapter.FrontForumAdapter;
-import com.example.hackathon2022.data.ReplyForumRepository;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.ByteArrayOutputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Objects;
 
 public class HomePage extends AppCompatActivity implements View.OnClickListener{
     ArrayList<ObjectForum> newList = new ArrayList<>();
@@ -103,7 +90,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     }
 
     public void intoLowongan(View view) {
-        startActivity(new Intent(this, LowonganPekerjaan.class));
+        startActivity(new Intent(this, JasaPage.class));
         finish();
     }
 

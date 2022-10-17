@@ -14,8 +14,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SupplierCardPage extends AppCompatActivity {
 
-    TextView txtjudul, txtcategory, txtdescription, txtStar;
-    String judul, category, description, nomor, star, supplierkey;
+    TextView txtjudul, txtcategory, txtdescription, txtStar, txtDate;
+    String judul, category, description, nomor, star, supplierkey, date;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ImageButton starBtn;
@@ -34,6 +34,7 @@ public class SupplierCardPage extends AppCompatActivity {
         txtdescription = findViewById(R.id.activitysuppliercardpage_description);
         txtStar = findViewById(R.id.activitysuppliercardpage_starCount);
         starBtn = findViewById(R.id.activitysuppliercardpage_starButton);
+        txtDate = findViewById(R.id.activitysuppliercardpage_date);
 
         Intent intent = getIntent();
         judul = intent.getStringExtra("judul");
@@ -42,11 +43,18 @@ public class SupplierCardPage extends AppCompatActivity {
         nomor = intent.getStringExtra("nomor");
         star = intent.getStringExtra("star");
         supplierkey = intent.getStringExtra("key");
+        date = intent.getStringExtra("date");
 
         txtjudul.setText(judul);
         txtcategory.setText(category);
         txtdescription.setText(description);
-        txtStar.setText(star);
+        txtDate.setText(date);
+        if(Integer.valueOf(star)>999){
+            float temp = (float)Float.valueOf(star)/1000;
+            txtStar.setText(String.valueOf(String.format("%.1f",temp))+" ribu");
+        }else{
+            txtStar.setText(star);
+        }
     }
 
     public void backtoHome(View view) {
