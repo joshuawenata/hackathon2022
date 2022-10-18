@@ -5,16 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profile"
-    android:background="@color/bgaabu"
+    android:background="@color/almost_blue"
     >
 
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/profile_bg" />
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:srcCompat="@drawable/profile_bg" />-->
 
 
     <LinearLayout
@@ -22,19 +21,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:orientation="vertical"
-        android:padding="20dp"
-        >
+        android:padding="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:elevation="2dp"
             android:fontFamily="@font/kanit_medium"
             android:text="Akun Saya"
             android:textAlignment="center"
-            android:textColor="@color/baseBlue"
-            android:textSize="17sp" />
+            android:textColor="@color/figma_gray"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,27 +53,49 @@
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/ic_baseline_person_24" />
 
-            <EditText
+            <TextView
                 android:id="@+id/activityprofile_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:backgroundTint="@color/baseBlue"
                 android:fontFamily="@font/kanit_medium"
                 android:text="Joshua Wenata Sunarto"
                 android:textAlignment="center"
-                android:textColor="@color/baseBlue"
-                android:backgroundTint="@color/baseBlue"
-                android:textSize="21sp"/>
+                android:textColor="@color/elegant_black"
+                android:textSize="21sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/activityprofile_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/baseBlue"
                 android:fontFamily="@font/kanit_light"
                 android:text="081252346294"
                 android:textAlignment="center"
-                android:textColor="@android:color/darker_gray"
-                android:backgroundTint="@color/baseBlue"/>
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/activityprofile_UMKM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/baseBlue"
+                android:fontFamily="@font/kanit_regular"
+                android:text="Nama UMKM"
+                android:textAlignment="center"
+                android:textColor="@color/primary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/activityprofile_lokasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/baseBlue"
+                android:fontFamily="@font/kanit_regular"
+                android:text="Kota Bandung"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray" />
 
         </LinearLayout>
 
@@ -82,12 +104,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="4dp"
                 android:background="@drawable/card"
+                android:elevation="4dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
@@ -105,9 +130,9 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_baseline_edit_24"
                     android:background="@null"
-                    android:onClick="editProfile"/>
+                    android:onClick="editProfile"
+                    app:srcCompat="@drawable/ic_baseline_edit_24" />
             </LinearLayout>
         </LinearLayout>
 
@@ -117,12 +142,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="4dp"
                 android:background="@drawable/card"
+                android:elevation="4dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
@@ -138,14 +166,14 @@
                     android:textSize="12dp" />
 
                 <ImageButton
+                    android:id="@+id/logout_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_baseline_exit_to_app_24"
                     android:background="@null"
-                    android:id="@+id/logout_btn"/>
-<!--                    android:onClick="Logout"-->
-<!--                    tools:ignore="OnClick" -->
-<!--                    />-->
+                    app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
+                <!--                    android:onClick="Logout"-->
+                <!--                    tools:ignore="OnClick" -->
+                <!--                    />-->
             </LinearLayout>
         </LinearLayout>
 

@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UbahProfileActivity"
-    android:background="@color/backgroundPrimary"
+    android:background="@color/white"
+    android:layout_marginBottom="50dp"
+    android:fillViewport="true"
     >
 
     <!--MAIN CONTAINER-->
@@ -48,19 +50,234 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/activityprofile_name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Joshua Wenata Sunarto"
-            android:textAlignment="center"
-            android:textColor="@color/baseBlue"
-            android:background="@drawable/round_btt_white"
-            android:textSize="21sp"/>
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                >
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/really_round_primary"
+                    android:backgroundTint="@color/baseBlue"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_baseline_person_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="100dp"
+                    android:maxHeight="100dp"
+                    app:srcCompat="@drawable/ic_baseline_edit_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/round_gray"
+                    android:padding="3dp"
+                    android:layout_marginEnd="8dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lengkap"
+                    android:fontFamily="@font/kanit_regular"
+                    android:paddingHorizontal="20dp"/>
+                <EditText
+                    android:id="@+id/activityprofile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="Nama User"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Handphone"
+                    android:fontFamily="@font/kanit_regular"
+                    android:paddingHorizontal="20dp"/>
+                <EditText
+                    android:id="@+id/activityprofile_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="081224158369"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kata Kunci"
+                    android:fontFamily="@font/kanit_regular"
+                    android:paddingHorizontal="20dp"/>
+                <EditText
+                    android:id="@+id/activityregister_inputpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="password1234"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="20dp"
+                    android:inputType="textVisiblePassword"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kategori UMKM Anda"
+                    android:fontFamily="@font/kanit_regular"
+                    android:paddingHorizontal="20dp"/>
+                <EditText
+                    android:id="@+id/kategori_umkm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="FnB"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama UMKM/Bisnis Anda"
+                    android:fontFamily="@font/kanit_regular"
+                    android:paddingHorizontal="20dp"/>
+                <EditText
+                    android:id="@+id/nama_umkm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="RyanStore"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi UMKM/Bisnis Anda"
+                    android:fontFamily="@font/kanit_regular"
+                    android:paddingHorizontal="20dp"/>
+                <EditText
+                    android:id="@+id/lokasi_umkm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="Kota Bandung, Jawa Barat"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi UMKM/Bisnis Anda"
+                    android:fontFamily="@font/kanit_regular"
+                    android:paddingHorizontal="20dp"/>
+                <EditText
+                    android:id="@+id/deskripsi_umkm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="Menjual barang elektronik yang dapat anda gunakan sehari-hari untuk kerperluan kantor, sekolah, maupun pemakaian biasa"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="20dp"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/simpan_btt"
+                android:layout_margin="50dp"
+                />
+        </LinearLayout>
     </LinearLayout>
-
-
 </androidx.core.widget.NestedScrollView>
