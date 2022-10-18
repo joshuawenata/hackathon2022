@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
-                android:onClick="backtoHome"
+                android:onClick="backtoProfile"
                 app:srcCompat="@drawable/arrow_back"
                 tools:ignore="ContentDescription,OnClick" />
 
@@ -64,10 +64,10 @@
                 >
 
                 <ImageView
+                    android:id="@+id/activityubahprofile_imageprofile"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_margin="5dp"
-                    android:background="@drawable/really_round_primary"
                     android:backgroundTint="@color/baseBlue"
                     android:padding="5dp"
                     android:scaleType="fitCenter"
@@ -80,6 +80,7 @@
                     />
 
                 <ImageView
+                    android:id="@+id/activityubahprofile_imagebtn"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:scaleType="fitCenter"
@@ -104,11 +105,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nama Lengkap"
+                    android:text="Nama UMKM/Bisnis Anda"
                     android:fontFamily="@font/kanit_regular"
                     android:paddingHorizontal="20dp"/>
                 <EditText
-                    android:id="@+id/activityprofile_name"
+                    android:id="@+id/activityubahprofile_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -133,7 +134,7 @@
                     android:fontFamily="@font/kanit_regular"
                     android:paddingHorizontal="20dp"/>
                 <EditText
-                    android:id="@+id/activityprofile_phone"
+                    android:id="@+id/activityubahprofile_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -158,7 +159,7 @@
                     android:fontFamily="@font/kanit_regular"
                     android:paddingHorizontal="20dp"/>
                 <EditText
-                    android:id="@+id/activityregister_inputpassword"
+                    android:id="@+id/activityubahregister_inputpassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -184,7 +185,7 @@
                     android:fontFamily="@font/kanit_regular"
                     android:paddingHorizontal="20dp"/>
                 <EditText
-                    android:id="@+id/kategori_umkm"
+                    android:id="@+id/activityubahprofile_kategori_umkm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -205,36 +206,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nama UMKM/Bisnis Anda"
-                    android:fontFamily="@font/kanit_regular"
-                    android:paddingHorizontal="20dp"/>
-                <EditText
-                    android:id="@+id/nama_umkm"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/kanit_regular"
-                    android:text="RyanStore"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/figma_gray"
-                    android:textSize="16sp"
-                    android:layout_marginHorizontal="20dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="10dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="Lokasi UMKM/Bisnis Anda"
                     android:fontFamily="@font/kanit_regular"
                     android:paddingHorizontal="20dp"/>
                 <EditText
-                    android:id="@+id/lokasi_umkm"
+                    android:id="@+id/activityubahprofile_lokasi_umkm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -255,11 +231,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lokasi UMKM/Bisnis Anda"
+                    android:text="Deskripsi UMKM/Bisnis Anda"
                     android:fontFamily="@font/kanit_regular"
                     android:paddingHorizontal="20dp"/>
                 <EditText
-                    android:id="@+id/deskripsi_umkm"
+                    android:id="@+id/activityubahprofile_deskripsi_umkm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -272,12 +248,14 @@
                     />
             </LinearLayout>
 
-            <ImageView
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/simpan_btt"
                 android:layout_margin="50dp"
-                />
+                android:onClick="Save"
+                tools:ignore="OnClick"
+                android:background="@null"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
