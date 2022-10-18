@@ -18,9 +18,9 @@ public class UserRepository {
 
     public static User LOGGED_IN_USER = null;
 
-    public static void insertUser(String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath, String star){
+    public static void insertUser(String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath, String star, String date, String backgroundimagepath){
         String userKey = userRef.push().getKey();
-        User newUser = new User(userKey, userName, userNomor, Crypt.generateHash(userPass), deskripsi, kategori, lokasi, imagepath, star);
+        User newUser = new User(userKey, userName, userNomor, Crypt.generateHash(userPass), deskripsi, kategori, lokasi, imagepath, star, date, backgroundimagepath);
         userRef.child(userKey).setValue(newUser.toMap());
     }
 
@@ -65,6 +65,8 @@ public class UserRepository {
         String lokasi;
         String imagepath;
         String star;
+        String date;
+        String backgroundimagepath;
         snapshot = snapshot.getChildren().iterator().next();
 
         nomor = snapshot.child("nomor").getValue(String.class);
@@ -75,8 +77,10 @@ public class UserRepository {
         lokasi = snapshot.child("lokasi").getValue(String.class);
         imagepath = snapshot.child("imagepath").getValue(String.class);
         star = snapshot.child("star").getValue(String.class);
+        date = snapshot.child("date").getValue(String.class);
+        backgroundimagepath = snapshot.child("backgroundimagepath").getValue(String.class);
 
-        return new User(snapshot.getKey(), nama, nomor, password, deskripsi, kategori, lokasi, imagepath, star);
+        return new User(snapshot.getKey(), nama, nomor, password, deskripsi, kategori, lokasi, imagepath, star, date, backgroundimagepath);
     }
 
     public static void find(String userKey, FinisihListener<User> listener){

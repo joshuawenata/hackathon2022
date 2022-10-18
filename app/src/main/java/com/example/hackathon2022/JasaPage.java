@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.hackathon2022.Object.ObjectLowongan;
-import com.example.hackathon2022.adapter.LowonganAdapter;
+import com.example.hackathon2022.adapter.JasaAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class LowonganPekerjaan extends AppCompatActivity {
+public class JasaPage extends AppCompatActivity {
     ArrayList <ObjectLowongan> newList = new ArrayList<>();
     Context context = this;
 
@@ -49,11 +49,18 @@ public class LowonganPekerjaan extends AppCompatActivity {
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                LowonganAdapter myAdapter = new LowonganAdapter(context, newList);
-                myAdapter.setOnItemClickListener(new LowonganAdapter.OnItemClickListener() {
+                JasaAdapter myAdapter = new JasaAdapter(context, newList);
+                myAdapter.setOnItemClickListener(new JasaAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick() {
-                        startActivity(new Intent(LowonganPekerjaan.this, JasaCardPage.class));
+                    public void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star) {
+                        Intent i = new Intent(JasaPage.this, JasaCardPage.class);
+                        i.putExtra("nama",nama);
+                        i.putExtra("lokasi",lokasi);
+                        i.putExtra("deskripsi",deskripsi);
+                        i.putExtra("date",date);
+                        i.putExtra("star",star);
+                        i.putExtra("key",key);
+                        startActivity(i);
                         finish();
                     }
                 });

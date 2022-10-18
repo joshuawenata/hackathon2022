@@ -54,12 +54,16 @@ public class SupplierFnb extends AppCompatActivity {
                 AllSupplierAdapter myAdapter = new AllSupplierAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new AllSupplierAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String judul, String category, String description, String nomor) {
+                    public void onItemClick(String key, String judul, String category, String description, String nomor, String date, String star, String backgroundimagepath) {
                         Intent i = new Intent(SupplierFnb.this, SupplierCardPage.class);
+                        i.putExtra("key", key);
                         i.putExtra("judul",judul);
                         i.putExtra("category",category);
                         i.putExtra("description",description);
                         i.putExtra("nomor", nomor);
+                        i.putExtra("star", star);
+                        i.putExtra("date", date);
+                        i.putExtra("backgroundimagepath", backgroundimagepath);
                         startActivity(i);
                     }
                 });

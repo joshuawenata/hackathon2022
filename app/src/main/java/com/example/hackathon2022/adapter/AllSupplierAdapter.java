@@ -33,7 +33,7 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
     private AllSupplierAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String judul, String category, String description, String nomor);
+        void onItemClick(String key, String judul, String category, String description, String nomor, String date, String star, String backgroundimagepath);
     }
 
     public void setOnItemClickListener(AllSupplierAdapter.OnItemClickListener listener){
@@ -59,6 +59,13 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
         holder.txtKategori.setText(SupplierList.get(position).getKategori());
         holder.txtDeskripsi.setText(SupplierList.get(position).getDeskripsi());
 
+        if(Integer.valueOf(SupplierList.get(position).getStar())>999){
+            float temp = (float)Float.valueOf(SupplierList.get(position).getStar())/1000;
+            holder.txtStar.setText(String.valueOf(String.format("%.1f",temp))+" ribu");
+        }else{
+            holder.txtStar.setText(SupplierList.get(position).getStar().toString());
+        }
+
         storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(SupplierList.get(position).getImagePath());
         try {
             File localfile = File.createTempFile("temp","jpg");
@@ -80,7 +87,7 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
     }
 
     public class SupplierViewHolder extends RecyclerView.ViewHolder {
-        TextView txtName, txtLokasi, txtKategori, txtDeskripsi;
+        TextView txtName, txtLokasi, txtKategori, txtDeskripsi, txtStar;
         ImageView lblimage;
         SupplierViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,20 +96,25 @@ public class AllSupplierAdapter extends RecyclerView.Adapter<AllSupplierAdapter.
             txtKategori = itemView.findViewById(R.id.componentcardsupplier_kategori);
             txtDeskripsi = itemView.findViewById(R.id.componentcardsupplier_deskripsi);
             lblimage = itemView.findViewById(R.id.componentcardsupplier_image);
+            txtStar = itemView.findViewById(R.id.componentcardsupplier_starcount);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-                    String judul, category, description, nomor;
+                    String judul, category, description, nomor, date, star, key, backgroundimagepath;
 
                     judul = SupplierList.get(position).getNama();
                     category = SupplierList.get(position).getKategori();
                     description = SupplierList.get(position).getDeskripsi();
                     nomor = SupplierList.get(position).getNomor();
+                    date = SupplierList.get(position).getDate();
+                    star = SupplierList.get(position).getStar();
+                    key = SupplierList.get(position).getKey();
+                    backgroundimagepath = SupplierList.get(position).getBackgroundimagepath();
 
                     if(mListener!=null){
-                        mListener.onItemClick(judul, category, description, nomor);
+                        mListener.onItemClick(key, judul, category, description, nomor, date, star, backgroundimagepath);
                     }
                 }
             });

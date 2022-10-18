@@ -13,8 +13,10 @@ public class User {
     private String lokasi;
     private String imagepath;
     private String star;
+    private String date;
+    private String backgroundimagepath;
 
-    public User(String key, String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath, String star) {
+    public User(String key, String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath, String star, String date, String backgroundimagepath) {
         this.userKey = key;
         this.userName = userName;
         this.userNomor = userNomor;
@@ -24,6 +26,24 @@ public class User {
         this.lokasi = lokasi;
         this.imagepath = imagepath;
         this.star = star;
+        this.date = date;
+        this.backgroundimagepath = backgroundimagepath;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getBackgroundimagepath() {
+        return backgroundimagepath;
+    }
+
+    public void setBackgroundimagepath(String backgroundimagepath) {
+        this.backgroundimagepath = backgroundimagepath;
     }
 
     public String getDeskripsi() {
@@ -109,6 +129,7 @@ public class User {
         data.put("lokasi", lokasi);
         data.put("imagepath", imagepath);
         data.put("star", star);
+        data.put("date",date);
         return data;
     }
 }

@@ -5,18 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
-import com.example.hackathon2022.Object.ObjectSupplier;
 import com.example.hackathon2022.Object.ObjectUser;
-import com.example.hackathon2022.adapter.AllForumAdapter;
 import com.example.hackathon2022.adapter.SupplierAdapter;
-import com.example.hackathon2022.adapter.SupplierTerdekatAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -57,7 +52,7 @@ public class SupplierPage extends AppCompatActivity {
                 SupplierAdapter myAdapter = new SupplierAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new SupplierAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String key, String judul, String category, String description, String nomor, String star) {
+                    public void onItemClick(String key, String judul, String category, String description, String nomor, String star, String date, String backgroundimagepath) {
                         Intent i = new Intent(SupplierPage.this, SupplierCardPage.class);
                         i.putExtra("key", key);
                         i.putExtra("judul",judul);
@@ -65,7 +60,8 @@ public class SupplierPage extends AppCompatActivity {
                         i.putExtra("description",description);
                         i.putExtra("nomor", nomor);
                         i.putExtra("star", star);
-                        i.putExtra("key", key);
+                        i.putExtra("date", date);
+                        i.putExtra("backgroundimagepath", backgroundimagepath);
                         startActivity(i);
                     }
                 });
@@ -88,17 +84,12 @@ public class SupplierPage extends AppCompatActivity {
     }
 
     public void intoLowongan(View view) {
-        startActivity(new Intent(this, LowonganPekerjaan.class));
+        startActivity(new Intent(this, JasaPage.class));
         finish();
     }
 
     public void intoAdd(View view) {
         startActivity(new Intent(this, addsupplier.class));
-        finish();
-    }
-
-    public void TopSupplier(View view) {
-        startActivity(new Intent(this, TopSupplier.class));
         finish();
     }
 

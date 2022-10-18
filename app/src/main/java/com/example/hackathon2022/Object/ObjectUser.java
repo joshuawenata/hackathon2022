@@ -9,6 +9,24 @@ public class ObjectUser {
     private String lokasi;
     private String imagepath;
     private String star;
+    private String date;
+    private String backgroundimagepath;
+
+    public String getBackgroundimagepath() {
+        return backgroundimagepath;
+    }
+
+    public void setBackgroundimagepath(String backgroundimagepath) {
+        this.backgroundimagepath = backgroundimagepath;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public String getKey() {
         return key;

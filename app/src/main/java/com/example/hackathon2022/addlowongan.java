@@ -6,13 +6,10 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.example.hackathon2022.R;
 import com.example.hackathon2022.data.LowonganRepository;
-import com.example.hackathon2022.data.SupplierRepository;
 
 public class addlowongan extends AppCompatActivity {
 
@@ -59,14 +56,14 @@ public class addlowongan extends AppCompatActivity {
             LowonganRepository.insertLowongan(nama,
                     lokasi,
                     deskripsi);
-            startActivity(new Intent(this, LowonganPekerjaan.class));
+            startActivity(new Intent(this, JasaPage.class));
             finish();
         }
 
     }
 
     public void backtoLowongan(View view) {
-        startActivity(new Intent(this, LowonganPekerjaan.class));
+        startActivity(new Intent(this, JasaPage.class));
         finish();
     }
 }

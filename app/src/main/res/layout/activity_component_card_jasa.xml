@@ -124,7 +124,6 @@
                         >
 
                         <ImageView
-                            android:id="@+id/componentcardforum_starbtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@null"
@@ -132,7 +131,7 @@
                             />
 
                         <TextView
-                            android:id="@+id/componentcardforum_starcount"
+                            android:id="@+id/componentcardlowongan_starcount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_3_1_ribu"

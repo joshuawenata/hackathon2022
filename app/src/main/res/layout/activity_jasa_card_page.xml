@@ -83,6 +83,7 @@ android:background="@color/bgaabu"
                 >
 
                 <TextView
+                    android:id="@+id/activityjasacardpage_nama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="Nama jasa apapun to put in here"
@@ -115,6 +116,22 @@ android:background="@color/bgaabu"
 <!--                        android:textSize="13sp" />-->
 
                     <TextView
+                        android:id="@+id/activityjasacardpage_lokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="Lokasi"
+                        android:textColor="@color/figma_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="  •  "
+                        android:textColor="@color/figma_gray"
+                        android:textSize="13sp" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="bottom"
@@ -124,7 +141,7 @@ android:background="@color/bgaabu"
                         />
 
                     <TextView
-                        android:id="@+id/date"
+                        android:id="@+id/activityjasacardpage_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="bottom"
@@ -147,7 +164,7 @@ android:background="@color/bgaabu"
                         android:paddingVertical="2dp">
 
                         <ImageButton
-                            android:id="@+id/activityforumcardpage_starButton"
+                            android:id="@+id/activityjasacardpage_starButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
@@ -160,7 +177,7 @@ android:background="@color/bgaabu"
                             tools:ignore="OnClick" />
 
                         <TextView
-                            android:id="@+id/activityforumcardpage_starCount"
+                            android:id="@+id/activityjasacardpage_starCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="3dp"
@@ -197,7 +214,7 @@ android:background="@color/bgaabu"
 
                 <!--INFORMASI TAMBAHAN-->
                 <TextView
-                    android:id="@+id/desc_content"
+                    android:id="@+id/activityjasacardpage_desc_content"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginVertical="5dp"
