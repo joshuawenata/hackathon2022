@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".UbahProfileActivity"
     android:background="@color/white"
-    android:layout_marginBottom="50dp"
     android:fillViewport="true"
     >
 
     <!--MAIN CONTAINER-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -117,6 +116,7 @@
                     android:text="Nama User"
                     android:textAlignment="textStart"
                     android:textColor="@color/figma_gray"
+                    android:backgroundTint="@color/figma_gray"
                     android:textSize="16sp"
                     android:layout_marginHorizontal="20dp"
                     />
@@ -144,32 +144,7 @@
                     android:textColor="@color/figma_gray"
                     android:textSize="16sp"
                     android:layout_marginHorizontal="20dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="10dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Kata Kunci"
-                    android:fontFamily="@font/kanit_regular"
-                    android:paddingHorizontal="20dp"/>
-                <EditText
-                    android:id="@+id/activityubahregister_inputpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/kanit_regular"
-                    android:text="password1234"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/figma_gray"
-                    android:textSize="16sp"
-                    android:layout_marginHorizontal="20dp"
-                    android:inputType="textVisiblePassword"
+                    android:backgroundTint="@color/figma_gray"
                     />
             </LinearLayout>
             <LinearLayout
@@ -195,6 +170,7 @@
                     android:textColor="@color/figma_gray"
                     android:textSize="16sp"
                     android:layout_marginHorizontal="20dp"
+                    android:backgroundTint="@color/figma_gray"
                     />
             </LinearLayout>
             <LinearLayout
@@ -220,6 +196,7 @@
                     android:textColor="@color/figma_gray"
                     android:textSize="16sp"
                     android:layout_marginHorizontal="20dp"
+                    android:backgroundTint="@color/figma_gray"
                     />
             </LinearLayout>
             <LinearLayout
@@ -245,6 +222,7 @@
                     android:textColor="@color/figma_gray"
                     android:textSize="16sp"
                     android:layout_marginHorizontal="20dp"
+                    android:backgroundTint="@color/figma_gray"
                     />
             </LinearLayout>
 
