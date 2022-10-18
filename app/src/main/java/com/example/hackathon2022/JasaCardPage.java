@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class JasaCardPage extends AppCompatActivity {
 
     TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar;
-    String nama, deskripsi, lokasi, date, star, jasakey;
+    String nama, deskripsi, lokasi, date, star, jasakey, nomor;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ImageButton starBtn;
@@ -42,6 +43,9 @@ public class JasaCardPage extends AppCompatActivity {
         date = intent.getStringExtra("date");
         star = intent.getStringExtra("star");
         jasakey = intent.getStringExtra("key");
+        nomor = intent.getStringExtra("nomor");
+
+        Log.i("TAG", nomor);
 
         txtnama.setText(nama);
         txtLokasi.setText(lokasi);

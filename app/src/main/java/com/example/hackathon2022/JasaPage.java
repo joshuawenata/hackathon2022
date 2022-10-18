@@ -52,7 +52,7 @@ public class JasaPage extends AppCompatActivity {
                 JasaAdapter myAdapter = new JasaAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new JasaAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star) {
+                    public void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star, String nomor) {
                         Intent i = new Intent(JasaPage.this, JasaCardPage.class);
                         i.putExtra("nama",nama);
                         i.putExtra("lokasi",lokasi);
@@ -60,6 +60,7 @@ public class JasaPage extends AppCompatActivity {
                         i.putExtra("date",date);
                         i.putExtra("star",star);
                         i.putExtra("key",key);
+                        i.putExtra("nomor",nomor);
                         startActivity(i);
                         finish();
                     }

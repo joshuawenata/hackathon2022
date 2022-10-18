@@ -7,6 +7,15 @@ public class ObjectLowongan {
     private String deskripsi;
     private String date;
     private String star;
+    private String nomor;
+
+    public String getNomor() {
+        return nomor;
+    }
+
+    public void setNomor(String nomor) {
+        this.nomor = nomor;
+    }
 
     public String getKey() {
         return key;

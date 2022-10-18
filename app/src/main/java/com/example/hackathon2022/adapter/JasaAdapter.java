@@ -30,7 +30,7 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
     private JasaAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star);
+        void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star, String nomor);
     }
 
     public void setOnItemClickListener(JasaAdapter.OnItemClickListener listener){
@@ -78,7 +78,7 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String nama, lokasi, deskripsi, date, star, key;
+                    String nama, lokasi, deskripsi, date, star, key, nomor;
                     ArrayList<ObjectLowongan> Llist = getLowonganList();
                     int position = getAdapterPosition();
 
@@ -88,9 +88,10 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
                     date = Llist.get(position).getDate();
                     star = Llist.get(position).getStar();
                     key = Llist.get(position).getKey();
+                    nomor = Llist.get(position).getNomor();
 
                     if(mListener!=null){
-                        mListener.onItemClick(key, nama, lokasi, deskripsi, date, star);
+                        mListener.onItemClick(key, nama, lokasi, deskripsi, date, star, nomor);
                     }
                 }
             });
