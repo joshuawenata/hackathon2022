@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class JasaCardPage extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ImageButton starBtn;
+    ImageView whatsappBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,16 @@ public class JasaCardPage extends AppCompatActivity {
         setContentView(R.layout.activity_jasa_card_page);
 
         initComponents();
+
+        whatsappBtn.setOnClickListener(view -> {
+            Intent kirimWA = new Intent(Intent.ACTION_SEND);
+            kirimWA.setType("text/plain");
+            kirimWA.putExtra(Intent.EXTRA_TEXT, "Halo!");
+            kirimWA.putExtra("jid", nomor + "@s.whatsapp.net");
+            kirimWA.setPackage("com.whatsapp");
+
+            startActivity(kirimWA);
+        });
     }
 
     private void initComponents() {
@@ -36,6 +48,7 @@ public class JasaCardPage extends AppCompatActivity {
         txtdeskripsi = findViewById(R.id.activityjasacardpage_desc_content);
         txtdate = findViewById(R.id.activityjasacardpage_date);
         txtStar = findViewById(R.id.activityjasacardpage_starCount);
+        whatsappBtn = findViewById(R.id.wa_btn);
 
         Intent intent = getIntent();
         nama = intent.getStringExtra("nama");
