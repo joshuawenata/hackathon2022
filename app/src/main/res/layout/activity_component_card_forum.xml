@@ -144,7 +144,6 @@
         android:id="@+id/componentcardforum_Pertanyaan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:minHeight="50dp"
         android:maxHeight="50dp"
         android:text="@string/loremipsum"
         android:fontFamily="@font/kanit_regular"
@@ -153,6 +152,7 @@
         android:ellipsize="end"
         android:textSize="12sp"
         android:paddingHorizontal="8dp"
+        android:textColor="@color/figma_gray"
         />
 
     <!--STAR,COMMENT,ETC-->
