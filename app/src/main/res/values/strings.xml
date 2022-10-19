@@ -13,7 +13,7 @@
 
     <!--    REGISTER    -->
     <string name="register_et_fullname">Nama lengkap UMKM atau bisnis anda</string>
-    <string name="register_et_email">Nomor handphone anda (+62 WhatsApp)</string>
+    <string name="register_et_email">Nomor whatsapp anda (62XXXXXXXXXX)</string>
     <string name="register_et_password">Masukkan kata kunci</string>
     <string name="register_et_confirm">Konfirmasi kata kunci</string>
     <string name="register_tagline">Mulai perjalanan UMKM anda bersama Kami</string>

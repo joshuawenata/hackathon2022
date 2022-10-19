@@ -62,7 +62,6 @@ public class JasaPage extends AppCompatActivity {
                         i.putExtra("key",key);
                         i.putExtra("nomor",nomor);
                         startActivity(i);
-                        finish();
                     }
                 });
                 recyclerView.setAdapter(myAdapter);

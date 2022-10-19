@@ -219,6 +219,7 @@ android:background="@color/bgaabu"
                     android:layout_height="match_parent"
                     android:layout_marginVertical="5dp"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:text="@string/loremipsum" />
 
                 <TextView
@@ -238,6 +239,7 @@ android:background="@color/bgaabu"
                     android:layout_height="match_parent"
                     android:layout_marginVertical="5dp"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:text="Informasi tambahan apapun di sini yang bisa membantu menjelaskan jasa macam apa ini" />
 
                 <!--INFORMASI TAMBAHAN-->
