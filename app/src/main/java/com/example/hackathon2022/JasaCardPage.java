@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -75,6 +76,7 @@ public class JasaCardPage extends AppCompatActivity {
         }
         txtStar.setText(tempstr);
         starBtn.setImageResource(R.drawable.ic_baseline_star_24);
+        Toast.makeText(this, "star berhasil ditambahkan", Toast.LENGTH_SHORT).show();
     }
 
 }

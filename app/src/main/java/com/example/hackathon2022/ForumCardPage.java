@@ -4,6 +4,7 @@ import static com.example.hackathon2022.data.UserRepository.LOGGED_IN_USER;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,7 +22,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hackathon2022.Object.ObjectReply;
 import com.example.hackathon2022.adapter.ReplyForumAdapter;
@@ -58,6 +61,7 @@ public class ForumCardPage extends AppCompatActivity{
     DatabaseReference databaseReference, ref;
     ImageView imageprofile;
     StorageReference storageReference;
+    NestedScrollView sv;
 
     ArrayList<ObjectReply> newList = new ArrayList<>();
     Context context = this;
@@ -85,6 +89,7 @@ public class ForumCardPage extends AppCompatActivity{
         txtStarCount = findViewById(R.id.activityforumcardpage_starCount);
         starBtn = findViewById(R.id.activityforumcardpage_starButton);
         imageprofile = findViewById(R.id.activityforumcardpage_imageview);
+        sv = findViewById(R.id.activityforumcardpage_scrollview);
 
         Intent intent = getIntent();
         forumkey = intent.getStringExtra("key");
@@ -165,6 +170,7 @@ public class ForumCardPage extends AppCompatActivity{
 
                 if(newList.size()>0){
                     labelJawaban.setVisibility(View.VISIBLE);
+                    sv.setMinimumHeight(500);
                 }else{
                     labelJawaban.setVisibility(View.INVISIBLE);
                 }
@@ -190,7 +196,13 @@ public class ForumCardPage extends AppCompatActivity{
 
     public void pushToDatabase(View view) {
         replyanswer = findViewById(R.id.activityforumcardpage_addanswer);
-        ReplyForumRepository.insertReplyForum(LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),dateFormat.format(dates),forumkey);
+        if(replyanswer.getText().toString().equals("")){
+            Toast.makeText(this, "jawaban tidak boleh kosong", Toast.LENGTH_SHORT).show();
+        }else{
+            ReplyForumRepository.insertReplyForum(LOGGED_IN_USER.getUserName(),replyanswer.getText().toString(),dateFormat.format(dates),forumkey);
+            replyanswer.setText("");
+            Toast.makeText(this, "jawaban berhasil di submit", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @SuppressLint({"SetTextI18n", "DefaultLocale"})
@@ -205,5 +217,6 @@ public class ForumCardPage extends AppCompatActivity{
         }
         txtStarCount.setText(tempstr);
         starBtn.setImageResource(R.drawable.ic_baseline_star_24);
+        Toast.makeText(this, "star berhasil ditambahkan", Toast.LENGTH_SHORT).show();
     }
 }
