@@ -121,7 +121,9 @@ public class JasaPage extends AppCompatActivity {
                     if(searchbar.getText().toString().equals("")){
                         newList.add(postSnapshot.getValue(ObjectLowongan.class));
                     }else{
-                        if(postSnapshot.getValue(ObjectLowongan.class).getNama().contains(searchbar.getText().toString())){
+                        if(postSnapshot.getValue(ObjectLowongan.class).getNama().contains(searchbar.getText().toString())
+                        ||postSnapshot.getValue(ObjectLowongan.class).getLokasi().contains(searchbar.getText().toString())
+                        ||postSnapshot.getValue(ObjectLowongan.class).getDeskripsi().contains(searchbar.getText().toString())){
                             newList.add(postSnapshot.getValue(ObjectLowongan.class));
                         }
                     }

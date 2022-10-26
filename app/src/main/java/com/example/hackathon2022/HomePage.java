@@ -53,13 +53,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    if(searchbar.getText().toString().equals("")){
-                        newList.add(postSnapshot.getValue(ObjectForum.class));
-                    }else{
-                        if(postSnapshot.getValue(ObjectForum.class).getJudul().contains(searchbar.getText().toString())){
-                            newList.add(postSnapshot.getValue(ObjectForum.class));
-                        }
-                    }
+                    newList.add(postSnapshot.getValue(ObjectForum.class));
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
@@ -129,7 +123,17 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    newList.add(postSnapshot.getValue(ObjectForum.class));
+                    if(searchbar.getText().toString().equals("")){
+                        newList.add(postSnapshot.getValue(ObjectForum.class));
+                    }else{
+                        if(postSnapshot.getValue(ObjectForum.class).getJudul().contains(searchbar.getText().toString())
+                                ||postSnapshot.getValue(ObjectForum.class).getKategori().contains(searchbar.getText().toString())
+                                ||postSnapshot.getValue(ObjectForum.class).getUsername().contains(searchbar.getText().toString())
+                                ||postSnapshot.getValue(ObjectForum.class).getPertanyaan().contains(searchbar.getText().toString())
+                        ){
+                            newList.add(postSnapshot.getValue(ObjectForum.class));
+                        }
+                    }
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));

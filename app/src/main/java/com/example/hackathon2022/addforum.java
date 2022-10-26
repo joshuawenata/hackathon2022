@@ -174,4 +174,9 @@ public class addforum extends AppCompatActivity {
 
     }
 
+    public void back(View view) {
+        startActivity(new Intent(this, HomePage.class));
+        finish();
+    }
+
 }

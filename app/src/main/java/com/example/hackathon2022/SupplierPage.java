@@ -117,7 +117,10 @@ public class SupplierPage extends AppCompatActivity {
                     if(searchbar.getText().toString().equals("")){
                         newList.add(postSnapshot.getValue(ObjectUser.class));
                     }else{
-                        if(postSnapshot.getValue(ObjectUser.class).getNama().contains(searchbar.getText().toString())){
+                        if(postSnapshot.getValue(ObjectUser.class).getNama().contains(searchbar.getText().toString())
+                        ||postSnapshot.getValue(ObjectUser.class).getLokasi().contains(searchbar.getText().toString())
+                        ||postSnapshot.getValue(ObjectUser.class).getKategori().contains(searchbar.getText().toString())
+                        ||postSnapshot.getValue(ObjectUser.class).getDeskripsi().contains(searchbar.getText().toString())){
                             newList.add(postSnapshot.getValue(ObjectUser.class));
                         }
                     }
