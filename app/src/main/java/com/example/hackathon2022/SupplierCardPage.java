@@ -75,6 +75,8 @@ public class SupplierCardPage extends AppCompatActivity {
         if(tempint>999){
             tempo=(float)tempint/1000;
             tempstr=String.valueOf(String.format("%.1f",tempo))+" ribu";
+        }else{
+            tempstr = String.valueOf(tempint);
         }
         txtStar.setText(tempstr);
         starBtn.setImageResource(R.drawable.ic_baseline_star_24);
