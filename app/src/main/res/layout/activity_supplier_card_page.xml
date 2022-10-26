@@ -264,6 +264,7 @@
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/ic_baseline_call_24"
                             android:layout_weight="1"
+                            android:id="@+id/whatsapp_btn"
                             />
 
                     </LinearLayout>
