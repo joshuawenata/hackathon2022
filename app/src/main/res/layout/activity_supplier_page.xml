@@ -137,6 +137,7 @@
 
                                 <!--EDIT TEXT SEARCH-->
                                 <EditText
+                                    android:id="@+id/activitysupplier_search_bar"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -150,7 +151,7 @@
                                     android:textColor="@color/figma_gray"
                                     android:textColorHint="@color/figma_gray"
                                     android:textSize="13sp"
-                                    tools:ignore="HardcodedText,NestedWeights" />
+                                    tools:ignore="HardcodedText,NestedWeights,OnClick" />
 
                                 <!--ICON NYA SEARCH-->
                                 <ImageView
@@ -162,7 +163,8 @@
                                     android:padding="7dp"
                                     app:srcCompat="@drawable/search"
                                     app:tint="@color/figma_gray"
-                                    tools:ignore="ContentDescription" />
+                                    tools:ignore="ContentDescription"
+                                    android:onClick="SearchingSupplier"/>
                             </LinearLayout>
 
                             <!--TEXT "PILIH BERDASARKAN TOPIK"-->

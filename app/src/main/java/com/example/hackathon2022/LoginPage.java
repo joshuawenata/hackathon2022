@@ -80,6 +80,10 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 txtNomor.setError("Silahkan masukan nomor handphone");
                 flag = false;
             }
+            else if(nomor.charAt(0)!='6'&&nomor.charAt(1)!='2'){
+                txtNomor.setError("Silahkan masukan nomor dengan awalan 62");
+                flag = false;
+            }
             else if(password.isEmpty()){
                 txtPassword.setError("Silahkan masukan kata sandi");
                 flag = false;

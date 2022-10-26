@@ -120,6 +120,7 @@
 
                         <!--EDIT TEXT SEARCH-->
                         <EditText
+                            android:id="@+id/activityhome_search_bar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -145,7 +146,8 @@
                             android:padding="7dp"
                             app:srcCompat="@drawable/search"
                             app:tint="@color/figma_gray"
-                            tools:ignore="ContentDescription" />
+                            tools:ignore="ContentDescription"
+                            android:onClick="SearchingForum"/>
                     </LinearLayout>
 
                     <!--TEXT "PILIH BERDASARKAN TOPIK"-->
