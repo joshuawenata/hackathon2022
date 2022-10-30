@@ -1,9 +1,12 @@
 package com.example.hackathon2022.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,11 +14,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hackathon2022.Object.ObjectLowongan;
 import com.example.hackathon2022.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHolder>{
 
+    StorageReference storageReference;
     Context context;
     ArrayList <ObjectLowongan> LowonganList;
 
@@ -55,6 +65,20 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
         holder.txtLokasi.setText(LowonganList.get(position).getLokasi());
         holder.txtDeskripsi.setText(LowonganList.get(position).getDeskripsi());
         holder.txtStar.setText(LowonganList.get(position).getStar());
+
+        storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(LowonganList.get(position).getImagepath());
+        try {
+            File localfile = File.createTempFile("temp","jpg");
+            storageReference.getFile(localfile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                    Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+                    holder.lblimage.setImageBitmap(bitmap);
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -67,13 +91,15 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
     }
 
     public class LowonganViewHolder extends RecyclerView.ViewHolder{
-        TextView txtName, txtLokasi, txtDeskripsi, txtDate, txtStar;
+        TextView txtName, txtLokasi, txtDeskripsi, txtStar;
+        ImageView lblimage;
         public LowonganViewHolder(@NonNull View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.componentcardlowongan_namaUMKM);
             txtLokasi = itemView.findViewById(R.id.componentcardlowongan_lokasi);
             txtDeskripsi = itemView.findViewById(R.id.componentcardlowongan_deskripsi);
             txtStar = itemView.findViewById(R.id.componentcardlowongan_starcount);
+            lblimage = itemView.findViewById(R.id.componentcardjasa_image);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

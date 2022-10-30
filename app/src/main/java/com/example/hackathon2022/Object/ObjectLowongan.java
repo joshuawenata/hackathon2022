@@ -9,6 +9,15 @@ public class ObjectLowongan {
     private String star;
     private String nomor;
     private String role;
+    private String imagepath;
+
+    public String getImagepath() {
+        return imagepath;
+    }
+
+    public void setImagepath(String imagepath) {
+        this.imagepath = imagepath;
+    }
 
     public String getRole() {
         return role;
