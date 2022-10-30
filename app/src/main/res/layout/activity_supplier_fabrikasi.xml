@@ -95,7 +95,8 @@
                     android:background="@drawable/round_btt_primary"
                     android:orientation="horizontal"
                     android:paddingHorizontal="12dp"
-                    android:paddingVertical="7dp">
+                    android:paddingVertical="7dp"
+                    android:onClick="sortFabrikasi">
 
                     <ImageView
                         android:layout_width="wrap_content"

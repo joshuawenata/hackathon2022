@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Objects;
 
 public class SupplierFabrikasi extends AppCompatActivity {
@@ -99,6 +100,61 @@ public class SupplierFabrikasi extends AppCompatActivity {
                                 postSnapshot.getValue(ObjectUser.class).getLokasi().contains(searchbar.getText().toString()))
                             newList.add(postSnapshot.getValue(ObjectUser.class));
                     }
+                }
+
+                recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
+                AllSupplierAdapter myAdapter = new AllSupplierAdapter(context, newList);
+                myAdapter.setOnItemClickListener(new AllSupplierAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(String key, String judul, String category, String description, String nomor, String date, String star, String backgroundimagepath) {
+                        Intent i = new Intent(SupplierFabrikasi.this, SupplierCardPage.class);
+                        i.putExtra("key", key);
+                        i.putExtra("judul",judul);
+                        i.putExtra("category",category);
+                        i.putExtra("description",description);
+                        i.putExtra("nomor", nomor);
+                        i.putExtra("star", star);
+                        i.putExtra("date", date);
+                        i.putExtra("backgroundimagepath", backgroundimagepath);
+                        startActivity(i);
+                    }
+                });
+                recyclerView.setAdapter(myAdapter);
+                myAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError firebaseError) {
+            }
+        });
+    }
+
+    public void sortFabrikasi(View view) {
+        ArrayList<ObjectUser> newList = new ArrayList<>();
+        ArrayList<ObjectUser> templist = new ArrayList<>();
+        RecyclerView recyclerView = findViewById(R.id.activitysupplierelektronik_recycleview);
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                int starmin = 9999;
+
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectUser.class)).getKategori().equals("Pakaian / Fabrikasi")&&postSnapshot.getValue(ObjectUser.class).getRole().equals("users")) {
+                        templist.add(postSnapshot.getValue(ObjectUser.class));
+                    }
+                }
+
+                for(int i=0;i<templist.size();i++){
+                    for(int j=i+1;j<templist.size();j++) {
+                        if (starmin > Integer.parseInt(templist.get(i).getStar())) {
+                            starmin = Integer.parseInt(templist.get(i).getStar());
+                            Collections.swap(templist, i, j);
+                        }
+                    }
+                }
+
+                for(int i=0;i<templist.size();i++){
+                    newList.add(templist.get(i));
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
