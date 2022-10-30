@@ -15,8 +15,17 @@ public class User {
     private String star;
     private String date;
     private String backgroundimagepath;
+    private String role;
 
-    public User(String key, String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath, String star, String date, String backgroundimagepath) {
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public User(String key, String userName, String userNomor, String userPass, String deskripsi, String kategori, String lokasi, String imagepath, String star, String date, String backgroundimagepath, String role) {
         this.userKey = key;
         this.userName = userName;
         this.userNomor = userNomor;
@@ -28,6 +37,7 @@ public class User {
         this.star = star;
         this.date = date;
         this.backgroundimagepath = backgroundimagepath;
+        this.role = role;
     }
 
     public String getDate() {
@@ -130,6 +140,7 @@ public class User {
         data.put("imagepath", imagepath);
         data.put("star", star);
         data.put("date",date);
+        data.put("role",role);
         return data;
     }
 }

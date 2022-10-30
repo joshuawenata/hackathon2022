@@ -49,7 +49,9 @@ public class SupplierPage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    newList.add(postSnapshot.getValue(ObjectUser.class));
+                    if(postSnapshot.getValue(ObjectUser.class).getRole().equals("users")){
+                        newList.add(postSnapshot.getValue(ObjectUser.class));
+                    }
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
@@ -114,14 +116,16 @@ public class SupplierPage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    if(searchbar.getText().toString().equals("")){
-                        newList.add(postSnapshot.getValue(ObjectUser.class));
-                    }else{
-                        if(postSnapshot.getValue(ObjectUser.class).getNama().contains(searchbar.getText().toString())
-                        ||postSnapshot.getValue(ObjectUser.class).getLokasi().contains(searchbar.getText().toString())
-                        ||postSnapshot.getValue(ObjectUser.class).getKategori().contains(searchbar.getText().toString())
-                        ||postSnapshot.getValue(ObjectUser.class).getDeskripsi().contains(searchbar.getText().toString())){
+                    if(postSnapshot.getValue(ObjectUser.class).getRole().equals("users")){
+                        if(searchbar.getText().toString().equals("")){
                             newList.add(postSnapshot.getValue(ObjectUser.class));
+                        }else{
+                            if(postSnapshot.getValue(ObjectUser.class).getNama().contains(searchbar.getText().toString())
+                                    ||postSnapshot.getValue(ObjectUser.class).getLokasi().contains(searchbar.getText().toString())
+                                    ||postSnapshot.getValue(ObjectUser.class).getKategori().contains(searchbar.getText().toString())
+                                    ||postSnapshot.getValue(ObjectUser.class).getDeskripsi().contains(searchbar.getText().toString())){
+                                newList.add(postSnapshot.getValue(ObjectUser.class));
+                            }
                         }
                     }
                 }

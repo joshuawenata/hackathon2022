@@ -99,7 +99,6 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
                 flag = true;
             }
 
-            //buat user baru
             if(flag){
                 Intent i = new Intent(this, RegisterCategoryActivity.class);
                 i.putExtra("nomor", nomor);

@@ -11,6 +11,15 @@ public class ObjectUser {
     private String star;
     private String date;
     private String backgroundimagepath;
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public String getBackgroundimagepath() {
         return backgroundimagepath;

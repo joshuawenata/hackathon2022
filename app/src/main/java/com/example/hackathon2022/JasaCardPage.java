@@ -77,7 +77,7 @@ public class JasaCardPage extends AppCompatActivity {
     public void AddStar(View view) {
         starBtn = findViewById(R.id.activityjasacardpage_starButton);
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("lowongan");
+        databaseReference = firebaseDatabase.getReference("users");
         databaseReference.child(jasakey+"/star").setValue(String.valueOf(Integer.parseInt(star)+1));
         int tempint = Integer.parseInt(star);
         tempint += 1;

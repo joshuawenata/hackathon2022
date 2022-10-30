@@ -44,13 +44,15 @@ public class JasaPage extends AppCompatActivity {
         searchbar = findViewById(R.id.activityjasa_search_bar);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("lowongan");
+        databaseReference = firebaseDatabase.getReference("users");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    newList.add(postSnapshot.getValue(ObjectLowongan.class));
+                    if(postSnapshot.getValue(ObjectLowongan.class).getRole().equals("freelancer")){
+                        newList.add(postSnapshot.getValue(ObjectLowongan.class));
+                    }
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));

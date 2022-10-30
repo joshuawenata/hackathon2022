@@ -8,6 +8,15 @@ public class ObjectLowongan {
     private String date;
     private String star;
     private String nomor;
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public String getNomor() {
         return nomor;

@@ -48,11 +48,31 @@ public class RegisterUMKM extends AppCompatActivity implements View.OnClickListe
         password = intent.getStringExtra("password");
         kategori = intent.getStringExtra("kategori");
 
+        boolean flag = true;
+        if(nama.isEmpty()){
+            txtNama.setError("Silahkan masukan nama");
+            flag = false;
+        }
+        else if(lokasi.isEmpty()){
+            txtLokasi.setError("Silahkan masukan lokasi");
+            flag = false;
+        }
+        else if(deskripsi.isEmpty()){
+            txtDescription.setError("Silahkan masukan deskripsi");
+            flag = false;
+        }
+        else{
+            flag = true;
+        }
+
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
 
-        UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png");
-        startActivity(new Intent(this, LoginPage.class));
-        finish();
+        if(flag){
+            UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "users");
+            startActivity(new Intent(this, LoginPage.class));
+            finish();
+        }
+
     }
 }

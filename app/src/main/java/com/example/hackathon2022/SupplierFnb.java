@@ -48,7 +48,7 @@ public class SupplierFnb extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectUser.class)).getKategori().equals("FnB")){
+                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectUser.class)).getKategori().equals("FnB")&&postSnapshot.getValue(ObjectUser.class).getRole().equals("users")){
                         newList.add(postSnapshot.getValue(ObjectUser.class));
                     }
                 }
