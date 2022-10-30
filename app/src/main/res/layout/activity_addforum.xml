@@ -128,9 +128,9 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:width="10dp"
-                    android:src="@drawable/asset_add_pic"
+                    android:src="@drawable/addforum_imgview"
                     android:layout_margin="20dp"
-                    tools:ignore="ContentDescription" />
+                    tools:ignore="ContentDescription"/>
 
                 <ImageButton
                     android:id="@+id/activityaddforum_btnTambahMedia"
@@ -138,8 +138,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
-                    android:src="@drawable/add_forum_pic_btt"
-                    tools:ignore="ContentDescription" />
+                    android:src="@drawable/addforum_tambahgmbr"
+                    tools:ignore="ContentDescription,InvalidId" />
 
             </LinearLayout>
 
@@ -163,7 +163,8 @@
                 android:onClick="AddForum"
                 tools:ignore="ContentDescription,NestedWeights,OnClick"
                 android:layout_weight="2"
-                android:src="@drawable/add_forum_btt"
+                android:src="@drawable/addforum_btntambah"
+                android:elevation="4dp"
                 android:background="@null"
                 />
 
