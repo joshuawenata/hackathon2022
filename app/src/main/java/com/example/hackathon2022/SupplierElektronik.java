@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class SupplierFnb extends AppCompatActivity {
+public class SupplierElektronik extends AppCompatActivity {
     ArrayList<ObjectUser> newList = new ArrayList<>();
     Context context = this;
 
@@ -48,7 +48,7 @@ public class SupplierFnb extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectUser.class)).getKategori().equals("FnB")){
+                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectUser.class)).getKategori().equals("Elektronik")){
                         newList.add(postSnapshot.getValue(ObjectUser.class));
                     }
                 }
@@ -58,7 +58,7 @@ public class SupplierFnb extends AppCompatActivity {
                 myAdapter.setOnItemClickListener(new AllSupplierAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(String key, String judul, String category, String description, String nomor, String date, String star, String backgroundimagepath) {
-                        Intent i = new Intent(SupplierFnb.this, SupplierCardPage.class);
+                        Intent i = new Intent(SupplierElektronik.this, SupplierCardPage.class);
                         i.putExtra("key", key);
                         i.putExtra("judul",judul);
                         i.putExtra("category",category);

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgaabu"
+    tools:context=".SupplierElektronik">
+
+    <!--    MAIN CONTAINER-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        >
+
+        <!--    TOP BAR     -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/backgroundPrimary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:elevation="4dp"
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/arrow_back"
+                android:background="@null"
+                android:onClick="backtoSupplier"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/kanit_semibold"
+                android:text="Elektronik"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!--        CONTAINER FOR FILTER BTT    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="5dp"
+            android:paddingHorizontal="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--            SEARCH SORT      -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_btt_primary"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    app:srcCompat="@drawable/search" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_btt_white"
+                    android:fontFamily="@font/kanit_regular"
+                    android:hint="Cari nama supplier, nama produk, atau lainnya"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="7dp"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!--            CONTAINER SORT      -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/round_btt_primary"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/sort" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="Sort"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="15dp"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activitysupplierfnb_recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="8"
+                tools:listitem="@layout/recycler_view_item_8" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
