@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgaabu"
-    tools:context=".HomePage">
+    tools:context=".SupplierPage">
 
     <!-- CONTENT -->
     <androidx.core.widget.NestedScrollView
@@ -163,7 +163,7 @@
                                     android:padding="7dp"
                                     app:srcCompat="@drawable/search"
                                     app:tint="@color/figma_gray"
-                                    tools:ignore="ContentDescription"
+                                    tools:ignore="ContentDescription,OnClick"
                                     android:onClick="SearchingSupplier"/>
                             </LinearLayout>
 
@@ -268,7 +268,8 @@
                                                 app:layout_constraintStart_toStartOf="parent"
                                                 app:layout_constraintTop_toTopOf="parent"
                                                 app:srcCompat="@drawable/ic_misc_clothes"
-                                                tools:ignore="OnClick" />
+                                                tools:ignore="OnClick"
+                                                android:onClick="intoFabrikasi"/>
 
                                             <TextView
                                                 android:layout_width="wrap_content"
@@ -310,7 +311,8 @@
                                                 app:layout_constraintStart_toStartOf="parent"
                                                 app:layout_constraintTop_toTopOf="parent"
                                                 app:srcCompat="@drawable/ic_misc_chip"
-                                                tools:ignore="OnClick" />
+                                                tools:ignore="OnClick"
+                                                android:onClick="intoElektronik"/>
 
                                             <TextView
                                                 android:layout_width="wrap_content"

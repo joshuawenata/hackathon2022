@@ -108,6 +108,16 @@ public class SupplierPage extends AppCompatActivity {
         finish();
     }
 
+    public void intoFabrikasi(View view) {
+        startActivity(new Intent(this, SupplierFabrikasi.class));
+        finish();
+    }
+
+    public void intoElektronik(View view) {
+        startActivity(new Intent(this, SupplierElektronik.class));
+        finish();
+    }
+
     public void SearchingSupplier(View view) {
         RecyclerView recyclerView = findViewById(R.id.activitysupplier_recycleviewsupplier);
         ArrayList<ObjectUser> newList = new ArrayList<>();

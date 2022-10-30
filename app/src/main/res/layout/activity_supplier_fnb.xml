@@ -66,13 +66,16 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
-                    app:srcCompat="@drawable/search" />
+                    app:srcCompat="@drawable/search"
+                    android:background="@null"
+                    android:onClick="SearchingSupplierFnB"/>
 
                 <EditText
+                    android:id="@+id/activitysupplierfnb_searchbar"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
