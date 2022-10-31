@@ -50,7 +50,7 @@ public class addforum extends AppCompatActivity {
     private final int PICK_IMAGE_REQUEST = 22;
     public static int temp = 0;
 
-    private EditText txtJudul, txtPertanyaan, txtKategori;
+    private EditText txtJudul, txtPertanyaan;
     private ImageButton btnUploadFile;
     private ImageView imageprofile;
     ProgressDialog pd;
@@ -59,7 +59,6 @@ public class addforum extends AppCompatActivity {
         pd = new ProgressDialog(this);
         pd.setMessage("Uploading....");
         txtJudul = findViewById(R.id.activityaddforum_inputjudulforum);
-        txtKategori = findViewById(R.id.activityaddforum_inputkategori);
         txtPertanyaan = findViewById(R.id.activityaddforum_inputpertanyaan);
         btnUploadFile = findViewById(R.id.activityaddforum_btnTambahMedia);
         imageprofile = findViewById(R.id.activityaddforum_imageprofile);
@@ -119,16 +118,13 @@ public class addforum extends AppCompatActivity {
     public void AddForum(View view) {
         String judul, kategori, pertanyaan;
 
+        kategori = getIntent().getStringExtra("kategori");
         judul = txtJudul.getText().toString();
-        kategori = txtKategori.getText().toString();
         pertanyaan = txtPertanyaan.getText().toString();
 
         boolean flag = true;
         if(judul.isEmpty()){
             txtJudul.setError("Silahkan masukan judul Forum");
-            flag = false;
-        }else if(pertanyaan.isEmpty()){
-            txtKategori.setError("Silahkan masukan kategori Forum");
             flag = false;
         }else if(pertanyaan.isEmpty()){
             txtPertanyaan.setError("Silahkan masukan pertanyaan Forum");

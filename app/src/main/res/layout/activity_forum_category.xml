@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForumCategory"
+    android:background="@color/backgroundPrimary"
+    >
+
+    <!--LOGO-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logotext_01"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/welcome_bg"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apa kategori forum yang ingin dibuat?"
+            android:fontFamily="@font/kanit_semibold"
+            android:textColor="@color/primary"
+            android:textSize="24sp"
+            android:layout_marginVertical="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityforumcategory_saranusaha"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/saranusaha_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/activityforumcategory_saranusahaic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_forum_modal_usaha_icon"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saran Usaha"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityforumcategory_pemasaran"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/pemasaran_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
+                    <ImageButton
+                        android:id="@+id/activityforumcategory_pemasaranic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_forum_pemasaran_icon"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pemasaran"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityforumcategory_perizinan"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/perizinan_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/activityforumcategory_perizinanic"
+                        android:layout_width="104dp"
+                        android:layout_height="70dp"
+                        android:adjustViewBounds="true"
+                        android:alpha="0.7"
+                        android:background="@null"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_forum_perizinan_icon"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="9dp" />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perizinan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityforumcategory_sosmed"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/socialmedia_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
+                    <ImageButton
+                        android:id="@+id/activityforumcategory_sosmedic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_socialmedia"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Social media"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityforumcategory_ecommerce"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/ecommerce_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
+                    <ImageButton
+                        android:id="@+id/activityforumcategory_ecommerceic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_ecommerce"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="E-commerce"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--SATU ITEM-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityforumcategory_tipsandtrick"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/description_column"
+                    android:elevation="2dp"
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/tipsandtrick_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:visibility="invisible"
+                        />
+                    <ImageButton
+                        android:id="@+id/activityforumcategory_tipsandtrickic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_tipsandtrick"
+                        android:background="@null"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="10dp"
+                        android:maxHeight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.7"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tips and Trick"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/kanit_regular"
+                        android:textColor="@color/figma_second_text"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <!--                &lt;!&ndash;SATU ITEM&ndash;&gt;-->
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:layout_width="130dp"-->
+                <!--                    android:layout_height="100dp"-->
+                <!--                    android:background="@drawable/description_column"-->
+                <!--                    android:elevation="2dp"-->
+                <!--                    android:layout_margin="3dp"-->
+                <!--                    android:padding="10dp"-->
+                <!--                    >-->
+                <!--                    <ImageButton-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:src="@drawable/ic_misc_other"-->
+                <!--                        android:background="@null"-->
+                <!--                        android:adjustViewBounds="true"-->
+                <!--                        android:maxWidth="10dp"-->
+                <!--                        android:maxHeight="10dp"-->
+                <!--                        android:scaleType="fitCenter"-->
+                <!--                        android:layout_marginBottom="16dp"-->
+                <!--                        android:alpha="0.7"-->
+                <!--                        />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_marginTop="4dp"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Lainnya"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        android:fontFamily="@font/kanit_regular"-->
+                <!--                        android:textColor="@color/figma_second_text"/>-->
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/activityforumcategory_lanjutbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lanjutbtn"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@null"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

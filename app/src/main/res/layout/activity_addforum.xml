@@ -82,22 +82,6 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/activityaddforum_inputkategori"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginVertical="5dp"
-                android:background="@drawable/round_edittext"
-                android:backgroundTint="@color/white"
-                android:fontFamily="@font/kanit_regular"
-                android:hint="Kategori forum"
-                android:paddingHorizontal="15dp"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/figma_gray"
-                android:inputType="text"
-                tools:ignore="HardcodedText" />
-
-            <EditText
                 android:id="@+id/activityaddforum_inputpertanyaan"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"

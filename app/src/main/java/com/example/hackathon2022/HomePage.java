@@ -97,8 +97,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     }
 
     public void intoAdd(View view) {
-        startActivity(new Intent(this, addforum.class));
-        finish();
+        startActivity(new Intent(this, ForumCategory.class));
     }
 
     public void intoProfile(View view) {
