@@ -74,7 +74,6 @@ public class RegisterCategoryActivity extends AppCompatActivity implements View.
 
     @Override
     public void onClick(View v) {
-
         if(v.equals(fnb)) {
             kategori = "FnB";
             if(checklist==0){

@@ -14,7 +14,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class RegisterUMKM extends AppCompatActivity implements View.OnClickListener{
+public class RegisterFreelancerPageTwo extends AppCompatActivity implements View.OnClickListener{
 
     EditText txtNama, txtDescription, txtLokasi;
     ImageButton btnDaftar;
@@ -22,16 +22,16 @@ public class RegisterUMKM extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_umkm);
+        setContentView(R.layout.activity_register_freelancer_page_two);
 
         initComponents();
     }
 
     private void initComponents() {
-        txtNama = findViewById(R.id.activityregisterumkm_inputfullname);
-        txtDescription = findViewById(R.id.activityregisterumkm_inputdescription);
-        txtLokasi = findViewById(R.id.activityregisterumkm_inputlokasi);
-        btnDaftar = findViewById(R.id.activityregisterumkm_btnDaftar);
+        txtNama = findViewById(R.id.activityregisterfreelancertwo_inputfullname);
+        txtDescription = findViewById(R.id.activityregisterfreelancertwo_inputdescription);
+        txtLokasi = findViewById(R.id.activityregisterfreelancertwo_inputlokasi);
+        btnDaftar = findViewById(R.id.activityregisterfreelancertwo_btnDaftar);
 
         btnDaftar.setOnClickListener(this);
     }
@@ -70,7 +70,7 @@ public class RegisterUMKM extends AppCompatActivity implements View.OnClickListe
         Date date = new Date();
 
         if(flag){
-            UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "users");
+            UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "freelancer");
             startActivity(new Intent(this, LoginPage.class));
             finish();
         }

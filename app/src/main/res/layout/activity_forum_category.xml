@@ -91,7 +91,7 @@
                         android:maxWidth="10dp"
                         android:maxHeight="10dp"
                         android:scaleType="fitCenter"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="20dp"
                         android:alpha="0.7"
                         />
 
@@ -135,7 +135,7 @@
                         android:maxWidth="10dp"
                         android:maxHeight="10dp"
                         android:scaleType="fitCenter"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="20dp"
                         android:alpha="0.7"
                         />
 
@@ -179,8 +179,8 @@
 
                     <ImageButton
                         android:id="@+id/activityforumcategory_perizinanic"
-                        android:layout_width="104dp"
-                        android:layout_height="70dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:adjustViewBounds="true"
                         android:alpha="0.7"
                         android:background="@null"
@@ -188,8 +188,8 @@
                         android:maxHeight="10dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_forum_perizinan_icon"
-                        tools:layout_editor_absoluteX="10dp"
-                        tools:layout_editor_absoluteY="9dp" />
+                        android:layout_marginBottom="20dp"
+                        tools:ignore="MissingConstraints" />
 
                     <TextView
                         android:layout_marginTop="4dp"
@@ -324,7 +324,7 @@
                         android:maxWidth="10dp"
                         android:maxHeight="10dp"
                         android:scaleType="fitCenter"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="25dp"
                         android:alpha="0.7"
                         />
 

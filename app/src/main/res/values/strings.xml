@@ -76,6 +76,7 @@
     <string name="apa_kategori_umkm_anda">Apa kategori UMKM anda?</string>
     <string name="deskripsi_umkm_bisnis_anda">Deskripsi UMKM atau bisnis anda</string>
     <string name="lokasi_umkm_bisnis_anda">Lokasi UMKM atau bisnis anda</string>
+    <string name="mulai_perjalanan_anda_sebagai_freelancer_bersama_kami">Mulai perjalanan anda sebagai freelancer bersama kami!</string>
     <string-array name="umkm_user_category">
         <item>Fabrikasi</item>
         <item>Food and Beverage</item>

@@ -83,11 +83,7 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
 
     @Override
     public int getItemCount() {
-        if(LowonganList.size()>=5){
-            return 5;
-        }else{
-            return LowonganList.size();
-        }
+        return LowonganList.size();
     }
 
     public class LowonganViewHolder extends RecyclerView.ViewHolder{
