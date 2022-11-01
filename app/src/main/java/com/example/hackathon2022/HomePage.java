@@ -162,4 +162,24 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
             }
         });
     }
+
+    public void intoPerizinan(View view) {
+        startActivity(new Intent(this, HomePerizinan.class));
+    }
+
+    public void intoPemasaran(View view) {
+        startActivity(new Intent(this, HomePemasaran.class));
+    }
+
+    public void intoSocialMedia(View view) {
+        startActivity(new Intent(this, HomeSocialMedia.class));
+    }
+
+    public void intoEcommerce(View view) {
+        startActivity(new Intent(this, HomeEcommerce.class));
+    }
+
+    public void intoTipsAndTrick(View view) {
+        startActivity(new Intent(this, HomeTips.class));
+    }
 }

@@ -62,7 +62,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:background="@drawable/round_btt_primary"
+                android:background="@drawable/round_btt_secondary"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -70,9 +70,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
-                    app:srcCompat="@drawable/search" />
+                    android:onClick="SearchingModalUsaha"
+                    app:srcCompat="@drawable/search"
+                    tools:ignore="OnClick" />
 
                 <EditText
+                    android:id="@+id/activityhomemodalusaha_searchbar"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -89,10 +92,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:background="@drawable/round_btt_primary"
+                android:background="@drawable/round_btt_secondary"
                 android:orientation="horizontal"
                 android:paddingHorizontal="12dp"
-                android:paddingVertical="7dp">
+                android:onClick="SortingModalUsaha"
+                android:paddingVertical="7dp"
+                tools:ignore="OnClick">
 
                 <ImageView
                     android:layout_width="wrap_content"

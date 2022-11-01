@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgaabu"
-    tools:context=".SupplierElektronik">
+    tools:context=".HomePemasaran">
 
     <!--    MAIN CONTAINER-->
     <LinearLayout
@@ -32,16 +32,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/arrow_back"
-                android:background="@null"
-                android:onClick="backtoSupplier"
-                tools:ignore="OnClick" />
+                android:onClick="backtoHome"
+                tools:ignore="OnClick"
+                android:background="@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:fontFamily="@font/kanit_semibold"
-                android:text="Elektronik"
+                android:text="Pemasaran"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -49,11 +49,12 @@
         <!--        CONTAINER FOR FILTER BTT    -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
-            android:paddingHorizontal="10dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            >
 
             <!--            SEARCH SORT      -->
             <LinearLayout
@@ -65,23 +66,22 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
+                    android:onClick="SearchingPemasaran"
                     app:srcCompat="@drawable/search"
-                    android:background="@null"
-                    android:onClick="SearchingSupplierElektronik"
                     tools:ignore="OnClick" />
 
                 <EditText
-                    android:id="@+id/activitysupplierelektronik_searchbar"
+                    android:id="@+id/activityhomepemasaran_searchbar"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/round_btt_white"
                     android:fontFamily="@font/kanit_regular"
-                    android:hint="Cari nama supplier, nama produk, atau lainnya"
+                    android:hint="Cari judul forum, diksusi, atau lainnya"
                     android:paddingHorizontal="10dp"
                     android:paddingVertical="7dp"
                     android:textSize="11sp" />
@@ -91,12 +91,12 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
                 android:background="@drawable/round_btt_secondary"
                 android:orientation="horizontal"
                 android:paddingHorizontal="12dp"
+                android:onClick="SortingPemasaran"
                 android:paddingVertical="7dp"
-                android:onClick="sortElektronik"
                 tools:ignore="OnClick">
 
                 <ImageView
@@ -115,20 +115,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activitysupplierelektronik_recycleview"
+                android:id="@+id/activityhomepemasaran_recycleview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:itemCount="8"
-                tools:listitem="@layout/recycler_view_item_8" />
+                tools:listitem="@layout/recycler_view_item_3"
+                />
 
         </LinearLayout>
+
 
     </LinearLayout>
 
 </RelativeLayout>
-

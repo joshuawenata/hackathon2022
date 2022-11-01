@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
 
-public class HomeModalusaha extends AppCompatActivity {
+public class HomePemasaran extends AppCompatActivity {
 
     Context context = this;
     EditText searchbar;
@@ -35,15 +35,15 @@ public class HomeModalusaha extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_modalusaha);
+        setContentView(R.layout.activity_home_pemasaran);
 
         initComponents();
     }
 
     protected void initComponents() {
         ArrayList<ObjectForum> newList = new ArrayList<>();
-        RecyclerView recyclerView = findViewById(R.id.activityhomemodalusaha_recycleview);
-        searchbar = findViewById(R.id.activityhomemodalusaha_searchbar);
+        RecyclerView recyclerView = findViewById(R.id.activityhomepemasaran_recycleview);
+        searchbar = findViewById(R.id.activityhomepemasaran_searchbar);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
@@ -52,7 +52,7 @@ public class HomeModalusaha extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectForum.class)).getKategori().equals("Saran Usaha")) {
+                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectForum.class)).getKategori().equals("Pemasaran")) {
                         newList.add(postSnapshot.getValue(ObjectForum.class));
                     }
                 }
@@ -62,7 +62,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path) {
-                        Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
+                        Intent i = new Intent(HomePemasaran.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
                         i.putExtra("judul",judul);
@@ -90,20 +90,20 @@ public class HomeModalusaha extends AppCompatActivity {
         finish();
     }
 
-    public void SearchingModalUsaha(View view) {
+    public void SearchingPemasaran(View view) {
         ArrayList<ObjectForum> newList = new ArrayList<>();
-        RecyclerView recyclerView = findViewById(R.id.activityhomemodalusaha_recycleview);
+        RecyclerView recyclerView = findViewById(R.id.activityhomepemasaran_recycleview);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectForum.class)).getKategori().equals("Saran Usaha")) {
+                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectForum.class)).getKategori().equals("Pemasaran")) {
                         if (postSnapshot.getValue(ObjectForum.class).getJudul().contains(searchbar.getText().toString()) ||
                                 postSnapshot.getValue(ObjectForum.class).getUsername().contains(searchbar.getText().toString()) ||
                                 postSnapshot.getValue(ObjectForum.class).getPertanyaan().contains(searchbar.getText().toString()) ||
                                 postSnapshot.getValue(ObjectForum.class).getDate().contains(searchbar.getText().toString())
                         ){
-                                    newList.add(postSnapshot.getValue(ObjectForum.class));
+                            newList.add(postSnapshot.getValue(ObjectForum.class));
                         }
                     }
                 }
@@ -113,7 +113,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path) {
-                        Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
+                        Intent i = new Intent(HomePemasaran.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
                         i.putExtra("judul",judul);
@@ -135,16 +135,16 @@ public class HomeModalusaha extends AppCompatActivity {
         });
     }
 
-    public void SortingModalUsaha(View view) {
+    public void SortingPemasaran(View view) {
         ArrayList<ObjectForum> newList = new ArrayList<>();
         ArrayList<ObjectForum> templist = new ArrayList<>();
-        RecyclerView recyclerView = findViewById(R.id.activityhomemodalusaha_recycleview);
+        RecyclerView recyclerView = findViewById(R.id.activityhomepemasaran_recycleview);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectForum.class)).getKategori().equals("Saran Usaha")) {
+                    if(Objects.requireNonNull(postSnapshot.getValue(ObjectForum.class)).getKategori().equals("Pemasaran")) {
                         templist.add(postSnapshot.getValue(ObjectForum.class));
                     }
                 }
@@ -166,7 +166,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path) {
-                        Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
+                        Intent i = new Intent(HomePemasaran.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
                         i.putExtra("judul",judul);

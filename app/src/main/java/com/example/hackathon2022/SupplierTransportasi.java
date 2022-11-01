@@ -141,7 +141,6 @@ public class SupplierTransportasi extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                int starmin = 9999;
 
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     if(Objects.requireNonNull(postSnapshot.getValue(ObjectUser.class)).getKategori().equals("Transportasi")&&postSnapshot.getValue(ObjectUser.class).getRole().equals("users")) {
@@ -151,8 +150,7 @@ public class SupplierTransportasi extends AppCompatActivity {
 
                 for(int i=0;i<templist.size();i++){
                     for(int j=i+1;j<templist.size();j++) {
-                        if (starmin > Integer.parseInt(templist.get(i).getStar())) {
-                            starmin = Integer.parseInt(templist.get(i).getStar());
+                        if (Integer.parseInt(templist.get(i).getStar()) < Integer.parseInt(templist.get(j).getStar())) {
                             Collections.swap(templist, i, j);
                         }
                     }
