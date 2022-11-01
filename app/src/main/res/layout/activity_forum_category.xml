@@ -225,7 +225,6 @@
                         android:id="@+id/activityforumcategory_sosmedic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/ic_socialmedia"
                         android:background="@null"
                         android:adjustViewBounds="true"
                         android:maxWidth="10dp"
