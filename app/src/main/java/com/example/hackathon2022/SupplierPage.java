@@ -93,11 +93,6 @@ public class SupplierPage extends AppCompatActivity {
         finish();
     }
 
-    public void intoAdd(View view) {
-        startActivity(new Intent(this, addsupplier.class));
-        finish();
-    }
-
     public void intoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
         finish();

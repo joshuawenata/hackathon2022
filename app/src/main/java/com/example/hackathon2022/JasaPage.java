@@ -92,11 +92,6 @@ public class JasaPage extends AppCompatActivity {
         finish();
     }
 
-    public void intoAdd(View view) {
-        startActivity(new Intent(this, addlowongan.class));
-        finish();
-    }
-
     public void intoLamar(View view) {
         startActivity(new Intent(this, LamarPekerjaan.class));
         finish();

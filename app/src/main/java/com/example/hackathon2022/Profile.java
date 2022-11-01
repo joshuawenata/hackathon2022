@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.hackathon2022.Object.ObjectUser;
@@ -35,7 +36,7 @@ import java.io.IOException;
 public class Profile extends AppCompatActivity {
 
     private TextView name, phone, lokasi;
-    private ImageButton btnLogout;
+    private LinearLayout btnLogout;
     private ImageView imageavatar;
 
     String namestr, nomorstr, lokasistr, deskripsistr, pathstr, kategoristr;
@@ -71,6 +72,7 @@ public class Profile extends AppCompatActivity {
         lokasi = findViewById(R.id.activityprofile_lokasi);
         imageavatar = findViewById(R.id.activityprofile_avatar);
         btnLogout = findViewById(R.id.logout_btn);
+        btnLogout.setClickable(true);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("users");
