@@ -2,6 +2,7 @@ package com.example.hackathon2022;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.hackathon2022.Object.ObjectForum;
@@ -30,11 +32,13 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     DatabaseReference databaseReference;
     EditText searchbar;
     ImageView starsBtn;
+    NestedScrollView myScrollView;
+    ImageButton selfBtt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_forum_page);
 
         initComponents();
     }
@@ -43,6 +47,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         RecyclerView recyclerView = findViewById(R.id.activityhome_recyclerview);
         searchbar = findViewById(R.id.activityhome_search_bar);
         starsBtn = findViewById(R.id.componentcardforum_starbtn);
+        myScrollView = findViewById(R.id.myScrollView);
+        selfBtt = findViewById(R.id.selfBtt);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
@@ -82,8 +88,15 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
             public void onCancelled(@NonNull DatabaseError firebaseError) {
             }
         });
+    }
 
-
+    public void intoHome(View view) {
+        selfBtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myScrollView.smoothScrollTo(0,0);
+            }
+        });
     }
 
     public void intoSupplier(View view) {

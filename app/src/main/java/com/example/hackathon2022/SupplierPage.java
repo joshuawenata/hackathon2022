@@ -2,6 +2,7 @@ package com.example.hackathon2022;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.example.hackathon2022.Object.ObjectForum;
 import com.example.hackathon2022.Object.ObjectUser;
@@ -28,6 +30,8 @@ public class SupplierPage extends AppCompatActivity {
     EditText searchbar;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    NestedScrollView myScrollView;
+    ImageButton selfBtt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,8 @@ public class SupplierPage extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.activitysupplier_recycleviewsupplier);
         ArrayList<ObjectUser> newList = new ArrayList<>();
         searchbar = findViewById(R.id.activitysupplier_search_bar);
+        myScrollView = findViewById(R.id.myScrollView);
+        selfBtt = findViewById(R.id.selfBtt);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("users");
@@ -126,6 +132,15 @@ public class SupplierPage extends AppCompatActivity {
     public void intoPengolahan(View view) {
         startActivity(new Intent(this, SupplierPengolahan.class));
         finish();
+    }
+
+    public void intoSupplier(View view) {
+        selfBtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myScrollView.smoothScrollTo(0,0);
+            }
+        });
     }
 
     public void SearchingSupplier(View view) {

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ public class JasaCardPage extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ImageButton starBtn;
-    ImageView whatsappBtn;
+    LinearLayout whatsappBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

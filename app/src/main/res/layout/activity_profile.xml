@@ -8,14 +8,6 @@
     android:background="@color/almost_blue"
     >
 
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:scaleType="fitXY"-->
-<!--        app:srcCompat="@drawable/profile_bg" />-->
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -91,7 +83,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginVertical="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -173,6 +166,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:elevation="3dp"
         >
 
         <!--HOLDER NYA ITEM DI APP BAR-->
@@ -223,12 +217,15 @@
 
             <!--ICON AKUN-->
             <ImageButton
+                android:id="@+id/selfBtt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:src="@drawable/ic_akun_biru"
                 android:layout_weight="1"
-                android:layout_marginHorizontal="5dp" />
+                android:layout_marginHorizontal="5dp"
+                android:onClick="intoProfile"
+                />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
