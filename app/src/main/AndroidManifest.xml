@@ -186,13 +186,7 @@
             android:name=".LamarPekerjaan"
             android:exported="false" />
         <activity
-            android:name=".addsupplier"
-            android:exported="false" />
-        <activity
             android:name=".addforum"
-            android:exported="false" />
-        <activity
-            android:name=".addlowongan"
             android:exported="false" />
         <activity
             android:name=".JasaPage"

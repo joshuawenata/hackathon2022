@@ -3,6 +3,7 @@ package com.example.hackathon2022;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,13 +20,21 @@ import android.widget.TextView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.hackathon2022.Object.ObjectForum;
+import com.example.hackathon2022.Object.ObjectUser;
 import com.example.hackathon2022.data.UserRepository;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class RegisterFreelancerPage extends AppCompatActivity implements View.OnClickListener{
@@ -33,6 +42,8 @@ public class RegisterFreelancerPage extends AppCompatActivity implements View.On
     private EditText txtNomor, txtPassword, txtConfirmPassword;
     private ImageButton btnDaftar;
     private TextView txtMasuk;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
 
     private void initComponents() {
         txtNomor = findViewById(R.id.activityregisterfreelancer_inputnomor);
@@ -74,9 +85,35 @@ public class RegisterFreelancerPage extends AppCompatActivity implements View.On
             confirmPassword = txtConfirmPassword.getText().toString();
 
             //validate data
+            final int[] sama = {0};
+
+            firebaseDatabase = FirebaseDatabase.getInstance();
+            databaseReference = firebaseDatabase.getReference("users");
+
+            databaseReference.addValueEventListener(new ValueEventListener() {
+                @SuppressLint("NotifyDataSetChanged")
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                        if(nomor.equals(postSnapshot.getValue(ObjectUser.class))){
+                            sama[0] =1;
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
+
             boolean flag = true;
             if(nomor.isEmpty()){
                 txtNomor.setError("Silahkan masukan nomor handphone");
+                flag = false;
+            }
+            else if(sama[0]==1){
+                sama[0]=0;
+                txtNomor.setError("Nomor ini sudah terpakai");
                 flag = false;
             }
             else if(nomor.charAt(0)!='6'&&nomor.charAt(1)!='2'){
