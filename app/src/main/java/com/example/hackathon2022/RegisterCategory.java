@@ -6,14 +6,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.hackathon2022.data.UserRepository;
-
-public class RegisterCategoryActivity extends AppCompatActivity implements View.OnClickListener{
+public class RegisterCategory extends AppCompatActivity implements View.OnClickListener{
 
     static int checklist = 0 ;
     String nomor, password, kategori;

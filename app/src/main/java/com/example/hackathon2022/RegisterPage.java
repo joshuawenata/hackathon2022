@@ -1,32 +1,13 @@
 package com.example.hackathon2022;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Spinner;
-import android.widget.Toast;
-
-import com.example.hackathon2022.data.UserRepository;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
-
-import java.io.IOException;
-import java.util.UUID;
 
 public class RegisterPage extends AppCompatActivity implements View.OnClickListener{
 
@@ -100,7 +81,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
             }
 
             if(flag){
-                Intent i = new Intent(this, RegisterCategoryActivity.class);
+                Intent i = new Intent(this, RegisterCategory.class);
                 i.putExtra("nomor", nomor);
                 i.putExtra("password", password);
                 startActivity(i);

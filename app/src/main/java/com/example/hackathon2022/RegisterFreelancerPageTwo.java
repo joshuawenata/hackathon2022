@@ -70,7 +70,7 @@ public class RegisterFreelancerPageTwo extends AppCompatActivity implements View
         Date date = new Date();
 
         if(flag){
-            UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "freelancer");
+            UserRepository.insertUser(nama, nomor, password, deskripsi, "", lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "freelancer");
             startActivity(new Intent(this, LoginPage.class));
             finish();
         }
