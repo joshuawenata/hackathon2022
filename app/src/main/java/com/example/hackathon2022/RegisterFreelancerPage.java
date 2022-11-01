@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -42,6 +44,7 @@ public class RegisterFreelancerPage extends AppCompatActivity implements View.On
     private EditText txtNomor, txtPassword, txtConfirmPassword;
     private ImageButton btnDaftar;
     private TextView txtMasuk;
+    Context context;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
@@ -72,6 +75,8 @@ public class RegisterFreelancerPage extends AppCompatActivity implements View.On
 
     @Override
     public void onClick(View view) {
+        ArrayList <ObjectUser> tempList = new ArrayList<>();
+        int sama = 0;
         if(view.equals(txtMasuk)){
             Intent i = new Intent(RegisterFreelancerPage.this, LoginPage.class);
             startActivity(i);
@@ -85,7 +90,6 @@ public class RegisterFreelancerPage extends AppCompatActivity implements View.On
             confirmPassword = txtConfirmPassword.getText().toString();
 
             //validate data
-            final int[] sama = {0};
 
             firebaseDatabase = FirebaseDatabase.getInstance();
             databaseReference = firebaseDatabase.getReference("users");
@@ -95,9 +99,45 @@ public class RegisterFreelancerPage extends AppCompatActivity implements View.On
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                        if(nomor.equals(postSnapshot.getValue(ObjectUser.class))){
-                            sama[0] =1;
+                        if(postSnapshot.getValue(ObjectUser.class).getNomor().equals(nomor)){
+                            tempList.add(postSnapshot.getValue(ObjectUser.class));
                         }
+                    }
+
+                    boolean flag = true;
+                    if(nomor.isEmpty()){
+                        txtNomor.setError("Silahkan masukan nomor handphone");
+                        flag = false;
+                    }
+                    else if(tempList.size()>0){
+                        txtNomor.setError("Nomor sudah terpakai");
+                        flag = false;
+                    }
+                    else if(nomor.charAt(0)!='6'&&nomor.charAt(1)!='2'){
+                        txtNomor.setError("Silahkan masukan nomor dengan awalan 62");
+                        flag = false;
+                    }
+                    else if(password.isEmpty()){
+                        txtPassword.setError("Silahkan masukan kata sandi");
+                        flag = false;
+                    }
+                    else if(confirmPassword.isEmpty()){
+                        txtConfirmPassword.setError("Silahkan masukan konfirmasi kata sandi");
+                        flag = false;
+                    }
+                    else if(checkConfirmPassword(password, confirmPassword)){
+                        txtConfirmPassword.setError("Konfirmasi kata sandi harus sesuai dengan kata sandi");
+                        flag = false;
+                    }
+                    else{
+                        flag = true;
+                    }
+
+                    if(flag){
+                        Intent i = new Intent(context, RegisterFreelancerPageTwo.class);
+                        i.putExtra("nomor", nomor);
+                        i.putExtra("password", password);
+                        startActivity(i);
                     }
                 }
 
@@ -106,42 +146,6 @@ public class RegisterFreelancerPage extends AppCompatActivity implements View.On
                 }
             });
 
-            boolean flag = true;
-            if(nomor.isEmpty()){
-                txtNomor.setError("Silahkan masukan nomor handphone");
-                flag = false;
-            }
-            else if(sama[0]==1){
-                sama[0]=0;
-                txtNomor.setError("Nomor ini sudah terpakai");
-                flag = false;
-            }
-            else if(nomor.charAt(0)!='6'&&nomor.charAt(1)!='2'){
-                txtNomor.setError("Silahkan masukan nomor dengan awalan 62");
-                flag = false;
-            }
-            else if(password.isEmpty()){
-                txtPassword.setError("Silahkan masukan kata sandi");
-                flag = false;
-            }
-            else if(confirmPassword.isEmpty()){
-                txtConfirmPassword.setError("Silahkan masukan konfirmasi kata sandi");
-                flag = false;
-            }
-            else if(checkConfirmPassword(password, confirmPassword)){
-                txtConfirmPassword.setError("Konfirmasi kata sandi harus sesuai dengan kata sandi");
-                flag = false;
-            }
-            else{
-                flag = true;
-            }
-
-            if(flag){
-                Intent i = new Intent(this, RegisterFreelancerPageTwo.class);
-                i.putExtra("nomor", nomor);
-                i.putExtra("password", password);
-                startActivity(i);
-            }
         }
     }
 }
