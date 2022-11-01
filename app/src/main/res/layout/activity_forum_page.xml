@@ -11,6 +11,7 @@
 
     <!--CONTENT-->
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/myScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
@@ -253,7 +254,8 @@
                                     android:layout_marginStart="30dp"
                                     android:layout_marginTop="5dp"
                                     android:alpha="0.5"
-                                    android:contentDescription="@string/resouceperizinan" />
+                                    android:contentDescription="@string/resouceperizinan"
+                                    />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -281,7 +283,7 @@
                                 >
 
                                 <ImageButton
-                                    android:layout_width="100dp"
+                                    android:layout_width="85dp"
                                     android:layout_height="100dp"
                                     app:srcCompat="@drawable/ic_forum_pemasaran_icon"
                                     android:onClick="intoPemasaran"
@@ -324,8 +326,8 @@
                                 >
 
                                 <ImageButton
-                                    android:layout_width="100dp"
-                                    android:layout_height="100dp"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
                                     android:onClick="intoSocialMedia"
                                     tools:ignore="ContentDescription,OnClick"
                                     android:padding="5dp"
@@ -337,7 +339,7 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
-                                    android:layout_marginStart="30dp"
+                                    android:layout_marginStart="35dp"
                                     android:alpha="0.5"
                                     />
 
@@ -347,7 +349,7 @@
                                     android:fontFamily="@font/kanit_semibold"
                                     android:text="Social Media"
                                     android:textColor="@color/figma_gray"
-                                    android:textSize="13sp"
+                                    android:textSize="11sp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     android:layout_marginBottom="7dp"
@@ -390,7 +392,7 @@
                                     android:fontFamily="@font/kanit_semibold"
                                     android:text="E-Commerce"
                                     android:textColor="@color/figma_gray"
-                                    android:textSize="13sp"
+                                    android:textSize="11sp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     android:layout_marginBottom="7dp"
@@ -410,8 +412,8 @@
                                 >
 
                                 <ImageButton
-                                    android:layout_width="100dp"
-                                    android:layout_height="100dp"
+                                    android:layout_width="85dp"
+                                    android:layout_height="85dp"
                                     app:srcCompat="@drawable/ic_tipsandtrick"
                                     android:onClick="intoTipsAndTrick"
                                     tools:ignore="ContentDescription,OnClick"
@@ -424,6 +426,7 @@
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     android:layout_marginStart="30dp"
+                                    android:layout_marginTop="5dp"
                                     android:alpha="0.5"
                                     />
 
@@ -433,7 +436,7 @@
                                     android:fontFamily="@font/kanit_semibold"
                                     android:text="@string/tips_and_trick"
                                     android:textColor="@color/figma_gray"
-                                    android:textSize="13sp"
+                                    android:textSize="11sp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     android:layout_marginBottom="7dp"
@@ -482,6 +485,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="3dp"
         >
 
         <!--HOLDER NYA ITEM DI APP BAR-->
@@ -499,13 +503,16 @@
 
             <!--ICON FORUM-->
             <ImageButton
+                android:id="@+id/selfBtt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:src="@drawable/ic_forum_biru"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="5dp"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription"
+                android:onClick="intoHome"
+                />
 
             <!--ICON SUPPLIER-->
             <ImageButton

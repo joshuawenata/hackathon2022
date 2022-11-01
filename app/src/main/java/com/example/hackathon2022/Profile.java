@@ -4,6 +4,7 @@ import static com.example.hackathon2022.data.UserRepository.LOGGED_IN_USER;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -38,6 +39,8 @@ public class Profile extends AppCompatActivity {
     private TextView name, phone, lokasi;
     private LinearLayout btnLogout;
     private ImageView imageavatar;
+    NestedScrollView myScrollView;
+    ImageButton selfBtt;
 
     String namestr, nomorstr, lokasistr, deskripsistr, pathstr, kategoristr;
 
@@ -73,6 +76,9 @@ public class Profile extends AppCompatActivity {
         imageavatar = findViewById(R.id.activityprofile_avatar);
         btnLogout = findViewById(R.id.logout_btn);
         btnLogout.setClickable(true);
+        myScrollView = findViewById(R.id.myScrollView);
+        selfBtt = findViewById(R.id.selfBtt);
+
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("users");
@@ -127,6 +133,10 @@ public class Profile extends AppCompatActivity {
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
         finish();
+    }
+
+    public void intoProfile(View view) {
+
     }
 
     public void editProfile(View view) {
