@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        tools:ignore="ContentDescription" />
 
     <!--LOGO-->
     <ImageView
@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        />
+        tools:ignore="ContentDescription" />
 
     <!--MAIN CONTENT-->
     <LinearLayout
@@ -90,7 +90,8 @@
                 android:fontFamily="@font/kanit_light"
                 android:textSize="15sp"
                 android:textColorHint="@color/figma_gray"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/activityregister_inputpassword"
@@ -105,7 +106,8 @@
                 android:fontFamily="@font/kanit_light"
                 android:textSize="15sp"
                 android:textColorHint="@color/figma_gray"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/activityregister_inputconfirmpassword"
@@ -120,7 +122,8 @@
                 android:fontFamily="@font/kanit_light"
                 android:textSize="15sp"
                 android:textColorHint="@color/figma_gray"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                tools:ignore="Autofill" />
 
         </LinearLayout>
 
@@ -130,7 +133,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="25dp"
             android:src="@drawable/lanjutbtn"
-            android:background="@null"/>
+            android:background="@null"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -152,7 +156,8 @@
                 android:layout_marginLeft="5dp"
                 android:fontFamily="@font/kanit_regular"
                 android:text="@string/masuk"
-                android:textColor="@color/primary" />
+                android:textColor="@color/primary"
+                tools:ignore="RtlHardcoded" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
