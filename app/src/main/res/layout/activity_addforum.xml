@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundlowongan"
-    tools:context=".addlowongan">
+    tools:context=".addforum">
 
     <ImageView
         android:layout_width="match_parent"
@@ -84,7 +84,8 @@
             <EditText
                 android:id="@+id/activityaddforum_inputpertanyaan"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
                 android:layout_marginVertical="5dp"
                 android:background="@drawable/description_column"
                 android:backgroundTint="@color/white"
@@ -94,7 +95,10 @@
                 android:textSize="15sp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/figma_gray"
-                android:inputType="text" />
+                android:inputType="text"
+                android:singleLine="false"
+                android:scrollHorizontally="false"
+                />
 
 
             <LinearLayout

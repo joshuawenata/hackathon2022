@@ -32,7 +32,6 @@ public class SupplierPage extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     NestedScrollView myScrollView;
-    LinearLayout selfBtt, homeBtt, jasaBtt, akunBtt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +46,6 @@ public class SupplierPage extends AppCompatActivity {
         ArrayList<ObjectUser> newList = new ArrayList<>();
         searchbar = findViewById(R.id.activitysupplier_search_bar);
         myScrollView = findViewById(R.id.myScrollView);
-        selfBtt = findViewById(R.id.selfBtt);
-        homeBtt = findViewById(R.id.supplierBtt);
-        jasaBtt = findViewById(R.id.jasaBtt);
-        akunBtt = findViewById(R.id.akunBtt);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("users");
@@ -101,8 +96,12 @@ public class SupplierPage extends AppCompatActivity {
 
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
-        overridePendingTransition(R.transition.slide_out, R.transition.slide_in);
+        overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
         finish();
+    }
+
+    public void intoSupplier(View view) {
+        myScrollView.smoothScrollTo(0,0);
     }
 
     public void intoJasa(View view) {
@@ -152,15 +151,6 @@ public class SupplierPage extends AppCompatActivity {
     public void intoPengolahan(View view) {
         startActivity(new Intent(this, SupplierPengolahan.class));
         finish();
-    }
-
-    public void intoSupplier(View view) {
-        selfBtt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myScrollView.smoothScrollTo(0,0);
-            }
-        });
     }
 
     public void SearchingSupplier(View view) {

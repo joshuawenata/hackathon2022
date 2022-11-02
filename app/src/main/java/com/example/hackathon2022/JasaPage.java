@@ -30,7 +30,6 @@ public class JasaPage extends AppCompatActivity {
 
     EditText searchbar;
     NestedScrollView myScrollView;
-    ImageButton selfBtt;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
@@ -47,7 +46,6 @@ public class JasaPage extends AppCompatActivity {
         ArrayList <ObjectLowongan> newList = new ArrayList<>();
         searchbar = findViewById(R.id.activityjasa_search_bar);
         myScrollView = findViewById(R.id.myScrollView);
-        selfBtt = findViewById(R.id.selfBtt);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("users");
@@ -90,11 +88,23 @@ public class JasaPage extends AppCompatActivity {
 
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
+        overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
         finish();
     }
 
     public void intoSupplier(View view) {
         startActivity(new Intent(this, SupplierPage.class));
+        overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
+        finish();
+    }
+
+    public void intoJasa(View view) {
+        myScrollView.smoothScrollTo(0,0);
+    }
+
+    public void intoProfile(View view) {
+        startActivity(new Intent(this, Profile.class));
+        overridePendingTransition(R.transition.slide_in, R.transition.slide_out);
         finish();
     }
 
@@ -108,19 +118,9 @@ public class JasaPage extends AppCompatActivity {
         finish();
     }
 
-    public void intoProfile(View view) {
-        startActivity(new Intent(this, Profile.class));
-        finish();
-    }
 
-    public void intoLowongan(View view) {
-        selfBtt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myScrollView.smoothScrollTo(0,0);
-            }
-        });
-    }
+
+
 
     public void SearchingJasa(View view) {
         RecyclerView recyclerView = findViewById(R.id.activitylowongan_recycleviewlowongan);

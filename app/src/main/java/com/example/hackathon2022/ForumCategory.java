@@ -141,4 +141,8 @@ public class ForumCategory extends AppCompatActivity implements View.OnClickList
             }
         }
     }
+
+    public void back(View view){
+        finish();
+    }
 }

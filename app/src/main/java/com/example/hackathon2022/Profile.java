@@ -40,7 +40,6 @@ public class Profile extends AppCompatActivity {
     private LinearLayout btnLogout;
     private ImageView imageavatar;
     NestedScrollView myScrollView;
-    ImageButton selfBtt;
 
     String namestr, nomorstr, lokasistr, deskripsistr, pathstr, kategoristr;
 
@@ -77,7 +76,6 @@ public class Profile extends AppCompatActivity {
         btnLogout = findViewById(R.id.logout_btn);
         btnLogout.setClickable(true);
         myScrollView = findViewById(R.id.myScrollView);
-        selfBtt = findViewById(R.id.selfBtt);
 
 
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -120,24 +118,34 @@ public class Profile extends AppCompatActivity {
         });
     }
 
-    public void intoSupplier(View view) {
-        startActivity(new Intent(this, SupplierPage.class));
-        finish();
-    }
 
-    public void intoLowongan(View view) {
-        startActivity(new Intent(this, JasaPage.class));
-        finish();
-    }
+
+
 
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
+        overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
+        finish();
+    }
+
+    public void intoSupplier(View view) {
+        startActivity(new Intent(this, SupplierPage.class));
+        overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
+        finish();
+    }
+
+    public void intoJasa(View view) {
+        startActivity(new Intent(this, JasaPage.class));
+        overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
         finish();
     }
 
     public void intoProfile(View view) {
-
+        myScrollView.smoothScrollTo(0,0);
     }
+
+
+
 
     public void editProfile(View view) {
         Intent i = new Intent(this, UbahProfileActivity.class);

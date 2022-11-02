@@ -34,7 +34,6 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     EditText searchbar;
     ImageView starsBtn;
     NestedScrollView myScrollView;
-    LinearLayout selfBtt, supplierBtt, jasaBtt, akunBtt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +48,6 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         searchbar = findViewById(R.id.activityhome_search_bar);
         starsBtn = findViewById(R.id.componentcardforum_starbtn);
         myScrollView = findViewById(R.id.myScrollView);
-        selfBtt = findViewById(R.id.selfBtt);
-        supplierBtt = findViewById(R.id.supplierBtt);
-        jasaBtt = findViewById(R.id.jasaBtt);
-        akunBtt = findViewById(R.id.akunBtt);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
@@ -98,16 +93,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
 
 
-
-
-
     public void intoHome(View view) {
-        selfBtt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myScrollView.smoothScrollTo(0,0);
-            }
-        });
+        myScrollView.smoothScrollTo(0,0);
     }
 
     public void intoSupplier(View view) {

@@ -198,7 +198,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="85dp"
                                         android:layout_marginVertical="5dp"
-                                        android:orientation="horizontal">
+                                        android:orientation="horizontal"
+                                        tools:ignore="TooDeepLayout">
 
                                         <!--FNB-->
                                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -506,11 +507,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:clickable="false"
         android:elevation="3dp"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <!--HOLDER NYA ITEM DI APP BAR-->
         <LinearLayout
@@ -523,31 +524,29 @@
             app:layout_constraintRight_toRightOf="parent"
             android:background="@drawable/appbar"
             android:weightSum="5"
-            >
+            android:baselineAligned="false">
 
             <!--ICON FORUM-->
             <LinearLayout
-                android:id="@+id/homeBtt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:onClick="intoHome"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:onClick="intoHome">
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:src="@drawable/ic_forum_biru"
                     android:layout_marginHorizontal="5dp"
-                    tools:ignore="ContentDescription"
-                    />
+                    android:background="@null"
+                    android:onClick="intoHome"
+                    android:src="@drawable/ic_forum_white"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
 
             <!--ICON SUPPLIER-->
             <LinearLayout
-                android:id="@+id/selfBtt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -559,47 +558,47 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:src="@drawable/ic_supplier_white"
+                    android:src="@drawable/ic_supplier_biru"
                     android:layout_marginHorizontal="5dp"
+                    android:onClick="intoSupplier"
                     tools:ignore="ContentDescription,OnClick" />
             </LinearLayout>
 
             <!--ICON JASA-->
             <LinearLayout
-                android:id="@+id/jasaBtt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:onClick="intoJasa"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:onClick="intoJasa">
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:src="@drawable/ic_jasa_white"
-                    tools:ignore="ContentDescription,OnClick"
                     android:layout_marginHorizontal="5dp"
-                    />
+                    android:background="@null"
+                    android:onClick="intoJasa"
+                    android:src="@drawable/ic_jasa_white"
+                    tools:ignore="ContentDescription,OnClick" />
             </LinearLayout>
 
             <!--ICON AKUN-->
             <LinearLayout
-                android:id="@+id/akunBtt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:onClick="intoProfile"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:onClick="intoProfile">
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:src="@drawable/ic_akun_white"
                     android:layout_marginHorizontal="5dp"
+                    android:background="@null"
+                    android:onClick="intoProfile"
+                    android:src="@drawable/ic_akun_white"
                     tools:ignore="ContentDescription" />
             </LinearLayout>
         </LinearLayout>
