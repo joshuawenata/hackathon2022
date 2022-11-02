@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.example.hackathon2022.Object.ObjectForum;
 import com.example.hackathon2022.Object.ObjectUser;
@@ -31,7 +32,7 @@ public class SupplierPage extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     NestedScrollView myScrollView;
-    ImageButton selfBtt;
+    LinearLayout selfBtt, homeBtt, jasaBtt, akunBtt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,9 @@ public class SupplierPage extends AppCompatActivity {
         searchbar = findViewById(R.id.activitysupplier_search_bar);
         myScrollView = findViewById(R.id.myScrollView);
         selfBtt = findViewById(R.id.selfBtt);
+        homeBtt = findViewById(R.id.supplierBtt);
+        jasaBtt = findViewById(R.id.jasaBtt);
+        akunBtt = findViewById(R.id.akunBtt);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("users");
@@ -89,20 +93,36 @@ public class SupplierPage extends AppCompatActivity {
 
     }
 
+
+
+
+
+
+
     public void intoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
+        overridePendingTransition(R.transition.slide_out, R.transition.slide_in);
         finish();
     }
 
-    public void intoLowongan(View view) {
+    public void intoJasa(View view) {
         startActivity(new Intent(this, JasaPage.class));
+        overridePendingTransition(R.transition.slide_in, R.transition.slide_out);
         finish();
     }
 
     public void intoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
+        overridePendingTransition(R.transition.slide_in, R.transition.slide_out);
         finish();
     }
+
+
+
+
+
+
+
 
     public void intoFnB(View view) {
         startActivity(new Intent(this, SupplierFnb.class));

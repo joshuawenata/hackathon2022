@@ -295,16 +295,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
 
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        app:srcCompat="@drawable/ic_baseline_comment_24"-->
-<!--                        android:adjustViewBounds="true"-->
-<!--                        android:scaleType="fitCenter"-->
-<!--                        android:maxWidth="20dp"-->
-<!--                        />-->
-
-
                 </LinearLayout>
 
                 <!--ONE FORUM REPLY ENTITY-->

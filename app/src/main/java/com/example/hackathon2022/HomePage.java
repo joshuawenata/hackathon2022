@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.hackathon2022.Object.ObjectForum;
 import com.example.hackathon2022.adapter.FrontForumAdapter;
@@ -33,7 +34,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     EditText searchbar;
     ImageView starsBtn;
     NestedScrollView myScrollView;
-    ImageButton selfBtt;
+    LinearLayout selfBtt, supplierBtt, jasaBtt, akunBtt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,9 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         starsBtn = findViewById(R.id.componentcardforum_starbtn);
         myScrollView = findViewById(R.id.myScrollView);
         selfBtt = findViewById(R.id.selfBtt);
+        supplierBtt = findViewById(R.id.supplierBtt);
+        jasaBtt = findViewById(R.id.jasaBtt);
+        akunBtt = findViewById(R.id.akunBtt);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("forum");
@@ -90,6 +94,13 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         });
     }
 
+
+
+
+
+
+
+
     public void intoHome(View view) {
         selfBtt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,11 +112,19 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
     public void intoSupplier(View view) {
         startActivity(new Intent(this, SupplierPage.class));
+        overridePendingTransition(R.transition.slide_in, R.transition.slide_out);
         finish();
     }
 
-    public void intoLowongan(View view) {
+    public void intoJasa(View view) {
         startActivity(new Intent(this, JasaPage.class));
+        overridePendingTransition(R.transition.slide_in, R.transition.slide_out);
+        finish();
+    }
+
+    public void intoProfile(View view) {
+        startActivity(new Intent(this, Profile.class));
+        overridePendingTransition(R.transition.slide_in, R.transition.slide_out);
         finish();
     }
 
@@ -113,10 +132,13 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         startActivity(new Intent(this, ForumCategory.class));
     }
 
-    public void intoProfile(View view) {
-        startActivity(new Intent(this, Profile.class));
-        finish();
-    }
+
+
+
+
+
+
+
 
     public void intoModal(View view) {
         startActivity(new Intent(this, HomeModalusaha.class));

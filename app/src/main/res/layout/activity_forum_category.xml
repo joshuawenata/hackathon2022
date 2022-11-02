@@ -345,39 +345,6 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 >
-
-                <!--                &lt;!&ndash;SATU ITEM&ndash;&gt;-->
-                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-                <!--                    android:layout_width="130dp"-->
-                <!--                    android:layout_height="100dp"-->
-                <!--                    android:background="@drawable/description_column"-->
-                <!--                    android:elevation="2dp"-->
-                <!--                    android:layout_margin="3dp"-->
-                <!--                    android:padding="10dp"-->
-                <!--                    >-->
-                <!--                    <ImageButton-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="match_parent"-->
-                <!--                        android:src="@drawable/ic_misc_other"-->
-                <!--                        android:background="@null"-->
-                <!--                        android:adjustViewBounds="true"-->
-                <!--                        android:maxWidth="10dp"-->
-                <!--                        android:maxHeight="10dp"-->
-                <!--                        android:scaleType="fitCenter"-->
-                <!--                        android:layout_marginBottom="16dp"-->
-                <!--                        android:alpha="0.7"-->
-                <!--                        />-->
-
-                <!--                    <TextView-->
-                <!--                        android:layout_marginTop="4dp"-->
-                <!--                        android:layout_width="wrap_content"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:text="Lainnya"-->
-                <!--                        app:layout_constraintStart_toStartOf="parent"-->
-                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--                        android:fontFamily="@font/kanit_regular"-->
-                <!--                        android:textColor="@color/figma_second_text"/>-->
-                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
             </LinearLayout>
         </LinearLayout>
         <ImageButton

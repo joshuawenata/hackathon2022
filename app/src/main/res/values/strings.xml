@@ -69,7 +69,7 @@
     <string name="_3_1_ribu">3,1 ribu</string>
     <string name="anonymous">Anonymous</string>
     <string name="dot">•</string>
-    <string name="title_soal_di_sini">Title soal di sini</string>
+    <string name="title_soal_di_sini">Title Forum</string>
     <string name="lokasi_supplier">Lokasi supplier</string>
     <string name="jasa_yang_mungkin_anda_perlukan">Jasa yang mungkin anda perlukan</string>
     <string name="jawaban_forum">Jawaban Forum</string>
@@ -80,6 +80,7 @@
     <string name="saran_usaha">Saran Usaha</string>
     <string name="tips_and_trick">Tips and Trik</string>
     <string name="social_media">Social Media</string>
+    <string name="e_commerce">E-Commerce</string>
     <string-array name="umkm_user_category">
         <item>Fabrikasi</item>
         <item>Food and Beverage</item>
