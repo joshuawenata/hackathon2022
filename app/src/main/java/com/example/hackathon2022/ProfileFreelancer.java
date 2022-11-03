@@ -104,7 +104,7 @@ public class ProfileFreelancer extends AppCompatActivity {
                     newList.add(postSnapshot.getValue(ObjectGallery.class));
                 }
 
-                rv.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
+                rv.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
                 FreelancerAdapter TopAdapter = new FreelancerAdapter(context, newList);
                 rv.setAdapter(TopAdapter);
                 TopAdapter.notifyDataSetChanged();

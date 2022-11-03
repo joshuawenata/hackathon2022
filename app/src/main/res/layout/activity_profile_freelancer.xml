@@ -231,25 +231,32 @@
 
                     <ImageView
                         android:id="@+id/activityprofilefreelancer_addgallery"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="110dp"
+                        android:layout_height="120dp"
                         android:src="@drawable/ic_addgallery"
-                        android:padding="10dp"
-                        tools:ignore="OnClick">
+                        android:paddingLeft="10dp">
                     </ImageView>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/activityprofilefreelancer_recyclerviewfreelancer"
+                    <HorizontalScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="90dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
                         android:scrollbars="horizontal"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:paddingRight="10dp"
-                        tools:listitem="@layout/activity_component_gallery"
+                        android:layout_marginVertical="15dp"
                         >
 
-                    </androidx.recyclerview.widget.RecyclerView>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/activityprofilefreelancer_recyclerviewfreelancer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            >
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </HorizontalScrollView>
+
 
                 </LinearLayout>
 
