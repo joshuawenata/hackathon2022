@@ -13,6 +13,7 @@
         android:background="@drawable/gallery">
 
         <ImageView
+            android:id="@+id/componentgallery_imgview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/gallery_placeholder"
