@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundlowongan"
+    tools:context=".Community"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--BACKGROUND-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/bg_supplier"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scaleType="fitXY"
+                android:layout_marginTop="-50dp"
+                />
+
+            <!--CONTENT-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1"
+                >
+
+                <!--MAIN HOLDER BUAT ITEM-ITEM LAIN SELAIN APP BAR-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:weightSum="4"
+
+                    >
+
+
+                    <!--MAIN HOLDER NYA JUDUL SAMA GAMBAR-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:text="Penyewa Jasa Lainnya"
+                                android:id="@+id/lbllowongan1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/kanit_bold"
+                                android:textColor="@color/white"
+                                android:textSize="30sp"
+                                android:textAlignment="textStart"
+                                />
+
+                            <TextView
+                                android:id="@+id/lbllowongan2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/kanit_light"
+                                android:text="Penyewa jasa sukses lainnya di KamiFriend!"
+                                android:textColor="@color/white"
+                                android:textAlignment="textStart"
+                                android:textSize="12dp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="6dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="280dp"
+                                android:minWidth="260dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/art_jasa" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--MAIN HOLDER NYA FORUM POPULER-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_top"
+
+                        android:paddingTop="10dp"
+                        tools:ignore="NestedWeights"
+                        >
+
+                        <!--MAIN HOLDER NYA SEARCH BAR-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            tools:ignore="NestedWeights"
+                            android:layout_marginHorizontal="15dp"
+                            >
+
+                            <!--EDIT TEXT SEARCH-->
+                            <EditText
+                                android:id="@+id/activityjasa_search_bar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/round_btt_white"
+                                android:fontFamily="@font/kanit_regular"
+                                android:hint="Jasa apa yang ingin anda cari?"
+                                android:paddingVertical="7dp"
+                                android:paddingHorizontal="12dp"
+                                android:textSize="13sp"
+                                android:textColorHint="@color/figma_gray"
+                                android:textColor="@color/figma_gray"
+                                tools:ignore="NestedWeights"
+                                android:autofillHints=""
+                                android:inputType="text" />
+
+                            <!--ICON NYA SEARCH-->
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0.05"
+                                android:background="@drawable/roundcorner"
+                                android:padding="7dp"
+                                app:srcCompat="@drawable/search"
+                                app:tint="@color/figma_gray"
+                                tools:ignore="ContentDescription,OnClick"
+                                android:onClick="SearchingJasa"/>
+                        </LinearLayout>
+
+                        <!--TEXT "PEKERJAAN YANG DIBUTUHKAN TERSEDIA"-->
+                        <TextView
+                            android:id="@+id/lbllowongan3"
+                            android:text="@string/jasa_yang_mungkin_anda_perlukan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kanit_semibold"
+                            android:textSize="16sp"
+                            android:textColor="@color/elegant_black"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:paddingHorizontal="5dp"
+                            android:layout_marginHorizontal="15dp"
+                            />
+
+                        <!--HOLDER NYA RECYCLER VIEW-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activitylowongan_recycleviewlowongan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/activity_component_card_jasa"
+                                android:layout_marginBottom="80dp"
+                                android:paddingHorizontal="10dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--MAIN CONSTRAINT BUAT APP BAR-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--HOLDER NYA ITEM DI APP BAR-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/appbar"
+            android:weightSum="5"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="50dp">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_community_blue"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="50dp"
+                android:onClick="intoProfile"
+                tools:ignore="OnClick">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_akun_white"
+                    tools:ignore="ContentDescription,OnClick"
+                    android:onClick="intoProfile"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

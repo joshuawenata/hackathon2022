@@ -156,15 +156,11 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:fontFamily="@font/kanit_medium"
-                        android:text="Graphic Designer"
+                        android:text="Tentang Saya"
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp" />
+                        android:textSize="15dp"
+                        android:layout_marginLeft="10dp"/>
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        app:srcCompat="@drawable/ic_edit" />
                 </LinearLayout>
 
                 <TextView
@@ -213,15 +209,10 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:fontFamily="@font/kanit_medium"
-                        android:text="My Portofolio"
+                        android:text="Portofolio Saya"
                         android:textColor="@android:color/darker_gray"
                         android:textSize="15dp" />
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        app:srcCompat="@drawable/ic_edit" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -327,14 +318,16 @@
             android:clickable="true"
             android:focusable="true"
             android:gravity="center_horizontal"
-            android:layout_marginHorizontal="50dp">
+            android:layout_marginHorizontal="50dp"
+            android:onClick="intoCommunity">
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@null"
                 android:src="@drawable/ic_community_gray"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription"
+                android:onClick="intoCommunity"/>
         </LinearLayout>
 
         <LinearLayout

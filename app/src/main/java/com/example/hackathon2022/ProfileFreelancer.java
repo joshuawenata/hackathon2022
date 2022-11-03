@@ -101,7 +101,9 @@ public class ProfileFreelancer extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    newList.add(postSnapshot.getValue(ObjectGallery.class));
+                    if(postSnapshot.getValue((ObjectGallery.class)).getGalleryKey().equals(LOGGED_IN_USER.getUserKey())){
+                        newList.add(postSnapshot.getValue(ObjectGallery.class));
+                    }
                 }
 
                 rv.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
@@ -222,6 +224,12 @@ public class ProfileFreelancer extends AppCompatActivity {
 
         Intent i = new Intent(ProfileFreelancer.this, WelcomePage.class);
         startActivity(i);
+        finish();
+    }
+
+    public void intoCommunity(View view) {
+        startActivity(new Intent(this, Community.class));
+        overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
         finish();
     }
 }

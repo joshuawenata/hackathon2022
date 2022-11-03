@@ -45,7 +45,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                         startActivity(i);
                         finish();
                     }else if(data.getRole().equals("freelancer")){
-                        Intent i = new Intent(LoginPage.this, ProfileFreelancer.class);
+                        Intent i = new Intent(LoginPage.this, Community.class);
                         startActivity(i);
                         finish();
                     }
@@ -125,7 +125,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 startActivity(i);
                 finish();
             }else if(data.getRole().equals("freelancer")){
-                Intent i = new Intent(LoginPage.this, ProfileFreelancer.class);
+                Intent i = new Intent(LoginPage.this, Community.class);
                 startActivity(i);
                 finish();
             }
