@@ -112,9 +112,15 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             editor.putString("nomor", data.getUserNomor());
             editor.commit();
 
-            Intent i = new Intent(LoginPage.this, HomePage.class);
-            startActivity(i);
-            finish();
+            if(data.getRole().equals("users")){
+                Intent i = new Intent(LoginPage.this, HomePage.class);
+                startActivity(i);
+                finish();
+            }else{
+                Intent i = new Intent(LoginPage.this, ProfileFreelancer.class);
+                startActivity(i);
+                finish();
+            }
         }
     }
 }

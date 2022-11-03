@@ -93,26 +93,24 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:background="@drawable/card"
+                android:clickable="true"
                 android:elevation="2dp"
                 android:gravity="center"
+                android:onClick="editProfile"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
-                android:paddingVertical="15dp"
-                android:clickable="true"
-                android:onClick="editProfile"
-                >
+                android:paddingVertical="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:fontFamily="@font/kanit_medium"
+                    android:onClick="editProfile"
                     android:text="Ubah informasi akun"
                     android:textColor="@color/baseBlue"
-                    android:textSize="12dp"
-                    android:clickable="true"
-                    android:onClick="editProfile"
-                    />
+                    android:textSize="12dp" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -133,19 +131,18 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/logout_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:background="@drawable/card"
+                android:clickable="true"
                 android:elevation="4dp"
                 android:gravity="center"
+                android:onClick="editProfile"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
-                android:paddingVertical="15dp"
-                android:id="@+id/logout_btn"
-                android:clickable="true"
-                android:onClick="editProfile"
-                >
+                android:paddingVertical="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -160,8 +157,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    app:srcCompat="@drawable/ic_baseline_exit_to_app_24"
-                    />
+                    app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
             </LinearLayout>
         </LinearLayout>
 

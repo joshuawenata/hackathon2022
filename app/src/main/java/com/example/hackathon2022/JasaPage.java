@@ -108,20 +108,6 @@ public class JasaPage extends AppCompatActivity {
         finish();
     }
 
-    public void intoLamar(View view) {
-        startActivity(new Intent(this, LamarPekerjaan.class));
-        finish();
-    }
-
-    public void LihatSemua(View view) {
-        startActivity(new Intent(this, AllLowongan.class));
-        finish();
-    }
-
-
-
-
-
     public void SearchingJasa(View view) {
         RecyclerView recyclerView = findViewById(R.id.activitylowongan_recycleviewlowongan);
         ArrayList <ObjectLowongan> newList = new ArrayList<>();
