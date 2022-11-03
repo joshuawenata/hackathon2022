@@ -47,24 +47,15 @@ public class Profile extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
+    ImageButton btnLogout1;
+    TextView btnLogout2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
         initComponents();
-
-        btnLogout.setOnClickListener(v -> {
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Profile.this);
-
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.clear();
-            editor.commit();
-
-            Intent i = new Intent(Profile.this, WelcomePage.class);
-            startActivity(i);
-            finish();
-        });
     }
 
     @SuppressLint("WrongViewCast")
@@ -75,6 +66,10 @@ public class Profile extends AppCompatActivity {
         imageavatar = findViewById(R.id.activityprofile_avatar);
         btnLogout = findViewById(R.id.logout_btn);
         btnLogout.setClickable(true);
+        btnLogout1 = findViewById(R.id.logout_btn1);
+        btnLogout1.setClickable(true);
+        btnLogout2 = findViewById(R.id.logout_btn2);
+        btnLogout2.setClickable(true);
         myScrollView = findViewById(R.id.myScrollView);
 
 
@@ -115,6 +110,42 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError firebaseError) {
             }
+        });
+
+        btnLogout.setOnClickListener(v -> {
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Profile.this);
+
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.clear();
+            editor.commit();
+
+            Intent i = new Intent(Profile.this, WelcomePage.class);
+            startActivity(i);
+            finish();
+        });
+
+        btnLogout1.setOnClickListener(v -> {
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Profile.this);
+
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.clear();
+            editor.commit();
+
+            Intent i = new Intent(Profile.this, WelcomePage.class);
+            startActivity(i);
+            finish();
+        });
+
+        btnLogout2.setOnClickListener(v -> {
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Profile.this);
+
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.clear();
+            editor.commit();
+
+            Intent i = new Intent(Profile.this, WelcomePage.class);
+            startActivity(i);
+            finish();
         });
     }
 

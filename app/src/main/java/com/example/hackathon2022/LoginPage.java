@@ -2,6 +2,7 @@ package com.example.hackathon2022;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -27,7 +28,9 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         txtNomor = findViewById(R.id.activitylogin_inputnomor);
         txtPassword = findViewById(R.id.activitylogin_inputpassword);
         btnMasuk = findViewById(R.id.activitylogin_btnMasuk);
-        txtRegistrasi = findViewById(R.id.activity_register_txt_masuk);
+        txtRegistrasi = findViewById(R.id.activitylogin_txtRegistrasi);
+        btnMasuk.setOnClickListener(this);
+        txtRegistrasi.setOnClickListener(this);
     }
 
     private void checkIfLoggedIn(){
@@ -37,9 +40,15 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 UserRepository.LOGGED_IN_USER = data;
 
                 if(data != null){
-                    Intent i = new Intent(LoginPage.this, HomePage.class);
-                    startActivity(i);
-                    finish();
+                    if(data.getRole().equals("users")){
+                        Intent i = new Intent(LoginPage.this, HomePage.class);
+                        startActivity(i);
+                        finish();
+                    }else if(data.getRole().equals("freelancer")){
+                        Intent i = new Intent(LoginPage.this, ProfileFreelancer.class);
+                        startActivity(i);
+                        finish();
+                    }
                 }
                 else{
                     SharedPreferences.Editor editor = preferences.edit();
@@ -57,8 +66,6 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
 
         checkIfLoggedIn();
         initComponents();
-        btnMasuk.setOnClickListener(this);
-        txtRegistrasi.setOnClickListener(this);
     }
 
     @Override
@@ -117,7 +124,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 Intent i = new Intent(LoginPage.this, HomePage.class);
                 startActivity(i);
                 finish();
-            }else{
+            }else if(data.getRole().equals("freelancer")){
                 Intent i = new Intent(LoginPage.this, ProfileFreelancer.class);
                 startActivity(i);
                 finish();

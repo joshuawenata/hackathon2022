@@ -89,10 +89,6 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         });
     }
 
-
-
-
-
     public void intoHome(View view) {
         myScrollView.smoothScrollTo(0,0);
     }
@@ -122,14 +118,6 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     public void intoSearch(View view) {
         startActivity(new Intent(this, ForumSearchPage.class));
     }
-
-
-
-
-
-
-
-
 
     public void intoModal(View view) {
         startActivity(new Intent(this, HomeModalusaha.class));
