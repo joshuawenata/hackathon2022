@@ -27,7 +27,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         txtNomor = findViewById(R.id.activitylogin_inputnomor);
         txtPassword = findViewById(R.id.activitylogin_inputpassword);
         btnMasuk = findViewById(R.id.activitylogin_btnMasuk);
-        txtRegistrasi = findViewById(R.id.activitylogin_txtRegistrasi);
+        txtRegistrasi = findViewById(R.id.activity_register_txt_masuk);
     }
 
     private void checkIfLoggedIn(){
@@ -64,7 +64,8 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
         if(view.equals(txtRegistrasi)){
-            Intent i = new Intent(LoginPage.this, RegisterPage.class);
+            Intent i = new Intent(LoginPage.this, PickRoles.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
         }
         else if(view.equals(btnMasuk)){

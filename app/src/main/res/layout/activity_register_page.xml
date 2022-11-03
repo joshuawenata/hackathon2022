@@ -18,24 +18,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="ContentDescription" />
 
-    <!--LOGO-->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/logotext_01"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        tools:ignore="ContentDescription" />
-
     <!--MAIN CONTENT-->
     <LinearLayout
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:gravity="center"
@@ -136,28 +121,27 @@
             android:background="@null"
             tools:ignore="ContentDescription" />
 
-        <LinearLayout
+
+    </LinearLayout>
+
+    <!--BACK BUTTON-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sudah_punya_akun"
-                android:textColor="@color/white"
-                android:fontFamily="@font/kanit_light"
-                />
-
-            <TextView
-                android:id="@+id/activityregister_txtMasuk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:fontFamily="@font/kanit_regular"
-                android:text="@string/masuk"
-                android:textColor="@color/primary"
-                tools:ignore="RtlHardcoded" />
-        </LinearLayout>
+            app:srcCompat="@drawable/arrow_back"
+            android:background="@null"
+            android:onClick="back"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

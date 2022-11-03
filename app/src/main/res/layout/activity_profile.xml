@@ -8,165 +8,225 @@
     android:background="@color/almost_blue"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        android:padding="20dp">
 
-        <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:elevation="2dp"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Akun Saya"
-            android:textAlignment="center"
-            android:textColor="@color/figma_gray"
-            android:textSize="20sp" />
+            app:srcCompat="@drawable/bg_profile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="-20dp"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Akun Saya"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="60dp"
+                />
 
             <ImageView
                 android:id="@+id/activityprofile_avatar"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_margin="5dp"
-                android:backgroundTint="@color/baseBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/absolute_round_gray"
                 android:padding="5dp"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/ic_baseline_person_24" />
-
-            <TextView
-                android:id="@+id/activityprofile_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:backgroundTint="@color/baseBlue"
-                android:fontFamily="@font/kanit_medium"
-                android:text="Joshua Wenata Sunarto"
-                android:textAlignment="center"
-                android:textColor="@color/elegant_black"
-                android:textSize="21sp" />
-
-            <TextView
-                android:id="@+id/activityprofile_phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/baseBlue"
-                android:fontFamily="@font/kanit_light"
-                android:text="081252346294"
-                android:textAlignment="center"
-                android:textColor="@android:color/darker_gray" />
-
-            <TextView
-                android:id="@+id/activityprofile_lokasi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/baseBlue"
-                android:fontFamily="@font/kanit_regular"
-                android:text="Kota Bandung"
-                android:textAlignment="center"
-                android:textColor="@android:color/darker_gray" />
-
-        </LinearLayout>
-
-        <!--    UBAH INFORMASI AKUN-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="5dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/card"
+                app:srcCompat="@drawable/ic_baseline_person_24"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
                 android:elevation="2dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="15dp"
-                android:clickable="true"
-                android:onClick="editProfile"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/kanit_medium"
-                    android:text="Ubah informasi akun"
-                    android:textColor="@color/baseBlue"
-                    android:textSize="12dp"
-                    android:clickable="true"
-                    android:onClick="editProfile"
-                    />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:onClick="editProfile"
-                    app:srcCompat="@drawable/ic_baseline_edit_24" />
-            </LinearLayout>
-        </LinearLayout>
-
-
-        <!--        KELUAR AKUN     -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginVertical="5dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/card"
-                android:elevation="4dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="15dp"
-                android:id="@+id/logout_btn"
-                android:clickable="true"
-                android:onClick="editProfile"
-                >
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/description_column"
+                android:elevation="2dp"
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/kanit_medium"
-                    android:text="Keluar"
-                    android:textColor="@color/danger"
-                    android:textSize="12dp" />
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="10dp"
+                    >
 
-                <ImageButton
-                    android:layout_width="wrap_content"
+
+                    <TextView
+                        android:id="@+id/activityprofile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/baseBlue"
+                        android:fontFamily="@font/kanit_medium"
+                        android:text="Joshua Wenata Sunarto"
+                        android:textAlignment="center"
+                        android:textColor="@color/elegant_black"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/activityprofile_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/baseBlue"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="081252346294"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/activityprofile_lokasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/baseBlue"
+                        android:fontFamily="@font/kanit_regular"
+                        android:text="Kota Bandung"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray" />
+                </LinearLayout>
+
+
+                <!--    UBAH INFORMASI AKUN-->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    app:srcCompat="@drawable/ic_baseline_exit_to_app_24"
-                    />
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:alpha="0.5"
+                        android:background="@color/figma_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:onClick="editProfile"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="15dp">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:onClick="editProfile"
+                            app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/kanit_medium"
+                            android:onClick="editProfile"
+                            android:text="Ubah informasi akun"
+                            android:textColor="@color/figma_gray"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="10dp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--        KELUAR AKUN     -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/logout_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/card"
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:onClick="editProfile"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="15dp">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kanit_medium"
+                        android:text="Keluar"
+                        android:textColor="@color/danger"
+                        android:textSize="12sp"
+                        android:layout_marginStart="10dp"
+                        />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
 
     <!--MAIN CONSTRAINT BUAT APP BAR-->
     <androidx.constraintlayout.widget.ConstraintLayout

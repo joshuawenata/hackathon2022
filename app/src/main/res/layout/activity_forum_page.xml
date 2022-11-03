@@ -135,7 +135,11 @@
                             android:textColor="@color/figma_gray"
                             tools:ignore="NestedWeights"
                             android:autofillHints=""
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:focusableInTouchMode="false"
+                            android:editable="false"
+                            android:onClick="intoSearch"
+                            />
 
                         <!--ICON NYA SEARCH-->
                         <ImageView

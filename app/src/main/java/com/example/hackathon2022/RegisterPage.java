@@ -38,7 +38,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
         txtPassword = findViewById(R.id.activityregister_inputpassword);
         txtConfirmPassword = findViewById(R.id.activityregister_inputconfirmpassword);
         btnDaftar = findViewById(R.id.activityregister_btnDaftar);
-        txtMasuk = findViewById(R.id.activityregister_txtMasuk);
+        txtMasuk = findViewById(R.id.activity_register_txt_masuk);
     }
 
     @Override
@@ -122,6 +122,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
                         Intent i = new Intent(context, RegisterCategory.class);
                         i.putExtra("nomor", nomor);
                         i.putExtra("password", password);
+                        i.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
                         startActivity(i);
                     }
                 }
@@ -132,5 +133,9 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
             });
 
         }
+    }
+
+    public void back(View view) {
+        finish();
     }
 }

@@ -8,21 +8,6 @@
     android:background="@color/backgroundPrimary"
     >
 
-    <!--LOGO-->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/logotext_01"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="650dp"
@@ -34,17 +19,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@drawable/welcome_bg"
         android:gravity="center"
-        android:layout_marginTop="50dp"
         >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pilih Roles Anda"
+            android:text="Anda mendaftarkan diri sebagai"
             android:fontFamily="@font/kanit_semibold"
-            android:textColor="@color/primary"
-            android:textSize="24sp"
-            android:layout_marginVertical="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginVertical="30dp"
+            android:textAlignment="center"
             />
 
         <LinearLayout
@@ -129,80 +114,85 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         android:visibility="invisible"
-                        />
+                        android:contentDescription="CHECK" />
                     <ImageButton
                         android:id="@+id/activityrole_freelanceric"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/ic_freelancer"
-                        android:background="@null"
+                        android:layout_marginBottom="20dp"
                         android:adjustViewBounds="true"
+                        android:alpha="0.7"
+                        android:background="@null"
+                        android:contentDescription="@string/freelanceric"
                         android:maxWidth="10dp"
                         android:maxHeight="10dp"
                         android:scaleType="fitCenter"
-                        android:layout_marginBottom="20dp"
-                        android:alpha="0.7"
-                        />
+                        android:src="@drawable/ic_freelancer" />
 
                     <TextView
-                        android:layout_marginTop="4dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Freelancer"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="4dp"
                         android:fontFamily="@font/kanit_regular"
-                        android:textColor="@color/figma_second_text"/>
+                        android:text="@string/freelancer"
+                        android:textColor="@color/figma_second_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
-
-                <!--                &lt;!&ndash;SATU ITEM&ndash;&gt;-->
-                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-                <!--                    android:layout_width="130dp"-->
-                <!--                    android:layout_height="100dp"-->
-                <!--                    android:background="@drawable/description_column"-->
-                <!--                    android:elevation="2dp"-->
-                <!--                    android:layout_margin="3dp"-->
-                <!--                    android:padding="10dp"-->
-                <!--                    >-->
-                <!--                    <ImageButton-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="match_parent"-->
-                <!--                        android:src="@drawable/ic_misc_other"-->
-                <!--                        android:background="@null"-->
-                <!--                        android:adjustViewBounds="true"-->
-                <!--                        android:maxWidth="10dp"-->
-                <!--                        android:maxHeight="10dp"-->
-                <!--                        android:scaleType="fitCenter"-->
-                <!--                        android:layout_marginBottom="16dp"-->
-                <!--                        android:alpha="0.7"-->
-                <!--                        />-->
-
-                <!--                    <TextView-->
-                <!--                        android:layout_marginTop="4dp"-->
-                <!--                        android:layout_width="wrap_content"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:text="Lainnya"-->
-                <!--                        app:layout_constraintStart_toStartOf="parent"-->
-                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--                        android:fontFamily="@font/kanit_regular"-->
-                <!--                        android:textColor="@color/figma_second_text"/>-->
-                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
             </LinearLayout>
         </LinearLayout>
         <ImageButton
             android:id="@+id/activityrole_lanjut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/lanjutbtn"
             android:layout_marginHorizontal="10dp"
             android:layout_marginVertical="10dp"
-            android:background="@null"/>
+            android:background="@null"
+            android:contentDescription="@string/lanjutbtt"
+            android:src="@drawable/lanjutbtn" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_light"
+                android:text="@string/sudah_punya_akun"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/activity_register_txt_masuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/kanit_semibold"
+                android:text="@string/masuk"
+                android:textColor="@color/primary"
+                tools:ignore="RtlHardcoded"
+                android:focusable="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/arrow_back"
+            android:background="@null"
+            android:contentDescription="@string/backbtt" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -119,6 +119,10 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         startActivity(new Intent(this, ForumCategory.class));
     }
 
+    public void intoSearch(View view) {
+        startActivity(new Intent(this, ForumSearchPage.class));
+    }
+
 
 
 

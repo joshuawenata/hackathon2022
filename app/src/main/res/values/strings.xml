@@ -13,10 +13,10 @@
 
     <!--    REGISTER    -->
     <string name="register_et_fullname">Nama lengkap UMKM atau bisnis anda</string>
-    <string name="register_et_email">Nomor whatsapp anda (62XXXXXXXXXX)</string>
+    <string name="register_et_email">Nomor WhatsApp (62xxxxxxxxxxx)</string>
     <string name="register_et_password">Masukkan kata kunci</string>
     <string name="register_et_confirm">Konfirmasi kata kunci</string>
-    <string name="register_tagline">Mulai perjalanan UMKM anda bersama Kami</string>
+    <string name="register_tagline">Mulai perjalanan UMKM bersama Kami</string>
 
     <!--    LOGIN      -->
     <string name="login_tagline">Lanjutkan perjalanan UMKM anda bersama Kami</string>
@@ -82,6 +82,11 @@
     <string name="social_media">Social Media</string>
     <string name="e_commerce">E-Commerce</string>
     <string name="apa_kategori_forum_yang_ingin_dibuat">Kategori forum anda</string>
+    <string name="daftar">Daftar</string>
+    <string name="backbtt">BACKBTT</string>
+    <string name="lanjutbtt">LANJUTBTT</string>
+    <string name="freelancer">Freelancer</string>
+    <string name="freelanceric">FREELANCERIC</string>
     <string-array name="umkm_user_category">
         <item>Fabrikasi</item>
         <item>Food and Beverage</item>

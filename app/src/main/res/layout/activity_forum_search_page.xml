@@ -6,4 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".ForumSearchPage">
 
+    <!--    TOP BAR     -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/backgroundPrimary"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:minHeight="50dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="back"
+            app:srcCompat="@drawable/arrow_back"
+            tools:ignore="ContentDescription,OnClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:fontFamily="@font/kanit_semibold"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
