@@ -110,6 +110,7 @@ public class ForumCardPage extends AppCompatActivity{
         if(path.equals("")){
             imageprofile.setImageResource(R.drawable.asset_forum);
             thumbnailHolder.setPadding(30,30,30,30);
+            imageprofile.setVisibility(View.VISIBLE);
         }else{
             Log.i("cek", path);
             storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(path);
@@ -125,6 +126,7 @@ public class ForumCardPage extends AppCompatActivity{
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            imageprofile.setVisibility(View.VISIBLE);
         }
 
         txtjudul.setText(judul);
