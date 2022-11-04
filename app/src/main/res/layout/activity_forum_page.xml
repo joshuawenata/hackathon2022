@@ -136,9 +136,7 @@
                             tools:ignore="NestedWeights"
                             android:autofillHints=""
                             android:inputType="text"
-                            android:focusableInTouchMode="false"
-                            android:editable="false"
-                            android:onClick="intoSearch"
+                            android:onClick="SearchingForum"
                             />
 
                         <!--ICON NYA SEARCH-->

@@ -109,7 +109,8 @@
                         android:fontFamily="@font/kanit_light"
                         android:text="Ditanyakan "
                         android:textColor="@color/figma_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/activityforumcardpage_username"
@@ -118,7 +119,8 @@
                         android:fontFamily="@font/kanit_light"
                         android:text="Author"
                         android:textColor="@color/figma_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
                     <View
                         android:layout_width="0dp"
@@ -143,7 +145,8 @@
                             android:maxHeight="20dp"
                             android:onClick="AddStar"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/ic_baseline_star_border_24" />
+                            app:srcCompat="@drawable/ic_baseline_star_border_24"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/activityforumcardpage_starCount"
@@ -152,7 +155,8 @@
                             android:layout_marginHorizontal="3dp"
                             android:fontFamily="@font/kanit_light"
                             android:text="0"
-                            android:textColor="@color/figma_gray" />
+                            android:textColor="@color/figma_gray"
+                            tools:ignore="HardcodedText" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -161,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginBottom="10dp"
-                    >
+                    tools:ignore="RtlHardcoded">
                     <TextView
                         android:id="@+id/activityforumcardpage_kategori"
                         android:layout_width="wrap_content"
@@ -170,7 +174,8 @@
                         android:text="Kategori Forum"
                         android:textColor="@color/figma_gray"
                         android:fontFamily="@font/kanit_light"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/name"
@@ -179,7 +184,8 @@
                         android:gravity="bottom"
                         android:text="  •  "
                         android:textColor="@color/figma_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/date"
@@ -189,7 +195,8 @@
                         android:text="11/10/2022"
                         android:fontFamily="@font/kanit_light"
                         android:textColor="@color/figma_gray"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <TextView
@@ -225,7 +232,7 @@
                         android:text="0"
                         android:textAlignment="textEnd"
                         android:textColor="@android:color/darker_gray"
-                        />
+                        tools:ignore="HardcodedText,RtlHardcoded" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -234,7 +241,7 @@
                         android:text="/200"
                         android:textAlignment="textEnd"
                         android:textColor="@android:color/darker_gray"
-                        />
+                        tools:ignore="HardcodedText" />
 
                     <EditText
                         android:id="@+id/activityforumcardpage_addanswer"
@@ -248,7 +255,7 @@
                         android:textColor="@color/black"
                         android:textColorHint="@color/figma_gray"
                         android:textSize="12sp"
-                        tools:ignore="NestedWeights" />
+                        tools:ignore="Autofill,HardcodedText,NestedWeights,TextFields" />
 
                     <ImageButton
                         android:id="@+id/ic_comment"
@@ -262,7 +269,8 @@
                         android:onClick="pushToDatabase"
                         android:padding="4dp"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/ic_baseline_send_24" />
+                        app:srcCompat="@drawable/ic_baseline_send_24"
+                        tools:ignore="ContentDescription" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -285,7 +293,7 @@
                     android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:layout_marginVertical="4dp"
-                    />
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -293,7 +301,8 @@
                     android:text="Belum ada jawaban forum."
                     android:textAlignment="center"
                     android:fontFamily="@font/kanit_regular"
-                    />
+                    android:textColor="@color/figma_second_text"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -301,7 +310,8 @@
                     android:text="Tambahkan jawaban untuk berkontribusi"
                     android:textAlignment="center"
                     android:fontFamily="@font/kanit_regular"
-                    />
+                    android:textColor="@color/figma_second_text"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <!--JAWABAN-->
@@ -334,7 +344,8 @@
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
 
