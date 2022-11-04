@@ -242,6 +242,16 @@
                     android:textColor="@color/figma_gray"
                     android:text="Informasi tambahan apapun di sini yang bisa membantu menjelaskan jasa macam apa ini" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="Portofolio Freelancer"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
