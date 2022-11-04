@@ -76,11 +76,7 @@ public class SupplierTerdekatAdapter extends RecyclerView.Adapter<SupplierTerdek
 
     @Override
     public int getItemCount() {
-        if(SupplierList.size()>=2){
-            return 2;
-        }else{
-            return SupplierList.size();
-        }
+        return SupplierList.size();
     }
 
     public class SupplierViewHolder extends RecyclerView.ViewHolder {
