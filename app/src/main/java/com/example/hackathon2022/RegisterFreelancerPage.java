@@ -44,7 +44,7 @@ public class RegisterFreelancerPage extends AppCompatActivity implements View.On
     private EditText txtNomor, txtPassword, txtConfirmPassword;
     private ImageButton btnDaftar;
     private TextView txtMasuk;
-    Context context;
+    Context context = this;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 

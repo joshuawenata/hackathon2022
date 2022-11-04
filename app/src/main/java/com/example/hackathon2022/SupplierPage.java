@@ -116,41 +116,28 @@ public class SupplierPage extends AppCompatActivity {
         finish();
     }
 
-
-
-
-
-
-
-
     public void intoFnB(View view) {
         startActivity(new Intent(this, SupplierFnb.class));
-        finish();
     }
 
     public void intoFabrikasi(View view) {
         startActivity(new Intent(this, SupplierFabrikasi.class));
-        finish();
     }
 
     public void intoElektronik(View view) {
         startActivity(new Intent(this, SupplierElektronik.class));
-        finish();
     }
 
     public void intoPangan(View view) {
         startActivity(new Intent(this, SupplierPangan.class));
-        finish();
     }
 
     public void intoTransportasi(View view) {
         startActivity(new Intent(this, SupplierTransportasi.class));
-        finish();
     }
 
     public void intoPengolahan(View view) {
         startActivity(new Intent(this, SupplierPengolahan.class));
-        finish();
     }
 
     public void SearchingSupplier(View view) {

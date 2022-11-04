@@ -187,7 +187,7 @@ public class ProfileFreelancerEdit extends AppCompatActivity {
     }
 
     public void backtoProfile(View view) {
-        startActivity(new Intent(this, Profile.class));
+        startActivity(new Intent(this, ProfileFreelancer.class));
         finish();
     }
 }
