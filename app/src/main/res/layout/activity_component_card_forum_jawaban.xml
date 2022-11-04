@@ -63,7 +63,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/componentcardforum_date"
+                android:id="@+id/componentcardforumjawaban_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="22h"
@@ -91,7 +91,7 @@
 
     <!--DESC-->
     <TextView
-        android:id="@+id/componentcardforum_Pertanyaan"
+        android:id="@+id/componentcardforumjawaban_jawaban"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:maxHeight="50dp"
