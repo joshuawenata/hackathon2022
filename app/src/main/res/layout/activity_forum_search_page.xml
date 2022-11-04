@@ -66,34 +66,51 @@
                 android:id="@+id/activityhome_search_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:background="@drawable/round_btt_white"
+                android:elevation="2dp"
+                android:focusableInTouchMode="false"
                 android:fontFamily="@font/kanit_regular"
                 android:hint="@string/forum_apa_yang_ingin_ditanyakan"
-                android:paddingVertical="7dp"
-                android:paddingHorizontal="12dp"
-                android:textSize="13sp"
-                android:textColorHint="@color/figma_gray"
-                android:textColor="@color/figma_gray"
-                tools:ignore="NestedWeights"
-                android:autofillHints=""
                 android:inputType="text"
-                android:focusableInTouchMode="false"
-                />
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:textColor="@color/figma_gray"
+                android:textColorHint="@color/figma_gray"
+                android:textSize="13sp"
+                tools:ignore="NestedWeights" />
 
             <!--ICON NYA SEARCH-->
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.05"
                 android:background="@drawable/roundcorner"
+                android:elevation="2dp"
+                android:onClick="SearchingForum"
                 android:padding="7dp"
                 app:srcCompat="@drawable/search"
                 app:tint="@color/figma_gray"
-                tools:ignore="ContentDescription"
-                android:onClick="SearchingForum"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/almost_blue"
+            android:orientation="vertical"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activityhome_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:paddingHorizontal="10dp"
+                tools:listitem="@layout/activity_component_card_forum"
                 />
         </LinearLayout>
     </LinearLayout>

@@ -257,7 +257,7 @@ android:background="@color/bgaabu"
                     android:orientation="horizontal">
 
                     <HorizontalScrollView
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="90dp"
                         android:orientation="vertical"
                         android:layout_weight="1"
@@ -267,10 +267,10 @@ android:background="@color/bgaabu"
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/activityprofilefreelancer_recyclerviewfreelancer"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
                             >
                         </androidx.recyclerview.widget.RecyclerView>
 
