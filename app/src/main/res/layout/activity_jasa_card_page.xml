@@ -261,6 +261,7 @@ android:background="@color/bgaabu"
                 <!--INFORMASI TAMBAHAN-->
 
                 <TextView
+                    android:id="@+id/activityjasacardpage_portofoliotitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"

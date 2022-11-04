@@ -31,7 +31,7 @@ import java.util.ArrayList;
 
 public class JasaCardPage extends AppCompatActivity {
 
-    TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar, txtjasa;
+    TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar, txtjasa, txtPorto;
     String nama, deskripsi, lokasi, date, star, jasakey, nomor, jasa;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -68,6 +68,7 @@ public class JasaCardPage extends AppCompatActivity {
         txtdate = findViewById(R.id.activityjasacardpage_date);
         txtStar = findViewById(R.id.activityjasacardpage_starCount);
         txtjasa = findViewById(R.id.activityjasacardpage_jasa);
+        txtPorto = findViewById(R.id.activityjasacardpage_portofoliotitle);
         whatsappBtn = findViewById(R.id.wa_btn);
         rv = findViewById(R.id.activityprofilefreelancer_recyclerviewfreelancer);
 
@@ -103,6 +104,10 @@ public class JasaCardPage extends AppCompatActivity {
                     }
                 }
 
+                if(newList.size()==0){
+                    txtPorto.setVisibility(View.INVISIBLE);
+                }
+
                 rv.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
                 FreelancerAdapter TopAdapter = new FreelancerAdapter(context, newList);
                 rv.setAdapter(TopAdapter);
@@ -114,6 +119,7 @@ public class JasaCardPage extends AppCompatActivity {
 
             }
         });
+
     }
 
     public void backtoHome(View view) {

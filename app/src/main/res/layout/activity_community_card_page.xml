@@ -259,6 +259,7 @@
                     android:text="Informasi tambahan apapun di sini yang bisa membantu menjelaskan jasa macam apa ini" />
 
                 <TextView
+                    android:id="@+id/activitycommunitycardpage_portofoliotitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"

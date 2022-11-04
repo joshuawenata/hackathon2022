@@ -31,7 +31,7 @@ import java.util.ArrayList;
 
 public class CommunityCardPage extends AppCompatActivity {
 
-    TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar, txtjasa;
+    TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar, txtjasa, txtPorto;
     String nama, deskripsi, lokasi, date, star, jasakey, nomor, jasa;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference,databaseReferences;
@@ -56,6 +56,7 @@ public class CommunityCardPage extends AppCompatActivity {
         txtdate = findViewById(R.id.activityjasacardpage_date);
         txtStar = findViewById(R.id.activityjasacardpage_starCount);
         txtjasa = findViewById(R.id.activityjasacardpage_jasa);
+        txtPorto = findViewById(R.id.activitycommunitycardpage_portofoliotitle);
         rv = findViewById(R.id.activityprofilefreelancer_recyclerviewfreelancer);
 
         Intent intent = getIntent();
@@ -90,6 +91,10 @@ public class CommunityCardPage extends AppCompatActivity {
                     }
                 }
 
+                if(newList.size()==0){
+                    txtPorto.setVisibility(View.INVISIBLE);
+                }
+
                 rv.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
                 FreelancerAdapter TopAdapter = new FreelancerAdapter(context, newList);
                 rv.setAdapter(TopAdapter);
@@ -101,6 +106,7 @@ public class CommunityCardPage extends AppCompatActivity {
 
             }
         });
+
     }
 
     public void backtoHome(View view) {
