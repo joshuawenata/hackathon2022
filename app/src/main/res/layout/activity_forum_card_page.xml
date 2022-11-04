@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activityforumcardpage_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ForumCardPage"
     android:background="@color/bgaabu"
     android:fillViewport="true"
-    >
+    tools:context=".ForumCardPage">
 
     <!--MAIN HOLDER-->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -90,29 +88,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_semibold"
+                    android:lineSpacingExtra="-6sp"
                     android:paddingHorizontal="15dp"
                     android:textColor="@color/primary"
-                    android:textSize="22sp"
-                    tools:text="A short or very long title to put in here" />
-
-
-                <TextView
-                    android:id="@+id/activityforumcardpage_pertanyaan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_semibold"
-                    android:paddingHorizontal="15dp"
-                    android:textColor="@color/figma_gray"
-                    android:textSize="15sp"
-                    tools:text="A short or very long title to put in here"
-                    android:layout_marginBottom="8dp"
-                    />
+                    android:textSize="20sp"
+                    tools:text="Bagaimana caranya mendaftar akun Tokopedia Seller?" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="15dp">
+                    android:paddingHorizontal="15dp"
+                    android:gravity="center"
+                    >
 
                     <TextView
                         android:id="@+id/author"
@@ -120,7 +108,8 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kanit_light"
                         android:text="Ditanyakan "
-                        android:textColor="@color/figma_gray" />
+                        android:textColor="@color/figma_gray"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/activityforumcardpage_username"
@@ -128,7 +117,8 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kanit_light"
                         android:text="Author"
-                        android:textColor="@color/figma_gray" />
+                        android:textColor="@color/figma_gray"
+                        android:textSize="13sp" />
 
                     <View
                         android:layout_width="0dp"
@@ -180,7 +170,7 @@
                         android:text="Kategori Forum"
                         android:textColor="@color/figma_gray"
                         android:fontFamily="@font/kanit_light"
-                        android:textSize="13sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/name"
@@ -196,20 +186,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="bottom"
-                        android:text="Nov 25"
+                        android:text="11/10/2022"
                         android:fontFamily="@font/kanit_light"
                         android:textColor="@color/figma_gray"
-                        android:textSize="13sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/activityforumcardpage_pertanyaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kanit_regular"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="13sp"
+                    tools:text="@string/loremipsum"
+                    />
 
                 <LinearLayout
                     android:id="@+id/comment_holder"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:paddingVertical="10dp"
+                    >
 
                     <TextView
                         android:id="@+id/activityforumcardpage_answercount"
@@ -239,6 +244,7 @@
                         android:backgroundTint="@color/black"
                         android:fontFamily="@font/kanit_regular"
                         android:hint="Tambahkan jawaban"
+                        android:maxLength="200"
                         android:textColor="@color/black"
                         android:textColorHint="@color/figma_gray"
                         android:textSize="12sp"
@@ -258,8 +264,44 @@
                         android:scaleType="fitCenter"
                         app:srcCompat="@drawable/ic_baseline_send_24" />
                 </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/belum_ada_jawaban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:background="@color/white"
+                android:paddingBottom="30dp"
+                >
 
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_question_answer_24"
+                    android:alpha="0.5"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:layout_marginVertical="4dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Belum ada jawaban forum."
+                    android:textAlignment="center"
+                    android:fontFamily="@font/kanit_regular"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tambahkan jawaban untuk berkontribusi"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/kanit_regular"
+                    />
             </LinearLayout>
 
             <!--JAWABAN-->
@@ -274,11 +316,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:paddingHorizontal="20dp"
                     android:gravity="center"
-                    android:paddingTop="10dp"
+                    android:paddingTop="20dp"
                     android:background="@color/white"
                     >
                     <!--JAWABAN FORUM TEXT-->

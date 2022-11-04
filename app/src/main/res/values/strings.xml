@@ -87,6 +87,8 @@
     <string name="lanjutbtt">LANJUTBTT</string>
     <string name="freelancer">Freelancer</string>
     <string name="freelanceric">FREELANCERIC</string>
+    <string name="jasa">Jasa </string>
+    <string name="desain_grafis">Desain Grafis</string>
     <string-array name="umkm_user_category">
         <item>Fabrikasi</item>
         <item>Food and Beverage</item>

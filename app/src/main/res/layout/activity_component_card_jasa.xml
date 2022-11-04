@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginVertical="2dp"
-    android:padding="4dp"
-    >
+    android:padding="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        >
+        tools:ignore="DisableBaselineAlignment,UselessParent">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/card"
-            android:orientation="horizontal"
             android:gravity="center"
-            >
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
@@ -30,23 +30,24 @@
                 >
                 <ImageView
                     android:id="@+id/componentcardjasa_image"
-                    android:layout_width="80dp"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/jasa_art"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
-
-                    />
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/jasa_art"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="5"
                 android:layout_marginHorizontal="10dp"
                 android:paddingHorizontal="5dp"
-                >
+                tools:ignore="NestedWeights">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -62,38 +63,27 @@
                         android:textColor="@color/figma_text"
                         android:maxWidth="150dp"
                         android:maxHeight="20dp"
-                        android:text="Nama Jasa UMKM"
+                        android:text="Ryan Creativity Co."
                         android:textSize="16sp"
                         android:maxLines="1"
-                        />
+                        tools:ignore="HardcodedText" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/kanit_semibold"
-                            android:textColor="@color/figma_text"
-                            android:maxWidth="150dp"
-                            android:maxHeight="20dp"
-                            android:text="as a "
-                            android:textSize="16sp"
-                            android:maxLines="1"
-                            />
-
-                        <TextView
                             android:id="@+id/componentcardjasa_jasa"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:fontFamily="@font/kanit_semibold"
-                            android:textColor="@color/figma_text"
                             android:maxWidth="150dp"
                             android:maxHeight="20dp"
-                            android:text="Graphic Designer"
-                            android:textSize="16sp"
                             android:maxLines="1"
+                            android:text="Graphic Designer"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp"
+                            tools:ignore="HardcodedText"
                             />
                     </LinearLayout>
 
@@ -106,10 +96,10 @@
                         android:textColor="@color/figma_text"
                         android:maxWidth="150dp"
                         android:maxHeight="20dp"
-                        android:text="Lokasi Jasa UMKM"
+                        android:text="Lokasi Penyedia Jasa"
                         android:textSize="12sp"
                         android:maxLines="1"
-                        />
+                        tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <TextView
@@ -124,7 +114,6 @@
                     android:maxHeight="20dp"
                     android:maxLines="2"
                     android:ellipsize="end"
-                    android:layout_marginBottom="4dp"
                     />
 
                 <!--STAR,COMMENT,ETC-->
@@ -140,7 +129,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        />
+                        tools:ignore="InefficientWeight" />
 
                     <LinearLayout
                         android:id="@+id/star_holder"
@@ -155,8 +144,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@null"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="18dp"
+                            android:minWidth="18dp"
+                            android:scaleType="fitCenter"
                             app:srcCompat="@drawable/ic_baseline_star_24"
-                            />
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/componentcardlowongan_starcount"
@@ -166,7 +159,7 @@
                             android:fontFamily="@font/kanit_light"
                             android:textColor="@android:color/darker_gray"
                             android:layout_marginHorizontal="3dp"
-                            android:textSize="12sp"
+                            android:textSize="11sp"
                             />
                     </LinearLayout>
                 </LinearLayout>

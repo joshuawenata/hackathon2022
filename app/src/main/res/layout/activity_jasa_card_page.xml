@@ -86,50 +86,27 @@ android:background="@color/bgaabu"
                     android:id="@+id/activityjasacardpage_nama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Nama jasa apapun to put in here"
+                    tools:text="Ryan Creative Co."
                     android:fontFamily="@font/kanit_semibold"
                     android:textColor="@color/primary"
-                    android:textSize="22sp"
+                    android:textSize="20sp"
                     />
+
+                <TextView
+                    android:id="@+id/activityjasacardpage_jasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kanit_semibold"
+                    android:text="@string/desain_grafis"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:gravity="center"
                     >
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/jasa_type"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:fontFamily="@font/kanit_light"-->
-<!--                        android:text="FnB, Packaging"-->
-<!--                        android:textColor="@color/figma_gray" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/name"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:gravity="bottom"-->
-<!--                        android:text="  •  "-->
-<!--                        android:textColor="@color/figma_gray"-->
-<!--                        android:textSize="13sp" />-->
-
-                    <TextView
-                        android:id="@+id/activityjasacardpage_jasa"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="Jasa"
-                        android:textColor="@color/figma_gray" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="bottom"
-                        android:text="  •  "
-                        android:textColor="@color/figma_gray"
-                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/activityjasacardpage_lokasi"
@@ -137,6 +114,7 @@ android:background="@color/bgaabu"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kanit_light"
                         android:text="Lokasi"
+                        android:textSize="13sp"
                         android:textColor="@color/figma_gray" />
 
                     <TextView
@@ -152,6 +130,7 @@ android:background="@color/bgaabu"
                         android:layout_height="wrap_content"
                         android:gravity="bottom"
                         android:text="Sejak "
+                        android:textSize="13sp"
                         android:fontFamily="@font/kanit_light"
                         android:textColor="@color/figma_gray"
                         />
@@ -161,7 +140,8 @@ android:background="@color/bgaabu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="bottom"
-                        android:text="Nov 25"
+                        android:text="10/11/2022"
+                        android:textSize="13sp"
                         android:fontFamily="@font/kanit_light"
                         android:textColor="@color/figma_gray"
                         />
@@ -198,7 +178,7 @@ android:background="@color/bgaabu"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="3dp"
                             android:fontFamily="@font/kanit_light"
-                            android:text="0"
+                            android:text="134"
                             android:textColor="@color/figma_gray" />
                     </LinearLayout>
                 </LinearLayout>
@@ -234,7 +214,7 @@ android:background="@color/bgaabu"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginVertical="5dp"
-                    android:fontFamily="@font/kanit_regular"
+                    android:fontFamily="@font/kanit_light"
                     android:textColor="@color/figma_gray"
                     android:text="@string/loremipsum" />
 
@@ -254,9 +234,9 @@ android:background="@color/bgaabu"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginVertical="5dp"
-                    android:fontFamily="@font/kanit_regular"
-                    android:textColor="@color/figma_gray"
-                    android:text="Informasi tambahan apapun di sini yang bisa membantu menjelaskan jasa macam apa ini" />
+                    android:fontFamily="@font/kanit_light"
+                    android:text="Informasi tambahan apapun di sini yang bisa membantu menjelaskan jasa macam apa ini"
+                    android:textColor="@color/figma_gray" />
 
                 <!--INFORMASI TAMBAHAN-->
                 <TextView

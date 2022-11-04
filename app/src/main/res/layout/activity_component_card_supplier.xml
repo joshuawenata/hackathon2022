@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="140dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginVertical="2dp"
     android:padding="4dp"
-    >
+    tools:ignore="DisableBaselineAlignment">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -14,7 +15,7 @@
         android:background="@drawable/card"
         android:orientation="horizontal"
         android:gravity="center"
-        >
+        tools:ignore="UselessParent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -26,10 +27,12 @@
                 android:id="@+id/componentcardsupplier_image"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_supplier_gray"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                />
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_supplier_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
@@ -39,7 +42,7 @@
             android:layout_weight="5"
             android:layout_marginHorizontal="10dp"
             android:paddingHorizontal="5dp"
-            >
+            tools:ignore="InefficientWeight,NestedWeights">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -58,19 +61,20 @@
                     android:text="Nama Supplier"
                     android:textSize="16sp"
                     android:maxLines="1"
-                    />
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/componentcardsupplier_lokasi"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit_regular"
-                    android:textColor="@color/figma_text"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/kanit_semibold"
                     android:maxWidth="150dp"
                     android:maxHeight="20dp"
-                    android:text="@string/lokasi_supplier"
-                    android:textSize="12sp"
                     android:maxLines="1"
+                    android:text="Graphic Designer"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText"
                     />
             </LinearLayout>
 
@@ -85,7 +89,7 @@
                 android:minWidth="250dp"
                 android:maxHeight="20dp"
                 android:maxLines="1"
-                />
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/componentcardsupplier_deskripsi"
@@ -130,8 +134,13 @@
                         android:id="@+id/componentcardforum_starbtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
                         android:background="@null"
+                        android:maxWidth="18dp"
+                        android:minWidth="18dp"
+                        android:scaleType="fitCenter"
                         app:srcCompat="@drawable/ic_baseline_star_24"
+                        tools:ignore="ContentDescription"
                         />
 
                     <TextView

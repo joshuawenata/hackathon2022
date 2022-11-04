@@ -62,6 +62,7 @@ public class ForumCardPage extends AppCompatActivity{
     ImageView imageprofile;
     StorageReference storageReference;
     NestedScrollView sv;
+    LinearLayout noAnswer;
 
     ArrayList<ObjectReply> newList = new ArrayList<>();
     Context context = this;
@@ -90,6 +91,7 @@ public class ForumCardPage extends AppCompatActivity{
         starBtn = findViewById(R.id.activityforumcardpage_starButton);
         imageprofile = findViewById(R.id.activityforumcardpage_imageview);
         sv = findViewById(R.id.activityforumcardpage_scrollview);
+        noAnswer = findViewById(R.id.belum_ada_jawaban);
 
         Intent intent = getIntent();
         forumkey = intent.getStringExtra("key");
@@ -170,9 +172,11 @@ public class ForumCardPage extends AppCompatActivity{
 
                 if(newList.size()>0){
                     labelJawaban.setVisibility(View.VISIBLE);
+                    noAnswer.setVisibility(View.GONE);
                     sv.setMinimumHeight(500);
                 }else{
-                    labelJawaban.setVisibility(View.INVISIBLE);
+                    noAnswer.setVisibility(View.VISIBLE);
+                    labelJawaban.setVisibility(View.GONE);
                 }
 
                 recyclerJawaban.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));

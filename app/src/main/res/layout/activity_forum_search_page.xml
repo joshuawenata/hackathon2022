@@ -6,41 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".ForumSearchPage">
 
-    <!--    TOP BAR     -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/backgroundPrimary"
-        android:elevation="4dp"
-        android:gravity="center_vertical"
-        android:minHeight="50dp"
-        android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        >
 
-        <ImageButton
-            android:layout_width="wrap_content"
+        <!--    TOP BAR     -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@null"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="back"
-            app:srcCompat="@drawable/arrow_back"
-            tools:ignore="ContentDescription,OnClick" />
+            android:background="@color/backgroundPrimary"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:minHeight="50dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            >
 
-        <TextView
-            android:layout_width="wrap_content"
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="back"
+                app:srcCompat="@drawable/arrow_back"
+                tools:ignore="ContentDescription,OnClick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/kanit_semibold"
+                android:text="Search Forum"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <!--MAIN HOLDER NYA SEARCH BAR-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="15dp"
-            android:fontFamily="@font/kanit_semibold"
-            android:text=""
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText" />
+            android:layout_marginVertical="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="NestedWeights"
+            android:elevation="2dp"
+            android:paddingHorizontal="15dp"
+            >
 
+            <!--EDIT TEXT SEARCH-->
+            <EditText
+                android:id="@+id/activityhome_search_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_btt_white"
+                android:fontFamily="@font/kanit_regular"
+                android:hint="@string/forum_apa_yang_ingin_ditanyakan"
+                android:paddingVertical="7dp"
+                android:paddingHorizontal="12dp"
+                android:textSize="13sp"
+                android:textColorHint="@color/figma_gray"
+                android:textColor="@color/figma_gray"
+                tools:ignore="NestedWeights"
+                android:autofillHints=""
+                android:inputType="text"
+                android:focusableInTouchMode="false"
+                />
+
+            <!--ICON NYA SEARCH-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.05"
+                android:background="@drawable/roundcorner"
+                android:padding="7dp"
+                app:srcCompat="@drawable/search"
+                app:tint="@color/figma_gray"
+                tools:ignore="ContentDescription"
+                android:onClick="SearchingForum"
+
+                />
+        </LinearLayout>
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
