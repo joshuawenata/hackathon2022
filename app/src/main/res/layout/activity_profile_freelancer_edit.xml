@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:fontFamily="@font/kanit_semibold"
-                android:text="Ubah Profile"
+                android:text="Ubah Data Freelancer"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -104,8 +104,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nama Freelancer"
+                    android:text="Nama Lengkap Anda"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_name"
@@ -132,6 +133,7 @@
                     android:layout_height="wrap_content"
                     android:text="Nomor Handphone"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_phone"
@@ -156,8 +158,36 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lokasi UMKM/Bisnis Anda"
+                    android:text="Jasa Anda"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
+                    android:paddingHorizontal="20dp"/>
+                <EditText
+                    android:id="@+id/activityubahprofile_kategori_umkm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kanit_regular"
+                    android:text="FnB"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="20dp"
+                    android:backgroundTint="@color/figma_gray"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi Anda"
+                    android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_lokasi_umkm"
@@ -182,8 +212,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Deskripsi UMKM/Bisnis Anda"
+                    android:text="Deskripsi Jasa Anda"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_deskripsi_umkm"

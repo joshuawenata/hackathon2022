@@ -106,6 +106,7 @@
                     android:layout_height="wrap_content"
                     android:text="Nama UMKM/Bisnis Anda"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_name"
@@ -132,6 +133,7 @@
                     android:layout_height="wrap_content"
                     android:text="Nomor Handphone"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_phone"
@@ -158,6 +160,7 @@
                     android:layout_height="wrap_content"
                     android:text="Kategori UMKM Anda"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_kategori_umkm"
@@ -184,6 +187,7 @@
                     android:layout_height="wrap_content"
                     android:text="Lokasi UMKM/Bisnis Anda"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_lokasi_umkm"
@@ -210,6 +214,7 @@
                     android:layout_height="wrap_content"
                     android:text="Deskripsi UMKM/Bisnis Anda"
                     android:fontFamily="@font/kanit_regular"
+                    android:textColor="@color/figma_gray"
                     android:paddingHorizontal="20dp"/>
                 <EditText
                     android:id="@+id/activityubahprofile_deskripsi_umkm"
