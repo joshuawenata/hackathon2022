@@ -31,8 +31,8 @@ import java.util.ArrayList;
 
 public class CommunityCardPage extends AppCompatActivity {
 
-    TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar;
-    String nama, deskripsi, lokasi, date, star, jasakey, nomor;
+    TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar, txtjasa;
+    String nama, deskripsi, lokasi, date, star, jasakey, nomor, jasa;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference,databaseReferences;
     StorageReference storageReference;
@@ -55,6 +55,7 @@ public class CommunityCardPage extends AppCompatActivity {
         txtdeskripsi = findViewById(R.id.activityjasacardpage_desc_content);
         txtdate = findViewById(R.id.activityjasacardpage_date);
         txtStar = findViewById(R.id.activityjasacardpage_starCount);
+        txtjasa = findViewById(R.id.activityjasacardpage_jasa);
         rv = findViewById(R.id.activityprofilefreelancer_recyclerviewfreelancer);
 
         Intent intent = getIntent();
@@ -64,6 +65,7 @@ public class CommunityCardPage extends AppCompatActivity {
         date = intent.getStringExtra("date");
         star = intent.getStringExtra("star");
         jasakey = intent.getStringExtra("key");
+        jasa = intent.getStringExtra("jasa");
         nomor = intent.getStringExtra("nomor");
 
         Log.i("TAG", nomor);
@@ -73,6 +75,7 @@ public class CommunityCardPage extends AppCompatActivity {
         txtdeskripsi.setText(deskripsi);
         txtdate.setText(date);
         txtStar.setText(star);
+        txtjasa.setText(jasa);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReferences = firebaseDatabase.getReference("gallery");

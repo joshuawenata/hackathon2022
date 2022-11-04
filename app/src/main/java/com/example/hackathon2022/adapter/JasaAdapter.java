@@ -40,7 +40,7 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
     private JasaAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener{
-        void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star, String nomor);
+        void onItemClick(String key, String nama, String jasa, String lokasi, String deskripsi, String date, String star, String nomor);
     }
 
     public void setOnItemClickListener(JasaAdapter.OnItemClickListener listener){
@@ -87,7 +87,7 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
     }
 
     public class LowonganViewHolder extends RecyclerView.ViewHolder{
-        TextView txtName, txtLokasi, txtDeskripsi, txtStar;
+        TextView txtName, txtLokasi, txtDeskripsi, txtStar, txtJasa;
         ImageView lblimage;
         public LowonganViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -95,12 +95,13 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
             txtLokasi = itemView.findViewById(R.id.componentcardlowongan_lokasi);
             txtDeskripsi = itemView.findViewById(R.id.componentcardlowongan_deskripsi);
             txtStar = itemView.findViewById(R.id.componentcardlowongan_starcount);
+            txtJasa = itemView.findViewById(R.id.componentcardjasa_jasa);
             lblimage = itemView.findViewById(R.id.componentcardjasa_image);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String nama, lokasi, deskripsi, date, star, key, nomor;
+                    String nama, lokasi, deskripsi, date, star, key, nomor, jasa;
                     ArrayList<ObjectLowongan> Llist = getLowonganList();
                     int position = getAdapterPosition();
 
@@ -108,12 +109,13 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
                     lokasi = Llist.get(position).getLokasi();
                     deskripsi = Llist.get(position).getDeskripsi();
                     date = Llist.get(position).getDate();
+                    jasa = Llist.get(position).getJasa();
                     star = Llist.get(position).getStar();
                     key = Llist.get(position).getKey();
                     nomor = Llist.get(position).getNomor();
 
                     if(mListener!=null){
-                        mListener.onItemClick(key, nama, lokasi, deskripsi, date, star, nomor);
+                        mListener.onItemClick(key, nama, jasa, lokasi, deskripsi, date, star, nomor);
                     }
                 }
             });

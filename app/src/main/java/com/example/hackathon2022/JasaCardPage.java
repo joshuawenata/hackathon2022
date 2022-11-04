@@ -18,8 +18,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class JasaCardPage extends AppCompatActivity {
 
-    TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar;
-    String nama, deskripsi, lokasi, date, star, jasakey, nomor;
+    TextView txtnama, txtdeskripsi, txtLokasi, txtdate, txtStar, txtjasa;
+    String nama, deskripsi, lokasi, date, star, jasakey, nomor, jasa;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ImageButton starBtn;
@@ -49,6 +49,7 @@ public class JasaCardPage extends AppCompatActivity {
         txtdeskripsi = findViewById(R.id.activityjasacardpage_desc_content);
         txtdate = findViewById(R.id.activityjasacardpage_date);
         txtStar = findViewById(R.id.activityjasacardpage_starCount);
+        txtjasa = findViewById(R.id.activityjasacardpage_jasa);
         whatsappBtn = findViewById(R.id.wa_btn);
 
         Intent intent = getIntent();
@@ -58,6 +59,7 @@ public class JasaCardPage extends AppCompatActivity {
         date = intent.getStringExtra("date");
         star = intent.getStringExtra("star");
         jasakey = intent.getStringExtra("key");
+        jasa = intent.getStringExtra("jasa");
         nomor = intent.getStringExtra("nomor");
 
         Log.i("TAG", nomor);
@@ -67,6 +69,7 @@ public class JasaCardPage extends AppCompatActivity {
         txtdeskripsi.setText(deskripsi);
         txtdate.setText(date);
         txtStar.setText(star);
+        txtjasa.setText(jasa);
     }
 
     public void backtoHome(View view) {

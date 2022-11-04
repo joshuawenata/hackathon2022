@@ -29,17 +29,9 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
     private EditText txtNomor, txtPassword, txtConfirmPassword;
     private ImageButton btnDaftar;
     private TextView txtMasuk;
-    Context context;
+    Context context = this;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-
-    private void initComponents() {
-        txtNomor = findViewById(R.id.activityregister_inputnomor);
-        txtPassword = findViewById(R.id.activityregister_inputpassword);
-        txtConfirmPassword = findViewById(R.id.activityregister_inputconfirmpassword);
-        btnDaftar = findViewById(R.id.activityregister_btnDaftar);
-        txtMasuk = findViewById(R.id.activity_register_txt_masuk);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +39,13 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_register_page);
 
         initComponents();
-        txtMasuk.setOnClickListener(this);
+    }
+
+    private void initComponents() {
+        txtNomor = findViewById(R.id.activityregister_inputnomor);
+        txtPassword = findViewById(R.id.activityregister_inputpassword);
+        txtConfirmPassword = findViewById(R.id.activityregister_inputconfirmpassword);
+        btnDaftar = findViewById(R.id.activityregister_btnDaftar);
         btnDaftar.setOnClickListener(this);
     }
 

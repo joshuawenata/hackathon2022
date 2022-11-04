@@ -9,7 +9,16 @@ public class ObjectLowongan {
     private String star;
     private String nomor;
     private String role;
+    private String jasa;
     private String imagepath;
+
+    public String getJasa() {
+        return jasa;
+    }
+
+    public void setJasa(String jasa) {
+        this.jasa = jasa;
+    }
 
     public String getImagepath() {
         return imagepath;

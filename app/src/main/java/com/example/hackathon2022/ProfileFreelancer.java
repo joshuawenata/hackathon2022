@@ -232,4 +232,7 @@ public class ProfileFreelancer extends AppCompatActivity {
         overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
         finish();
     }
+
+    public void intoEdit(View view) {
+    }
 }

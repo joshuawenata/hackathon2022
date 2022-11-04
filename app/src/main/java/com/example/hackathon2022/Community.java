@@ -63,7 +63,7 @@ public class Community extends AppCompatActivity {
                 JasaAdapter myAdapter = new JasaAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new JasaAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star, String nomor) {
+                    public void onItemClick(String key, String nama, String jasa, String lokasi, String deskripsi, String date, String star, String nomor) {
                         Intent i = new Intent(Community.this, CommunityCardPage.class);
                         i.putExtra("nama",nama);
                         i.putExtra("lokasi",lokasi);
@@ -71,6 +71,7 @@ public class Community extends AppCompatActivity {
                         i.putExtra("date",date);
                         i.putExtra("star",star);
                         i.putExtra("key",key);
+                        i.putExtra("jasa",jasa);
                         i.putExtra("nomor",nomor);
                         startActivity(i);
                     }
@@ -109,7 +110,7 @@ public class Community extends AppCompatActivity {
                 JasaAdapter myAdapter = new JasaAdapter(context, newList);
                 myAdapter.setOnItemClickListener(new JasaAdapter.OnItemClickListener() {
                     @Override
-                    public void onItemClick(String key, String nama, String lokasi, String deskripsi, String date, String star, String nomor) {
+                    public void onItemClick(String key, String nama, String jasa, String lokasi, String deskripsi, String date, String star, String nomor) {
                         Intent i = new Intent(Community.this, CommunityCardPage.class);
                         i.putExtra("nama",nama);
                         i.putExtra("lokasi",lokasi);

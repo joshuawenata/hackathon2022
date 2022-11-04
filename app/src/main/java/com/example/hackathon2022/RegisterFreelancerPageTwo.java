@@ -16,7 +16,7 @@ import java.util.Date;
 
 public class RegisterFreelancerPageTwo extends AppCompatActivity implements View.OnClickListener{
 
-    EditText txtNama, txtDescription, txtLokasi;
+    EditText txtNama, txtDescription, txtLokasi, txtJasa;
     ImageButton btnDaftar;
 
     @Override
@@ -31,6 +31,7 @@ public class RegisterFreelancerPageTwo extends AppCompatActivity implements View
         txtNama = findViewById(R.id.activityregisterfreelancertwo_inputfullname);
         txtDescription = findViewById(R.id.activityregisterfreelancertwo_inputdescription);
         txtLokasi = findViewById(R.id.activityregisterfreelancertwo_inputlokasi);
+        txtJasa = findViewById(R.id.activityregisterfreelancertwo_inputjasa);
         btnDaftar = findViewById(R.id.activityregisterfreelancertwo_btnDaftar);
 
         btnDaftar.setOnClickListener(this);
@@ -38,16 +39,16 @@ public class RegisterFreelancerPageTwo extends AppCompatActivity implements View
 
     @Override
     public void onClick(View v) {
-        String nama, deskripsi, lokasi, nomor, password, kategori;
+        String nama, deskripsi, lokasi, nomor, password, jasa;
         nama = txtNama.getText().toString();
         deskripsi = txtDescription.getText().toString();
+        jasa = txtJasa.getText().toString();
         lokasi = txtLokasi.getText().toString();
 
         Intent intent = getIntent();
 
         nomor = intent.getStringExtra("nomor");
         password = intent.getStringExtra("password");
-        kategori = intent.getStringExtra("kategori");
 
         boolean flag = true;
         if(nama.isEmpty()){
@@ -56,6 +57,10 @@ public class RegisterFreelancerPageTwo extends AppCompatActivity implements View
         }
         else if(lokasi.isEmpty()){
             txtLokasi.setError("Silahkan masukan lokasi");
+            flag = false;
+        }
+        else if(jasa.isEmpty()){
+            txtJasa.setError("Silahkan masukan jasa anda");
             flag = false;
         }
         else if(deskripsi.isEmpty()){
@@ -70,7 +75,7 @@ public class RegisterFreelancerPageTwo extends AppCompatActivity implements View
         Date date = new Date();
 
         if(flag){
-            UserRepository.insertUser(nama, nomor, password, deskripsi, "", lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "freelancer");
+            UserRepository.insertUser(nama, nomor, password, deskripsi, jasa, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "freelancer");
             startActivity(new Intent(this, LoginPage.class));
             finish();
         }

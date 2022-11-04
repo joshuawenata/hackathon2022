@@ -108,7 +108,8 @@
                             android:layout_height="wrap_content"
                             android:background="@null"
                             app:srcCompat="@drawable/ic_edit"
-                            />
+                            android:onClick="intoEdit"
+                            tools:ignore="OnClick" />
 
                     </LinearLayout>
 
