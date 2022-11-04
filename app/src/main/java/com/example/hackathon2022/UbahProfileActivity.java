@@ -171,8 +171,6 @@ public class UbahProfileActivity extends AppCompatActivity {
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     pd.dismiss();
                     Toast.makeText(UbahProfileActivity.this, "Upload successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(UbahProfileActivity.this, Profile.class));
-                    finish();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -185,6 +183,8 @@ public class UbahProfileActivity extends AppCompatActivity {
             temp = 0;
             path = "avatar.png";
         }
+        startActivity(new Intent(UbahProfileActivity.this, Profile.class));
+        finish();
     }
 
     public void backtoProfile(View view) {

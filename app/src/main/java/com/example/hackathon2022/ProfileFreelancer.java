@@ -71,7 +71,7 @@ public class ProfileFreelancer extends AppCompatActivity {
         this.filePath = filePath;
     }
 
-    String namestr, nomorstr, lokasistr, deskripsistr, pathstr;
+    String namestr, nomorstr, lokasistr, deskripsistr, pathstr, jasastr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +127,7 @@ public class ProfileFreelancer extends AppCompatActivity {
                         lokasistr = postSnapshot.getValue(ObjectUser.class).getLokasi();
                         deskripsistr = postSnapshot.getValue(ObjectUser.class).getDeskripsi();
                         pathstr = postSnapshot.getValue(ObjectUser.class).getImagePath();
+                        jasastr = postSnapshot.getValue(ObjectUser.class).getKategori();
 
                         name.setText(namestr);
                         phone.setText(nomorstr);
@@ -234,5 +235,16 @@ public class ProfileFreelancer extends AppCompatActivity {
     }
 
     public void intoEdit(View view) {
+        Intent i = new Intent(this, ProfileFreelancerEdit.class);
+        i.putExtra("name",namestr);
+        i.putExtra("phone",nomorstr);
+        i.putExtra("kategori",jasastr);
+        i.putExtra("lokasi",lokasistr);
+        i.putExtra("deskripsi",deskripsistr);
+        i.putExtra("key",LOGGED_IN_USER.getUserKey());
+        i.putExtra("imagepath", pathstr);
+        startActivity(i);
+        overridePendingTransition(R.transition.slide_enter, R.transition.slide_exit);
+        finish();
     }
 }

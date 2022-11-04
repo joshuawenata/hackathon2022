@@ -259,6 +259,46 @@ android:background="@color/bgaabu"
                     android:text="Informasi tambahan apapun di sini yang bisa membantu menjelaskan jasa macam apa ini" />
 
                 <!--INFORMASI TAMBAHAN-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="Portofolio Freelancer"
+                    android:textColor="@color/figma_gray"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:scrollbars="horizontal"
+                        android:layout_marginVertical="15dp"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/activityprofilefreelancer_recyclerviewfreelancer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            >
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

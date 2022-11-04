@@ -1,8 +1,12 @@
 package com.example.hackathon2022;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,8 +17,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hackathon2022.Object.ObjectGallery;
+import com.example.hackathon2022.adapter.FreelancerAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.util.ArrayList;
 
 public class JasaCardPage extends AppCompatActivity {
 
@@ -24,6 +37,11 @@ public class JasaCardPage extends AppCompatActivity {
     DatabaseReference databaseReference;
     ImageButton starBtn;
     LinearLayout whatsappBtn;
+    RecyclerView rv;
+    DatabaseReference databaseReferences;
+    StorageReference storageReference;
+    Context context = this;
+    ArrayList<ObjectGallery> newList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +69,7 @@ public class JasaCardPage extends AppCompatActivity {
         txtStar = findViewById(R.id.activityjasacardpage_starCount);
         txtjasa = findViewById(R.id.activityjasacardpage_jasa);
         whatsappBtn = findViewById(R.id.wa_btn);
+        rv = findViewById(R.id.activityprofilefreelancer_recyclerviewfreelancer);
 
         Intent intent = getIntent();
         nama = intent.getStringExtra("nama");
@@ -70,6 +89,31 @@ public class JasaCardPage extends AppCompatActivity {
         txtdate.setText(date);
         txtStar.setText(star);
         txtjasa.setText(jasa);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReferences = firebaseDatabase.getReference("gallery");
+        storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com");
+
+        databaseReferences.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                    if(postSnapshot.getValue((ObjectGallery.class)).getGalleryKey().equals(jasakey)){
+                        newList.add(postSnapshot.getValue(ObjectGallery.class));
+                    }
+                }
+
+                rv.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
+                FreelancerAdapter TopAdapter = new FreelancerAdapter(context, newList);
+                rv.setAdapter(TopAdapter);
+                TopAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     public void backtoHome(View view) {
