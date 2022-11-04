@@ -7,79 +7,196 @@
     android:background="@color/almost_blue"
     tools:context=".ProfileFreelancer">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        android:padding="20dp"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:elevation="2dp"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Akun Saya"
-            android:textAlignment="center"
-            android:textColor="@color/figma_gray"
-            android:textSize="20sp" />
+        android:layout_marginBottom="60dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="5dp"
-            android:gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
             android:orientation="vertical"
+            android:padding="20dp"
             tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:elevation="2dp"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Akun Saya"
+                android:textAlignment="center"
+                android:textColor="@color/figma_gray"
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:orientation="horizontal">
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
 
-                <ImageView
-                    android:id="@+id/activityprofilefreelancer_avatar"
-                    android:layout_width="85dp"
-                    android:layout_height="85dp"
-                    android:backgroundTint="@color/baseBlue"
-                    android:padding="5dp"
-                    android:scaleType="fitXY"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:orientation="horizontal">
 
-                </ImageView>
+                    <ImageView
+                        android:id="@+id/activityprofilefreelancer_avatar"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:backgroundTint="@color/baseBlue"
+                        android:padding="5dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="20dp">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:elevation="2dp"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="15dp"
+                        android:clickable="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/activityprofilefreelancer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="250dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/baseBlue"
+                            android:fontFamily="@font/kanit_medium"
+                            android:text="Joshua Wenata Sunarto"
+                            android:textAlignment="center"
+                            android:textColor="@color/elegant_black"
+                            android:textSize="21sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:elevation="2dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="10dp">
+
+                            <TextView
+                                android:id="@+id/activityprofilefreelancer_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/baseBlue"
+                                android:fontFamily="@font/kanit_light"
+                                android:text="081252346294"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/darker_gray"
+                                android:layout_marginLeft="20dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                app:srcCompat="@drawable/ic_edit"
+                                android:onClick="intoEdit"
+                                tools:ignore="OnClick" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/activityprofilefreelancer_lokasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/baseBlue"
+                            android:fontFamily="@font/kanit_regular"
+                            android:text="Kota Bandung"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/darker_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    android:orientation="vertical"
+                    android:background="@drawable/card"
+                    android:clickable="true"
                     android:elevation="2dp"
                     android:gravity="center"
+                    android:orientation="vertical"
                     android:paddingHorizontal="10dp"
-                    android:paddingVertical="15dp"
-                    android:clickable="true"
-                    >
+                    android:paddingVertical="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:fontFamily="@font/kanit_medium"
+                            android:text="Tentang Saya"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="15dp"
+                            android:layout_marginLeft="10dp"/>
+
+                    </LinearLayout>
 
                     <TextView
-                        android:id="@+id/activityprofilefreelancer_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxWidth="250dp"
-                        android:layout_marginTop="5dp"
-                        android:backgroundTint="@color/baseBlue"
-                        android:fontFamily="@font/kanit_medium"
-                        android:text="Joshua Wenata Sunarto"
-                        android:textAlignment="center"
-                        android:textColor="@color/elegant_black"
-                        android:textSize="21sp" />
+                        android:id="@+id/activityprofilefreelancer_deskripsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_margin="10dp"
+                        android:maxHeight="90dp"
+                        android:padding="10dp"
+                        android:background="@drawable/card"
+                        android:backgroundTint="#D9D9D9"
+                        android:text="@string/loremipsum"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/card"
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -89,216 +206,107 @@
                         android:elevation="2dp"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:paddingHorizontal="10dp">
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="15dp">
 
                         <TextView
-                            android:id="@+id/activityprofilefreelancer_phone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:backgroundTint="@color/baseBlue"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="081252346294"
-                            android:textAlignment="center"
+                            android:clickable="true"
+                            android:fontFamily="@font/kanit_medium"
+                            android:text="Portofolio Saya"
                             android:textColor="@android:color/darker_gray"
-                            android:layout_marginLeft="20dp"/>
-
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@null"
-                            app:srcCompat="@drawable/ic_edit"
-                            android:onClick="intoEdit"
-                            tools:ignore="OnClick" />
+                            android:textSize="15dp" />
 
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/activityprofilefreelancer_lokasi"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/baseBlue"
-                        android:fontFamily="@font/kanit_regular"
-                        android:text="Kota Bandung"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/darker_gray" />
+                        android:orientation="horizontal">
 
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
+                        <ImageView
+                            android:id="@+id/activityprofilefreelancer_addgallery"
+                            android:layout_width="110dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/ic_addgallery"
+                            android:paddingLeft="10dp">
+                        </ImageView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/card"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:fontFamily="@font/kanit_medium"
-                        android:text="Tentang Saya"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-                        android:layout_marginLeft="10dp"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/activityprofilefreelancer_deskripsi"
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:layout_margin="10dp"
-                    android:maxHeight="90dp"
-                    android:padding="10dp"
-                    android:background="@drawable/card"
-                    android:backgroundTint="#D9D9D9"
-                    android:text="@string/loremipsum"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    >
-                </TextView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/card"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:clickable="true"
-                    android:elevation="2dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp"
-                    android:paddingVertical="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:fontFamily="@font/kanit_medium"
-                        android:text="Portofolio Saya"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/activityprofilefreelancer_addgallery"
-                        android:layout_width="110dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/ic_addgallery"
-                        android:paddingLeft="10dp">
-                    </ImageView>
-
-                    <HorizontalScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:scrollbars="horizontal"
-                        android:layout_marginVertical="15dp"
-                        >
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/activityprofilefreelancer_recyclerviewfreelancer"
+                        <HorizontalScrollView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginLeft="5dp"
+                            android:layout_height="90dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:scrollbars="horizontal"
+                            android:layout_marginVertical="15dp"
                             >
-                        </androidx.recyclerview.widget.RecyclerView>
 
-                    </HorizontalScrollView>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activityprofilefreelancer_recyclerviewfreelancer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="5dp"
+                                >
+                            </androidx.recyclerview.widget.RecyclerView>
 
+                        </HorizontalScrollView>
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginVertical="5dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/logout_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/card"
-                    android:clickable="true"
-                    android:elevation="2dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="17dp"
-                    android:onClick="intoLogout"
-                    android:paddingVertical="15dp">
+                    android:layout_height="70dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    >
 
-                    <ImageButton
-                        android:id="@+id/logout_btn1"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/logout_btn"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@null"
+                        android:background="@drawable/card"
+                        android:clickable="true"
+                        android:elevation="2dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="17dp"
+                        android:layout_margin="4dp"
                         android:onClick="intoLogout"
-                        app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
-                    <TextView
-                        android:id="@+id/logout_btn2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/kanit_medium"
-                        android:text="Keluar"
-                        android:textColor="@color/danger"
-                        android:textSize="12sp"
-                        android:onClick="intoLogout"
-                        android:layout_marginStart="10dp"
-                        />
+                        android:paddingVertical="15dp">
+
+                        <ImageButton
+                            android:id="@+id/logout_btn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:onClick="intoLogout"
+                            app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
+                        <TextView
+                            android:id="@+id/logout_btn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/kanit_medium"
+                            android:text="Keluar"
+                            android:textColor="@color/danger"
+                            android:textSize="12sp"
+                            android:onClick="intoLogout"
+                            android:layout_marginStart="10dp"
+                            />
+                    </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -349,5 +357,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
