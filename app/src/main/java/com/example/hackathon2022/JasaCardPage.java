@@ -105,13 +105,15 @@ public class JasaCardPage extends AppCompatActivity {
                 }
 
                 if(newList.size()==0){
-                    txtPorto.setVisibility(View.INVISIBLE);
+                    txtPorto.setVisibility(View.GONE);
+                    rv.setVisibility(View.GONE);
+                }else{
+                    rv.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
+                    FreelancerAdapter TopAdapter = new FreelancerAdapter(context, newList);
+                    rv.setAdapter(TopAdapter);
+                    TopAdapter.notifyDataSetChanged();
                 }
 
-                rv.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
-                FreelancerAdapter TopAdapter = new FreelancerAdapter(context, newList);
-                rv.setAdapter(TopAdapter);
-                TopAdapter.notifyDataSetChanged();
             }
 
             @Override
