@@ -78,6 +78,7 @@
                     android:id="@+id/activityhometipsandtrick_searchbar"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:textColor="@color/figma_gray"
                     android:layout_weight="1"
                     android:background="@drawable/round_btt_white"
                     android:fontFamily="@font/kanit_regular"
