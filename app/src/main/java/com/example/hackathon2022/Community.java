@@ -118,6 +118,7 @@ public class Community extends AppCompatActivity {
                         i.putExtra("date",date);
                         i.putExtra("star",star);
                         i.putExtra("key",key);
+                        i.putExtra("jasa",jasa);
                         i.putExtra("nomor",nomor);
                         startActivity(i);
                     }

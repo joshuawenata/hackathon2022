@@ -3,6 +3,7 @@ package com.example.hackathon2022.adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,7 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
         holder.txtName.setText(LowonganList.get(position).getNama());
         holder.txtLokasi.setText(LowonganList.get(position).getLokasi());
         holder.txtDeskripsi.setText(LowonganList.get(position).getDeskripsi());
+        holder.txtJasa.setText(LowonganList.get(position).getKategori());
         holder.txtStar.setText(LowonganList.get(position).getStar());
 
         storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(LowonganList.get(position).getImagepath());
@@ -109,7 +111,7 @@ public class JasaAdapter extends RecyclerView.Adapter<JasaAdapter.LowonganViewHo
                     lokasi = Llist.get(position).getLokasi();
                     deskripsi = Llist.get(position).getDeskripsi();
                     date = Llist.get(position).getDate();
-                    jasa = Llist.get(position).getJasa();
+                    jasa = Llist.get(position).getKategori();
                     star = Llist.get(position).getStar();
                     key = Llist.get(position).getKey();
                     nomor = Llist.get(position).getNomor();

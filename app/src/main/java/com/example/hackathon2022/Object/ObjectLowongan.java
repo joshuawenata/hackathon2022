@@ -9,15 +9,15 @@ public class ObjectLowongan {
     private String star;
     private String nomor;
     private String role;
-    private String jasa;
+    private String kategori;
     private String imagepath;
 
-    public String getJasa() {
-        return jasa;
+    public String getKategori() {
+        return kategori;
     }
 
-    public void setJasa(String jasa) {
-        this.jasa = jasa;
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
     }
 
     public String getImagepath() {
