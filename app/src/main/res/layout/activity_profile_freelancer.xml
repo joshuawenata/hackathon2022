@@ -46,7 +46,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/card"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
 
                     <ImageView
                         android:id="@+id/activityprofilefreelancer_avatar"
@@ -55,66 +57,54 @@
                         android:backgroundTint="@color/baseBlue"
                         android:padding="5dp"
                         android:scaleType="fitXY"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="20dp">
-
-                    </ImageView>
+                        android:layout_margin="10dp"
+                        />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
                         android:orientation="vertical"
                         android:elevation="2dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
+                        android:gravity="center_vertical"
                         android:paddingVertical="15dp"
                         android:clickable="true"
                         >
 
                         <TextView
                             android:id="@+id/activityprofilefreelancer_name"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:maxWidth="250dp"
                             android:layout_marginTop="5dp"
                             android:backgroundTint="@color/baseBlue"
                             android:fontFamily="@font/kanit_medium"
                             android:text="Joshua Wenata Sunarto"
-                            android:textAlignment="center"
+                            android:textAlignment="textStart"
                             android:textColor="@color/elegant_black"
-                            android:textSize="21sp" />
+                            android:textSize="20sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="4dp"
                             android:clickable="true"
                             android:elevation="2dp"
-                            android:gravity="center"
+                            android:gravity="center_vertical"
                             android:orientation="horizontal"
-                            android:paddingHorizontal="10dp">
+                            >
 
                             <TextView
                                 android:id="@+id/activityprofilefreelancer_phone"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/baseBlue"
                                 android:fontFamily="@font/kanit_light"
                                 android:text="081252346294"
-                                android:textAlignment="center"
+                                android:textAlignment="textStart"
                                 android:textColor="@android:color/darker_gray"
-                                android:layout_marginLeft="20dp"/>
+                                />
 
-                            <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@null"
-                                app:srcCompat="@drawable/ic_edit"
-                                android:onClick="intoEdit"
-                                tools:ignore="OnClick" />
+
 
                         </LinearLayout>
 
@@ -125,9 +115,30 @@
                             android:backgroundTint="@color/baseBlue"
                             android:fontFamily="@font/kanit_regular"
                             android:text="Kota Bandung"
-                            android:textAlignment="center"
+                            android:textAlignment="textStart"
                             android:textColor="@android:color/darker_gray" />
 
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        >
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            app:srcCompat="@drawable/ic_edit"
+                            android:onClick="intoEdit"
+                            tools:ignore="OnClick" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -179,7 +190,8 @@
                         android:background="@drawable/card"
                         android:backgroundTint="#D9D9D9"
                         android:text="@string/loremipsum"
-                        android:textColor="@color/black"
+                        android:textColor="@color/elegant_black"
+                        android:fontFamily="@font/kanit_light"
                         android:textSize="15dp"
                         >
                     </TextView>

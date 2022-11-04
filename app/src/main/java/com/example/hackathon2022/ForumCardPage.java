@@ -4,6 +4,7 @@ import static com.example.hackathon2022.data.UserRepository.LOGGED_IN_USER;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -63,6 +64,7 @@ public class ForumCardPage extends AppCompatActivity{
     StorageReference storageReference;
     NestedScrollView sv;
     LinearLayout noAnswer;
+    ConstraintLayout thumbnailHolder;
 
     ArrayList<ObjectReply> newList = new ArrayList<>();
     Context context = this;
@@ -92,6 +94,7 @@ public class ForumCardPage extends AppCompatActivity{
         imageprofile = findViewById(R.id.activityforumcardpage_imageview);
         sv = findViewById(R.id.activityforumcardpage_scrollview);
         noAnswer = findViewById(R.id.belum_ada_jawaban);
+        thumbnailHolder = findViewById(R.id.thumbnail_holder);
 
         Intent intent = getIntent();
         forumkey = intent.getStringExtra("key");
@@ -106,6 +109,7 @@ public class ForumCardPage extends AppCompatActivity{
 
         if(path.equals("")){
             imageprofile.setImageResource(R.drawable.asset_forum);
+            thumbnailHolder.setPadding(30,30,30,30);
         }else{
             Log.i("cek", path);
             storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://hackathon2022-85c99.appspot.com").child(path);
