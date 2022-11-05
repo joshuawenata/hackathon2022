@@ -73,11 +73,9 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_logo_gray"
                     tools:ignore="ContentDescription"
                     android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
-                    android:visibility="invisible"
                     />
 
 <!--            &lt;!&ndash;THUMBNAIL HOLDER&ndash;&gt;-->
