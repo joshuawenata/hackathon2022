@@ -114,9 +114,10 @@
                         android:id="@+id/activityjasacardpage_jasa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/kanit_light"
-                        android:text="Jasa"
-                        android:textColor="@color/figma_gray" />
+                        android:fontFamily="@font/kanit_semibold"
+                        android:text="@string/desain_grafis"
+                        android:textColor="@color/figma_gray"
+                        android:textSize="14sp"  />
 
                 <LinearLayout
                     android:layout_width="match_parent"
