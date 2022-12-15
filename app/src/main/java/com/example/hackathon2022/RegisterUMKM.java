@@ -72,7 +72,7 @@ public class RegisterUMKM extends AppCompatActivity implements View.OnClickListe
         if(flag){
             UserRepository.insertUser(nama, nomor, password, deskripsi, kategori, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "users");
             startActivity(new Intent(this, LoginPage.class));
-            finish();
+            finishAffinity();
         }
 
     }

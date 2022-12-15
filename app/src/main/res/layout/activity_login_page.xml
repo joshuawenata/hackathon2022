@@ -144,6 +144,6 @@
             app:srcCompat="@drawable/arrow_back"
             android:background="@null"
             android:onClick="back"
-            />
+            tools:ignore="OnClick" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

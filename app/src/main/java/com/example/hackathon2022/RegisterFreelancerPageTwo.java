@@ -77,7 +77,7 @@ public class RegisterFreelancerPageTwo extends AppCompatActivity implements View
         if(flag){
             UserRepository.insertUser(nama, nomor, password, deskripsi, jasa, lokasi, "avatar.png", "0", dateFormat.format(date), "backgroundimage.png", "freelancer");
             startActivity(new Intent(this, LoginPage.class));
-            finish();
+            finishAffinity();
         }
 
     }
