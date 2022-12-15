@@ -165,7 +165,7 @@ public class addforum extends AppCompatActivity {
 
             ForumRepository.insertForum(judul, kategori, pertanyaan, path, LOGGED_IN_USER.getUserName(),dateFormat.format(date),0);
             startActivity(new Intent(this, HomePage.class));
-            finish();
+            finishAffinity();
         }
 
     }
