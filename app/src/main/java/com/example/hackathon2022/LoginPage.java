@@ -132,7 +132,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         }
     }
 
-    public void back(){
+    public void back(View view){
         Intent i = new Intent(LoginPage.this, WelcomePage.class);
         startActivity(i);
         finishAffinity();
