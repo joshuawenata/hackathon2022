@@ -86,7 +86,7 @@ public class HomeSocialMedia extends AppCompatActivity {
 
     public void backtoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
-        finish();
+        finishAffinity();
     }
 
     public void SearchingSocialMedia(View view) {

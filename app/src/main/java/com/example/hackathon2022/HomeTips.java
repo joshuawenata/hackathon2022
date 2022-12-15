@@ -86,7 +86,7 @@ public class HomeTips extends AppCompatActivity {
 
     public void backtoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
-        finish();
+        finishAffinity();
     }
 
     public void SearchingTipsAndTrick(View view) {

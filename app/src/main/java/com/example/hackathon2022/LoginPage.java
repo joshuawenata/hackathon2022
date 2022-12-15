@@ -123,11 +123,11 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             if(data.getRole().equals("users")){
                 Intent i = new Intent(LoginPage.this, HomePage.class);
                 startActivity(i);
-                finish();
+                finishAffinity();
             }else if(data.getRole().equals("freelancer")){
                 Intent i = new Intent(LoginPage.this, Community.class);
                 startActivity(i);
-                finish();
+                finishAffinity();
             }
         }
     }

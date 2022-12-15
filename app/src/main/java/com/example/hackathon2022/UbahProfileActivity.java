@@ -184,11 +184,11 @@ public class UbahProfileActivity extends AppCompatActivity {
             path = "avatar.png";
         }
         startActivity(new Intent(UbahProfileActivity.this, Profile.class));
-        finish();
+        finishAffinity();
     }
 
     public void backtoProfile(View view) {
         startActivity(new Intent(this, Profile.class));
-        finish();
+        finishAffinity();
     }
 }

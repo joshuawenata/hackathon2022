@@ -222,7 +222,7 @@
             android:name=".ForumCardPage"
             android:exported="false" />
         <activity
-            android:name=".HomeModalusaha"
+            android:name=".HomeSaranUsaha"
             android:exported="false" />
         <activity
             android:name=".Profile"

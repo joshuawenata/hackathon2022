@@ -89,7 +89,7 @@ public class SupplierPengolahan extends AppCompatActivity {
 
     }
 
-    public void backtoSupplier(View view) { startActivity(new Intent(this, SupplierPage.class)); finish();}
+    public void backtoSupplier(View view) { startActivity(new Intent(this, SupplierPage.class)); finishAffinity();}
 
     public void SearchingSupplierPengolahan(View view) {
         ArrayList<ObjectUser> newList = new ArrayList<>();

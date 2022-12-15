@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
 
-public class HomeModalusaha extends AppCompatActivity {
+public class HomeSaranUsaha extends AppCompatActivity {
 
     Context context = this;
     EditText searchbar;
@@ -61,7 +61,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path) {
-                        Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
+                        Intent i = new Intent(HomeSaranUsaha.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
                         i.putExtra("judul",judul);
@@ -86,7 +86,7 @@ public class HomeModalusaha extends AppCompatActivity {
 
     public void backtoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
-        finish();
+        finishAffinity();
     }
 
     public void SearchingModalUsaha(View view) {
@@ -112,7 +112,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path) {
-                        Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
+                        Intent i = new Intent(HomeSaranUsaha.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
                         i.putExtra("judul",judul);
@@ -165,7 +165,7 @@ public class HomeModalusaha extends AppCompatActivity {
                 myAdapter.setOnItemClickListener(new AllForumAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(View v, String key, String username, String judul, String kategori, String pertanyaan, String date, String star, String path) {
-                        Intent i = new Intent(HomeModalusaha.this, ForumCardPage.class);
+                        Intent i = new Intent(HomeSaranUsaha.this, ForumCardPage.class);
                         i.putExtra("key",key);
                         i.putExtra("username",username);
                         i.putExtra("judul",judul);

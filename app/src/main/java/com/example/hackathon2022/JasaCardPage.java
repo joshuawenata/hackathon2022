@@ -126,7 +126,7 @@ public class JasaCardPage extends AppCompatActivity {
 
     public void backtoHome(View view) {
         startActivity(new Intent(this, JasaPage.class));
-        finish();
+        finishAffinity();
     }
 
     @SuppressLint({"SetTextI18n", "DefaultLocale"})

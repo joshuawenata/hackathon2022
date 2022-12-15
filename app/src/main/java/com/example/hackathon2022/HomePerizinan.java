@@ -86,7 +86,7 @@ public class HomePerizinan extends AppCompatActivity {
 
     public void backtoHome(View view) {
         startActivity(new Intent(this, HomePage.class));
-        finish();
+        finishAffinity();
     }
 
     public void SearchingPerizinan(View view) {

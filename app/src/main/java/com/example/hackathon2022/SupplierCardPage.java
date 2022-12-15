@@ -77,7 +77,7 @@ public class SupplierCardPage extends AppCompatActivity {
 
     public void backtoHome(View view) {
         startActivity(new Intent(this, SupplierPage.class));
-        finish();
+        finishAffinity();
     }
 
     @SuppressLint({"SetTextI18n", "DefaultLocale"})

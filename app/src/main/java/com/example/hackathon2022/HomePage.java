@@ -12,9 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.example.hackathon2022.Object.ObjectForum;
 import com.example.hackathon2022.adapter.FrontForumAdapter;
@@ -116,7 +114,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     }
 
     public void intoModal(View view) {
-        startActivity(new Intent(this, HomeModalusaha.class));
+        startActivity(new Intent(this, HomeSaranUsaha.class));
     }
 
     @Override
